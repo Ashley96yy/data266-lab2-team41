@@ -1,0 +1,6 @@
+# Add the packages required by the final implementation below.
+# Pin exact versions only after the team has validated the working environment.
+# Examples (uncomment and pin when confirmed):
+# jupyterlab==<validated-version>
+# numpy==<validated-version>
+# torch==<validated-version>

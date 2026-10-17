@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+.env
+.DS_Store
+
+# Model weights and checkpoints belong on Hugging Face, not GitHub
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+checkpoints/
+
+# Generated images belong on Hugging Face, not GitHub
+generated_images/
+outputs/images/
+
+# Experiment tracking and caches
+wandb/
+.cache/

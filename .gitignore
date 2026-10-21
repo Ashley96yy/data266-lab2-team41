@@ -25,5 +25,7 @@ outputs/images/
 wandb/
 .cache/
 
-# Runtime-only Part 1 extraction artifacts
-part1_rag/data/processed/
+# Local inputs and runtime-only artifacts (never commit PDFs or datasets)
+data/
+.runtime/
+*.pdf

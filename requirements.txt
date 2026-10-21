@@ -1,6 +1,8 @@
-# Add the packages required by the final implementation below.
-# Pin exact versions only after the team has validated the working environment.
-# Examples (uncomment and pin when confirmed):
-# jupyterlab==<validated-version>
-# numpy==<validated-version>
-# torch==<validated-version>
+# Versions below were validated by executing the current Part 1 notebook.
+numpy==2.0.2
+Pillow==11.3.0
+PyMuPDF==1.26.5
+torch==2.8.0
+transformers==4.57.6
+
+# Add and pin later-task dependencies only after their checkpoints are validated.

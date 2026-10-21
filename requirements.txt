@@ -4,5 +4,7 @@ Pillow==11.3.0
 PyMuPDF==1.26.5
 torch==2.8.0
 transformers==4.57.6
+chromadb==1.5.9
+sentence-transformers==5.1.2
 
 # Add and pin later-task dependencies only after their checkpoints are validated.

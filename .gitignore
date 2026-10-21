@@ -24,3 +24,6 @@ outputs/images/
 # Experiment tracking and caches
 wandb/
 .cache/
+
+# Runtime-only Part 1 extraction artifacts
+part1_rag/data/processed/

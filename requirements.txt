@@ -1,5 +1,6 @@
 # Versions below were validated by executing the current Part 1 notebook.
 numpy==2.0.2
+pandas==2.2.3
 Pillow==11.3.0
 PyMuPDF==1.26.5
 torch==2.8.0

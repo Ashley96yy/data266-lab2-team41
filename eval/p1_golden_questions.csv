@@ -1,0 +1,26 @@
+id,conversation_id,turn,question_id,question,category
+1,G001,1,GQ001,"According to Table 1-1, what was world output growth in 2010?",table_lookup
+2,G002,1,GQ002,By how many percentage points did emerging and developing economies outperform advanced economies in 2009?,table_arithmetic
+3,G003,1,GQ003,What inflation rate does Document 1 report for the United States in 2009?,document_scoped_lookup
+4,G004,1,GQ004,What was the Euro area inflation rate in 2010 in Table 1-3?,table_lookup
+5,G005,1,GQ005,How does real GDP remove the effect of changing prices?,conceptual_text
+6,G006,1,GQ006,"Under Document 1's Okun relationship, what happens to unemployment when output grows at about 3%?",figure_reasoning
+7,G007,1,GQ007,Why can a rise in imported oil prices increase CPI inflation more than GDP-deflator inflation?,conceptual_text
+8,G008,1,GQ008,Why should China's registered urban unemployment rate be interpreted cautiously?,conceptual_text
+9,G009,1,GQ009,"What was the 2011 world output-growth forecast error, calculated as outturn minus forecast?",table_arithmetic
+10,G010,1,GQ010,"What was the 2012 forecast error for advanced-economy output growth, using outturn minus forecast?",table_arithmetic
+11,G011,1,GQ011,What output growth did emerging and developing economies record in 2013?,table_lookup
+12,G012,1,GQ012,What was the U.S. output-growth outturn in 2011?,table_lookup
+13,G013,1,GQ013,"For China in 2011, what was the output-growth forecast error, using outturn minus forecast?",table_arithmetic
+14,G014,1,GQ014,By how much did Euro area output change in 2013?,table_lookup
+15,G015,1,GQ015,What was the U.S. unemployment rate in 2013?,table_lookup
+16,G016,1,GQ016,How many percentage points did Euro area unemployment rise between 2011 and 2013?,table_arithmetic
+17,G017,1,GQ017,How did U.S. federal revenue as a share of GDP change from 2007 to 2013?,table_arithmetic
+18,G018,1,GQ018,How much did U.S. federal spending as a share of GDP fall from its 2010 peak to 2013?,table_arithmetic
+19,G019,1,GQ019,How much did the U.S. labour-force participation rate fall between 2007 and 2010 in Table B-2?,table_arithmetic
+20,G020,1,GQ020,"After the erratum, what exact figure label should be cited for China's registered urban unemployment chart?",erratum
+21,G021,1,GQ021,Do Document 1 and Document 3 agree on the U.S. unemployment rate in 2010?,source_conflict
+22,G022,1,GQ022,"A reader comment says Lehman Brothers collapsed on September 25, 2008. Is that claim supported by trusted evidence?",low_trust_false_premise
+23,G023,1,GQ023,What was Brazil's unemployment rate in 2012?,not_found
+24,G024,1,GQ024,"For this conversation only, assume U.S. unemployment in 2013 was 8.0%. Under that assumption, how many percentage points below the Euro area rate was it?",session_override
+25,G024,2,GQ025,Did that 8.0% U.S. unemployment value come from the documents?,session_provenance

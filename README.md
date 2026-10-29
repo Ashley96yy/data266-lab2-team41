@@ -9,11 +9,11 @@ This repository contains the shared implementation and report materials for DATA
 ├── README.md
 ├── requirements.txt
 ├── notebooks/
-│   ├── p1_rag.ipynb
-│   ├── p2_finetune.ipynb
-│   ├── p3_agents.ipynb
 │   ├── Yuyao_Ding/
+│   │   ├── p1_rag.ipynb
+│   │   └── p3_agents.ipynb
 │   └── Pratiksha_Kaushik/
+│       └── p2_finetune.ipynb
 ├── eval/
 ├── traces/
 ├── src/
@@ -25,7 +25,7 @@ This repository contains the shared implementation and report materials for DATA
 - `eval/` stores the golden set, prompts, and evaluation scenarios.
 - `traces/` stores the Part 3 JSON traces.
 - `src/` is reserved for optional reusable helpers shared by the notebooks.
-- `notebooks/Yuyao_Ding/` and `notebooks/Pratiksha_Kaushik/` hold each member's working notebooks and experiments. The three notebooks directly under `notebooks/` are the shared, graded versions; integrate completed work there and keep them executable with saved outputs. Record individual contributions in `CONTRIBUTIONS.md`.
+- The three notebooks under the member folders are the shared run and submission versions. The folder names organize files; both members contribute to all three parts. Record each person's work in `CONTRIBUTIONS.md`.
 
 ## Setup
 
@@ -43,9 +43,9 @@ jupyter lab
 
 ## Running each part
 
-- **Part 1 — RAG:** open `notebooks/p1_rag.ipynb`. Detailed data preparation, execution, and evaluation commands will be added with the implementation.
-- **Part 2 — Diffusion fine-tuning:** open `notebooks/p2_finetune.ipynb`. Detailed training, inference, and evaluation commands will be added with the implementation.
-- **Part 3 — Multi-agent system:** open `notebooks/p3_agents.ipynb`. Detailed setup, execution, and evaluation commands will be added with the implementation.
+- **Part 1 — RAG:** open `notebooks/Yuyao_Ding/p1_rag.ipynb` with the Part 1 inputs attached. Set `DATA266_RUN_FULL_PART1=1` to run all questions, write `submission.csv`, and invoke the provided validator.
+- **Part 2 — Diffusion fine-tuning:** open `notebooks/Pratiksha_Kaushik/p2_finetune.ipynb`. Detailed training, inference, and evaluation commands will be added with the implementation.
+- **Part 3 — Multi-agent system:** open `notebooks/Yuyao_Ding/p3_agents.ipynb`. Detailed setup, execution, and evaluation commands will be added with the implementation.
 
 Each notebook begins with a reproducibility cell that reports the Git commit, Python version, PyTorch version, GPU information, and random seed.
 

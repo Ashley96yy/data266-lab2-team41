@@ -11,7 +11,9 @@ This repository contains the shared implementation and report materials for DATA
 ├── notebooks/
 │   ├── p1_rag.ipynb
 │   ├── p2_finetune.ipynb
-│   └── p3_agents.ipynb
+│   ├── p3_agents.ipynb
+│   ├── Yuyao_Ding/
+│   └── Pratiksha_Kaushik/
 ├── eval/
 ├── traces/
 ├── src/
@@ -23,6 +25,7 @@ This repository contains the shared implementation and report materials for DATA
 - `eval/` stores the golden set, prompts, and evaluation scenarios.
 - `traces/` stores the Part 3 JSON traces.
 - `src/` is reserved for optional reusable helpers shared by the notebooks.
+- `notebooks/Yuyao_Ding/` and `notebooks/Pratiksha_Kaushik/` hold each member's working notebooks and experiments. The three notebooks directly under `notebooks/` are the shared, graded versions; integrate completed work there and keep them executable with saved outputs. Record individual contributions in `CONTRIBUTIONS.md`.
 
 ## Setup
 

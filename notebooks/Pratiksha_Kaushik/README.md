@@ -12,6 +12,8 @@ DATA 266 Lab 2, Team 41, Part 2. This part fine-tunes Stable Diffusion 1.5 on th
 | Comparison model: LoRA rank 4 | [PratikshaK-1/naruto-sd15-lora-r4](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4) |
 | All 120 generated images (base, run 1, run 2) with prompt, seed, CLIP score and NSFW flag | [PratikshaK-1/naruto-sd15-p2-generations](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations) |
 
+All notebook outputs (cleaned data, adapters, images, evaluation files and logs) are also in the [Part 2 Google Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link).
+
 Both model repos include a model card with the training settings, evaluation results, usage code and limitations.
 
 ### Use the final model
@@ -47,7 +49,7 @@ Graders should use **p2_v4.ipynb**. The other notebooks are kept to show how the
 3. Run **Runtime → Restart session and run all**.
 
 Notes:
-- **Storage:** all outputs are saved to Google Drive under `MyDrive/data266-lab2/`. The `eval/` and `work/` folders mentioned below are inside that Drive folder, not in this repository.
+- **Storage:** all outputs are saved to Google Drive under `MyDrive/data266-lab2/` ([shared Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link)). The `eval/` and `work/` folders mentioned below are inside that Drive folder, not in this repository.
 - **Reuse:** with `REUSE = True`, finished steps (cleaned data, trained adapters, generated images, human-eval pairs) are loaded from Drive. Metrics are recomputed on every run.
 - **Retraining:** set `RETRAIN = True` to train again. Each run takes about 75 to 85 minutes on a T4.
 - **Choosing the final run:** the notebook picks the run with the lowest KID. Set `FINAL_OVERRIDE = "run1"` or `"run2"` to choose the other one.
@@ -161,6 +163,8 @@ Run 2 (rank 32) is the final model:
 - KID is computed from only 20 generated images, so small differences between runs should be read with care.
 
 ## Outputs saved by the notebook (in Google Drive)
+
+All of these files are in the [Part 2 Google Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link).
 
 | File | Contents |
 |---|---|

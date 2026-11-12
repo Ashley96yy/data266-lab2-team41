@@ -13,8 +13,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 
-ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "part3_agents" / "data" / "fixtures"
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "data" / "part3" / "fixtures"
 SIZE = (1200, 900)
 
 

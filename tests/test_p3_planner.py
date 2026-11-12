@@ -9,7 +9,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from part3_agents.src.planner import plan_request
+from src.p3_planner import plan_request
 
 
 class PlannerInputGateTest(unittest.TestCase):

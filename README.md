@@ -45,7 +45,7 @@ jupyter lab
 
 - **Part 1 — RAG:** open `notebooks/Yuyao_Ding/p1_rag.ipynb` with the Part 1 inputs attached. Set `DATA266_RUN_FULL_PART1=1` to run all questions, write `submission.csv`, and invoke the provided validator.
 - **Part 2 — Diffusion fine-tuning:** open `notebooks/Pratiksha_Kaushik/p2_v4.ipynb` in Colab and run all. See [notebooks/Pratiksha_Kaushik/README.md](notebooks/Pratiksha_Kaushik/README.md) for setup, results and Hugging Face links (final model: [PratikshaK-1/naruto-sd15-lora-r32](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32)).
-- **Part 3 — Multi-agent system:** open `notebooks/Yuyao_Ding/p3_agents.ipynb`. Detailed setup, execution, and evaluation commands will be added with the implementation.
+- **Part 3 — Multi-agent system:** open `notebooks/Yuyao_Ding/p3_agents.ipynb`. The frozen scenarios and input verification instructions are in [eval/PART3.md](eval/PART3.md); reusable Planner code is in `src/p3_planner.py`. Detailed execution commands will be added with the implementation.
 
 Each notebook begins with a reproducibility cell that reports the Git commit, Python version, PyTorch version, GPU information, and random seed.
 

@@ -15,7 +15,7 @@ are claimed here.
 
 Paths in the JSON files are relative to the repository root. All 15 primary
 inputs and all 10 safety inputs are prepared locally under the ignored
-`part3_agents/data/fixtures/` directory. The photo-style and drawing assets
+`data/part3/fixtures/` directory. The photo-style and drawing assets
 were made with the built-in OpenAI image generator: they are **synthetic**, not
 real photographs. The three image-embedded-instruction graphics and three
 deliberately invalid files were made by `build_red_team_inputs.py` (Pillow
@@ -36,10 +36,10 @@ fixture-status fields were updated during input preparation; the original
 requests and pass/fail rubrics remain unchanged.
 
 The current local-only bundle is
-`part3_agents/data/part3_fixture_bundle_v2_with_portrait.zip`.
+`data/part3/part3_fixture_bundle_v3.zip`.
 It contains the 21 ready inputs plus the plans, manifest, and verifier. The
 archive is ignored by Git. Extract it at a fresh repository root, then run
-`python part3_agents/evaluations/verify_fixture_manifest.py`. This checks the
+`python eval/verify_p3_fixture_manifest.py`. This checks the
 21 SHA-256 hashes. Keep the portrait and bundle limited to team/course testing;
 ask the subject before sharing them with anyone else or uploading to a service.
 

@@ -13,16 +13,19 @@ are claimed here.
 
 ## Fixture preparation
 
-Paths in the JSON files are relative to the repository root. The 15 primary
-inputs and 8 of the 10 safety inputs are prepared locally under the ignored
+Paths in the JSON files are relative to the repository root. All 15 primary
+inputs and all 10 safety inputs are prepared locally under the ignored
 `part3_agents/data/fixtures/` directory. The photo-style and drawing assets
 were made with the built-in OpenAI image generator: they are **synthetic**, not
 real photographs. The three image-embedded-instruction graphics and three
 deliberately invalid files were made by `build_red_team_inputs.py` (Pillow
 12.1.1). `p3_fixture_manifest.json` records every file's source, case IDs,
-size, dimensions where applicable, and SHA-256. Its one pending item is a
-consented portrait of an identifiable real adult for RT07 and RT08. An AI face
-must not be substituted for that real-person safety test.
+size, dimensions where applicable, and SHA-256. RT07 and RT08 share a
+user-provided photograph of an identifiable adult. The user confirmed the
+subject is an adult and consents to its use for these two safety tests. The
+local PNG retains the original decoded pixels and contains no EXIF metadata.
+The test should refuse the deceptive edit requests; no edited portrait is part
+of the fixture set. Do not publish the portrait or the bundle to GitHub.
 
 Keep inputs out of GitHub. Put the final input set on Hugging Face if it must
 be shared with graders. Before any scored run, verify file hashes against the
@@ -32,13 +35,13 @@ results; version any changes and report which version was evaluated. The
 fixture-status fields were updated during input preparation; the original
 requests and pass/fail rubrics remain unchanged.
 
-The local-only bundle is `part3_agents/data/part3_fixture_bundle_v1.zip`.
-It contains the 20 ready inputs plus the plans, manifest, and verifier. The
+The current local-only bundle is
+`part3_agents/data/part3_fixture_bundle_v2_with_portrait.zip`.
+It contains the 21 ready inputs plus the plans, manifest, and verifier. The
 archive is ignored by Git. Extract it at a fresh repository root, then run
 `python part3_agents/evaluations/verify_fixture_manifest.py`. This checks the
-20 ready SHA-256 hashes and still reports RT07/RT08 as pending. Do not run the
-full 10-case safety evaluation until their real-person input is supplied and
-the manifest is updated.
+21 SHA-256 hashes. Keep the portrait and bundle limited to team/course testing;
+ask the subject before sharing them with anyone else or uploading to a service.
 
 ## Scoring protocol
 

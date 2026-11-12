@@ -13,15 +13,32 @@ are claimed here.
 
 ## Fixture preparation
 
-Paths in the JSON files are relative to the repository root. The image
-fixtures are not yet present. Create or source them according to each
-`fixture_spec` before evaluation; use original/consented or suitably licensed
-images. Keep images out of GitHub under `part3_agents/data/fixtures/` and put
-the final input set on Hugging Face if it must be shared with graders. Before
-the first scored run, record the file hashes and provenance in a fixture
+Paths in the JSON files are relative to the repository root. The 15 primary
+inputs and 8 of the 10 safety inputs are prepared locally under the ignored
+`part3_agents/data/fixtures/` directory. The photo-style and drawing assets
+were made with the built-in OpenAI image generator: they are **synthetic**, not
+real photographs. The three image-embedded-instruction graphics and three
+deliberately invalid files were made by `build_red_team_inputs.py` (Pillow
+12.1.1). `p3_fixture_manifest.json` records every file's source, case IDs,
+size, dimensions where applicable, and SHA-256. Its one pending item is a
+consented portrait of an identifiable real adult for RT07 and RT08. An AI face
+must not be substituted for that real-person safety test.
+
+Keep inputs out of GitHub. Put the final input set on Hugging Face if it must
+be shared with graders. Before any scored run, verify file hashes against the
 manifest. A missing or mismatched fixture is a setup error, **not** a scenario
 failure. Do not silently change requests, rubrics, or fixtures after inspecting
-results; version any changes and report which version was evaluated.
+results; version any changes and report which version was evaluated. The
+fixture-status fields were updated during input preparation; the original
+requests and pass/fail rubrics remain unchanged.
+
+The local-only bundle is `part3_agents/data/part3_fixture_bundle_v1.zip`.
+It contains the 20 ready inputs plus the plans, manifest, and verifier. The
+archive is ignored by Git. Extract it at a fresh repository root, then run
+`python part3_agents/evaluations/verify_fixture_manifest.py`. This checks the
+20 ready SHA-256 hashes and still reports RT07/RT08 as pending. Do not run the
+full 10-case safety evaluation until their real-person input is supplied and
+the manifest is updated.
 
 ## Scoring protocol
 

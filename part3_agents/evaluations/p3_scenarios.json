@@ -2,7 +2,7 @@
   "schema_version": 1,
   "set_id": "p3_primary_15",
   "seed": 266,
-  "fixture_status": "pending_preparation_and_hashes",
+  "fixture_status": "15_of_15_ready_locally_see_p3_fixture_manifest.json",
   "scored_results": null,
   "domain_model_id": "PratikshaK-1/naruto-sd15-lora-r32",
   "cases": [
@@ -10,7 +10,7 @@
       "id": "P3-S01",
       "category": "caption_visual_question",
       "fixture": "part3_agents/data/fixtures/desk_note.png",
-      "fixture_spec": "Original photo: one laptop, one white mug, and a paper card visibly reading DATA 266 on a desk; no people.",
+      "fixture_spec": "Original synthetic photo-style image: one laptop, one white mug, and a paper card visibly reading DATA 266 on a desk; no people.",
       "request": "Caption this image in one sentence.",
       "vision_questions": ["What objects are on the desk?", "What text is on the paper card?"],
       "expected_route": "vision_only",
@@ -24,7 +24,7 @@
       "id": "P3-S02",
       "category": "caption_visual_question",
       "fixture": "part3_agents/data/fixtures/bicycle_green_light.png",
-      "fixture_spec": "Original photo: exactly one red bicycle at a crossing and a clearly visible green traffic light; no other bicycles.",
+      "fixture_spec": "Original synthetic photo-style image: exactly one red bicycle at a crossing and a clearly visible green traffic light; no other bicycles.",
       "request": "What color is the traffic light in this picture?",
       "vision_questions": ["What color is the traffic light?", "How many bicycles are visible?"],
       "expected_route": "vision_only",
@@ -38,7 +38,7 @@
       "id": "P3-S03",
       "category": "caption_visual_question",
       "fixture": "part3_agents/data/fixtures/fruit_sale_card.png",
-      "fixture_spec": "Original photo: a bowl containing exactly two apples and one banana beside a card visibly reading SALE; no other fruit.",
+      "fixture_spec": "Original synthetic photo-style image: a bowl containing exactly two apples and one banana beside a card visibly reading SALE; no other fruit.",
       "request": "How many apples are there, and what word is written on the card?",
       "vision_questions": ["How many apples are visible?", "What word is on the card?"],
       "expected_route": "vision_only",
@@ -52,7 +52,7 @@
       "id": "P3-S04",
       "category": "style_change",
       "fixture": "part3_agents/data/fixtures/red_bicycle_basket.png",
-      "fixture_spec": "Original photo: one red bicycle with a front basket parked against a plain wall; no rider.",
+      "fixture_spec": "Original synthetic photo-style image: one red bicycle with a front basket parked against a plain wall; no rider.",
       "request": "Turn this into a watercolor painting, keeping the red bicycle and its basket.",
       "expected_route": "style_change_img2img",
       "pass_if": [
@@ -65,7 +65,7 @@
       "id": "P3-S05",
       "category": "style_change",
       "fixture": "part3_agents/data/fixtures/lake_mountains.png",
-      "fixture_spec": "Original landscape photo: a lake in the foreground and two mountains behind it; no people or buildings.",
+      "fixture_spec": "Original synthetic landscape photo-style image: a lake in the foreground and two mountains behind it; no people or buildings.",
       "request": "Render this lake and mountain scene as a black-and-white ink sketch without adding buildings.",
       "expected_route": "style_change_img2img",
       "pass_if": [
@@ -78,7 +78,7 @@
       "id": "P3-S06",
       "category": "style_change",
       "fixture": "part3_agents/data/fixtures/toy_robot.png",
-      "fixture_spec": "Original photo: one small silver toy robot standing on a table, with two visible arms and no people.",
+      "fixture_spec": "Original synthetic photo-style image: one small silver toy robot standing on a table, with two visible arms and no people.",
       "request": "Make the toy robot look like a clay stop-motion character while keeping its pose and two arms.",
       "expected_route": "style_change_img2img",
       "pass_if": [
@@ -91,7 +91,7 @@
       "id": "P3-S07",
       "category": "edit_enhance",
       "fixture": "part3_agents/data/fixtures/dark_cat_window.png",
-      "fixture_spec": "Original underexposed photo: one cat sitting beside a window; the cat is visible but dark, with no other animals.",
+      "fixture_spec": "Original synthetic underexposed photo-style image: one cat sitting beside a window; the cat is visible but dark, with no other animals.",
       "request": "Brighten this photo so the cat is easier to see, without changing the cat or the window.",
       "expected_route": "enhancement",
       "pass_if": [
@@ -104,7 +104,7 @@
       "id": "P3-S08",
       "category": "edit_enhance",
       "fixture": "part3_agents/data/fixtures/yellow_cast_tea_mug.png",
-      "fixture_spec": "Original indoor photo: one white ceramic mug labeled TEA, with a strong yellow light cast; the label remains legible.",
+      "fixture_spec": "Original synthetic indoor photo-style image: one white ceramic mug labeled TEA, with a strong yellow light cast; the label remains legible.",
       "request": "Correct the yellow color cast but preserve the mug and the word TEA.",
       "expected_route": "enhancement",
       "pass_if": [
@@ -117,7 +117,7 @@
       "id": "P3-S09",
       "category": "edit_enhance",
       "fixture": "part3_agents/data/fixtures/noisy_garden_path.png",
-      "fixture_spec": "Original mildly noisy photo: a garden path between two flower beds; no people, animals, or signs.",
+      "fixture_spec": "Original synthetic mildly noisy photo-style image: a garden path between two flower beds; no people, animals, or signs.",
       "request": "Reduce the visible noise while keeping the path and flowers in place.",
       "expected_route": "enhancement",
       "pass_if": [
@@ -130,7 +130,7 @@
       "id": "P3-S10",
       "category": "domain_style",
       "fixture": "part3_agents/data/fixtures/explorer_blue_scarf.png",
-      "fixture_spec": "Original team-created drawing: one fictional adult explorer wearing a blue scarf, standing in front of trees; not a real person's portrait.",
+      "fixture_spec": "Original AI-generated drawing: one fictional adult explorer wearing a blue scarf, standing in front of trees; not a real person's portrait.",
       "request": "Transform this fictional explorer into a Naruto-inspired anime style, preserving the blue scarf and single character.",
       "expected_route": "domain_style_generation",
       "pass_if": [
@@ -143,7 +143,7 @@
       "id": "P3-S11",
       "category": "domain_style",
       "fixture": "part3_agents/data/fixtures/village_red_bridge.png",
-      "fixture_spec": "Original team-created drawing: a small village street with a red footbridge over a stream; no people or text.",
+      "fixture_spec": "Original AI-generated drawing: a small village street with a red footbridge over a stream; no people or text.",
       "request": "Make this village and red bridge look like a Naruto-inspired anime background; keep the bridge and stream.",
       "expected_route": "domain_style_generation",
       "pass_if": [
@@ -156,7 +156,7 @@
       "id": "P3-S12",
       "category": "domain_style",
       "fixture": "part3_agents/data/fixtures/two_adventurers_red_blue.png",
-      "fixture_spec": "Original team-created drawing: exactly two fictional adventurers standing side by side, one in a red coat and one in a blue coat; no real people.",
+      "fixture_spec": "Original AI-generated drawing: exactly two fictional adventurers standing side by side, one in a red coat and one in a blue coat; no real people.",
       "request": "Convert these two adventurers to a Naruto-inspired anime style while preserving both people and their red-versus-blue clothing.",
       "expected_route": "domain_style_generation",
       "pass_if": [
@@ -169,7 +169,7 @@
       "id": "P3-S13",
       "category": "ambiguous_broken",
       "fixture": "part3_agents/data/fixtures/plain_cup.png",
-      "fixture_spec": "Original photo: one plain ceramic cup on a table; no text or people.",
+      "fixture_spec": "Original synthetic photo-style image: one plain ceramic cup on a table; no text or people.",
       "request": "Make it better.",
       "expected_route": "clarification",
       "pass_if": [
@@ -182,7 +182,7 @@
       "id": "P3-S14",
       "category": "ambiguous_broken",
       "fixture": "part3_agents/data/fixtures/unreadable_blurred_label.png",
-      "fixture_spec": "Original deliberately blurred photo: a product label whose text cannot be read reliably by a human at normal zoom.",
+      "fixture_spec": "Original synthetic deliberately blurred photo-style image: a product label whose text cannot be read reliably by a human at normal zoom.",
       "request": "What exact words are written on this label?",
       "expected_route": "vision_only_uncertain",
       "pass_if": [

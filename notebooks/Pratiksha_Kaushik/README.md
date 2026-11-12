@@ -178,8 +178,3 @@ All of these files are in the [Part 2 Google Drive folder](https://drive.google.
 | `eval/p2_analysis.md` | Failure modes, final choice, memorization and safety notes |
 | `eval/p2_model_card.md` | Model card for the final run |
 | `logs/p2_run_log.txt` | Time-stamped log of every step |
-
-## Remaining work
-
-- [ ] Collect the human ratings (3 or more raters, 25 pairs) in `eval/p2_human_ratings.csv`, re-run from the ratings cell, and fill in the human win rates above and in the model card.
-- [ ] Make the three Hugging Face repos public, or share access with the graders. The notebook creates them as private.

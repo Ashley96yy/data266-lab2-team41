@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "set_id": "p3_primary_15",
+  "seed": 266,
+  "fixture_status": "pending_preparation_and_hashes",
+  "scored_results": null,
+  "domain_model_id": "PratikshaK-1/naruto-sd15-lora-r32",
+  "cases": [
+    {
+      "id": "P3-S01",
+      "category": "caption_visual_question",
+      "fixture": "part3_agents/data/fixtures/desk_note.png",
+      "fixture_spec": "Original photo: one laptop, one white mug, and a paper card visibly reading DATA 266 on a desk; no people.",
+      "request": "Caption this image in one sentence.",
+      "vision_questions": ["What objects are on the desk?", "What text is on the paper card?"],
+      "expected_route": "vision_only",
+      "pass_if": [
+        "Caption correctly mentions the desk, laptop, and mug without inventing people or extra objects.",
+        "Vision output answers both supplied questions and transcribes DATA 266 correctly.",
+        "No prompt-engineering, image-generation, or critique agent is invoked."
+      ]
+    },
+    {
+      "id": "P3-S02",
+      "category": "caption_visual_question",
+      "fixture": "part3_agents/data/fixtures/bicycle_green_light.png",
+      "fixture_spec": "Original photo: exactly one red bicycle at a crossing and a clearly visible green traffic light; no other bicycles.",
+      "request": "What color is the traffic light in this picture?",
+      "vision_questions": ["What color is the traffic light?", "How many bicycles are visible?"],
+      "expected_route": "vision_only",
+      "pass_if": [
+        "Answer says the light is green and the vision record answers both questions, including one bicycle.",
+        "Answer does not add an unsupported claim about whether crossing is safe.",
+        "No image is generated."
+      ]
+    },
+    {
+      "id": "P3-S03",
+      "category": "caption_visual_question",
+      "fixture": "part3_agents/data/fixtures/fruit_sale_card.png",
+      "fixture_spec": "Original photo: a bowl containing exactly two apples and one banana beside a card visibly reading SALE; no other fruit.",
+      "request": "How many apples are there, and what word is written on the card?",
+      "vision_questions": ["How many apples are visible?", "What word is on the card?"],
+      "expected_route": "vision_only",
+      "pass_if": [
+        "Answer gives two apples and transcribes SALE exactly.",
+        "Vision output answers both supplied questions without inventing additional fruit.",
+        "No image is generated."
+      ]
+    },
+    {
+      "id": "P3-S04",
+      "category": "style_change",
+      "fixture": "part3_agents/data/fixtures/red_bicycle_basket.png",
+      "fixture_spec": "Original photo: one red bicycle with a front basket parked against a plain wall; no rider.",
+      "request": "Turn this into a watercolor painting, keeping the red bicycle and its basket.",
+      "expected_route": "style_change_img2img",
+      "pass_if": [
+        "Output has a visibly watercolor-like treatment.",
+        "Exactly one bicycle remains, recognizably red, with its front basket retained.",
+        "The trace records the prompt, model, seed, steps, critique decision, and no more than two revisions."
+      ]
+    },
+    {
+      "id": "P3-S05",
+      "category": "style_change",
+      "fixture": "part3_agents/data/fixtures/lake_mountains.png",
+      "fixture_spec": "Original landscape photo: a lake in the foreground and two mountains behind it; no people or buildings.",
+      "request": "Render this lake and mountain scene as a black-and-white ink sketch without adding buildings.",
+      "expected_route": "style_change_img2img",
+      "pass_if": [
+        "Output is recognizably a monochrome ink sketch.",
+        "Lake and two-mountain composition remains recognizable; no building is added.",
+        "The generation and critique agents run and the trace records their decisions."
+      ]
+    },
+    {
+      "id": "P3-S06",
+      "category": "style_change",
+      "fixture": "part3_agents/data/fixtures/toy_robot.png",
+      "fixture_spec": "Original photo: one small silver toy robot standing on a table, with two visible arms and no people.",
+      "request": "Make the toy robot look like a clay stop-motion character while keeping its pose and two arms.",
+      "expected_route": "style_change_img2img",
+      "pass_if": [
+        "Output has a visible clay or stop-motion material appearance.",
+        "One robot, its standing pose, and two arms remain recognizable.",
+        "The output is checked by the critique agent and no more than two revisions occur."
+      ]
+    },
+    {
+      "id": "P3-S07",
+      "category": "edit_enhance",
+      "fixture": "part3_agents/data/fixtures/dark_cat_window.png",
+      "fixture_spec": "Original underexposed photo: one cat sitting beside a window; the cat is visible but dark, with no other animals.",
+      "request": "Brighten this photo so the cat is easier to see, without changing the cat or the window.",
+      "expected_route": "enhancement",
+      "pass_if": [
+        "Cat details are more visible than in the input without severe blown-out highlights.",
+        "Exactly one cat and the window remain; no new animal or object is introduced.",
+        "The trace records an enhancement operation and an output-safety check."
+      ]
+    },
+    {
+      "id": "P3-S08",
+      "category": "edit_enhance",
+      "fixture": "part3_agents/data/fixtures/yellow_cast_tea_mug.png",
+      "fixture_spec": "Original indoor photo: one white ceramic mug labeled TEA, with a strong yellow light cast; the label remains legible.",
+      "request": "Correct the yellow color cast but preserve the mug and the word TEA.",
+      "expected_route": "enhancement",
+      "pass_if": [
+        "The color cast is reduced and the mug appears closer to neutral white.",
+        "The mug remains one mug and its TEA label stays legible and unchanged.",
+        "The result is reviewed by the critique agent rather than accepted without inspection."
+      ]
+    },
+    {
+      "id": "P3-S09",
+      "category": "edit_enhance",
+      "fixture": "part3_agents/data/fixtures/noisy_garden_path.png",
+      "fixture_spec": "Original mildly noisy photo: a garden path between two flower beds; no people, animals, or signs.",
+      "request": "Reduce the visible noise while keeping the path and flowers in place.",
+      "expected_route": "enhancement",
+      "pass_if": [
+        "Visible noise is reduced without an obviously blurred or destroyed scene.",
+        "The central path and both flower beds remain recognizable; no people or signs are added.",
+        "Generation settings, timing, and critique outcome appear in the JSON trace."
+      ]
+    },
+    {
+      "id": "P3-S10",
+      "category": "domain_style",
+      "fixture": "part3_agents/data/fixtures/explorer_blue_scarf.png",
+      "fixture_spec": "Original team-created drawing: one fictional adult explorer wearing a blue scarf, standing in front of trees; not a real person's portrait.",
+      "request": "Transform this fictional explorer into a Naruto-inspired anime style, preserving the blue scarf and single character.",
+      "expected_route": "domain_style_generation",
+      "pass_if": [
+        "Trace identifies the team Part 2 Hugging Face LoRA and its resolved revision, not just the base model.",
+        "Output shows a recognizable anime treatment while retaining one character and a blue scarf.",
+        "Prompt, seed, steps, safety result, and critique decision are recorded."
+      ]
+    },
+    {
+      "id": "P3-S11",
+      "category": "domain_style",
+      "fixture": "part3_agents/data/fixtures/village_red_bridge.png",
+      "fixture_spec": "Original team-created drawing: a small village street with a red footbridge over a stream; no people or text.",
+      "request": "Make this village and red bridge look like a Naruto-inspired anime background; keep the bridge and stream.",
+      "expected_route": "domain_style_generation",
+      "pass_if": [
+        "The Part 2 LoRA is loaded or confirmed active and its model revision is recorded.",
+        "Output has an anime-background appearance and still shows a red bridge over a stream.",
+        "Critique checks prompt match and output safety before acceptance."
+      ]
+    },
+    {
+      "id": "P3-S12",
+      "category": "domain_style",
+      "fixture": "part3_agents/data/fixtures/two_adventurers_red_blue.png",
+      "fixture_spec": "Original team-created drawing: exactly two fictional adventurers standing side by side, one in a red coat and one in a blue coat; no real people.",
+      "request": "Convert these two adventurers to a Naruto-inspired anime style while preserving both people and their red-versus-blue clothing.",
+      "expected_route": "domain_style_generation",
+      "pass_if": [
+        "The team Part 2 LoRA, not an unrelated style model, is used and recorded in the trace.",
+        "Output contains two distinct figures with the red-versus-blue clothing distinction.",
+        "The critique agent gives a concrete revision instruction if that distinction is lost, with at most two revisions."
+      ]
+    },
+    {
+      "id": "P3-S13",
+      "category": "ambiguous_broken",
+      "fixture": "part3_agents/data/fixtures/plain_cup.png",
+      "fixture_spec": "Original photo: one plain ceramic cup on a table; no text or people.",
+      "request": "Make it better.",
+      "expected_route": "clarification",
+      "pass_if": [
+        "System asks what kind of change the user wants or offers concrete options without choosing one silently.",
+        "No image is generated before clarification.",
+        "A JSON trace records the ambiguity and the user-facing response without a crash."
+      ]
+    },
+    {
+      "id": "P3-S14",
+      "category": "ambiguous_broken",
+      "fixture": "part3_agents/data/fixtures/unreadable_blurred_label.png",
+      "fixture_spec": "Original deliberately blurred photo: a product label whose text cannot be read reliably by a human at normal zoom.",
+      "request": "What exact words are written on this label?",
+      "expected_route": "vision_only_uncertain",
+      "pass_if": [
+        "System says the text cannot be read reliably and asks for a clearer image rather than inventing words.",
+        "No image is generated and no guessed transcription is presented as fact.",
+        "The trace records a clear low-quality-input outcome without a crash."
+      ]
+    },
+    {
+      "id": "P3-S15",
+      "category": "ambiguous_broken",
+      "fixture": "part3_agents/data/fixtures/corrupt_image.png",
+      "fixture_spec": "A non-empty file with a .png extension containing invalid image bytes; deliberately not decodable.",
+      "request": "Caption this image.",
+      "expected_route": "input_error",
+      "pass_if": [
+        "System returns a clear invalid-image message and does not crash or hang.",
+        "No vision or generation model is given undecoded bytes as if they were a valid image.",
+        "A JSON trace records the input error and elapsed time."
+      ]
+    }
+  ]
+}

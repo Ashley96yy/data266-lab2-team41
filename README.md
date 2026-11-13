@@ -58,3 +58,7 @@ Small source files, evaluation summaries, configuration files, and trace metadat
 ## Status
 
 The repository follows the required shared structure for all three parts. Part-specific instructions and pinned dependency versions will be completed as the implementation develops.
+
+## Part 3 continuation
+
+Generation, two-image critique, bounded orchestration, Gradio, and evaluation helpers are implemented. See [Windows runbook and validation limits](eval/PART3_IMPLEMENTATION.md). Install `requirements-part3.txt` in the existing CUDA environment. CPU tests and UI construction do not constitute the frozen model evaluation; real GPU results remain pending.

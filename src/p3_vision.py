@@ -143,6 +143,7 @@ def parse_vision_output(
 def load_qwen_vision(
     model_id: str = VISION_MODEL_ID,
     device: str = "cuda:0",
+    *, revision: str | None = None,
 ) -> tuple[Any, Any]:
     """Load the existing Part 1 Qwen VLM family when a CUDA GPU is available."""
     import torch
@@ -157,12 +158,14 @@ def load_qwen_vision(
     )
     processor = AutoProcessor.from_pretrained(
         model_id,
+        revision=revision,
         min_pixels=VISION_MIN_PIXELS,
         max_pixels=VISION_MAX_PIXELS,
         use_fast=False,
     )
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         model_id,
+        revision=revision,
         dtype=dtype,
         attn_implementation="sdpa",
     ).to(device)
@@ -219,6 +222,7 @@ def run_qwen_vision(
     return {
         **observation,
         "model_id": model.config.name_or_path,
+        "model_revision": getattr(model.config, "_commit_hash", None),
         "input_tokens": input_tokens,
         "generated_tokens": int(generated_ids.shape[1]),
         "elapsed_seconds": elapsed_seconds,

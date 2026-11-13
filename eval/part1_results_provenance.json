@@ -1,0 +1,20 @@
+{
+  "inference_commit": "55942bef55fcf15057911f6b33e93eae028d28a3",
+  "run_path": "C:\\Users\\endle\\Desktop\\lab2\\data266-lab2-team41-main\\data266-lab2-team41-main\\.runtime\\part1\\20261113T220851Z",
+  "run_artifact_hashes": {
+    "execution_manifest.json": "bf2f17a2b8c30a4557ff1a5212a3257945439bd74a4e8463576dfeba5c50d323",
+    "gpu_memory.json": "32d576c23709567e0746d242fdc550e05096b2297e88dfd1e954676100860599",
+    "p1_run_audit.json": "c544e02fa5f1bd75cf1da061c44b8d82e336f0cd3c5fe32660d46997f4369b7f",
+    "evaluation/dense_only.json": "0ce41e88fed8462f8d06363cf1462c4c01a134b423595f841f471cb753abcc01",
+    "evaluation/dense_only.review.ai.json": "013021fd483e455fcd60b77f414d23d96cd9161819930fee77a554213007bc7f",
+    "evaluation/dense_only.review.json": "85e7c697a427afcb71b010c72b6d89f8e2cf5014f0c2c45aa003bbdba2edc726",
+    "evaluation/final.json": "008a764d19538892d7eb6ee73ad2f3c7b0473a48f2dae7dc3dff63fe51572736",
+    "evaluation/final.review.ai.json": "e2b9603ae8f66ef4413186f4837d725e24a67f0ccb929a588e0f3eec1734b60b",
+    "evaluation/final.review.json": "e71d01da2f99a066de594a3952063bcb4251c75562321c5f4eec49461fd6ec50"
+  },
+  "reviews": "Provisional AI source-content review only. No human groundedness labels.",
+  "archive_sha256": "85fd15395ef03b2774970b8ccff60842e6bbc3a55e67d6b42a3ea1df4ad5a7d6",
+  "human_ratings_pending": true,
+  "actual_t4_p100_verified": false,
+  "kaggle_submission_performed": false
+}

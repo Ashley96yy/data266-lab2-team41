@@ -1,0 +1,34 @@
+[
+  {
+    "mode": "dense_only",
+    "denominator": 25,
+    "answer_correct_out_of_25": 6,
+    "answer_correctness": 0.24,
+    "retrieval_recall_at_5": 0.4722222222222222,
+    "retrieval_denominator": 24,
+    "citation_accuracy": 0.140625,
+    "citation_denominator": 64,
+    "groundedness_mean": null,
+    "groundedness_agree_within_one": null,
+    "median_seconds_per_question": 6.108288099996571,
+    "content_review_complete": true,
+    "two_member_review_complete": false,
+    "content_review_method": "AI-assisted manual comparison with original course PDF text and rendered charts. Correctness checks complete requested content; each cited page is checked for its attributed material claims, with unsupported computed comparisons failing support. Provisional pending team confirmation; not either member human groundedness rating."
+  },
+  {
+    "mode": "final",
+    "denominator": 25,
+    "answer_correct_out_of_25": 18,
+    "answer_correctness": 0.72,
+    "retrieval_recall_at_5": 0.7638888888888888,
+    "retrieval_denominator": 24,
+    "citation_accuracy": 0.4897959183673469,
+    "citation_denominator": 49,
+    "groundedness_mean": null,
+    "groundedness_agree_within_one": null,
+    "median_seconds_per_question": 0.03925349999917671,
+    "content_review_complete": true,
+    "two_member_review_complete": false,
+    "content_review_method": "AI-assisted manual comparison with original course PDF text and rendered charts. Correctness checks complete requested content; each cited page is checked for its attributed material claims, with unsupported computed comparisons failing support. Provisional pending team confirmation; not either member human groundedness rating."
+  }
+]

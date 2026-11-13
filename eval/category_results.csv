@@ -1,0 +1,13 @@
+category,mode,sum,count
+facts_tables,dense_only,4,5
+figures,dense_only,0,6
+two_sources,dense_only,0,3
+multi_turn,dense_only,1,5
+conflicts_revisions,dense_only,0,3
+safety_absence,dense_only,1,3
+facts_tables,final,5,5
+figures,final,2,6
+two_sources,final,2,3
+multi_turn,final,5,5
+conflicts_revisions,final,1,3
+safety_absence,final,3,3

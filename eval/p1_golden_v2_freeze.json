@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-11-13T21:24:35.267763+00:00",
+  "candidate_protocol_commit": "3a68cbe19af17b13dfd392f2d6c6736708ff6fa9",
+  "specification_sha256": "acef085a2cf48ce26d80025fead37d4f4e8c8a046df0eab61acec820c0e7f995",
+  "canonical_specification_sha256": "e4cf051593f3665cec1e411b5b745c64e33b92e9369d25c508f71e6fa01e1763",
+  "coverage": {
+    "facts_tables": 5,
+    "figures": 6,
+    "two_sources": 3,
+    "multi_turn": 5,
+    "conflicts_revisions": 3,
+    "safety_absence": 3
+  },
+  "original_inputs": {
+    "source": "private Kaggle dataset yuyaoding/data266-lab2-part1-inputs version 1",
+    "archive_sha256": "dddbcb4e0a606e517bfffc96263034abd8b0638952bcab3fe74742303e172679",
+    "files": {
+      "Document.pdf": "ffb663c2a7e93abd12f4e9e3f5d61782e949f5e63250920b77bfb1343a20bcda",
+      "Document2_Supplement_A_Outturns_2011-2013.pdf": "2220bbaed13e0931ab4a511f3c7d0ed62379e9aaea4dd02f2e2d6f659d69215f",
+      "Document3_Briefing_B_Labour_Prices_Policy.pdf": "16a0d8016180de2732c37cf4569b7b1b1ba310b298b665c7b8969c2c3dd74d9c",
+      "Questions.csv": "2343f9bd1df41ae5ab778869a57b4a1f0c7f9c55af4cb83167c973de5ccd291d",
+      "kb_manifest.json": "3c5a914ecad22a9bbe69f4e32120bb1f31bed663c4a6f6a99f669201a42f1a46",
+      "sample_submission.csv": "457dae24f9bfebdd7569bd9c60b14cb58564e007a0560442e4727f147696b967",
+      "validate_submission.py": "51f32d0e61a0ecd1a8fc0184c93cea628ce32164a2cba12bdfa22dd53c4a0945"
+    }
+  },
+  "reviewed_by_team": false
+}

@@ -13,6 +13,9 @@ from copy import deepcopy
 import re
 
 import pdfplumber
+from .p1_labels import find_explicit_visual_labels
+from .p1_intent import (requested_document_scope, requested_periods,
+                       requires_explanation_or_multiple_tasks, is_counterfactual_comparison)
 
 
 NOT_FOUND_ANSWER = (
@@ -41,7 +44,7 @@ ENTITY_PATTERNS = (
 METRIC_PATTERNS = (
     (
         "labour force participation rate",
-        re.compile(r"\blabou?r[-\s]+force\s+participation(?:\s+rate)?\b", re.I),
+        re.compile(r"\b(?:labou?r[-\s]+force\s+)?participation(?:\s+rate)?\b", re.I),
     ),
     (
         "budget balance",
@@ -53,7 +56,8 @@ METRIC_PATTERNS = (
         "output growth",
         re.compile(
             r"\b(?:output[-\s]+(?:growth|change|contract(?:ion|ed)?)|"
-            r"GDP[-\s]+growth|economic[-\s]+growth)\b",
+            r"GDP[-\s]+growth|economic[-\s]+growth|growth(?:\s+rate)?|"
+            r"(?:output|economy|economies)\s+(?:fell|declined|decreased|dropped|grew|rose|increased|contract(?:ed)?|shrank|expanded))\b",
             re.I,
         ),
     ),
@@ -479,7 +483,7 @@ def parse_query_frame(question, conversation_context=None):
         raise ValueError("question must be non-empty text")
     entities = _mentions(question, ENTITY_PATTERNS)
     metrics = _mentions(question, METRIC_PATTERNS)
-    years = list(dict.fromkeys(YEAR_RE.findall(question)))
+    years = requested_periods(question)
 
     recent_questions = []
     if isinstance(conversation_context, dict):
@@ -498,15 +502,21 @@ def parse_query_frame(question, conversation_context=None):
         if not metrics:
             metrics = _mentions(earlier, METRIC_PATTERNS)
         if not years:
-            years = list(dict.fromkeys(YEAR_RE.findall(earlier)))
+            years = requested_periods(earlier)
         if entities and metrics and years:
             break
 
     folded = _clean(question).casefold()
-    if "forecast error" in folded or "outturn minus" in folded:
+    if ("forecast error" in folded or "outturn minus" in folded
+        or ('forecast' in folded and re.search(r'\b(?:actual|outturn)\b',folded)
+            and re.search(r'\b(?:differ\w*|compar\w*|supersed\w*)\b',folded))):
         operation = "forecast_error"
     elif any(term in folded for term in ("agree", "disagree", "conflict")):
         operation = "source_agreement"
+    elif len(years) == 2 and any(
+        term in folded for term in ("compare", "compared", "higher", "lower", "than")
+    ):
+        operation = "period_comparison"
     elif len(years) >= 2 and any(
         term in folded for term in ("between", "from", "change", "rise", "rose", "fall", "fell")
     ):
@@ -516,6 +526,13 @@ def parse_query_frame(question, conversation_context=None):
         for term in (
             "by how many",
             "by how much",
+            "how much",
+            "compare",
+            "compared",
+            "worse",
+            "better",
+            "higher",
+            "lower",
             "difference",
             "outperform",
             "below",
@@ -544,10 +561,7 @@ def parse_query_frame(question, conversation_context=None):
     else:
         requested_kind = None
 
-    requested_docs = [
-        f"DOC{match.group(1)}"
-        for match in re.finditer(r"\b(?:document|doc)\s*([1-3])\b", question, re.I)
-    ]
+    requested_docs = requested_document_scope(question)
     labels = [match.group(0) for match in VISUAL_LABEL_RE.finditer(question)]
     return {
         "entities": entities,
@@ -735,6 +749,8 @@ def _forecast_error_answer(frame, selected):
         f"{_value_text(forecast['value'])} forecast for {entity} {metric} "
         f"in {period}."
     )
+    if difference:
+        answer += f" The outturn was {abs(difference):.1f} percentage points {'lower' if difference < 0 else 'higher'} than the forecast."
     supporting = [outturn, forecast]
     return {
         "answer": answer,
@@ -834,6 +850,89 @@ def _difference_answer(frame, selected):
     }, supporting
 
 
+def _period_comparison_answer(frame, selected):
+    if len(frame["years"]) != 2 or len(frame["entities"]) != 1 or len(frame["metrics"]) != 1:
+        return None
+    grouped = _group_by_key(selected)
+    keys = [(frame["entities"][0], frame["metrics"][0], year) for year in frame["years"]]
+    if not all(key in grouped for key in keys):
+        return None
+    first, second = (_single_current_fact(grouped[key]) for key in keys)
+    if first is None or second is None:
+        return None
+    difference = first["value"] - second["value"]
+    relation = "higher than" if difference > 0 else "lower than" if difference < 0 else "equal to"
+    supporting = [first, second]
+    prefix = "Under the session assumption, " if _answer_status(supporting) == "session_override" else ""
+    answer = (f"{prefix}{first['entity']} {first['metric']} in {first['period']} "
+              f"was {_value_text(first['value'])}, {abs(difference):.1f} percentage points "
+              f"{relation} {_value_text(second['value'])} in {second['period']}.")
+    return {"answer": answer, "status": _answer_status(supporting),
+            "citations": _citations(supporting), "figure_references": _figures(supporting)}, supporting
+
+
+def _false_growth_premise(question, frame, selected):
+    # Check a directional premise only when it resolves to one unambiguous
+    # documented observation. A user's explicit counterfactual is not a premise error.
+    folded = question.casefold()
+    if not re.search(r"\b(?:why|explain)\b", folded) or re.search(r"\b(?:assume|assumption|suppose|hypothetical)\b", folded):
+        return None
+    if frame['metrics'] != ['output growth'] or len(frame['entities']) != 1 or len(frame['years']) != 1:
+        return None
+    grouped = _group_by_key(selected)
+    if len(grouped) != 1:
+        return None
+    fact = _single_current_fact(next(iter(grouped.values())))
+    if fact is None or fact['value_kind'] == 'session_override':
+        return None
+    negative = bool(re.search(r"\b(?:contract(?:ed|ion)?|shrank|negative\s+growth|output\s+fell)\b", folded))
+    positive = bool(re.search(r"\b(?:grew|expanded|positive(?:ly)?\s+gr(?:ew|owth))\b", folded))
+    contradicted = (negative and not positive and fact['value'] >= 0) or (positive and not negative and fact['value'] <= 0)
+    if not contradicted:
+        return None
+    direction = 'positive growth' if fact['value'] > 0 else 'a contraction' if fact['value'] < 0 else 'zero growth'
+    answer = f"The premise is false: {fact['entity']} output growth was {_value_text(fact['value'])} in {fact['period']}, indicating {direction}."
+    return {'answer': answer, 'status': 'false_premise', 'citations': _citations([fact]),
+            'figure_references': _figures([fact])}, [fact]
+
+
+def _same_period_session_comparison(question, frame, selected):
+    if not is_counterfactual_comparison(question) or len(_group_by_key(selected)) != 1:
+        return None
+    assumed=[f for f in selected if f['value_kind']=='session_override']
+    documents=[f for f in selected if f['doc_id']!='SESSION']
+    if len(assumed)!=1 or not documents:
+        return None
+    document=_single_current_fact(documents)
+    if document is None:
+        return None
+    assumption=assumed[0];difference=assumption['value']-document['value']
+    relation='higher than' if difference>0 else 'lower than' if difference<0 else 'equal to'
+    text=(f"Under the session assumption, {assumption['entity']} {assumption['metric']} "
+          f"in {assumption['period']} is {_value_text(assumption['value'])}, "
+          f"{abs(difference):.1f} percentage points {relation} the published "
+          f"{_value_text(document['value'])}. The document value remains unchanged.")
+    return {'answer':text,'status':'session_override','citations':_citations([document]),
+            'figure_references':_figures([document])},[assumption,document]
+
+
+def _append_document_values_for_assumptions(resolved, selected):
+    answer,supporting=resolved
+    if answer['status']!='session_override':
+        return resolved
+    for assumption in [f for f in supporting if f['value_kind']=='session_override']:
+        documents=[f for f in selected if f['doc_id']!='SESSION' and
+                   (f['entity'],f['metric'],f['period'])==(assumption['entity'],assumption['metric'],assumption['period'])]
+        document=_single_current_fact(documents) if documents else None
+        if document is not None and document not in supporting:
+            answer['answer']+=(f" The published {document['entity']} {document['metric']} "
+                               f"for {document['period']} remains {_value_text(document['value'])}.")
+            supporting.append(document)
+    answer['citations']=_citations(supporting)
+    answer['figure_references']=_figures(supporting)
+    return answer,supporting
+
+
 def _precise_absence(frame, structured):
     if not (
         len(frame["entities"]) == 1
@@ -895,6 +994,10 @@ def _session_facts(conversation_context):
 
 def resolve_structured_query(question, structured, conversation_context=None):
     """Return a generic structured answer or None for VLM/text reasoning."""
+    if any(label.startswith('Figure ') for label in find_explicit_visual_labels(question)):
+        # Table/narrative observations cannot establish a named chart reading.
+        # Keep the exact visual route and let the VLM inspect that chart.
+        return None
     frame = parse_query_frame(question, conversation_context)
     selected = _select_facts(frame, structured)
     if not frame["metrics"]:
@@ -910,7 +1013,15 @@ def resolve_structured_query(question, structured, conversation_context=None):
             and (not frame["metrics"] or fact["metric"] in frame["metrics"])
             and (not frame["years"] or fact["period"] in frame["years"])
         )
-    if frame["operation"] == "forecast_error":
+    premise_resolution = _false_growth_premise(question, frame, selected)
+    same_period_session = _same_period_session_comparison(question, frame, selected)
+    if premise_resolution is not None:
+        resolved = premise_resolution
+    elif same_period_session is not None:
+        resolved = same_period_session
+    elif frame["operation"] == "period_comparison":
+        resolved = _period_comparison_answer(frame, selected)
+    elif frame["operation"] == "forecast_error":
         resolved = _forecast_error_answer(frame, selected)
     elif frame["operation"] == "change":
         resolved = _change_answer(frame, selected)
@@ -925,6 +1036,18 @@ def resolve_structured_query(question, structured, conversation_context=None):
     else:
         resolved = _direct_answer(frame, selected)
 
+    if resolved is not None:
+        resolved = _append_document_values_for_assumptions(resolved, selected)
+    full_answer_needed = requires_explanation_or_multiple_tasks(question)
+    if full_answer_needed and not (resolved is not None and resolved[0]['status'] in {'false_premise','session_override'}):
+        # A lookup is not a complete answer to a request for an explanation or
+        # another task. Supply source facts to the VLM instead of ending early.
+        for metric in frame['metrics']:
+            if not any(f['metric']==metric for f in selected):
+                selected.extend(f for f in structured['facts'] if f['metric']==metric
+                                and (not frame['entities'] or f['entity'] in frame['entities']))
+        return {'answer':None,'supporting_facts':deepcopy([f for f in selected if f['doc_id']!='SESSION'][:16]),
+                'query_frame':frame,'evidence_only':True}
     if resolved is None and _precise_absence(frame, structured):
         return {
             "answer": {

@@ -16,6 +16,20 @@ Frozen SHA-256 checksums:
 
 Safety invariant: no golden answer cites `DOC3:p7` or `Figure C-1`.
 
+## Saved Part 1 results
+
+The two completed Colab evaluations are preserved in
+[`part1/results/`](part1/results/):
+
+- [`round1_colab_before_schema_fix/`](part1/results/round1_colab_before_schema_fix/)
+- [`round2_colab_20261114T032206Z/`](part1/results/round2_colab_20261114T032206Z/)
+
+These directories contain generated answers, diagnostics, summaries, and
+provenance. The saved result files were moved without content changes. The
+[comparison notebook](../notebooks/Yuyao_Ding/p1_round2_comparison.ipynb) reads
+these paths; no new inference is needed to inspect the completed results.
+Human answer, citation-support, and groundedness reviews remain pending.
+
 ## Frozen baseline record
 
 The first evaluation of the fixed candidate was run at commit `c78d7f2`

@@ -17,6 +17,7 @@ This repository contains the shared implementation and report materials for DATA
 │       ├── p1/              # retained Part 1 development notebooks
 │       └── p2_v4.ipynb
 ├── eval/
+│   └── part1/results/           # preserved Part 1 run results
 ├── traces/
 ├── src/
 ├── scripts/                     # one-off runners and review tools
@@ -25,7 +26,7 @@ This repository contains the shared implementation and report materials for DATA
 └── .gitignore
 ```
 
-- `eval/` stores the golden set, prompts, and evaluation scenarios.
+- `eval/` stores the golden set, prompts, evaluation scenarios, and saved Part 1 results under `eval/part1/results/`.
 - `traces/` contains redacted JSON traces for all 40 Part 3 T4 evaluation requests. The complete raw run archive, private fixtures, and generated images remain outside GitHub.
 - `src/` contains reusable helpers shared by the notebooks.
 - `scripts/` contains executable helpers, including the preserved Part 1 Colab rerun script.
@@ -70,7 +71,7 @@ The repository keeps the three parts in the shared notebook structure. Part-spec
 
 ## Part 1 second Colab evaluation
 
-The second real Tesla T4 run and first-run comparison are preserved under `outputs/part1/`. See the [round 2 protocol](eval/PART1_ROUND2.md) and [executed comparison notebook](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb). The final cell of `p1_rag.ipynb` records the improved run; the original earlier outputs remain intact. The preserved helper is now at [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p1_colab_schema_fix_and_rerun.py). In the recorded upload-to-Colab layout, that file was placed at `/content/p1_colab_schema_fix_and_rerun.py`, which is the path saved in the executed notebook. This directory cleanup does not require another GPU run. Human metrics and final Git provenance are still pending.
+The second real Tesla T4 run and first-run comparison are preserved under [`eval/part1/results/`](eval/part1/results/). See the [round 2 protocol](eval/PART1_ROUND2.md) and [executed comparison notebook](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb). The final cell of `p1_rag.ipynb` records the improved run; the original earlier outputs remain intact. The preserved helper is now at [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p1_colab_schema_fix_and_rerun.py). In the recorded upload-to-Colab layout, that file was placed at `/content/p1_colab_schema_fix_and_rerun.py`, which is the path saved in the executed notebook. This directory cleanup does not require another GPU run. Human metrics and final Git provenance are still pending.
 
 ## Part 3 Colab T4 run
 

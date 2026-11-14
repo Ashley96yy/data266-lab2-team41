@@ -1,7 +1,8 @@
-# Part 3 implementation and existing-environment runbook
+# Part 3 implementation and runbook
 
-Use the current working Windows environment. Do not reinstall the root
-requirements or replace CUDA/PyTorch. The fixed private input bundle stays under
+Part 3's completed course-compatible GPU run used Colab Tesla T4. Do not
+reinstall the root requirements or replace a working CUDA/PyTorch environment.
+The fixed private input bundle stays under
 ignored data/part3; generated images, model caches and raw traces stay under
 ignored .runtime. Do not publish the consented portrait.
 
@@ -27,7 +28,8 @@ without the quality loop. Unresolved quality outcomes remain revision_limit.
 
 ## Run and validate
 
-From the repository root, with the existing .venv selected:
+For optional local Windows smoke checks, from the repository root with its
+existing `.venv` selected:
 
 ```powershell
 $env:PYTHONUTF8='1'

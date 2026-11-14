@@ -9,8 +9,7 @@ This repository contains the shared implementation and report materials for DATA
 ├── README.md
 ├── requirements.txt
 ├── requirements-part3.txt
-├── config/
-│   └── windows/                 # validated environment snapshots
+├── config/                      # optional environment records
 ├── notebooks/
 │   ├── Yuyao_Ding/
 │   │   ├── p1_rag.ipynb
@@ -31,10 +30,12 @@ This repository contains the shared implementation and report materials for DATA
 - `traces/` stores the Part 3 JSON traces.
 - `src/` contains reusable helpers shared by the notebooks.
 - `scripts/` contains executable helpers, including the preserved Part 1 Colab rerun script.
-- `config/windows/` contains the Part 1 and Part 3 Windows environment snapshots and constraints. These are provenance records, not instructions to replace a working CUDA/PyTorch installation.
+- `config/` contains optional environment records from local development. The course GPU evidence is in the executed notebooks and measured reports.
 - The member folders contain the primary notebooks and retained development versions. The folder names organize files; both members contribute to all three parts. Record each person's work in `CONTRIBUTIONS.md`.
 
 ## Setup
+
+Course-required GPU work must run on one 16 GB GPU (Kaggle T4/P100 or Colab T4). The executed T4 runs and their measured results are linked below.
 
 For a fresh Part 1 environment, create and activate a Python environment, then install the pinned Part 1 dependencies in `requirements.txt`:
 
@@ -42,7 +43,7 @@ For a fresh Part 1 environment, create and activate a Python environment, then i
 python -m pip install -r requirements.txt
 ```
 
-Part 3 has separate dependencies in `requirements-part3.txt`. See its runbook before installing anything into an existing GPU environment. The historical Windows snapshots under `config/windows/` are not the default installation command.
+Part 3 has separate dependencies in `requirements-part3.txt`. See its runbook before installing anything into an existing GPU environment. The historical snapshots under `config/` are not the default installation command.
 
 Start Jupyter from the repository root:
 
@@ -72,6 +73,6 @@ The repository keeps the three parts in the shared notebook structure. Part-spec
 
 The second real Tesla T4 run and first-run comparison are preserved under `outputs/part1/`. See the [round 2 protocol](eval/PART1_ROUND2.md) and [executed comparison notebook](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb). The final cell of `p1_rag.ipynb` records the improved run; the original earlier outputs remain intact. The preserved helper is now at [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p1_colab_schema_fix_and_rerun.py). In the recorded upload-to-Colab layout, that file was placed at `/content/p1_colab_schema_fix_and_rerun.py`, which is the path saved in the executed notebook. This directory cleanup does not require another GPU run. Human metrics and final Git provenance are still pending.
 
-## Part 3 GPU development runs
+## Part 3 Colab T4 run
 
-The [executed Part 3 notebook](notebooks/Yuyao_Ding/p3_agents.ipynb) now records a real Colab Tesla T4 run from source commit `53c92a3`: the unchanged 15 scenarios in both modes and 10 red-team cases completed with zero program exceptions. Its [measured report](eval/PART3_T4_MEASURED_RESULTS.md) is calculated from the saved run records; the complete run archive remains private to the team. The earlier RTX 4090 [measured results](eval/PART3_LOCAL_RESULTS.md) and [Windows validation notes](eval/WINDOWS_GPU_VALIDATION.md) remain separate historical evidence. Operational completion and CLIP diagnostics are not human quality or safety scores. Both members' independent reviews remain pending. Keep the working Windows CUDA/PyTorch environment; do not reinstall the root requirements to start Part 3.
+The [executed Part 3 notebook](notebooks/Yuyao_Ding/p3_agents.ipynb) records a real Colab Tesla T4 run from source commit `53c92a3`: the unchanged 15 scenarios in both modes and 10 red-team cases completed with zero program exceptions. Its [measured report](eval/PART3_T4_MEASURED_RESULTS.md) is calculated from the saved run records; the complete run archive remains private to the team. Operational completion and CLIP diagnostics are not human quality or safety scores. Both members' independent reviews remain pending.

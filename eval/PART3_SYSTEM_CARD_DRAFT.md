@@ -70,6 +70,7 @@ Insert the notebook-generated per-case red-team observations here only after bot
 members independently inspect them. Operational refusal/block/error counts are not
 attack-success rates. Task success, human agreement, attack success and critic
 agreement remain pending until complete real reviews and documented adjudication.
-The RTX4090 allocator-budget run does not establish execution on an actual 16GB
-T4/P100. Both members' runs, meeting recordings, final report, artifact hosting,
-publication and final tag remain separate submission obligations.
+The earlier RTX 4090 allocator-budget run is separate from the completed Colab
+Tesla T4 execution recorded in the Part 3 notebook and measured T4 report.
+Both members' independent reviews, meeting recordings, final report, artifact
+hosting, publication and final tag remain separate submission obligations.

@@ -2,6 +2,9 @@
 
 Source commit: `bffe8bbc48b19dea73d7f0dd2f609f8d018af75a`. Host: NVIDIA GeForce RTX 4090.
 
+This is the earlier Windows development record. The later actual Tesla T4 run is
+reported separately in [PART3_T4_MEASURED_RESULTS.md](PART3_T4_MEASURED_RESULTS.md).
+
 This is a development rerun after documented implementation fixes, using the unchanged frozen cases. Flow completion and CLIP similarity are not human pass/fail labels. Both members must independently review the rubric outcomes; blank human metrics remain pending.
 
 | Measurement | With quality loop | Without quality loop | Red team |

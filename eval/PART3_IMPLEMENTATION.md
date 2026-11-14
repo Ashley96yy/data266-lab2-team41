@@ -70,6 +70,9 @@ steps, effective img2img strength, applied steps, LoRA weight and safety results
 The unchanged cases were used during development; disclose this rather than
 claiming an untouched holdout. Human metrics remain pending until real reviews.
 
-Actual execution on a 16GB T4/P100, both members' complete runs, recordings,
-their own IEEE report/system card, approved artifact hosting and the final tag
-remain required. A 14GiB allocator budget on RTX4090 is not actual T4/P100 proof.
+A completed Colab Tesla T4 execution from source commit `53c92a3` is recorded in
+`notebooks/Yuyao_Ding/p3_agents.ipynb` and `eval/PART3_T4_MEASURED_RESULTS.md`.
+The 15 paired scenarios and 10 red-team cases had zero execution errors. The
+earlier 14 GiB allocator budget on RTX 4090 remains separate historical evidence.
+Both members' independent reviews, recordings, their own IEEE report/system card,
+approved artifact hosting and the final tag remain required.

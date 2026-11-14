@@ -3,7 +3,9 @@
 The earlier snapshot below is historical. Use PART3_IMPLEMENTATION.md for the
 current runbook and PART3_LOCAL_RESULTS.md for the newest notebook-derived real
 GPU measurements. Source hashes and immutable-case hashes are in the preserved
-run manifest. Human scores and actual T4/P100 hardware verification remain pending.
+run manifest. This Windows run alone did not verify T4/P100 hardware; a later
+Colab Tesla T4 execution is recorded in `PART3_T4_MEASURED_RESULTS.md`. Human
+scores remain pending.
 No package was installed, removed or changed during this Part3 quality revision.
 
 # DATA266 Lab2 Part3 — Windows 实测记录

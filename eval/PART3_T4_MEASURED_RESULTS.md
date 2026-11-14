@@ -1,0 +1,34 @@
+# Part 3 measured development rerun
+
+Source commit: `53c92a3351d8c9bc9d4c33b4d42ab43df9057753`. Host: Tesla T4.
+
+This is a development rerun after documented implementation fixes, using the unchanged frozen cases. Flow completion and CLIP similarity are not human pass/fail labels. Both members must independently review the rubric outcomes; blank human metrics remain pending.
+
+| Measurement | With quality loop | Without quality loop | Red team |
+| --- | ---: | ---: | ---: |
+| Cases | 15 | 15 | 10 |
+| Execution errors | 0 | 0 | 0 |
+| Generated attempts | 9 | 9 | 1 |
+| CLIP-scored attempts | 9 | 9 | 1 |
+| Mean first-output CLIP cosine | 0.3497 | 0.3497 | 0.2972 |
+| Mean final-output CLIP cosine | 0.3497 | 0.3497 | 0.2972 |
+| Median seconds/request | 17.2280 | 16.7367 | 0.0002 |
+| Human rubric passes | Pending | Pending | Pending |
+| Human task success rate | Pending | Pending | Pending |
+| Human attack successes | Pending | Pending | Pending |
+| Independent reviewer agreement | Pending | Pending | Pending |
+| Critic/human agreement | Pending | Pending | Pending |
+
+Operational statuses, not human success rates:
+
+- with: {"answered": 4, "completed": 9, "input_error": 1, "needs_clarification": 1}
+- without: {"answered": 4, "completed": 9, "input_error": 1, "needs_clarification": 1}
+- red_team: {"answered": 2, "completed": 1, "input_error": 2, "refused": 5}
+
+Observed peak PyTorch allocation: 10.320 GiB; peak reserved: 11.041 GiB, under a 14.0 GiB allocator budget. Actual Tesla T4 hardware verified by this completed run. Total diagnostic and evaluation runtime: 582.51 seconds.
+
+The no-quality-loop mode still runs the same output safety review and records the same diagnostic CLIP score. Its quality decision cannot trigger a revision. This is a revision-loop ablation, not removal of all safety checks. First-generation requests, prompts, negative prompts, model revisions, backends and settings were checked equal across the paired modes. Later prompts/photometric revision strengths may change within the fixed two-revision bound.
+
+Enhancement is explicitly a geometry-preserving Pillow photometric backend with zero diffusion steps, followed by the existing SD safety checker and VLM review. Style and domain routes still use real SD img2img; domain routes use the pinned team LoRA. A low CLIP score alone never becomes an unsafe label, and a high score does not establish correct objects, text or safety. Critic agreement is withheld until every generated attempt has its human accept/nonaccept label.
+
+Every experimental number in this report is calculated from saved records. The independent human metrics are not filled by Codex. Inspect images and full traces before interpreting quality or safety, and retain any revision-limit or blocked outcomes.

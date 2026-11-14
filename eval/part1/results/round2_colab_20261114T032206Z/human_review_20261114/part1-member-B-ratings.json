@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "run_sha256": "1ba75f3bb6e9e2748fc510c87b1f969b5e56650f2c60b5e7899963daee80447b",
+  "mode": "final",
+  "member_label": "A",
+  "reviewer_name": "Yuyao Ding",
+  "independent_human_review": true,
+  "exported_at": "2026-11-14T18:46:55.722Z",
+  "records": [
+    {
+      "question_id": "P1V2-01",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-02",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-03",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-04",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-05",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-06",
+      "groundedness": 3,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-07",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-08",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-09",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-10",
+      "groundedness": 3,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-11",
+      "groundedness": 3,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-12",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-13",
+      "groundedness": 3,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-14",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-15",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-16",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-17",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-18",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-19",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-20",
+      "groundedness": 2,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-21",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-22",
+      "groundedness": 2,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-23",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-24",
+      "groundedness": 5,
+      "note": ""
+    },
+    {
+      "question_id": "P1V2-25",
+      "groundedness": 5,
+      "note": ""
+    }
+  ]
+}

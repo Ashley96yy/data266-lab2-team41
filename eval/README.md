@@ -28,7 +28,9 @@ These directories contain generated answers, diagnostics, summaries, and
 provenance. The saved result files were moved without content changes. The
 [comparison notebook](../notebooks/Yuyao_Ding/p1_round2_comparison.ipynb) reads
 these paths; no new inference is needed to inspect the completed results.
-Human answer, citation-support, and groundedness reviews remain pending.
+The [round-2 final-system groundedness ratings](part1/results/round2_colab_20261114T032206Z/human_review_20261114/)
+have been imported. Human answer-correctness and citation-support reviews remain
+pending; the supplied ratings do not score dense-only or earlier runs.
 
 ## Frozen baseline record
 

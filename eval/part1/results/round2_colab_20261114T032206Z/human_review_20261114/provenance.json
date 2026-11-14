@@ -1,0 +1,22 @@
+{
+  "original_review_hashes": {
+    "part1-member-A-ratings.json": "4b998dc5f9078f382b202f66e9b1f338a689c6bce96a537fd2f4209b4e282435",
+    "part1-member-B-ratings.json": "d4f5a23bab7357cf7694243faf4b76db63a3a21fa5a42974fdec655f57fe4ff9"
+  },
+  "source_prediction_file": "eval/part1/results/round2_colab_20261114T032206Z/golden_predictions.json",
+  "source_predictions_sha256": "be81e42d9b7dff813b26753b7fd88f1374259d4cba4fc7efcb9dd530ff574a0d",
+  "source_summary_sha256": "acd6bbcbbc76707201fe83815aa38cef65b230c892a8d47db7c6337b362cc611",
+  "recorded_original_run_sha256": "1ba75f3bb6e9e2748fc510c87b1f969b5e56650f2c60b5e7899963daee80447b",
+  "review_source_kind": "Projection of the saved round-2 final-system answers with original run identity supplied by summary.json; not a restored byte-identical original run file.",
+  "inference_source_commit": null,
+  "identity_correction": {
+    "file": "part1-member-B-ratings.json",
+    "original_reviewer_name": "Yuyao Ding",
+    "confirmed_reviewer_name": "Pratiksha Kaushik",
+    "authority": "User explicitly confirmed that Pratiksha Kaushik rated B independently and the name was entered incorrectly.",
+    "original_file_modified": false,
+    "scores_modified": false
+  },
+  "review_process": "Submitted files declare independent human review; provenance and structure are verified, not the review process itself.",
+  "metrics_boundary": "Groundedness only for the second Colab round final system; no new answer-correctness, citation-support, dense-only, or earlier-run human scores."
+}

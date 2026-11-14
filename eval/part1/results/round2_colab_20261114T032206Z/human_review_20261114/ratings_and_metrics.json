@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "source_run_sha256": "1ba75f3bb6e9e2748fc510c87b1f969b5e56650f2c60b5e7899963daee80447b",
+  "source_round": 2,
+  "source_gpu": "Tesla T4",
+  "reviewer_a_name": "Yuyao Ding",
+  "reviewer_b_name": "Pratiksha Kaushik",
+  "inference_rerun": false,
+  "metrics": {
+    "mode": "final",
+    "denominator": 25,
+    "answer_correct_out_of_25": null,
+    "answer_correctness": null,
+    "retrieval_recall_at_5": 0.7638888888888888,
+    "retrieval_denominator": 24,
+    "citation_accuracy": null,
+    "citation_denominator": 47,
+    "groundedness_mean": 4.44,
+    "groundedness_agree_within_one": 1,
+    "median_seconds_per_question": 0.7957796310001868,
+    "content_review_complete": false,
+    "two_member_review_complete": true
+  },
+  "reviewer_a_mean": 4.44,
+  "reviewer_b_mean": 4.44,
+  "exact_agreement_count": 23,
+  "within_one_agreement_count": 25,
+  "score_distribution_a": {
+    "5": 19,
+    "4": 1,
+    "2": 3,
+    "3": 2
+  },
+  "score_distribution_b": {
+    "5": 19,
+    "3": 4,
+    "2": 2
+  },
+  "records": [
+    {
+      "question_id": "P1V2-01",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-02",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-03",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-04",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-05",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-06",
+      "reviewer_a_groundedness": 4,
+      "reviewer_b_groundedness": 3,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-07",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-08",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-09",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-10",
+      "reviewer_a_groundedness": 2,
+      "reviewer_b_groundedness": 3,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-11",
+      "reviewer_a_groundedness": 3,
+      "reviewer_b_groundedness": 3,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-12",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-13",
+      "reviewer_a_groundedness": 3,
+      "reviewer_b_groundedness": 3,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-14",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-15",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-16",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-17",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-18",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-19",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-20",
+      "reviewer_a_groundedness": 2,
+      "reviewer_b_groundedness": 2,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-21",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-22",
+      "reviewer_a_groundedness": 2,
+      "reviewer_b_groundedness": 2,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-23",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-24",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    },
+    {
+      "question_id": "P1V2-25",
+      "reviewer_a_groundedness": 5,
+      "reviewer_b_groundedness": 5,
+      "reviewer_a_note": "",
+      "reviewer_b_note": ""
+    }
+  ]
+}

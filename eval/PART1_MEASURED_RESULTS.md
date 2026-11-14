@@ -1,5 +1,9 @@
 # Part 1 measured results: review draft
 
+This document preserves the earlier Windows evaluation. Later [round-2 Colab
+final-system groundedness ratings](part1/results/round2_colab_20261114T032206Z/human_review_20261114/)
+are recorded separately and must not be assigned to this older run.
+
 Inference commit: `55942bef55fcf15057911f6b33e93eae028d28a3`. Question set: `part1-v2-20261113`.
 These are measured development-set results on Windows RTX4090. Content/citation review is explicitly AI-assisted and provisional; it is not the required two-member human evaluation. The question draft needs team authorship, originality and reference review. The retained initial run and recorded fixes prevent a claim that this is an independent holdout.
 

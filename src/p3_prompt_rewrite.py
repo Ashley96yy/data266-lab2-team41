@@ -15,6 +15,14 @@ class PromptRewriteError(ValueError):
         self.model_attempts=attempts
 
 
+_PART_COUNT = re.compile(r'\b(one|single|two|both|three|four|[1-4])\s+(arms?|legs?|hands?|eyes?|ears?|wheels?|wings?|feet|foot)\b',re.I)
+_COUNT_VALUE = dict(one=1,single=1,two=2,both=2,three=3,four=4)
+
+
+def _count_value(word):
+    return _COUNT_VALUE.get(word.casefold(),int(word) if word.isdigit() else None)
+
+
 def validate_rewrite(raw,draft,tokenizer):
     value=_first_json_object(raw)
     if set(value)!={'positive_prompt','negative_prompt'}:raise ValueError('Return exactly positive_prompt and negative_prompt.')
@@ -35,18 +43,30 @@ def validate_rewrite(raw,draft,tokenizer):
         if re.search(r'\ban?\s+\w+',positive,re.I):positive='Single subject, '+positive
     if draft.route!='enhancement':negative='photograph, photorealism, '+negative
     negative=negative+', '+draft.negative_prompt
-    if any(len(tokenizer(text,truncation=False,verbose=False).input_ids)>tokenizer.model_max_length for text in [positive,negative]):
-        raise ValueError('Both diffusion prompts must fit the CLIP token limit; use fewer words.')
     colors=set(re.findall(r'\b(?:red|blue|green|yellow|orange|purple|black|white|silver|brown)\b',draft.original_request,re.I))
     colors={c.casefold() for c in colors}
     if monochrome_requested(draft.original_request):
         if not monochrome_requested(positive):raise ValueError('Preserve the explicitly requested monochrome appearance.')
         colors-= {'black','white'}
     if any(not re.search(r'\b'+c+r'\b',positive,re.I) for c in colors):raise ValueError('Preserve all explicitly requested colors in the positive caption.')
+    for match in _PART_COUNT.finditer(draft.original_request):
+        part=match.group(2).casefold()
+        part_pattern=r'(?:foot|feet)' if part in ('foot','feet') else re.escape(part.rstrip('s'))+r's?'
+        existing=re.search(r'\b(one|single|two|both|three|four|[1-4])\s+'+part_pattern+r'\b',positive,re.I)
+        if existing:
+            if _count_value(existing.group(1))!=_count_value(match.group(1)):
+                raise ValueError('The rewrite contradicts an explicitly requested part count.')
+        else:
+            if re.search(r'\bno\s+'+part_pattern+r'\b',positive,re.I):
+                raise ValueError('The rewrite contradicts an explicitly requested part count.')
+            # Restore only the approved count and part, never an inferred subject count.
+            positive+=', '+match.group(0)
     count_groups=[('one','single','1'),('two','both','2'),('three','3'),('four','4')]
     for words in count_groups:
         if any(re.search(r'\b'+w+r'\b',draft.original_request,re.I) for w in words):
             if not any(re.search(r'\b'+w+r'\b',positive,re.I) for w in words):raise ValueError('Preserve explicitly requested subject or part counts.')
+    if any(len(tokenizer(text,truncation=False,verbose=False).input_ids)>tokenizer.model_max_length for text in [positive,negative]):
+        raise ValueError('Both diffusion prompts must fit the CLIP token limit; use fewer words.')
     return positive,negative
 
 

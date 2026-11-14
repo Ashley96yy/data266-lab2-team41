@@ -20,3 +20,5 @@ This export does not fill in human quality or safety judgments. See the
 
 The deterministic export code is in
 [`scripts/export_p3_public_traces.py`](../scripts/export_p3_public_traces.py).
+
+The later [submitted human reviews and adjudication](../eval/part3/results/t4_20261114T060249Z/) are stored separately from this original trace export. The export manifest retains its original unscored status; the later review record supplies final human labels and their provenance.

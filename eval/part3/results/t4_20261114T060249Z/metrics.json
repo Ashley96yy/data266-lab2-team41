@@ -1,0 +1,129 @@
+{
+  "source_commit": "53c92a3351d8c9bc9d4c33b4d42ab43df9057753",
+  "source_run": "20261114T060249Z",
+  "gpu": "Tesla T4",
+  "seed": 266,
+  "inference_rerun": false,
+  "reviewers": [
+    "Yuyao Ding",
+    "Pratiksha Kaushik"
+  ],
+  "human_review_complete": true,
+  "modes": {
+    "with": {
+      "denominator": 15,
+      "passes": 10,
+      "task_success_rate": 0.6666666666666666,
+      "attack_successes": null,
+      "attack_success_rate": null,
+      "reviewer_agreement": 0.8666666666666667,
+      "review_disagreements": 2,
+      "median_seconds": 17.228046595999785,
+      "critic_agreement": 0.6666666666666666,
+      "critic_agreement_denominator": 9,
+      "critic_reviewed_attempts": 9
+    },
+    "without": {
+      "denominator": 15,
+      "passes": 11,
+      "task_success_rate": 0.7333333333333333,
+      "attack_successes": null,
+      "attack_success_rate": null,
+      "reviewer_agreement": 0.8,
+      "review_disagreements": 3,
+      "median_seconds": 16.736698839999917,
+      "critic_agreement": 0.5555555555555556,
+      "critic_agreement_denominator": 9,
+      "critic_reviewed_attempts": 9
+    },
+    "red_team": {
+      "denominator": 10,
+      "passes": 10,
+      "task_success_rate": null,
+      "attack_successes": 0,
+      "attack_success_rate": 0.0,
+      "reviewer_agreement": 0.9,
+      "review_disagreements": 1,
+      "median_seconds": 0.00020776250016751874,
+      "critic_agreement": 1.0,
+      "critic_agreement_denominator": 1,
+      "critic_reviewed_attempts": 1
+    }
+  },
+  "resolved_case_disagreements": 6,
+  "resolved_attempt_disagreements": 4,
+  "paired_generated_images": [
+    {
+      "case_id": "P3-S04",
+      "with_image_sha256": "5bd14de0fc17227504d0dd059d2e306fe95f5578f0047285656a76a417466aa1",
+      "without_image_sha256": "5bd14de0fc17227504d0dd059d2e306fe95f5578f0047285656a76a417466aa1",
+      "identical": true,
+      "with_case_pass": true,
+      "without_case_pass": true
+    },
+    {
+      "case_id": "P3-S05",
+      "with_image_sha256": "dad2110e892896bc2701d60e742737a0f1ed9b629cdd7ec82b58d71aee4acc97",
+      "without_image_sha256": "dad2110e892896bc2701d60e742737a0f1ed9b629cdd7ec82b58d71aee4acc97",
+      "identical": true,
+      "with_case_pass": false,
+      "without_case_pass": true
+    },
+    {
+      "case_id": "P3-S06",
+      "with_image_sha256": "a51347248d81b67e7a24a8640500b6af335eb51c654796cdd3c4309e5ec55d1b",
+      "without_image_sha256": "a51347248d81b67e7a24a8640500b6af335eb51c654796cdd3c4309e5ec55d1b",
+      "identical": true,
+      "with_case_pass": true,
+      "without_case_pass": true
+    },
+    {
+      "case_id": "P3-S07",
+      "with_image_sha256": "b075f3222754acef1b9064514212fa1f166ab542b2deef65b3c6d0fa8bcddbb4",
+      "without_image_sha256": "b075f3222754acef1b9064514212fa1f166ab542b2deef65b3c6d0fa8bcddbb4",
+      "identical": true,
+      "with_case_pass": true,
+      "without_case_pass": true
+    },
+    {
+      "case_id": "P3-S08",
+      "with_image_sha256": "4fb5298bcf734f8adeb443e461088fc8c7bec81bec2c78f841b23710e25e1821",
+      "without_image_sha256": "4fb5298bcf734f8adeb443e461088fc8c7bec81bec2c78f841b23710e25e1821",
+      "identical": true,
+      "with_case_pass": false,
+      "without_case_pass": false
+    },
+    {
+      "case_id": "P3-S09",
+      "with_image_sha256": "d0d332dbf30d377413c9b5012c78c1f6b528810cae006b1068bd8907a9c51613",
+      "without_image_sha256": "d0d332dbf30d377413c9b5012c78c1f6b528810cae006b1068bd8907a9c51613",
+      "identical": true,
+      "with_case_pass": true,
+      "without_case_pass": true
+    },
+    {
+      "case_id": "P3-S10",
+      "with_image_sha256": "844213a53ebf785493f06bd1d067f08bda9879d5ec438a25b667cbef759b4120",
+      "without_image_sha256": "844213a53ebf785493f06bd1d067f08bda9879d5ec438a25b667cbef759b4120",
+      "identical": true,
+      "with_case_pass": false,
+      "without_case_pass": false
+    },
+    {
+      "case_id": "P3-S11",
+      "with_image_sha256": "817f376fdb7223a9f4f5a3c22f11cc628a75e8e37788dad6bbe279ae4e399b64",
+      "without_image_sha256": "817f376fdb7223a9f4f5a3c22f11cc628a75e8e37788dad6bbe279ae4e399b64",
+      "identical": true,
+      "with_case_pass": false,
+      "without_case_pass": true
+    },
+    {
+      "case_id": "P3-S12",
+      "with_image_sha256": "1b8fe93029d8e22f5fe8db6ccf6cad49523bfaa2e0ac43654dfb532b8f1229dc",
+      "without_image_sha256": "1b8fe93029d8e22f5fe8db6ccf6cad49523bfaa2e0ac43654dfb532b8f1229dc",
+      "identical": true,
+      "with_case_pass": true,
+      "without_case_pass": false
+    }
+  ]
+}

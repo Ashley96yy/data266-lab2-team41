@@ -1,0 +1,320 @@
+{
+  "set_id": "p3_primary_15",
+  "critique_enabled": true,
+  "execution_complete": true,
+  "reviewer_a_name": "Yuyao Ding",
+  "reviewer_b_name": "Pratiksha Kaushik",
+  "scored": true,
+  "raw_execution_sha256": "15c08c5f8cacd9264789252e519db8fd02a80c6bd98a1b98d037912fd355f2ea",
+  "records": [
+    {
+      "case_id": "P3-S01",
+      "reviewer_a_pass": true,
+      "reviewer_b_pass": true,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": true,
+      "resolution_note": "",
+      "trace": {
+        "status": "answered",
+        "elapsed_seconds": 6.750458778999928,
+        "attempts": []
+      }
+    },
+    {
+      "case_id": "P3-S02",
+      "reviewer_a_pass": true,
+      "reviewer_b_pass": true,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": true,
+      "resolution_note": "",
+      "trace": {
+        "status": "answered",
+        "elapsed_seconds": 5.456980524000301,
+        "attempts": []
+      }
+    },
+    {
+      "case_id": "P3-S03",
+      "reviewer_a_pass": false,
+      "reviewer_b_pass": false,
+      "reviewer_a_note": "Vision output invented additional banana.",
+      "reviewer_b_note": "",
+      "adjudicated_pass": false,
+      "resolution_note": "",
+      "trace": {
+        "status": "answered",
+        "elapsed_seconds": 5.493083219999789,
+        "attempts": []
+      }
+    },
+    {
+      "case_id": "P3-S04",
+      "reviewer_a_pass": true,
+      "reviewer_b_pass": true,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": true,
+      "resolution_note": "",
+      "trace": {
+        "status": "completed",
+        "elapsed_seconds": 19.250114382999982,
+        "attempts": [
+          {
+            "index": 0,
+            "reviewer_a_accept": true,
+            "reviewer_b_accept": true,
+            "human_accept": true,
+            "human_accept_resolution_note": "",
+            "critique": {
+              "decision": "accept"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "P3-S05",
+      "reviewer_a_pass": false,
+      "reviewer_b_pass": false,
+      "reviewer_a_note": "The ink-wash sketch style is not very apparent.",
+      "reviewer_b_note": "",
+      "adjudicated_pass": false,
+      "resolution_note": "",
+      "trace": {
+        "status": "completed",
+        "elapsed_seconds": 20.066450352000174,
+        "attempts": [
+          {
+            "index": 0,
+            "reviewer_a_accept": true,
+            "reviewer_b_accept": true,
+            "human_accept": true,
+            "human_accept_resolution_note": "",
+            "critique": {
+              "decision": "accept"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "P3-S06",
+      "reviewer_a_pass": true,
+      "reviewer_b_pass": true,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": true,
+      "resolution_note": "",
+      "trace": {
+        "status": "completed",
+        "elapsed_seconds": 23.148103640000045,
+        "attempts": [
+          {
+            "index": 0,
+            "reviewer_a_accept": true,
+            "reviewer_b_accept": true,
+            "human_accept": true,
+            "human_accept_resolution_note": "",
+            "critique": {
+              "decision": "accept"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "P3-S07",
+      "reviewer_a_pass": true,
+      "reviewer_b_pass": true,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": true,
+      "resolution_note": "",
+      "trace": {
+        "status": "completed",
+        "elapsed_seconds": 15.470873745999597,
+        "attempts": [
+          {
+            "index": 0,
+            "reviewer_a_accept": true,
+            "reviewer_b_accept": true,
+            "human_accept": true,
+            "human_accept_resolution_note": "",
+            "critique": {
+              "decision": "accept"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "P3-S08",
+      "reviewer_a_pass": false,
+      "reviewer_b_pass": false,
+      "reviewer_a_note": "he mug doesn't appear closer to neutral white.",
+      "reviewer_b_note": "",
+      "adjudicated_pass": false,
+      "resolution_note": "",
+      "trace": {
+        "status": "completed",
+        "elapsed_seconds": 23.074857297000108,
+        "attempts": [
+          {
+            "index": 0,
+            "reviewer_a_accept": false,
+            "reviewer_b_accept": false,
+            "human_accept": false,
+            "human_accept_resolution_note": "",
+            "critique": {
+              "decision": "accept"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "P3-S09",
+      "reviewer_a_pass": true,
+      "reviewer_b_pass": true,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": true,
+      "resolution_note": "",
+      "trace": {
+        "status": "completed",
+        "elapsed_seconds": 17.228046595999785,
+        "attempts": [
+          {
+            "index": 0,
+            "reviewer_a_accept": true,
+            "reviewer_b_accept": true,
+            "human_accept": true,
+            "human_accept_resolution_note": "",
+            "critique": {
+              "decision": "accept"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "P3-S10",
+      "reviewer_a_pass": false,
+      "reviewer_b_pass": false,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": false,
+      "resolution_note": "",
+      "trace": {
+        "status": "completed",
+        "elapsed_seconds": 21.657612596000035,
+        "attempts": [
+          {
+            "index": 0,
+            "reviewer_a_accept": false,
+            "reviewer_b_accept": false,
+            "human_accept": false,
+            "human_accept_resolution_note": "",
+            "critique": {
+              "decision": "accept"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "P3-S11",
+      "reviewer_a_pass": false,
+      "reviewer_b_pass": true,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": false,
+      "resolution_note": "Style is not apparent.",
+      "trace": {
+        "status": "completed",
+        "elapsed_seconds": 22.577583127999787,
+        "attempts": [
+          {
+            "index": 0,
+            "reviewer_a_accept": false,
+            "reviewer_b_accept": false,
+            "human_accept": false,
+            "human_accept_resolution_note": "",
+            "critique": {
+              "decision": "accept"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "P3-S12",
+      "reviewer_a_pass": true,
+      "reviewer_b_pass": false,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": true,
+      "resolution_note": "Naruto-inspired anime style confirmed.",
+      "trace": {
+        "status": "completed",
+        "elapsed_seconds": 25.594004357000358,
+        "attempts": [
+          {
+            "index": 0,
+            "reviewer_a_accept": true,
+            "reviewer_b_accept": false,
+            "human_accept": true,
+            "human_accept_resolution_note": "Naruto-inspired anime style",
+            "critique": {
+              "decision": "accept"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "P3-S13",
+      "reviewer_a_pass": true,
+      "reviewer_b_pass": true,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": true,
+      "resolution_note": "",
+      "trace": {
+        "status": "needs_clarification",
+        "elapsed_seconds": 0.04658406999988074,
+        "attempts": []
+      }
+    },
+    {
+      "case_id": "P3-S14",
+      "reviewer_a_pass": true,
+      "reviewer_b_pass": true,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": true,
+      "resolution_note": "",
+      "trace": {
+        "status": "answered",
+        "elapsed_seconds": 5.396454102999996,
+        "attempts": []
+      }
+    },
+    {
+      "case_id": "P3-S15",
+      "reviewer_a_pass": true,
+      "reviewer_b_pass": true,
+      "reviewer_a_note": "",
+      "reviewer_b_note": "",
+      "adjudicated_pass": true,
+      "resolution_note": "",
+      "trace": {
+        "status": "input_error",
+        "elapsed_seconds": 0.052525950000017474,
+        "attempts": []
+      }
+    }
+  ]
+}

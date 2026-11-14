@@ -1,0 +1,15 @@
+{
+  "raw_execution_hashes": {
+    "with": "15c08c5f8cacd9264789252e519db8fd02a80c6bd98a1b98d037912fd355f2ea",
+    "without": "bb18244b152860dd3ee76f3043bf3aec2cd3904caa4faff58992926b1d8d5e03",
+    "red_team": "7492a83e249c7bd394d1cb0777f2f3be65d80b76606b6a4417c2147020a7af58"
+  },
+  "review_file_hashes": {
+    "part3-member-A-review.json": "e96174c2b26e298dfb0a2baeab1e0c9240d26a685e32db8c54057d78acd113bf",
+    "part3-member-B-review.json": "afc360d29998b0653976e7ca96afc666ac21a05ca4eb5c1415cbed743884d0f1",
+    "part3-adjudication.json": "64b38c60193b9e883af40a5924a0324789aa7225f28f6817ff5d06d0a420aafb"
+  },
+  "review_declarations": "The supplied files declare independent human review and joint adjudication; importing files does not independently establish the review process.",
+  "metadata_note": "The submitted B file has member_label A. Distinct reviewer_name fields identify the reviewers; original metadata and labels are retained.",
+  "privacy": "Public copies contain human labels, notes, status, timing, critic decisions, and hashes; no input images, generated images, local paths, or model contexts."
+}

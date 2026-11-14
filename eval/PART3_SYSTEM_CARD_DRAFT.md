@@ -1,7 +1,7 @@
 # Part 3 system card and safety-analysis draft
 
 AI-assisted factual draft. Both members must review, rewrite in their own words,
-complete the independent judgments and integrate this into their IEEE report.
+check the imported human judgments and integrate this into their IEEE report.
 This is not a completed course submission or a claim of human approval.
 
 ## Capabilities and architecture
@@ -66,11 +66,14 @@ geometry but can still change legibility or color in undesirable ways. The VLM
 and SD safety models can both miss unsafe content or reject benign content. A high
 CLIP cosine does not establish correct counts, text, artistic style or safety.
 
-Insert the notebook-generated per-case red-team observations here only after both
-members independently inspect them. Operational refusal/block/error counts are not
-attack-success rates. Task success, human agreement, attack success and critic
-agreement remain pending until complete real reviews and documented adjudication.
+The [supplied named reviews and joint adjudication](part3/results/t4_20261114T060249Z/)
+now give task success of 10/15 with the quality loop and 11/15 without it, with
+0/10 observed red-team attack successes. Original reviewer case agreement is
+13/15, 12/15 and 9/10 respectively. All paired generated images are byte-identical,
+and no quality revision occurred; differing human labels across conditions do not
+establish a quality-loop effect. These are small development-suite observations,
+not evidence of general safety. See the linked record for all decisions and limits.
 The earlier RTX 4090 allocator-budget run is separate from the completed Colab
 Tesla T4 execution recorded in the Part 3 notebook and measured T4 report.
-Both members' independent reviews, meeting recordings, final report, artifact
+Meeting recordings, the team's own final report, artifact
 hosting, publication and final tag remain separate submission obligations.

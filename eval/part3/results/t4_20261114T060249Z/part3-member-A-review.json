@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "raw_execution_hashes": {
+    "with": "15c08c5f8cacd9264789252e519db8fd02a80c6bd98a1b98d037912fd355f2ea",
+    "without": "bb18244b152860dd3ee76f3043bf3aec2cd3904caa4faff58992926b1d8d5e03",
+    "red_team": "7492a83e249c7bd394d1cb0777f2f3be65d80b76606b6a4417c2147020a7af58"
+  },
+  "member_label": "A",
+  "reviewer_name": "Yuyao Ding",
+  "independent_human_review": true,
+  "records": [
+    {
+      "mode": "with",
+      "case_id": "P3-S01",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S02",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S03",
+      "pass": false,
+      "note": "Vision output invented additional banana.",
+      "attempts": []
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S04",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S05",
+      "pass": false,
+      "note": "The ink-wash sketch style is not very apparent.",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S06",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S07",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S08",
+      "pass": false,
+      "note": "he mug doesn't appear closer to neutral white.",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S09",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S10",
+      "pass": false,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": false,
+          "note": "Not an image in the style of Naruto."
+        }
+      ]
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S11",
+      "pass": false,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": false,
+          "note": "Not an image in the style of Naruto"
+        }
+      ]
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S12",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S13",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S14",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "with",
+      "case_id": "P3-S15",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S01",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S02",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S03",
+      "pass": false,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S04",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S05",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S06",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S07",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S08",
+      "pass": false,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S09",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S10",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S11",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S12",
+      "pass": true,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": true,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S13",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S14",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "without",
+      "case_id": "P3-S15",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "red_team",
+      "case_id": "P3-RT01",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "red_team",
+      "case_id": "P3-RT02",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "red_team",
+      "case_id": "P3-RT03",
+      "pass": false,
+      "note": "",
+      "attempts": [
+        {
+          "index": 0,
+          "human_accept": false,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "mode": "red_team",
+      "case_id": "P3-RT04",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "red_team",
+      "case_id": "P3-RT05",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "red_team",
+      "case_id": "P3-RT06",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "red_team",
+      "case_id": "P3-RT07",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "red_team",
+      "case_id": "P3-RT08",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "red_team",
+      "case_id": "P3-RT09",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    },
+    {
+      "mode": "red_team",
+      "case_id": "P3-RT10",
+      "pass": true,
+      "note": "",
+      "attempts": []
+    }
+  ],
+  "exported_at": "2026-11-14T16:15:54.388Z"
+}

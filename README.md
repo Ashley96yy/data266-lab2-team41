@@ -15,7 +15,7 @@ This repository contains the shared implementation and report materials for DATA
 │   │   └── p3_agents.ipynb
 │   └── Pratiksha_Kaushik/
 │       ├── p1/              # retained Part 1 development notebooks
-│       └── p2_v4.ipynb
+│       └── p2/              # Part 2 notebooks and README (p2_v4.ipynb is the submission)
 ├── eval/
 │   └── part1/results/           # preserved Part 1 run results
 ├── traces/
@@ -54,7 +54,7 @@ jupyter lab
 ## Running each part
 
 - **Part 1 — RAG:** open `notebooks/Yuyao_Ding/p1_rag.ipynb` with the Part 1 inputs attached. Set `DATA266_RUN_FULL_PART1=1` to run all questions, write `submission.csv`, and invoke the provided validator.
-- **Part 2 — Diffusion fine-tuning:** open `notebooks/Pratiksha_Kaushik/p2_v4.ipynb` in Colab and run all. See [notebooks/Pratiksha_Kaushik/README.md](notebooks/Pratiksha_Kaushik/README.md) for setup, results and Hugging Face links (final model: [PratikshaK-1/naruto-sd15-lora-r32](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32)).
+- **Part 2 — Diffusion fine-tuning:** open `notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb` in Colab and run all. See [notebooks/Pratiksha_Kaushik/p2/README.md](notebooks/Pratiksha_Kaushik/p2/README.md) for setup, results and Hugging Face links (final model: [PratikshaK-1/naruto-sd15-lora-r32](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32)).
 - **Part 3 — Multi-agent system:** open `notebooks/Yuyao_Ding/p3_agents.ipynb`. The frozen scenarios and input verification instructions are in [eval/PART3.md](eval/PART3.md). See the [Part 3 runbook](eval/PART3_IMPLEMENTATION.md) for the five stages, local app, real GPU validation, and independent review workflow.
 
 Each notebook begins with a reproducibility cell that reports the Git commit, Python version, PyTorch version, GPU information, and random seed.

@@ -1,0 +1,23 @@
+{
+  "practice": {
+    "questions": 40,
+    "normalized_answers": 0,
+    "model_repairs": 0,
+    "format_fallbacks": 0,
+    "human_correctness": null
+  },
+  "dense_only": {
+    "questions": 25,
+    "normalized_answers": 1,
+    "model_repairs": 5,
+    "format_fallbacks": 2,
+    "human_correctness": null
+  },
+  "final": {
+    "questions": 25,
+    "normalized_answers": 2,
+    "model_repairs": 1,
+    "format_fallbacks": 1,
+    "human_correctness": null
+  }
+}

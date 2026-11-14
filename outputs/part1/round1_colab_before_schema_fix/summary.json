@@ -1,0 +1,62 @@
+{
+  "round": 1,
+  "label": "First Colab evaluation before schema fixes",
+  "source_archive_sha256": "2f37b0f66dbf910ab34372045f58fd576d92b81eab6193b1c1c6b95339f774df",
+  "original_notebook_sha256": "7f55f38d8250fb706870febabecf4934c272ca5291a9f123b8edced2f020ca8c",
+  "seed": 266,
+  "hardware": {
+    "peak_allocated_gib": 7.869063854217529,
+    "peak_reserved_gib": 8.609375,
+    "allocator_budget_gib": 14.0,
+    "hardware": "Tesla T4",
+    "actual_t4_p100_verified": false
+  },
+  "questions_specification_sha256": "e4cf051593f3665cec1e411b5b745c64e33b92e9369d25c508f71e6fa01e1763",
+  "interpretation": "Development rerun; inspected failures informed the fix. Not an untouched holdout.",
+  "practice": {
+    "questions": 40,
+    "execution_errors": 0,
+    "format_fallbacks": 4,
+    "model_repairs": 8,
+    "median_seconds_per_question": 5.729
+  },
+  "golden": {
+    "dense_only": {
+      "mode": "dense_only",
+      "denominator": 25,
+      "answer_correct_out_of_25": null,
+      "answer_correctness": null,
+      "retrieval_recall_at_5": 0.4722222222222222,
+      "retrieval_denominator": 24,
+      "citation_accuracy": null,
+      "citation_denominator": 75,
+      "groundedness_mean": null,
+      "groundedness_agree_within_one": null,
+      "median_seconds_per_question": 12.840790267000102,
+      "content_review_complete": false,
+      "two_member_review_complete": false,
+      "run_sha256": "f3c77ef8d2110ee1fbed621f1735416f171f3b44aae2f1000833b9cbfcd030d8",
+      "format_fallbacks": 4,
+      "execution_errors": 0
+    },
+    "final": {
+      "mode": "final",
+      "denominator": 25,
+      "answer_correct_out_of_25": null,
+      "answer_correctness": null,
+      "retrieval_recall_at_5": 0.7638888888888888,
+      "retrieval_denominator": 24,
+      "citation_accuracy": null,
+      "citation_denominator": 36,
+      "groundedness_mean": null,
+      "groundedness_agree_within_one": null,
+      "median_seconds_per_question": 0.27093332599997666,
+      "content_review_complete": false,
+      "two_member_review_complete": false,
+      "run_sha256": "6dc3240e2cfe1ab0268bd154dacfb786f289aa219a61d5029b2a71ddb229db5e",
+      "format_fallbacks": 6,
+      "execution_errors": 0
+    }
+  },
+  "source_commit_at_original_inference": null
+}

@@ -1,0 +1,63 @@
+{
+  "round": 2,
+  "label": "Second development evaluation after schema fixes",
+  "source_archive_sha256": "61342c88c243480b91e805555853bfd6436a960d00fd8a4f1da6dbecc1ff95c7",
+  "original_notebook_sha256": "fc8d66444b20693d5b0e745e53eb8f490ade7b9c66dea834ff0a6d1c3f1b5912",
+  "seed": 266,
+  "hardware": {
+    "peak_allocated_gib": 7.877634048461914,
+    "peak_reserved_gib": 9.0078125,
+    "allocator_budget_gib": 14.0,
+    "hardware": "Tesla T4",
+    "total_device_gib": 14.56317138671875,
+    "actual_t4_p100_verified": true
+  },
+  "questions_specification_sha256": "e4cf051593f3665cec1e411b5b745c64e33b92e9369d25c508f71e6fa01e1763",
+  "interpretation": "Development rerun; inspected failures informed the fix. Not an untouched holdout.",
+  "practice": {
+    "questions": 40,
+    "execution_errors": 0,
+    "format_fallbacks": 0,
+    "model_repairs": 0,
+    "median_seconds_per_question": 5.126
+  },
+  "golden": {
+    "dense_only": {
+      "mode": "dense_only",
+      "denominator": 25,
+      "answer_correct_out_of_25": null,
+      "answer_correctness": null,
+      "retrieval_recall_at_5": 0.4722222222222222,
+      "retrieval_denominator": 24,
+      "citation_accuracy": null,
+      "citation_denominator": 75,
+      "groundedness_mean": null,
+      "groundedness_agree_within_one": null,
+      "median_seconds_per_question": 9.173568858999715,
+      "content_review_complete": false,
+      "two_member_review_complete": false,
+      "run_sha256": "39a303d1524b14d2ab91a1190fc2518894fdefa595b2227b13acc12423ab5115",
+      "format_fallbacks": 2,
+      "execution_errors": 0
+    },
+    "final": {
+      "mode": "final",
+      "denominator": 25,
+      "answer_correct_out_of_25": null,
+      "answer_correctness": null,
+      "retrieval_recall_at_5": 0.7638888888888888,
+      "retrieval_denominator": 24,
+      "citation_accuracy": null,
+      "citation_denominator": 47,
+      "groundedness_mean": null,
+      "groundedness_agree_within_one": null,
+      "median_seconds_per_question": 0.7957796310001868,
+      "content_review_complete": false,
+      "two_member_review_complete": false,
+      "run_sha256": "1ba75f3bb6e9e2748fc510c87b1f969b5e56650f2c60b5e7899963daee80447b",
+      "format_fallbacks": 1,
+      "execution_errors": 0
+    }
+  },
+  "source_commit_at_original_inference": null
+}

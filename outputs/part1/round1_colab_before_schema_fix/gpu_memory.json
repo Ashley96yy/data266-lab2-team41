@@ -1,0 +1,7 @@
+{
+  "peak_allocated_gib": 7.869063854217529,
+  "peak_reserved_gib": 8.609375,
+  "allocator_budget_gib": 14.0,
+  "hardware": "Tesla T4",
+  "actual_t4_p100_verified": false
+}

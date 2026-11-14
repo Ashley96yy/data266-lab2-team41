@@ -1,0 +1,2462 @@
+{
+  "note": "Compact generated results only; original question text, references and retrieved source chunks omitted. Not human-scored.",
+  "records": [
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-01",
+      "conversation_id": "p1v2-single-01",
+      "turn": "1",
+      "prediction": {
+        "answer": "The emerging and developing economies' output-growth outturn in 2013 was 4.6%",
+        "status": "answered",
+        "citations": [
+          "DOC2:p2",
+          "DOC2:p3",
+          "DOC1:p1"
+        ],
+        "figure_references": [
+          "Table 1-1",
+          "Figure A-1"
+        ]
+      },
+      "elapsed_seconds": 7.696452049000072,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p2",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-1",
+          "citation": "DOC1:p1"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-02",
+      "conversation_id": "p1v2-single-02",
+      "turn": "1",
+      "prediction": {
+        "answer": "In 2012, U.S. federal revenues were 16.4% of GDP, spending was 23.2% of GDP, and the budget balance was -6.8%. The spending-minus-revenue gap was therefore 6.8 percentage points.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p7",
+          "DOC3:p2"
+        ],
+        "figure_references": [
+          "Table A-3",
+          "Figure B-1"
+        ]
+      },
+      "elapsed_seconds": 9.173568858999715,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p7",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-3",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p17",
+          "citation": "DOC1:p17"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-1",
+          "citation": "DOC3:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-03",
+      "conversation_id": "p1v2-single-03",
+      "turn": "1",
+      "prediction": {
+        "answer": "The U.S. labour-force participation rate in 2010 was 64.7%",
+        "status": "answered",
+        "citations": [
+          "DOC3:p5",
+          "DOC2:p2"
+        ],
+        "figure_references": [
+          "Table B-2",
+          "Table A-1"
+        ]
+      },
+      "elapsed_seconds": 6.049821510000584,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC3:p5",
+          "citation": "DOC3:p5"
+        },
+        {
+          "kind": "figure",
+          "id": "Table B-2",
+          "citation": "DOC3:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p1",
+          "citation": "DOC3:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p3",
+          "citation": "DOC3:p3"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-04",
+      "conversation_id": "p1v2-single-04",
+      "turn": "1",
+      "prediction": {
+        "answer": "According to Supplement A Table A-2, the U.S. inflation, measured by the GDP deflator, in 2013 was 1.5%",
+        "status": "answered",
+        "citations": [
+          "DOC1:p5",
+          "DOC3:p4"
+        ],
+        "figure_references": [
+          "Figure B-3",
+          "Table 1-2"
+        ]
+      },
+      "elapsed_seconds": 8.071081518999563,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-3",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p4",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-2",
+          "citation": "DOC1:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p5",
+          "citation": "DOC1:p5"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-05",
+      "conversation_id": "p1v2-single-05",
+      "turn": "1",
+      "prediction": {
+        "answer": "In the base chapter Table 1-1, advanced economies grew at 0.1 percent in 2008.",
+        "status": "answered",
+        "citations": [
+          "DOC1:p1",
+          "DOC1:p12",
+          "DOC2:p2",
+          "DOC1:p11",
+          "DOC3:p3"
+        ],
+        "figure_references": [
+          "Table 1-1",
+          "Figure B-2"
+        ]
+      },
+      "elapsed_seconds": 8.145177393999802,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p1",
+          "citation": "DOC1:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-1",
+          "citation": "DOC1:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-2",
+          "citation": "DOC3:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p12",
+          "citation": "DOC1:p12"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p2",
+          "citation": "DOC2:p2"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-06",
+      "conversation_id": "p1v2-single-06",
+      "turn": "1",
+      "prediction": {
+        "answer": "Figure A-1 ends in 2012, while Table A-1 extends to 2013. Figure A-1 marks forecast years with dashed lines.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p2"
+        ],
+        "figure_references": [
+          "Figure A-1",
+          "Table A-1"
+        ]
+      },
+      "elapsed_seconds": 7.447740691000035,
+      "format_fallback": false,
+      "schema_normalizations": [
+        {
+          "stage": "primary",
+          "change": "citations_duplicates_removed"
+        }
+      ],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p4",
+          "citation": "DOC2:p4"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p7",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p5",
+          "citation": "DOC2:p5"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-07",
+      "conversation_id": "p1v2-single-07",
+      "turn": "1",
+      "prediction": {
+        "answer": "The endpoint for emerging economies in December 2010 is 2.06, while the endpoint for the United States is 1.57. These index levels differ because Figure A-5 rebases each index to January 2009, whereas Figure A-4 rebases each index to January 2007. This rebase changes the absolute level of the index but not the relative shape of the line or the percentage change between any two months.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p5",
+          "DOC1:p7"
+        ],
+        "figure_references": [
+          "Figure A-5",
+          "Table 1-3"
+        ]
+      },
+      "elapsed_seconds": 10.294068014999539,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p5",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-5",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p27",
+          "citation": "DOC1:p27"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-3",
+          "citation": "DOC1:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p37",
+          "citation": "DOC1:p37"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-08",
+      "conversation_id": "p1v2-single-08",
+      "turn": "1",
+      "prediction": {
+        "answer": "The unemployment rate in Greece decreased from 9.9% in 2010 to 9.0% in 2012.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p6",
+          "DOC1:p3",
+          "DOC2:p4",
+          "DOC2:p3",
+          "DOC1:p4"
+        ],
+        "figure_references": [
+          "Table A-2",
+          "Figure A-2"
+        ]
+      },
+      "elapsed_seconds": 7.710019297999679,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p6",
+          "citation": "DOC2:p6"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-2",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p3",
+          "citation": "DOC1:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-2",
+          "citation": "DOC2:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p4",
+          "citation": "DOC2:p4"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-09",
+      "conversation_id": "p1v2-single-09",
+      "turn": "1",
+      "prediction": {
+        "answer": "In 2010, Germany had an unemployment rate of approximately 4.5%, while Spain had around 8.5%. By 2012, Germany's unemployment rate had increased to about 5.5%, whereas Spain's rate had risen to approximately 9.5%. Therefore, the unemployment rate in Germany increased by 1 percentage point from 2010 to 2012, while in Spain, it increased by 1 percentage point.",
+        "status": "answered",
+        "citations": [
+          "DOC1:p3",
+          "DOC2:p5"
+        ],
+        "figure_references": [
+          "Figure 1-2",
+          "Figure A-4"
+        ]
+      },
+      "elapsed_seconds": 10.51767722600016,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p6",
+          "citation": "DOC2:p6"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure 1-2",
+          "citation": "DOC1:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p13",
+          "citation": "DOC1:p13"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-4",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p12",
+          "citation": "DOC1:p12"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-10",
+      "conversation_id": "p1v2-single-10",
+      "turn": "1",
+      "prediction": {
+        "answer": "-0.41",
+        "status": "answered",
+        "citations": [
+          "DOC3:p2",
+          "DOC2:p1",
+          "DOC1:p32"
+        ],
+        "figure_references": [
+          "Figure 2-7",
+          "Table B-1"
+        ]
+      },
+      "elapsed_seconds": 5.358088138000312,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC3:p6",
+          "citation": "DOC3:p6"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure 2-7",
+          "citation": "DOC1:p32"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p4",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "figure",
+          "id": "Table B-1",
+          "citation": "DOC3:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p1",
+          "citation": "DOC3:p1"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-11",
+      "conversation_id": "p1v2-single-11",
+      "turn": "1",
+      "prediction": {
+        "answer": "In 2013, the non-headline inflation series in Figure B-3 is the GDP deflator, which has a value of approximately 1.5%. Both figures share the headline CPI value of around 2.5%.",
+        "status": "answered",
+        "citations": [
+          "DOC3:p4",
+          "DOC1:p27"
+        ],
+        "figure_references": [
+          "Figure B-3",
+          "Figure 2-4"
+        ]
+      },
+      "elapsed_seconds": 9.411752886999238,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC3:p4",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-3",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p27",
+          "citation": "DOC1:p27"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure 2-4",
+          "citation": "DOC1:p27"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p1",
+          "citation": "DOC3:p1"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-12",
+      "conversation_id": "p1v2-single-12",
+      "turn": "1",
+      "prediction": {
+        "answer": "-0.8%",
+        "status": "answered",
+        "citations": [
+          "DOC1:p1",
+          "DOC2:p2"
+        ],
+        "figure_references": [
+          "Figure A-1",
+          "Table 1-1"
+        ]
+      },
+      "elapsed_seconds": 6.371762568000122,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p2",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-1",
+          "citation": "DOC1:p1"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p1",
+          "citation": "DOC1:p1"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-13",
+      "conversation_id": "p1v2-single-13",
+      "turn": "1",
+      "prediction": {
+        "answer": "The retrieved evidence does not support an answer to this question.",
+        "status": "not_found",
+        "citations": [],
+        "figure_references": []
+      },
+      "elapsed_seconds": 31.196643428999778,
+      "format_fallback": true,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC3:p5",
+          "citation": "DOC3:p5"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-2",
+          "citation": "DOC1:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p1",
+          "citation": "DOC3:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-3",
+          "citation": "DOC1:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p2",
+          "citation": "DOC3:p2"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-14",
+      "conversation_id": "p1v2-single-14",
+      "turn": "1",
+      "prediction": {
+        "answer": "The base chapter Table 1-2 U.S. output-growth average for 2000-2007 was 2.6%, while Supplement A Table A-2 U.S. output growth in 2013 was 2.4%. The difference between these rates is 0.2 percentage points.",
+        "status": "answered",
+        "citations": [
+          "DOC1:p1",
+          "DOC2:p7",
+          "DOC2:p2",
+          "DOC3:p2",
+          "DOC3:p3"
+        ],
+        "figure_references": [
+          "Figure B-1",
+          "Figure B-2"
+        ]
+      },
+      "elapsed_seconds": 11.248840609000581,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-1",
+          "citation": "DOC3:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p7",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-2",
+          "citation": "DOC3:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p2",
+          "citation": "DOC2:p2"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-15",
+      "conversation_id": "p1v2-session-a",
+      "turn": "1",
+      "prediction": {
+        "answer": "The published 2013 value for the U.S. inflation rate is 2.9%. The assumed 2013 value based on the 2012 outturn in Supplement A is 2.5%.",
+        "status": "answered",
+        "citations": [
+          "DOC3:p2",
+          "DOC3:p3",
+          "DOC2:p1",
+          "DOC1:p35",
+          "DOC1:p27"
+        ],
+        "figure_references": [
+          "Figure B-1",
+          "Figure B-2"
+        ]
+      },
+      "elapsed_seconds": 9.791093974000432,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p35",
+          "citation": "DOC1:p35"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-1",
+          "citation": "DOC3:p2"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-2",
+          "citation": "DOC3:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p27",
+          "citation": "DOC1:p27"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-16",
+      "conversation_id": "p1v2-session-a",
+      "turn": "2",
+      "prediction": {
+        "answer": "The published 2013 value for the U.S. inflation rate is 2.9%. The assumed 2013 value based on the 2012 outturn in Supplement A is 2.5%",
+        "status": "answered",
+        "citations": [
+          "DOC1:p35",
+          "DOC2:p1",
+          "DOC1:p27",
+          "DOC3:p2",
+          "DOC3:p4"
+        ],
+        "figure_references": [
+          "Figure B-1",
+          "Figure B-3"
+        ]
+      },
+      "elapsed_seconds": 18.305533890999868,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p35",
+          "citation": "DOC1:p35"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-1",
+          "citation": "DOC3:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-3",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p27",
+          "citation": "DOC1:p27"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-17",
+      "conversation_id": "p1v2-session-a",
+      "turn": "3",
+      "prediction": {
+        "answer": "The published 2013 value for the U.S. inflation rate is 2.9%. The assumed 2013 value based on the 2012 outturn in Supplement A is 2.5%. The difference is 0.4 percentage points.",
+        "status": "answered",
+        "citations": [
+          "DOC1:p35",
+          "DOC2:p1",
+          "DOC1:p27",
+          "DOC3:p4",
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table A-2",
+          "Figure B-3"
+        ]
+      },
+      "elapsed_seconds": 19.04540114000065,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p35",
+          "citation": "DOC1:p35"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-2",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-3",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p27",
+          "citation": "DOC1:p27"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-18",
+      "conversation_id": "p1v2-session-b",
+      "turn": "1",
+      "prediction": {
+        "answer": "The retrieved evidence does not support an answer to this question.",
+        "status": "not_found",
+        "citations": [],
+        "figure_references": []
+      },
+      "elapsed_seconds": 5.573410224000327,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p35",
+          "citation": "DOC1:p35"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-5",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure 1-2",
+          "citation": "DOC1:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p7",
+          "citation": "DOC1:p7"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-19",
+      "conversation_id": "p1v2-session-b",
+      "turn": "2",
+      "prediction": {
+        "answer": "The published U.S. inflation rate for 2013 in Supplement A is 1.5%",
+        "status": "answered",
+        "citations": [
+          "DOC2:p3",
+          "DOC1:p35",
+          "DOC2:p5"
+        ],
+        "figure_references": [
+          "Figure A-4"
+        ]
+      },
+      "elapsed_seconds": 6.524570990999564,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-5",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-4",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p35",
+          "citation": "DOC1:p35"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-20",
+      "conversation_id": "p1v2-single-20",
+      "turn": "1",
+      "prediction": {
+        "answer": "In 2010, the unemployment rate in the United States was 9.8%, according to Table 1-2 (DOC1:p5), while in the Euro Area, it was 10.1% (Table 1-3, DOC1:p7). Supplement A explicitly revised the U.S. unemployment observation for 2010, replacing the forecast with an outturn, as stated in Supplement A: Outturns, Revisions and Forecast Errors, 2011-2013 (DOC2:p1).",
+        "status": "answered",
+        "citations": [
+          "DOC1:p7",
+          "DOC1:p5",
+          "DOC2:p1"
+        ],
+        "figure_references": [
+          "Table 1-3",
+          "Table 1-2"
+        ]
+      },
+      "elapsed_seconds": 11.473355293000168,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-3",
+          "citation": "DOC1:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p1",
+          "citation": "DOC3:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-2",
+          "citation": "DOC1:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p5",
+          "citation": "DOC3:p5"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-21",
+      "conversation_id": "p1v2-single-21",
+      "turn": "1",
+      "prediction": {
+        "answer": "The base chapter forecasts U.S. 2011 inflation at 2.9%. The actual 2011 result, as reported in Supplement A, is 1.8%. It differs by 1.1 percentage points.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p1",
+          "DOC1:p4",
+          "DOC2:p2"
+        ],
+        "figure_references": [
+          "Table A-1",
+          "Figure A-1"
+        ]
+      },
+      "elapsed_seconds": 8.09630875899984,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC3:p4",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p35",
+          "citation": "DOC1:p35"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-22",
+      "conversation_id": "p1v2-single-22",
+      "turn": "1",
+      "prediction": {
+        "answer": "The erratum to Figure B-5 replaces every observation in the original chart, not just one year. It supersedes the version of Figure B-5 printed in Section B.4, which contains a plotting error for 2012. The corrected figure below supersedes it. All other values in the two versions are the same.",
+        "status": "answered",
+        "citations": [
+          "DOC3:p6",
+          "DOC1:p21",
+          "DOC1:p24"
+        ],
+        "figure_references": [
+          "Figure 2-2",
+          "Figure 2-3"
+        ]
+      },
+      "elapsed_seconds": 8.839842983999915,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC3:p6",
+          "citation": "DOC3:p6"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure 2-2",
+          "citation": "DOC1:p21"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p5",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure 2-3",
+          "citation": "DOC1:p24"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-23",
+      "conversation_id": "p1v2-single-23",
+      "turn": "1",
+      "prediction": {
+        "answer": "The retrieved evidence does not support an answer to this question.",
+        "status": "not_found",
+        "citations": [],
+        "figure_references": []
+      },
+      "elapsed_seconds": 12.250115207000817,
+      "format_fallback": true,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p35",
+          "citation": "DOC1:p35"
+        },
+        {
+          "kind": "figure",
+          "id": "Table B-1",
+          "citation": "DOC3:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p13",
+          "citation": "DOC1:p13"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure 2-4",
+          "citation": "DOC1:p27"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p26",
+          "citation": "DOC1:p26"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-24",
+      "conversation_id": "p1v2-single-24",
+      "turn": "1",
+      "prediction": {
+        "answer": "Euro area output grew positively in 2013 due to the recovery after the 2009 recession, despite initial contraction in 2012. According to Figure A-1 in Supplement A, the forecast for 2012 was -0.7% for the Euro area, while the actual outcome was -0.4%. This indicates a positive growth of 0.3 percentage points in 2013, contributing to the Euro area's overall positive growth trajectory.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p1",
+          "DOC2:p3",
+          "DOC1:p7",
+          "DOC1:p13",
+          "DOC1:p32",
+          "DOC2:p2",
+          "DOC2:p5"
+        ],
+        "figure_references": [
+          "Figure A-1",
+          "Figure A-4"
+        ]
+      },
+      "elapsed_seconds": 13.169446819999393,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-4",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p7",
+          "citation": "DOC1:p7"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-25",
+      "conversation_id": "p1v2-single-25",
+      "turn": "1",
+      "prediction": {
+        "answer": "Euro area unemployment in 2012 should be reported as 12.0%",
+        "status": "answered",
+        "citations": [
+          "DOC1:p7",
+          "DOC2:p6",
+          "DOC2:p3",
+          "DOC2:p1",
+          "DOC2:p4"
+        ],
+        "figure_references": [
+          "Figure A-2",
+          "Figure A-3"
+        ]
+      },
+      "elapsed_seconds": 14.217326181999852,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p7",
+          "citation": "DOC1:p7"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-2",
+          "citation": "DOC2:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p6",
+          "citation": "DOC2:p6"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-3",
+          "citation": "DOC2:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-01",
+      "conversation_id": "p1v2-single-01",
+      "turn": "1",
+      "prediction": {
+        "answer": "emerging and developing economies output growth was 4.6% in 2013.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p2"
+        ],
+        "figure_references": [
+          "Table A-1"
+        ]
+      },
+      "elapsed_seconds": 0.08723406700028136,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p2",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p7",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p3",
+          "citation": "DOC1:p3"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-02",
+      "conversation_id": "p1v2-single-02",
+      "turn": "1",
+      "prediction": {
+        "answer": "In 2012, U.S. federal revenues were 16.4% of GDP, and spending was 23.2% of GDP. The spending-minus-revenue gap was therefore 6.8 percentage points.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p7",
+          "DOC1:p13"
+        ],
+        "figure_references": [
+          "Table A-3"
+        ]
+      },
+      "elapsed_seconds": 7.585469141999965,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p7",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-3",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p13",
+          "citation": "DOC1:p13"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p17",
+          "citation": "DOC1:p17"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-03",
+      "conversation_id": "p1v2-single-03",
+      "turn": "1",
+      "prediction": {
+        "answer": "United States labour force participation rate was 64.7% in 2010.",
+        "status": "answered",
+        "citations": [
+          "DOC3:p5"
+        ],
+        "figure_references": [
+          "Table B-2"
+        ]
+      },
+      "elapsed_seconds": 0.08874701199965784,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC3:p5",
+          "citation": "DOC3:p5"
+        },
+        {
+          "kind": "figure",
+          "id": "Table B-2",
+          "citation": "DOC3:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p1",
+          "citation": "DOC3:p1"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p2",
+          "citation": "DOC3:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p3",
+          "citation": "DOC3:p3"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-04",
+      "conversation_id": "p1v2-single-04",
+      "turn": "1",
+      "prediction": {
+        "answer": "United States inflation rate was 1.5% in 2013.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 0.08627500599959603,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-2",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p7",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p26",
+          "citation": "DOC1:p26"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p5",
+          "citation": "DOC1:p5"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-05",
+      "conversation_id": "p1v2-single-05",
+      "turn": "1",
+      "prediction": {
+        "answer": "advanced economies output growth was 0.1% in 2008.",
+        "status": "answered",
+        "citations": [
+          "DOC1:p1"
+        ],
+        "figure_references": [
+          "Table 1-1"
+        ]
+      },
+      "elapsed_seconds": 0.08523925299959956,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p1",
+          "citation": "DOC1:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-1",
+          "citation": "DOC1:p1"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p2",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p5",
+          "citation": "DOC1:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p2",
+          "citation": "DOC1:p2"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-06",
+      "conversation_id": "p1v2-single-06",
+      "turn": "1",
+      "prediction": {
+        "answer": "Figure A-2 ends in 2012, while Figure A-3 extends to 2013. Both figures mark forecast years with dashed lines.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p4",
+          "DOC2:p1",
+          "DOC2:p3",
+          "DOC2:p7",
+          "DOC3:p4"
+        ],
+        "figure_references": [
+          "Figure A-2",
+          "Figure A-3"
+        ]
+      },
+      "elapsed_seconds": 9.750305271999423,
+      "format_fallback": false,
+      "schema_normalizations": [
+        {
+          "stage": "primary",
+          "change": "citations_duplicates_removed"
+        }
+      ],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p4",
+          "citation": "DOC2:p4"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-2",
+          "citation": "DOC2:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p7",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-3",
+          "citation": "DOC2:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-07",
+      "conversation_id": "p1v2-single-07",
+      "turn": "1",
+      "prediction": {
+        "answer": "The endpoint for emerging economies in December 2010 is 1.22 in Figure A-4 and 2.06 in Figure A-5. The difference arises because Figure A-5 is rebased to January 2009, while Figure A-4 remains at January 2007. This rebase shifts the index levels upwards, resulting in the higher endpoint in Figure A-5.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p5"
+        ],
+        "figure_references": [
+          "Figure A-4",
+          "Figure A-5"
+        ]
+      },
+      "elapsed_seconds": 9.562003302999983,
+      "format_fallback": false,
+      "schema_normalizations": [
+        {
+          "stage": "primary",
+          "change": "citations_duplicates_removed"
+        }
+      ],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p11",
+          "citation": "DOC1:p11"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-4",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p33",
+          "citation": "DOC1:p33"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-5",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p26",
+          "citation": "DOC1:p26"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-08",
+      "conversation_id": "p1v2-single-08",
+      "turn": "1",
+      "prediction": {
+        "answer": "In 2010, Greece's unemployment rate was 12.7%, while in 2012, it increased to 24.5%. Therefore, Greece's unemployment rate increased by 11.8 percentage points between 2010 and 2012.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p6",
+          "DOC2:p7"
+        ],
+        "figure_references": [
+          "Figure A-6",
+          "Figure A-7"
+        ]
+      },
+      "elapsed_seconds": 8.580015034999633,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p6",
+          "citation": "DOC2:p6"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-6",
+          "citation": "DOC2:p6"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p3",
+          "citation": "DOC1:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-7",
+          "citation": "DOC2:p6"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p4",
+          "citation": "DOC2:p4"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-09",
+      "conversation_id": "p1v2-single-09",
+      "turn": "1",
+      "prediction": {
+        "answer": "In 2010, Germany had an unemployment rate of 7.1%, while Spain had 20.1%. By 2012, Germany's rate dropped to 5.5%, while Spain's rate increased to 25.0%. The change in Germany was -1.6 percentage points, and in Spain, it was +4.9 percentage points.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p6",
+          "DOC2:p5",
+          "DOC1:p15",
+          "DOC1:p13",
+          "DOC1:p30"
+        ],
+        "figure_references": [
+          "Figure A-6",
+          "Figure A-7"
+        ]
+      },
+      "elapsed_seconds": 10.765832426000088,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p6",
+          "citation": "DOC2:p6"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-6",
+          "citation": "DOC2:p6"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p5",
+          "citation": "DOC2:p5"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-7",
+          "citation": "DOC2:p6"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p15",
+          "citation": "DOC1:p15"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-10",
+      "conversation_id": "p1v2-single-10",
+      "turn": "1",
+      "prediction": {
+        "answer": "-0.41",
+        "status": "answered",
+        "citations": [
+          "DOC3:p2",
+          "DOC3:p3"
+        ],
+        "figure_references": [
+          "Figure B-1",
+          "Figure B-2"
+        ]
+      },
+      "elapsed_seconds": 5.538741251999454,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p11",
+          "citation": "DOC1:p11"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-1",
+          "citation": "DOC3:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p5",
+          "citation": "DOC3:p5"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-2",
+          "citation": "DOC3:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p2",
+          "citation": "DOC3:p2"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-11",
+      "conversation_id": "p1v2-single-11",
+      "turn": "1",
+      "prediction": {
+        "answer": "In 2013, the non-headline inflation series in Figure B-3 is the GDP deflator, which has a value of approximately 1.5%. Both figures share a headline CPI value of around 1.5% in 2013.",
+        "status": "answered",
+        "citations": [
+          "DOC3:p4",
+          "DOC1:p36",
+          "DOC1:p27",
+          "DOC2:p4",
+          "DOC3:p1"
+        ],
+        "figure_references": [
+          "Figure B-3",
+          "Figure B-4"
+        ]
+      },
+      "elapsed_seconds": 10.177706354999827,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC3:p4",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-3",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p36",
+          "citation": "DOC1:p36"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-4",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p27",
+          "citation": "DOC1:p27"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-12",
+      "conversation_id": "p1v2-single-12",
+      "turn": "1",
+      "prediction": {
+        "answer": "World output growth in 2000-2007 average was 3.2%, 0.8 percentage points higher than 2.4% in 2013.",
+        "status": "answered",
+        "citations": [
+          "DOC1:p1",
+          "DOC2:p2"
+        ],
+        "figure_references": [
+          "Table 1-1",
+          "Table A-1"
+        ]
+      },
+      "elapsed_seconds": 0.10189028000058897,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p2",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-1",
+          "citation": "DOC1:p1"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p7",
+          "citation": "DOC2:p7"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-13",
+      "conversation_id": "p1v2-single-13",
+      "turn": "1",
+      "prediction": {
+        "answer": "-1.7 percentage points",
+        "status": "answered",
+        "citations": [
+          "DOC2:p3",
+          "DOC1:p5"
+        ],
+        "figure_references": [
+          "Table 1-2",
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 7.071536501000082,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p11",
+          "citation": "DOC1:p11"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p5",
+          "citation": "DOC3:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p24",
+          "citation": "DOC1:p24"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p25",
+          "citation": "DOC1:p25"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p1",
+          "citation": "DOC3:p1"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-14",
+      "conversation_id": "p1v2-single-14",
+      "turn": "1",
+      "prediction": {
+        "answer": "United States output growth in 2000-2007 average was 2.6%, 0.4 percentage points higher than 2.2% in 2013.",
+        "status": "answered",
+        "citations": [
+          "DOC1:p5",
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table 1-2",
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 0.5689434440000696,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p7",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-2",
+          "citation": "DOC1:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-2",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-15",
+      "conversation_id": "p1v2-session-a",
+      "turn": "1",
+      "prediction": {
+        "answer": "Under the session assumption, United States inflation rate in 2013 was 2.5%, 0.7 percentage points higher than 1.8% in 2012. The published United States inflation rate for 2013 remains 1.5%.",
+        "status": "session_override",
+        "citations": [
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 0.7957796310001868,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-3",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p5",
+          "citation": "DOC1:p5"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-3",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p13",
+          "citation": "DOC1:p13"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-16",
+      "conversation_id": "p1v2-session-a",
+      "turn": "2",
+      "prediction": {
+        "answer": "Under the session assumption, United States inflation rate in 2013 was 2.5%, 0.4 percentage points higher than 2.1% in 2011. The published United States inflation rate for 2013 remains 1.5%.",
+        "status": "session_override",
+        "citations": [
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 0.7159358199996859,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-3",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-3",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p5",
+          "citation": "DOC1:p5"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-17",
+      "conversation_id": "p1v2-session-a",
+      "turn": "3",
+      "prediction": {
+        "answer": "Under the session assumption, United States inflation rate in 2013 was 2.0%, 0.2 percentage points higher than 1.8% in 2012. The published United States inflation rate for 2013 remains 1.5%.",
+        "status": "session_override",
+        "citations": [
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 0.2775000430001455,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-3",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p5",
+          "citation": "DOC1:p5"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-3",
+          "citation": "DOC3:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p35",
+          "citation": "DOC1:p35"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-18",
+      "conversation_id": "p1v2-session-b",
+      "turn": "1",
+      "prediction": {
+        "answer": "Under the session assumption, Euro area inflation rate in 2011 is 4.0%, 2.7 percentage points higher than the published 1.3%. The document value remains unchanged.",
+        "status": "session_override",
+        "citations": [
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 0.1967646880002576,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-3",
+          "citation": "DOC1:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure 1-2",
+          "citation": "DOC1:p3"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p7",
+          "citation": "DOC1:p7"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-19",
+      "conversation_id": "p1v2-session-b",
+      "turn": "2",
+      "prediction": {
+        "answer": "United States inflation rate was 1.5% in 2013.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 0.22169265800039284,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-3",
+          "citation": "DOC1:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-3",
+          "citation": "DOC2:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p7",
+          "citation": "DOC2:p7"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-20",
+      "conversation_id": "p1v2-single-20",
+      "turn": "1",
+      "prediction": {
+        "answer": "In 2010, the unemployment rate according to Table 1-2 was 9.6%, while Table B-2 reported a rate of 9.8%. Supplement A explicitly revised the unemployment observation in Table 1-2 to align with the revised output growth rate for 2010, which is now reported as 2.4% instead of 3.0%. Therefore, only one unemployment observation should be reported.",
+        "status": "answered",
+        "citations": [
+          "DOC1:p5",
+          "DOC3:p5",
+          "DOC2:p1",
+          "DOC3:p1",
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table 1-2",
+          "Table B-2"
+        ]
+      },
+      "elapsed_seconds": 10.662245397999868,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table 1-2",
+          "citation": "DOC1:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p1",
+          "citation": "DOC3:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table B-2",
+          "citation": "DOC3:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p5",
+          "citation": "DOC3:p5"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-21",
+      "conversation_id": "p1v2-single-21",
+      "turn": "1",
+      "prediction": {
+        "answer": "The forecast error was -0.8 percentage points: 2.1% outturn minus 2.9% forecast for United States inflation rate in 2011. The outturn was 0.8 percentage points lower than the forecast.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 0.8036302079999587,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure 2-5",
+          "citation": "DOC1:p29"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p4",
+          "citation": "DOC1:p4"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-22",
+      "conversation_id": "p1v2-single-22",
+      "turn": "1",
+      "prediction": {
+        "answer": "The erratum to Figure B-5 replaces every observation in the original chart, except for the year 2012, which remains unchanged. The corrected version of Figure B-5 (corrected) Registered urban unemployment rate, China, 2000-2013 (DOC3:p6) shows the revised data for 2012, while the original version (DOC3:p5) includes the incorrect value.",
+        "status": "answered",
+        "citations": [
+          "DOC3:p6",
+          "DOC3:p5"
+        ],
+        "figure_references": [
+          "Figure B-5 (corrected)",
+          "Figure B-5"
+        ]
+      },
+      "elapsed_seconds": 9.26604580500043,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC3:p6",
+          "citation": "DOC3:p6"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-5 (corrected)",
+          "citation": "DOC3:p6"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p37",
+          "citation": "DOC1:p37"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure B-5",
+          "citation": "DOC3:p5"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p5",
+          "citation": "DOC2:p5"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-23",
+      "conversation_id": "p1v2-single-23",
+      "turn": "1",
+      "prediction": {
+        "answer": "The retrieved evidence does not support an answer to this question.",
+        "status": "not_found",
+        "citations": [],
+        "figure_references": []
+      },
+      "elapsed_seconds": 12.09883161399921,
+      "format_fallback": true,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p37",
+          "citation": "DOC1:p37"
+        },
+        {
+          "kind": "figure",
+          "id": "Table B-1",
+          "citation": "DOC3:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p26",
+          "citation": "DOC1:p26"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure 2-2",
+          "citation": "DOC1:p21"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p1",
+          "citation": "DOC3:p1"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-24",
+      "conversation_id": "p1v2-single-24",
+      "turn": "1",
+      "prediction": {
+        "answer": "The premise is false: Euro area output growth was -0.4% in 2013, indicating a contraction.",
+        "status": "false_premise",
+        "citations": [
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 0.1806267719994139,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC1:p11",
+          "citation": "DOC1:p11"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p7",
+          "citation": "DOC1:p7"
+        },
+        {
+          "kind": "page",
+          "id": "DOC3:p2",
+          "citation": "DOC3:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC1:p28",
+          "citation": "DOC1:p28"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        }
+      ],
+      "human_correct": null
+    },
+    {
+      "mode": "final",
+      "question_id": "P1V2-25",
+      "conversation_id": "p1v2-single-25",
+      "turn": "1",
+      "prediction": {
+        "answer": "Euro area unemployment rate was 11.4% in 2012.",
+        "status": "answered",
+        "citations": [
+          "DOC2:p3"
+        ],
+        "figure_references": [
+          "Table A-2"
+        ]
+      },
+      "elapsed_seconds": 0.1940141479999511,
+      "format_fallback": false,
+      "schema_normalizations": [],
+      "top_five": [
+        {
+          "kind": "page",
+          "id": "DOC2:p3",
+          "citation": "DOC2:p3"
+        },
+        {
+          "kind": "figure",
+          "id": "Table A-1",
+          "citation": "DOC2:p2"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p1",
+          "citation": "DOC2:p1"
+        },
+        {
+          "kind": "figure",
+          "id": "Figure A-2",
+          "citation": "DOC2:p4"
+        },
+        {
+          "kind": "page",
+          "id": "DOC2:p4",
+          "citation": "DOC2:p4"
+        }
+      ],
+      "human_correct": null
+    }
+  ]
+}

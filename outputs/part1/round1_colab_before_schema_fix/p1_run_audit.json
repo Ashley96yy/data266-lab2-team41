@@ -1,0 +1,41 @@
+{
+  "row_count": 40,
+  "conversation_count": 35,
+  "status_distribution": {
+    "answered": 28,
+    "not_found": 5,
+    "conflict": 2,
+    "false_premise": 1,
+    "session_override": 4
+  },
+  "rows_with_citations": 33,
+  "citation_presence_rate": 0.825,
+  "rows_with_figures": 30,
+  "median_seconds_per_question": 5.729,
+  "total_input_tokens": 119911,
+  "total_generated_tokens": 3623,
+  "override_repair_count": 0,
+  "answer_repair_count": 8,
+  "repair_count": 8,
+  "answer_fallback_count": 4,
+  "figure_citation_completion_count": 2,
+  "doc3_page7_citations": 0,
+  "doc3_figure_c1_citations": 0,
+  "figure_c1_references": 0,
+  "checks": {
+    "expected_question_rows": true,
+    "expected_question_conversations": true,
+    "submission_rows_complete": true,
+    "diagnostics_rows_complete": true,
+    "turn_results_complete": true,
+    "diagnostic_ids_match": true,
+    "conversations_match": true,
+    "memory_turns_match": true,
+    "diagnostics_completed": true,
+    "no_diagnostic_errors": true,
+    "doc3_page7_excluded": true,
+    "doc3_figure_c1_citation_excluded": true,
+    "figure_c1_reference_excluded": true
+  },
+  "all_checks_passed": true
+}

@@ -1,0 +1,16 @@
+{
+  "tests_run": 27,
+  "tests_passed": 27,
+  "test_scope": "Synthetic CPU contract/regression checks, not experimental scores or human reviews",
+  "tested_source_commit": "9caac5f34d2b843c5aaf5968eccd379ac2074c40",
+  "comparison_execution": {
+    "status": "completed",
+    "elapsed_seconds": 0.5109766000095988,
+    "code_cells": 3,
+    "new_gpu_inference": false,
+    "execution_engine": "In-process IPython CPU execution of analysis cells; no network kernel"
+  },
+  "current_colab_archive_verified": true,
+  "human_labels_filled": false,
+  "new_gpu_inference_by_integration": false
+}

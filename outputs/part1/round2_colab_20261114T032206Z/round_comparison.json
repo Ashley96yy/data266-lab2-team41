@@ -1,0 +1,113 @@
+{
+  "rows": [
+    {
+      "round": 1,
+      "cohort": "practice",
+      "questions": 40,
+      "execution_errors": 0,
+      "format_fallbacks": 4,
+      "median_seconds_per_question": 5.729,
+      "recall_at_5": null,
+      "retrieval_denominator": null,
+      "answer_correctness": null,
+      "citation_accuracy": null,
+      "groundedness_mean": null,
+      "human_agreement": null
+    },
+    {
+      "round": 1,
+      "cohort": "dense_only",
+      "questions": 25,
+      "execution_errors": 0,
+      "format_fallbacks": 4,
+      "median_seconds_per_question": 12.840790267000102,
+      "recall_at_5": 0.4722222222222222,
+      "retrieval_denominator": 24,
+      "answer_correctness": null,
+      "citation_accuracy": null,
+      "groundedness_mean": null,
+      "human_agreement": null
+    },
+    {
+      "round": 1,
+      "cohort": "final",
+      "questions": 25,
+      "execution_errors": 0,
+      "format_fallbacks": 6,
+      "median_seconds_per_question": 0.27093332599997666,
+      "recall_at_5": 0.7638888888888888,
+      "retrieval_denominator": 24,
+      "answer_correctness": null,
+      "citation_accuracy": null,
+      "groundedness_mean": null,
+      "human_agreement": null
+    },
+    {
+      "round": 2,
+      "cohort": "practice",
+      "questions": 40,
+      "execution_errors": 0,
+      "format_fallbacks": 0,
+      "median_seconds_per_question": 5.126,
+      "recall_at_5": null,
+      "retrieval_denominator": null,
+      "answer_correctness": null,
+      "citation_accuracy": null,
+      "groundedness_mean": null,
+      "human_agreement": null
+    },
+    {
+      "round": 2,
+      "cohort": "dense_only",
+      "questions": 25,
+      "execution_errors": 0,
+      "format_fallbacks": 2,
+      "median_seconds_per_question": 9.173568858999715,
+      "recall_at_5": 0.4722222222222222,
+      "retrieval_denominator": 24,
+      "answer_correctness": null,
+      "citation_accuracy": null,
+      "groundedness_mean": null,
+      "human_agreement": null
+    },
+    {
+      "round": 2,
+      "cohort": "final",
+      "questions": 25,
+      "execution_errors": 0,
+      "format_fallbacks": 1,
+      "median_seconds_per_question": 0.7957796310001868,
+      "recall_at_5": 0.7638888888888888,
+      "retrieval_denominator": 24,
+      "answer_correctness": null,
+      "citation_accuracy": null,
+      "groundedness_mean": null,
+      "human_agreement": null
+    }
+  ],
+  "changes": [
+    {
+      "cohort": "practice",
+      "before_fallbacks": 4,
+      "after_fallbacks": 0,
+      "fewer_fallbacks": 4,
+      "reduction_percentage_points": 10.0
+    },
+    {
+      "cohort": "dense_only",
+      "before_fallbacks": 4,
+      "after_fallbacks": 2,
+      "fewer_fallbacks": 2,
+      "reduction_percentage_points": 8.0
+    },
+    {
+      "cohort": "final",
+      "before_fallbacks": 6,
+      "after_fallbacks": 1,
+      "fewer_fallbacks": 5,
+      "reduction_percentage_points": 20.0
+    }
+  ],
+  "analysis_commit": "9caac5f34d2b843c5aaf5968eccd379ac2074c40",
+  "source_inference_commit": null
+}

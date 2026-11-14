@@ -1,0 +1,26 @@
+{
+  "schema_fix_source_sha256": "431db37afe9f08e25b5b1e9289e6b2ec731440371dc93a5c50b59b1500e53ba1",
+  "git_commit": null,
+  "libraries": {
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "transformers": "5.22.1",
+    "tokenizers": "0.23.3",
+    "numpy": "2.4.6",
+    "pandas": "2.2.3",
+    "Pillow": "11.3.0",
+    "PyMuPDF": "2.1",
+    "pdfplumber": "0.11.9",
+    "chromadb": "1.5.9",
+    "sentence-transformers": "5.7.0",
+    "rank-bm25": "0.2.2",
+    "huggingface-hub": "1.33.0"
+  },
+  "hardware": {
+    "name": "Tesla T4",
+    "device_count": 1,
+    "total_device_gib": 14.56317138671875
+  },
+  "seed": 266,
+  "protocol": "Development rerun after saved-output format failures; no human labels filled."
+}

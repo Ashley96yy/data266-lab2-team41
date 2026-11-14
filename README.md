@@ -8,7 +8,6 @@ This repository contains the shared implementation and report materials for DATA
 .
 ├── README.md
 ├── requirements.txt
-├── requirements-part3.txt
 ├── config/                      # optional environment records
 ├── notebooks/
 │   ├── Yuyao_Ding/
@@ -43,7 +42,7 @@ For a fresh Part 1 environment, create and activate a Python environment, then i
 python -m pip install -r requirements.txt
 ```
 
-Part 3 has separate dependencies in `requirements-part3.txt`. See its runbook before installing anything into an existing GPU environment. The historical snapshots under `config/` are not the default installation command.
+Part 3's actual Colab T4 package versions are printed in its executed notebook. The earlier local development snapshot is kept at `config/requirements-part3.txt` for provenance; it is not the default installation command for the T4 run. See the Part 3 runbook before changing an existing GPU environment.
 
 Start Jupyter from the repository root:
 

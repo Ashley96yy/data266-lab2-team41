@@ -8,15 +8,20 @@ This repository contains the shared implementation and report materials for DATA
 .
 ├── README.md
 ├── requirements.txt
+├── requirements-part3.txt
+├── config/
+│   └── windows/                 # validated environment snapshots
 ├── notebooks/
 │   ├── Yuyao_Ding/
 │   │   ├── p1_rag.ipynb
 │   │   └── p3_agents.ipynb
 │   └── Pratiksha_Kaushik/
+│       ├── p1/              # retained Part 1 development notebooks
 │       └── p2_v4.ipynb
 ├── eval/
 ├── traces/
 ├── src/
+├── scripts/                     # one-off runners and review tools
 ├── CONTRIBUTIONS.md
 ├── AI_USAGE.md
 └── .gitignore
@@ -25,15 +30,19 @@ This repository contains the shared implementation and report materials for DATA
 - `eval/` stores the golden set, prompts, and evaluation scenarios.
 - `traces/` stores the Part 3 JSON traces.
 - `src/` contains reusable helpers shared by the notebooks.
+- `scripts/` contains executable helpers, including the preserved Part 1 Colab rerun script.
+- `config/windows/` contains the Part 1 and Part 3 Windows environment snapshots and constraints. These are provenance records, not instructions to replace a working CUDA/PyTorch installation.
 - The member folders contain the primary notebooks and retained development versions. The folder names organize files; both members contribute to all three parts. Record each person's work in `CONTRIBUTIONS.md`.
 
 ## Setup
 
-Create and activate a Python environment, then install the dependencies once their versions have been finalized in `requirements.txt`:
+For a fresh Part 1 environment, create and activate a Python environment, then install the pinned Part 1 dependencies in `requirements.txt`:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
+
+Part 3 has separate dependencies in `requirements-part3.txt`. See its runbook before installing anything into an existing GPU environment. The historical Windows snapshots under `config/windows/` are not the default installation command.
 
 Start Jupyter from the repository root:
 
@@ -57,11 +66,11 @@ Small source files, evaluation summaries, configuration files, and trace metadat
 
 ## Status
 
-The repository follows the required shared structure for all three parts. Part-specific instructions and pinned dependency versions will be completed as the implementation develops.
+The repository keeps the three parts in the shared notebook structure. Part-specific runbooks and recorded environments are linked above. Human reviews, final report materials, and final competition submission remain separate completion items.
 
 ## Part 1 second Colab evaluation
 
-The second real Tesla T4 run and first-run comparison are preserved under outputs/part1. See [round 2 protocol](eval/PART1_ROUND2.md) and [executed comparison notebook](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb). The final cell of p1_rag.ipynb records the improved run; the original earlier outputs remain intact. For the recorded Colab layout, upload the root p1_colab_schema_fix_and_rerun.py helper to /content before that cell. Human metrics and final Git provenance are still pending.
+The second real Tesla T4 run and first-run comparison are preserved under `outputs/part1/`. See the [round 2 protocol](eval/PART1_ROUND2.md) and [executed comparison notebook](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb). The final cell of `p1_rag.ipynb` records the improved run; the original earlier outputs remain intact. The preserved helper is now at [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p1_colab_schema_fix_and_rerun.py). In the recorded upload-to-Colab layout, that file was placed at `/content/p1_colab_schema_fix_and_rerun.py`, which is the path saved in the executed notebook. This directory cleanup does not require another GPU run. Human metrics and final Git provenance are still pending.
 
 ## Part 3 GPU development runs
 

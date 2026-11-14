@@ -13,7 +13,7 @@ class ColabSchemaTest(unittest.TestCase):
             s=''.join(c.get('source',[]))
             if 'def build_evidence_packet' in s:exec(s.split('\nevidence_packet =')[0],cls.ns)
             if 'def validate_answer_json' in s:exec(s.split('\nschema_fixture =')[0],cls.ns)
-        tree=ast.parse((ROOT/'p1_colab_schema_fix_and_rerun.py').read_text(encoding='utf-8'))
+        tree=ast.parse((ROOT/'scripts/p1_colab_schema_fix_and_rerun.py').read_text(encoding='utf-8'))
         fn=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='normalize_answer_container')
         exec(compile(ast.Module(body=[fn],type_ignores=[]),'formatter','exec'),cls.ns)
 

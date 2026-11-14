@@ -18,9 +18,11 @@ human or citation-support scores have been invented. See the executed comparison
 notebook and its notebook-generated ROUND2_IMPROVEMENT.md report for actual numbers.
 
 The genuine executed p1_rag notebook is preserved; the canonical copy adds only
-Markdown labels to distinguish rounds. Its final cell expects the provided root
-helper at /content/p1_colab_schema_fix_and_rerun.py in the recorded Colab upload
-layout. Original archives/full retrieved contexts/images are local-only under
+Markdown labels to distinguish rounds. The helper source is now
+`scripts/p1_colab_schema_fix_and_rerun.py`; its bytes are unchanged. Its final
+cell still expects that file to be uploaded as
+`/content/p1_colab_schema_fix_and_rerun.py` in the recorded Colab layout.
+Original archives/full retrieved contexts/images are local-only under
 .runtime/part1_colab. Published outputs omit those original inputs and contexts.
 
 The saved Colab run had no Git checkout: retain null/unavailable rather than

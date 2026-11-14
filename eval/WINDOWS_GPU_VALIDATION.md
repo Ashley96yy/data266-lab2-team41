@@ -16,7 +16,7 @@ No package was installed, removed or changed during this Part3 quality revision.
 
 原项目的 58 个文件已备份至当前 Codex 工作目录的 `work/original-backup/`，对应 `work/original-backup-manifest.json` 保存 SHA-256。备份不复制 `.venv` 和 Python 缓存。21 个私有输入、三个冻结 JSON 文件和原先已执行的 `p3_agents.ipynb` 已逐字节比对一致。私有输入、肖像和生成图像均保留在本机。
 
-原环境为 Python 3.11.9、PyTorch 2.8.0+cu128、PyTorch CUDA 12.8、Transformers 4.57.6、RTX 4090。全部 106 个原有包版本保持不变。使用锁定清单新增依赖，另增加 `hf-xet==1.8.0` 用于模型下载。完整环境见 `windows_environment_lock.txt`；本机项目另存有 `requirements-windows-validated.txt`。`pip check` 通过。
+原环境为 Python 3.11.9、PyTorch 2.8.0+cu128、PyTorch CUDA 12.8、Transformers 4.57.6、RTX 4090。全部 106 个原有包版本保持不变。使用锁定清单新增依赖，另增加 `hf-xet==1.8.0` 用于模型下载。完整环境见 `windows_environment_lock.txt`；本机项目另存有 `config/windows/requirements-windows-validated.txt`。`pip check` 通过。
 
 修复与兼容调整：
 
@@ -61,7 +61,7 @@ $env:GRADIO_ANALYTICS_ENABLED='False'
 .\.venv\Scripts\python.exe -m src.p3_app
 ```
 
-单独复现独立测试图检查可运行 `.\.venv\Scripts\python.exe eval/smoke_p3_windows.py`。该脚本的 `--evaluate` 会重新执行固定批次并更新 `.runtime/eval/` 中的汇总文件；再次运行前应先另存当前汇总。每个请求使用独立 run_id，原 trace 保留。后续依赖操作应使用 `constraints-windows-existing.txt` 保护已有环境；无需重新安装 CUDA 或 PyTorch。
+单独复现独立测试图检查可运行 `.\.venv\Scripts\python.exe eval/smoke_p3_windows.py`。该脚本的 `--evaluate` 会重新执行固定批次并更新 `.runtime/eval/` 中的汇总文件；再次运行前应先另存当前汇总。每个请求使用独立 run_id，原 trace 保留。后续依赖操作应使用 `config/windows/constraints-windows-existing.txt` 保护已有环境；无需重新安装 CUDA 或 PyTorch。
 
 逐项状态与原始 trace 路径也记录在 `evaluation_execution_summary.json`：
 

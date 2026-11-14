@@ -129,7 +129,15 @@ def main():
     finally:
         manifest.update(finished_at=datetime.now(timezone.utc).isoformat(),elapsed_seconds=time.perf_counter()-start)
         if 'torch' in locals() and torch.cuda.is_available():
-            manifest.update(peak_allocated_gib=torch.cuda.max_memory_allocated()/1024**3,peak_reserved_gib=torch.cuda.max_memory_reserved()/1024**3,allocator_budget_gib=14.0,actual_t4_verified=False)
+            device_name = torch.cuda.get_device_name(0)
+            completed = manifest['status'] == 'completed'
+            manifest.update(
+                peak_allocated_gib=torch.cuda.max_memory_allocated()/1024**3,
+                peak_reserved_gib=torch.cuda.max_memory_reserved()/1024**3,
+                allocator_budget_gib=14.0,
+                actual_t4_verified=completed and 'T4' in device_name,
+                actual_p100_verified=completed and 'P100' in device_name,
+            )
         write(target/'manifest.json',manifest)
         print('VALIDATION RECORD:',target,manifest['status'],flush=True)
 

@@ -1,0 +1,83 @@
+{
+  "case_id": "P3-S01",
+  "mode": "without",
+  "source_run_id": "07ca15f0d8844b2da4156e051804381a",
+  "source_trace_sha256": "6f1e9d78e1b5d5bcd855a259fb8189f0b239450e1d0639ad199ac7014c80e10d",
+  "source_commit": "53c92a3351d8c9bc9d4c33b4d42ab43df9057753",
+  "gpu": "Tesla T4",
+  "seed": 266,
+  "request": "Caption this image in one sentence.",
+  "input_image": "private_fixture:P3-S01",
+  "critique_enabled": false,
+  "status": "answered",
+  "message": "A laptop displaying a scenic mountain lake view, next to a white mug and a piece of paper with 'DATA 266' written on it.",
+  "elapsed_seconds": 7.388667546000306,
+  "agent_events": [
+    {
+      "agent": "planner",
+      "input": {
+        "request": "Caption this image in one sentence.",
+        "image_path": "private_fixture:P3-S01"
+      },
+      "status": "completed",
+      "output": {
+        "route": "vision_only",
+        "status": "ready",
+        "message": "Send the image and question to Vision Understanding.",
+        "image_info": {
+          "format": "PNG",
+          "width": 1254,
+          "height": 1254,
+          "size_bytes": 2318140
+        },
+        "untrusted_image_text_present": false,
+        "elapsed_seconds": 0.05514
+      },
+      "elapsed_seconds": 0.05519001099992238
+    },
+    {
+      "agent": "vision",
+      "input": {
+        "image_path": "private_fixture:P3-S01",
+        "questions": [
+          "What objects are on the desk?",
+          "What text is on the paper card?"
+        ]
+      },
+      "status": "completed",
+      "output": {
+        "caption": "A laptop displaying a scenic mountain lake view, next to a white mug and a piece of paper with 'DATA 266' written on it.",
+        "main_objects": [
+          "laptop",
+          "mug",
+          "paper"
+        ],
+        "visible_text": [
+          "DATA 266"
+        ],
+        "answers": [
+          {
+            "question": "What objects are on the desk?",
+            "answer": "A laptop, a mug, and a piece of paper."
+          },
+          {
+            "question": "What text is on the paper card?",
+            "answer": "DATA 266"
+          }
+        ],
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "input_tokens": 749,
+        "generated_tokens": 145,
+        "elapsed_seconds": 7.164,
+        "format_retry_count": 0
+      },
+      "elapsed_seconds": 7.333229473999836
+    }
+  ],
+  "redaction": {
+    "private_file_paths": "replaced with stable case-scoped identifiers",
+    "raw_model_retry_payloads": "omitted; processed agent output and available retry counters retained",
+    "images": "not included"
+  }
+}

@@ -32,3 +32,5 @@ The no-quality-loop mode still runs the same output safety review and records th
 Enhancement is explicitly a geometry-preserving Pillow photometric backend with zero diffusion steps, followed by the existing SD safety checker and VLM review. Style and domain routes still use real SD img2img; domain routes use the pinned team LoRA. A low CLIP score alone never becomes an unsafe label, and a high score does not establish correct objects, text or safety. Critic agreement is withheld until every generated attempt has its human accept/nonaccept label.
 
 Every experimental number in this report is calculated from saved records. The independent human metrics are not filled by Codex. Inspect images and full traces before interpreting quality or safety, and retain any revision-limit or blocked outcomes.
+
+Redacted per-request JSON traces for the 40 evaluated cases are published under [traces/t4_20261114T060249Z](../traces/t4_20261114T060249Z/). The full raw traces and images remain in the team's private run archive.

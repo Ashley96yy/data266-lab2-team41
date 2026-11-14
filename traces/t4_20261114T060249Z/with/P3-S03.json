@@ -1,0 +1,84 @@
+{
+  "case_id": "P3-S03",
+  "mode": "with",
+  "source_run_id": "664b7d2b62dc45999a4c8ea4709e420a",
+  "source_trace_sha256": "433b980f204fbcdcafb0f444ac467c8b897bfc906bad450e964de0d3323da555",
+  "source_commit": "53c92a3351d8c9bc9d4c33b4d42ab43df9057753",
+  "gpu": "Tesla T4",
+  "seed": 266,
+  "request": "How many apples are there, and what word is written on the card?",
+  "input_image": "private_fixture:P3-S03",
+  "critique_enabled": true,
+  "status": "answered",
+  "message": "Two\nSALE",
+  "elapsed_seconds": 5.493083219999789,
+  "agent_events": [
+    {
+      "agent": "planner",
+      "input": {
+        "request": "How many apples are there, and what word is written on the card?",
+        "image_path": "private_fixture:P3-S03"
+      },
+      "status": "completed",
+      "output": {
+        "route": "vision_only",
+        "status": "ready",
+        "message": "Send the image and question to Vision Understanding.",
+        "image_info": {
+          "format": "PNG",
+          "width": 1254,
+          "height": 1254,
+          "size_bytes": 2440848
+        },
+        "untrusted_image_text_present": false,
+        "elapsed_seconds": 0.050949
+      },
+      "elapsed_seconds": 0.050997592999920016
+    },
+    {
+      "agent": "vision",
+      "input": {
+        "image_path": "private_fixture:P3-S03",
+        "questions": [
+          "How many apples are visible?",
+          "What word is on the card?"
+        ]
+      },
+      "status": "completed",
+      "output": {
+        "caption": "A bowl containing two red apples and a banana next to a 'SALE' sign.",
+        "main_objects": [
+          "bowl",
+          "apples",
+          "banana",
+          "card"
+        ],
+        "visible_text": [
+          "SALE"
+        ],
+        "answers": [
+          {
+            "question": "How many apples are visible?",
+            "answer": "Two"
+          },
+          {
+            "question": "What word is on the card?",
+            "answer": "SALE"
+          }
+        ],
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "input_tokens": 745,
+        "generated_tokens": 122,
+        "elapsed_seconds": 5.291,
+        "format_retry_count": 0
+      },
+      "elapsed_seconds": 5.441845596999883
+    }
+  ],
+  "redaction": {
+    "private_file_paths": "replaced with stable case-scoped identifiers",
+    "raw_model_retry_payloads": "omitted; processed agent output and available retry counters retained",
+    "images": "not included"
+  }
+}

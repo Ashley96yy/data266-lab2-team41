@@ -1,0 +1,44 @@
+{
+  "case_id": "P3-S13",
+  "mode": "with",
+  "source_run_id": "2f0d53db76ef43de809079913e8c22c3",
+  "source_trace_sha256": "8670bc04d5c5bf6939ae38366d2fc2842c9a1b5b43c80cd47e64457eb2250d37",
+  "source_commit": "53c92a3351d8c9bc9d4c33b4d42ab43df9057753",
+  "gpu": "Tesla T4",
+  "seed": 266,
+  "request": "Make it better.",
+  "input_image": "private_fixture:P3-S13",
+  "critique_enabled": true,
+  "status": "needs_clarification",
+  "message": "What specific style or edit would you like? No image has been generated.",
+  "elapsed_seconds": 0.04658406999988074,
+  "agent_events": [
+    {
+      "agent": "planner",
+      "input": {
+        "request": "Make it better.",
+        "image_path": "private_fixture:P3-S13"
+      },
+      "status": "completed",
+      "output": {
+        "route": "clarification",
+        "status": "needs_clarification",
+        "message": "What specific style or edit would you like? No image has been generated.",
+        "image_info": {
+          "format": "PNG",
+          "width": 1254,
+          "height": 1254,
+          "size_bytes": 1960962
+        },
+        "untrusted_image_text_present": false,
+        "elapsed_seconds": 0.046295
+      },
+      "elapsed_seconds": 0.04634204900003169
+    }
+  ],
+  "redaction": {
+    "private_file_paths": "replaced with stable case-scoped identifiers",
+    "raw_model_retry_payloads": "omitted; processed agent output and available retry counters retained",
+    "images": "not included"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "case_id": "P3-S14",
+  "mode": "without",
+  "source_run_id": "9e8f3dbf51314758a7c0815d6f40cd4a",
+  "source_trace_sha256": "ec7e0781449da72129edc5e379faca6479fd2e99c589baa78e81a79b5b436e21",
+  "source_commit": "53c92a3351d8c9bc9d4c33b4d42ab43df9057753",
+  "gpu": "Tesla T4",
+  "seed": 266,
+  "request": "What exact words are written on this label?",
+  "input_image": "private_fixture:P3-S14",
+  "critique_enabled": false,
+  "status": "answered",
+  "message": "Sauce",
+  "elapsed_seconds": 5.995590937000088,
+  "agent_events": [
+    {
+      "agent": "planner",
+      "input": {
+        "request": "What exact words are written on this label?",
+        "image_path": "private_fixture:P3-S14"
+      },
+      "status": "completed",
+      "output": {
+        "route": "vision_only",
+        "status": "ready",
+        "message": "Send the image and question to Vision Understanding.",
+        "image_info": {
+          "format": "PNG",
+          "width": 1254,
+          "height": 1254,
+          "size_bytes": 1788565
+        },
+        "untrusted_image_text_present": false,
+        "elapsed_seconds": 0.034244
+      },
+      "elapsed_seconds": 0.03429845199980264
+    },
+    {
+      "agent": "vision",
+      "input": {
+        "image_path": "private_fixture:P3-S14",
+        "questions": [
+          "What exact words are written on this label?",
+          "What readable text and uncertain small details are visible?"
+        ]
+      },
+      "status": "completed",
+      "output": {
+        "caption": "A jar of sauce with a label that includes a logo and some text.",
+        "main_objects": [
+          "jar",
+          "label"
+        ],
+        "visible_text": [
+          "Sauce"
+        ],
+        "answers": [
+          {
+            "question": "What exact words are written on this label?",
+            "answer": "Sauce"
+          },
+          {
+            "question": "What readable text and uncertain small details are visible?",
+            "answer": "Sauce"
+          }
+        ],
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "input_tokens": 757,
+        "generated_tokens": 116,
+        "elapsed_seconds": 5.801,
+        "format_retry_count": 0
+      },
+      "elapsed_seconds": 5.961050796999643
+    }
+  ],
+  "redaction": {
+    "private_file_paths": "replaced with stable case-scoped identifiers",
+    "raw_model_retry_payloads": "omitted; processed agent output and available retry counters retained",
+    "images": "not included"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "case_id": "P3-S15",
+  "mode": "without",
+  "source_run_id": "0b200a3bdd3b4a31aad0f863fc4c6565",
+  "source_trace_sha256": "8d0183f10ccdc138b9e216404eb93e61750d1e920c28ec87fd0afc04fc0f29b9",
+  "source_commit": "53c92a3351d8c9bc9d4c33b4d42ab43df9057753",
+  "gpu": "Tesla T4",
+  "seed": 266,
+  "request": "Caption this image.",
+  "input_image": "private_fixture:P3-S15",
+  "critique_enabled": false,
+  "status": "input_error",
+  "message": "The file is not a readable image. Please upload a valid image.",
+  "elapsed_seconds": 0.0008508999999321532,
+  "agent_events": [
+    {
+      "agent": "planner",
+      "input": {
+        "request": "Caption this image.",
+        "image_path": "private_fixture:P3-S15"
+      },
+      "status": "completed",
+      "output": {
+        "route": "input_error",
+        "status": "input_error",
+        "message": "The file is not a readable image. Please upload a valid image.",
+        "image_info": null,
+        "untrusted_image_text_present": false,
+        "elapsed_seconds": 0.000619
+      },
+      "elapsed_seconds": 0.0006536290002259193
+    }
+  ],
+  "redaction": {
+    "private_file_paths": "replaced with stable case-scoped identifiers",
+    "raw_model_retry_payloads": "omitted; processed agent output and available retry counters retained",
+    "images": "not included"
+  }
+}

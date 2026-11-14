@@ -26,7 +26,7 @@ This repository contains the shared implementation and report materials for DATA
 ```
 
 - `eval/` stores the golden set, prompts, and evaluation scenarios.
-- `traces/` is reserved for privacy-reviewed Part 3 JSON traces; no request traces are published there yet. The complete raw T4 run archive remains private to the team.
+- `traces/` contains redacted JSON traces for all 40 Part 3 T4 evaluation requests. The complete raw run archive, private fixtures, and generated images remain outside GitHub.
 - `src/` contains reusable helpers shared by the notebooks.
 - `scripts/` contains executable helpers, including the preserved Part 1 Colab rerun script.
 - `config/` contains optional environment records from local development. The course GPU evidence is in the executed notebooks and measured reports.

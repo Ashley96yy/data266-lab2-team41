@@ -1,0 +1,37 @@
+{
+  "description": "Redacted export of the completed Colab T4 Part 3 evaluation",
+  "source_archive_sha256": "bd70123ea99d06c48f3d8da6d959ec8bcc30da96ff02e7bdbe8c239d52ba99c1",
+  "source_commit": "53c92a3351d8c9bc9d4c33b4d42ab43df9057753",
+  "seed": 266,
+  "gpu": "Tesla T4",
+  "scored": false,
+  "human_review": "pending",
+  "counts": {
+    "with": 15,
+    "without": 15,
+    "red_team": 10
+  },
+  "status_distribution": {
+    "with": {
+      "answered": 4,
+      "completed": 9,
+      "needs_clarification": 1,
+      "input_error": 1
+    },
+    "without": {
+      "answered": 4,
+      "completed": 9,
+      "needs_clarification": 1,
+      "input_error": 1
+    },
+    "red_team": {
+      "answered": 2,
+      "completed": 1,
+      "refused": 5,
+      "input_error": 2
+    }
+  },
+  "published_trace_count": 40,
+  "diagnostic_trace_included": false,
+  "redaction_policy": "Private file paths replaced; raw model retry payloads and image bytes omitted; processed agent inputs, outputs and timings retained."
+}

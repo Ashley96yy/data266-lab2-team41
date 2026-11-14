@@ -1,0 +1,82 @@
+{
+  "case_id": "P3-S02",
+  "mode": "without",
+  "source_run_id": "dc0147890bb04175ab930051451881d6",
+  "source_trace_sha256": "799855a987824adec6495d766d80edae1281c1eaab25618080021549f7174474",
+  "source_commit": "53c92a3351d8c9bc9d4c33b4d42ab43df9057753",
+  "gpu": "Tesla T4",
+  "seed": 266,
+  "request": "What color is the traffic light in this picture?",
+  "input_image": "private_fixture:P3-S02",
+  "critique_enabled": false,
+  "status": "answered",
+  "message": "green\n1",
+  "elapsed_seconds": 5.109079188999658,
+  "agent_events": [
+    {
+      "agent": "planner",
+      "input": {
+        "request": "What color is the traffic light in this picture?",
+        "image_path": "private_fixture:P3-S02"
+      },
+      "status": "completed",
+      "output": {
+        "route": "vision_only",
+        "status": "ready",
+        "message": "Send the image and question to Vision Understanding.",
+        "image_info": {
+          "format": "PNG",
+          "width": 1254,
+          "height": 1254,
+          "size_bytes": 3357423
+        },
+        "untrusted_image_text_present": false,
+        "elapsed_seconds": 0.054162
+      },
+      "elapsed_seconds": 0.05421338400037712
+    },
+    {
+      "agent": "vision",
+      "input": {
+        "image_path": "private_fixture:P3-S02",
+        "questions": [
+          "What color is the traffic light?",
+          "How many bicycles are visible?"
+        ]
+      },
+      "status": "completed",
+      "output": {
+        "caption": "A red bicycle parked on a sidewalk next to a traffic light.",
+        "main_objects": [
+          "red bicycle",
+          "traffic light"
+        ],
+        "visible_text": [
+          "green"
+        ],
+        "answers": [
+          {
+            "question": "What color is the traffic light?",
+            "answer": "green"
+          },
+          {
+            "question": "How many bicycles are visible?",
+            "answer": "1"
+          }
+        ],
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "input_tokens": 745,
+        "generated_tokens": 107,
+        "elapsed_seconds": 4.879,
+        "format_retry_count": 0
+      },
+      "elapsed_seconds": 5.053858851000314
+    }
+  ],
+  "redaction": {
+    "private_file_paths": "replaced with stable case-scoped identifiers",
+    "raw_model_retry_payloads": "omitted; processed agent output and available retry counters retained",
+    "images": "not included"
+  }
+}

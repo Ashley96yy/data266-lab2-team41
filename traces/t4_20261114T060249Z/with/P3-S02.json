@@ -1,0 +1,82 @@
+{
+  "case_id": "P3-S02",
+  "mode": "with",
+  "source_run_id": "050c476cca1e46648cfed1748caf10d5",
+  "source_trace_sha256": "5770afcac1619abb9733faff3cfd0bd53cc8ebf41f775daa0f41b2ca4861caa8",
+  "source_commit": "53c92a3351d8c9bc9d4c33b4d42ab43df9057753",
+  "gpu": "Tesla T4",
+  "seed": 266,
+  "request": "What color is the traffic light in this picture?",
+  "input_image": "private_fixture:P3-S02",
+  "critique_enabled": true,
+  "status": "answered",
+  "message": "green\n1",
+  "elapsed_seconds": 5.456980524000301,
+  "agent_events": [
+    {
+      "agent": "planner",
+      "input": {
+        "request": "What color is the traffic light in this picture?",
+        "image_path": "private_fixture:P3-S02"
+      },
+      "status": "completed",
+      "output": {
+        "route": "vision_only",
+        "status": "ready",
+        "message": "Send the image and question to Vision Understanding.",
+        "image_info": {
+          "format": "PNG",
+          "width": 1254,
+          "height": 1254,
+          "size_bytes": 3357423
+        },
+        "untrusted_image_text_present": false,
+        "elapsed_seconds": 0.081279
+      },
+      "elapsed_seconds": 0.08133770700032983
+    },
+    {
+      "agent": "vision",
+      "input": {
+        "image_path": "private_fixture:P3-S02",
+        "questions": [
+          "What color is the traffic light?",
+          "How many bicycles are visible?"
+        ]
+      },
+      "status": "completed",
+      "output": {
+        "caption": "A red bicycle parked on a sidewalk next to a traffic light.",
+        "main_objects": [
+          "red bicycle",
+          "traffic light"
+        ],
+        "visible_text": [
+          "green"
+        ],
+        "answers": [
+          {
+            "question": "What color is the traffic light?",
+            "answer": "green"
+          },
+          {
+            "question": "How many bicycles are visible?",
+            "answer": "1"
+          }
+        ],
+        "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "model_revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+        "input_tokens": 745,
+        "generated_tokens": 107,
+        "elapsed_seconds": 5.141,
+        "format_retry_count": 0
+      },
+      "elapsed_seconds": 5.375386626999898
+    }
+  ],
+  "redaction": {
+    "private_file_paths": "replaced with stable case-scoped identifiers",
+    "raw_model_retry_payloads": "omitted; processed agent output and available retry counters retained",
+    "images": "not included"
+  }
+}

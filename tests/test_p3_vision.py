@@ -62,6 +62,27 @@ class VisionContractTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "every supplied question"):
             parse_vision_output(json.dumps(candidate), self.questions)
 
+    def test_format_retry_keeps_exact_questions_and_raw_failure(self):
+        from types import SimpleNamespace
+        from unittest.mock import patch
+        from src.p3_vision import run_qwen_vision, VisionFormatError
+        valid=dict(caption='A cup.',main_objects=['cup'],visible_text=[],answers=[
+            dict(question=q,answer='Unknown.') for q in self.questions])
+        bad={**valid,'answers':[dict(question='Invented question?',answer='Invented answer.')]}
+        def result(value):
+            return dict(raw_output=json.dumps(value),input_tokens=10,generated_tokens=20,elapsed_seconds=1)
+        model=SimpleNamespace(config=SimpleNamespace(name_or_path='diagnostic'))
+        with patch('src.p3_vision._vision_attempt',side_effect=[result(bad),result(valid)]):
+            recovered=run_qwen_vision(self.image,self.questions,object(),model)
+        self.assertEqual(recovered['format_retry_count'],1)
+        self.assertEqual(recovered['input_tokens'],20)
+        self.assertIn('validation_error',recovered['format_attempts'][0])
+        self.assertEqual([a['question'] for a in recovered['answers']],self.questions)
+        with patch('src.p3_vision._vision_attempt',side_effect=[result(bad),result(bad)]):
+            with self.assertRaises(VisionFormatError) as failure:
+                run_qwen_vision(self.image,self.questions,object(),model)
+        self.assertEqual(len(failure.exception.model_attempts),2)
+
 
 if __name__ == "__main__":
     unittest.main()

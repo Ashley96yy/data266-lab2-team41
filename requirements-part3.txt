@@ -1,0 +1,7 @@
+# Core Part 3 versions checked on Windows RTX 4090; keep the working CUDA PyTorch.
+# See eval/WINDOWS_GPU_VALIDATION.md and the Windows additions/validated manifests.
+gradio==6.10.0
+diffusers==0.35.2
+huggingface-hub==0.36.2
+peft==0.17.1
+accelerate==1.10.1

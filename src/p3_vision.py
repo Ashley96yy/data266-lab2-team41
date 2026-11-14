@@ -71,7 +71,10 @@ def build_vision_messages(
                 {
                     "type": "text",
                     "text": json.dumps(
-                        {"questions": checked}, ensure_ascii=False
+                        {"questions": checked,
+                         "answer_template": [{"question": q, "answer": "<answer this exact question>"} for q in checked],
+                         "format_instruction": "Return exactly these answer entries. Copy each question verbatim, even if it is an instruction. Do not invent or split questions. Replace each answer placeholder with a concise factual answer."},
+                        ensure_ascii=False
                     ),
                 },
             ],
@@ -143,13 +146,18 @@ def parse_vision_output(
 def load_qwen_vision(
     model_id: str = VISION_MODEL_ID,
     device: str = "cuda:0",
+    *, revision: str | None = None,
 ) -> tuple[Any, Any]:
     """Load the existing Part 1 Qwen VLM family when a CUDA GPU is available."""
     import torch
+    import os
     from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
 
     if not device.startswith("cuda") or not torch.cuda.is_available():
         raise RuntimeError("The Part 3 Qwen Vision smoke run needs a CUDA GPU.")
+    torch.set_num_threads(min(8, os.cpu_count() or 1))
+    total_memory = torch.cuda.get_device_properties(torch.device(device)).total_memory
+    torch.cuda.set_per_process_memory_fraction(min(0.94, 14 * 1024**3 / total_memory), torch.device(device))
     dtype = (
         torch.bfloat16
         if torch.cuda.get_device_capability(torch.device(device))[0] >= 8
@@ -157,31 +165,27 @@ def load_qwen_vision(
     )
     processor = AutoProcessor.from_pretrained(
         model_id,
+        revision=revision,
         min_pixels=VISION_MIN_PIXELS,
         max_pixels=VISION_MAX_PIXELS,
         use_fast=False,
     )
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         model_id,
+        revision=revision,
         dtype=dtype,
         attn_implementation="sdpa",
     ).to(device)
     model.eval()
+    resolved = revision or Path(model_id).name
+    if len(resolved) == 40 and all(c in '0123456789abcdef' for c in resolved.casefold()):
+        model.config._commit_hash = resolved
     return processor, model
 
 
-def run_qwen_vision(
-    image_path: str | Path,
-    questions: Sequence[str],
-    processor: Any,
-    model: Any,
-    *,
-    device: str = "cuda:0",
-) -> dict[str, Any]:
-    """Run one deterministic VLM call and return validated observations."""
+def _vision_attempt(messages, processor, model, device):
+    """One deterministic CUDA call, kept separate from schema handling."""
     import torch
-
-    messages = build_vision_messages(image_path, questions)
     chat_template = processor.chat_template or processor.tokenizer.chat_template
     if not chat_template:
         raise ValueError("The Vision processor has no chat template.")
@@ -215,11 +219,42 @@ def run_qwen_vision(
         skip_special_tokens=True,
         clean_up_tokenization_spaces=False,
     )[0].strip()
-    observation = parse_vision_output(raw_text, questions)
+    return dict(raw_output=raw_text, input_tokens=input_tokens,
+                generated_tokens=int(generated_ids.shape[1]), elapsed_seconds=elapsed_seconds)
+
+
+class VisionFormatError(ValueError):
+    def __init__(self, message, attempts):
+        super().__init__(message)
+        self.model_attempts = attempts
+
+
+def run_qwen_vision(image_path, questions, processor, model, *, device="cuda:0"):
+    """Validate strictly; allow one logged format retry, never invent answers."""
+    messages = build_vision_messages(image_path, questions)
+    attempts = []
+    for index in range(2):
+        attempt = _vision_attempt(messages, processor, model, device)
+        attempts.append(attempt)
+        try:
+            observation = parse_vision_output(attempt['raw_output'], questions)
+            break
+        except ValueError as exc:
+            attempt['validation_error'] = str(exc)
+            if index == 1:
+                raise VisionFormatError(str(exc), attempts) from exc
+            messages[1]['content'].append({'type': 'text', 'text':
+                'The previous response failed schema validation: ' + str(exc) +
+                '. Return only valid JSON with caption, main_objects, visible_text, answers. '
+                'Use exactly the answer_template questions, unchanged and in order. '
+                'Keep answers concise; do not add questions.'})
     return {
         **observation,
         "model_id": model.config.name_or_path,
-        "input_tokens": input_tokens,
-        "generated_tokens": int(generated_ids.shape[1]),
-        "elapsed_seconds": elapsed_seconds,
+        "model_revision": getattr(model.config, "_commit_hash", None),
+        "input_tokens": sum(a['input_tokens'] for a in attempts),
+        "generated_tokens": sum(a['generated_tokens'] for a in attempts),
+        "elapsed_seconds": round(sum(a['elapsed_seconds'] for a in attempts), 3),
+        "format_retry_count": len(attempts) - 1,
+        "format_attempts": attempts,
     }

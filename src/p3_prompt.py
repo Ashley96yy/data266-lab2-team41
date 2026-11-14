@@ -63,6 +63,13 @@ class PromptDraft:
     vision_objects_used: list[str]
     image_text_ignored_as_instructions: bool
     elapsed_seconds: float
+    source_caption: str = ''
+    revision_instruction: str = ''
+    revision_index: int = 0
+    positive_prompt: str = ''
+    rewrite_model_id: str | None = None
+    rewrite_model_revision: str | None = None
+    rewrite_attempts: tuple = ()
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -140,4 +147,36 @@ def build_generation_prompt(
         vision_objects_used=objects,
         image_text_ignored_as_instructions=True,
         elapsed_seconds=round(time.perf_counter() - start, 6),
+        source_caption=caption,
     )
+
+
+def compile_diffusion_prompt(draft, tokenizer):
+    """Token-budget the structured Prompt Agent output without clipping user text."""
+    limit = tokenizer.model_max_length
+    def count(text):
+        return len(tokenizer(text, truncation=False, verbose=False).input_ids)
+    core = (draft.positive_prompt or draft.original_request).strip()
+    if count(core) > limit:
+        raise ValueError('The user request exceeds the diffusion text limit. Please shorten it.')
+    parts=[core]; included=['prompt_agent_caption' if draft.positive_prompt else 'user_request']; omitted=[]
+    optional=[('revision_feedback', _safe_caption(draft.revision_instruction)),
+              ('source_objects', 'Source objects: '+', '.join(draft.vision_objects_used) if draft.vision_objects_used and not draft.positive_prompt else ''),
+              ('source_caption', 'Source scene: '+_safe_caption(draft.source_caption) if draft.source_caption and not draft.positive_prompt else ''),
+              ('preservation', 'Preserve source subjects and composition.')]
+    for label,text in optional:
+        if not text:
+            continue
+        candidate='. '.join(parts+[text])
+        if count(candidate)<=limit:
+            parts.append(text);included.append(label)
+        else:
+            omitted.append(label)
+    prompt='. '.join(parts)
+    return dict(effective_prompt=prompt, prompt_tokens=count(prompt), prompt_token_limit=limit,
+                prompt_components_included=included,prompt_components_omitted=omitted,
+                user_request_truncated=False)
+
+
+def monochrome_requested(request):
+    return bool(re.search(r'\b(?:black[ -]+and[ -]+white|monochrome|gr[ae]yscale)\b',request,re.I))

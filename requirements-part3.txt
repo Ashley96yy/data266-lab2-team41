@@ -1,7 +1,0 @@
-# Install after the existing requirements; GPU inference still requires CUDA PyTorch.
-# UI build tested on CPU; diffusion/Qwen inference must be smoke-tested on Windows.
-gradio==6.10.0
-diffusers==0.35.2
-huggingface-hub==0.36.0
-peft==0.17.1
-accelerate==1.10.1

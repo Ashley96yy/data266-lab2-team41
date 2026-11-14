@@ -59,10 +59,6 @@ Small source files, evaluation summaries, configuration files, and trace metadat
 
 The repository follows the required shared structure for all three parts. Part-specific instructions and pinned dependency versions will be completed as the implementation develops.
 
-## Part 3 continuation
-
-Generation, two-image critique, bounded orchestration, Gradio, and evaluation helpers are implemented. See [Windows runbook and validation limits](eval/PART3_IMPLEMENTATION.md). Install `requirements-part3.txt` in the existing CUDA environment. CPU tests and UI construction do not constitute the frozen model evaluation; real GPU results remain pending.
-
 ## Part 1 second Colab evaluation
 
 The second real Tesla T4 run and first-run comparison are preserved under outputs/part1. See [round 2 protocol](eval/PART1_ROUND2.md) and [executed comparison notebook](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb). The final cell of p1_rag.ipynb records the improved run; the original earlier outputs remain intact. For the recorded Colab layout, upload the root p1_colab_schema_fix_and_rerun.py helper to /content before that cell. Human metrics and final Git provenance are still pending.

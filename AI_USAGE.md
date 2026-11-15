@@ -36,3 +36,11 @@ Affected files: `notebooks/Yuyao_Ding/p2_baseline.ipynb`,
 `src/p2_partner_baseline.py`, `scripts/p2_train_worker.py`,
 `tests/test_p2_partner_baseline.py`, `config/requirements-part2-baseline.txt`,
 `eval/p2_yuyao_baseline_prompts.json`, `eval/PART2_YUYAO_BASELINE.md`.
+
+Part 2 follow-up: the user's first Colab T4 training attempt failed in Accelerator
+initialization because the CLI string `none` was treated as a tracker name; its
+reported allocated/reserved GPU peaks were zero. Codex added argument
+normalization to Python `None` in the worker, preserving the pinned trainer, and
+a narrowly checked recovery that archives the failed attempt and records the
+source transition without discarding prepared data. CPU regression tests cover
+this boundary. No successful GPU training or new model result is claimed yet.

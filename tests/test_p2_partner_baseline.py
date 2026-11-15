@@ -9,6 +9,7 @@ from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
+from scripts.p2_train_worker import invoke_trainer, adopt_logging_fix, PRE_LOGGING_FIX_SHA256
 
 from src.p2_partner_baseline import (BaselineConfig, fetch_trainer, gpu_check,
     read, training_args, validate_generations, validate_prompts, validate_split, write)
@@ -98,6 +99,69 @@ class PartnerBaselineTest(unittest.TestCase):
                 ast.parse(''.join(cell['source']))
                 self.assertIsNone(cell['execution_count'])
                 self.assertEqual(cell['outputs'],[])
+
+    def test_actual_cli_parse_is_normalized_before_accelerator_construction(self):
+        with TemporaryDirectory() as temp:
+            path=Path(temp)/'synthetic_trainer.py'
+            path.write_text('''import argparse
+def parse_args():
+    p=argparse.ArgumentParser()
+    p.add_argument('--report_to')
+    p.add_argument('--max_train_steps',type=int)
+    return p.parse_args()
+def main():
+    args=parse_args()
+    # Model the API contract that rejected the user's CLI string.
+    assert args.report_to is None, 'Unsupported logging capability'
+    return args.max_train_steps
+if __name__ == '__main__':
+    raise AssertionError('Do not run the entry point before normalizing arguments.')
+''')
+            before=path.read_bytes()
+            with patch('sys.argv',[str(path),'--report_to','none','--max_train_steps','600']):
+                self.assertEqual(invoke_trainer(path),600)
+            self.assertEqual(path.read_bytes(),before)
+
+    def logging_failure_fixture(self, root):
+        run=root/'run';(root/'scripts').mkdir();(root/'src').mkdir()
+        (root/'scripts/p2_train_worker.py').write_text('new worker source')
+        (root/'src/p2_partner_baseline.py').write_text('unchanged pipeline')
+        parent_hash=hashlib.sha256((root/'src/p2_partner_baseline.py').read_bytes()).hexdigest()
+        write(run/'manifest.json',dict(source_commit='original-source',source_hashes={
+            'scripts/p2_train_worker.py':PRE_LOGGING_FIX_SHA256,'src/p2_partner_baseline.py':parent_hash}))
+        from src.p2_partner_baseline import TRAINER_SHA256
+        write(run/'training_stats.json',dict(status='failed',error_type='ValueError',peak_allocated_gib=0,
+            peak_reserved_gib=0,trainer_sha256=TRAINER_SHA256,cumulative_wall_seconds=12))
+        (run/'training.log').write_text('ValueError: Unsupported logging capability: none')
+        (run/'prepared-data-sentinel').write_text('preserve this')
+        return run
+
+    def test_explicit_logging_recovery_keeps_failure_and_original_provenance(self):
+        with TemporaryDirectory() as temp:
+            root=Path(temp);run=self.logging_failure_fixture(root)
+            before_manifest=(run/'manifest.json').read_bytes()
+            before_stats=(run/'training_stats.json').read_bytes()
+            with patch('scripts.p2_train_worker.subprocess.check_output',return_value='new-source\n'):
+                adopt_logging_fix(root,run)
+                adopt_logging_fix(root,run)
+            manifest=read(run/'manifest.json')
+            self.assertEqual(manifest['source_commit'],'original-source')
+            self.assertEqual(manifest['training_source_commit'],'new-source')
+            self.assertEqual(len(manifest['training_compatibility_fixes']),1)
+            history=manifest['training_compatibility_fixes'][0]
+            self.assertEqual(history['previous_source_hashes']['scripts/p2_train_worker.py'],PRE_LOGGING_FIX_SHA256)
+            self.assertEqual((run/'training_stats.json').read_bytes(),before_stats)
+            self.assertEqual((run/'prepared-data-sentinel').read_text(),'preserve this')
+            self.assertEqual(len(list((run/'training_attempts').glob('pre_logging_fix_*.json'))),2)
+            self.assertTrue(any(read(p)['source_commit']=='original-source' for p in (run/'training_attempts').glob('*manifest*.json')))
+
+    def test_logging_recovery_rejects_any_run_with_existing_training_checkpoints(self):
+        with TemporaryDirectory() as temp:
+            root=Path(temp);run=self.logging_failure_fixture(root)
+            (run/'adapter/checkpoint-100').mkdir(parents=True)
+            original=(run/'manifest.json').read_bytes()
+            with self.assertRaises(ValueError):adopt_logging_fix(root,run)
+            self.assertEqual((run/'manifest.json').read_bytes(),original)
 
 
 if __name__=='__main__':unittest.main()

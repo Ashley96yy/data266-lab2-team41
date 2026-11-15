@@ -61,6 +61,18 @@ model snapshot so the example's scheduler also cannot resolve a different `main`
 See [the official LoRA guide](https://huggingface.co/docs/diffusers/training/lora)
 and [CLIP API](https://huggingface.co/docs/transformers/model_doc/clip).
 
+The worker maps the example's `--report_to none` CLI value to Python `None`
+before constructing Accelerator, whose no-tracker default is `log_with=None`.
+The pinned upstream file is not modified. A first user Colab attempt failed on
+this string/API mismatch before any CUDA allocation. Its failed statistics and
+log must remain recorded. The explicit `adopt_logging_fix(ROOT, RUN)` helper
+allows only that known zero-allocation failure to adopt the new worker source,
+archives its original manifest/statistics, and records the new training commit.
+It does not change training data, prompts, model revisions, settings or the
+original data-preparation source commit. Existing checkpoints or unrelated source
+changes are rejected. This fix has CPU regression coverage; a successful GPU
+training run is still pending.
+
 The new implementation adds isolated outputs, revision/source/data hashes,
 single-GPU checks, measured worker statistics, checkpoint restart, per-image
 checkpointing, paired metrics and private evidence packaging. This is an

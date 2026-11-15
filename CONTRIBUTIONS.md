@@ -40,6 +40,7 @@ Both members are responsible for the whole submission. The tables below show who
 | 2.3 Image generation | 20 fixed prompts written before training; seeds 0 and 1 for base and both runs (120 images); side-by-side grids; image dataset on Hugging Face | Pratiksha Kaushik |
 | 2.4 Evaluation and safety | KID, CLIP score, LPIPS diversity, GPU-hours and memory; CLIP-based AI judge; failure modes; final run choice; license, NSFW and memorization checks | Pratiksha Kaushik |
 | Documentation | Part 2 README, Part 2 sections of the root README | Pratiksha Kaushik |
+| Partner working baseline | Separate end-to-end baseline adaptation prepared with AI assistance: data preparation, one rank-4 LoRA training path, generation, metrics, checkpointing and run provenance. Actual GPU execution, own observations and knowledge-transfer recording are still pending; preparation is not an execution claim | Yuyao Ding; [notebook](notebooks/Yuyao_Ding/p2_baseline.ipynb), [protocol](eval/PART2_YUYAO_BASELINE.md) |
 | Human evaluation | Blinded 25 pairs, 3 or more raters | Both, plus an outside rater. **Pending** |
 
 Hugging Face: [final model (rank 32)](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32), [comparison model (rank 4)](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4), [generated images](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations).

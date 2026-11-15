@@ -20,3 +20,19 @@ For each use, record:
 | 2026-11-14 | Codex; model ID not exposed | Fixed Part 3 approved body-part count preservation and T4 hardware-status reporting; checked the user-provided executed Colab notebook and private run archive; removed temporary setup cells and stale Windows demo instructions from the primary notebook | User executed the unchanged 15×2+10 cases on Tesla T4. The archived run and frozen hashes were checked, the report was recalculated from saved records with no numerical change, 41 Colab tests passed, and 42 local CPU contracts passed. Human judgments and final report authorship remain pending | `src/p3_prompt_rewrite.py`, `src/p3_reporting.py`, Part 3 tests/notebook, `eval/PART3_T4_MEASURED_RESULTS.md`, Part 3 documentation |
 
 Additional team disclosures, including any Part 2 tool use, require confirmation from the responsible member before final submission.
+
+## Part 2 partner baseline preparation — 2026-11-14
+
+Codex prepared Yuyao Ding's separate working-baseline notebook and helper code,
+adapting Pratiksha Kaushik's existing data/prompt/sampler protocol and the official
+Apache-2.0 Diffusers v0.42.1 LoRA example. The official trainer is pinned by commit
+and inspected source hash. The work includes one-GPU guards, dependency constraints
+that preserve CUDA/PyTorch, private artifacts, checkpoint restart, paired metrics,
+and run provenance. Existing team experiments and weights were not overwritten.
+Only CPU contract/static checks were run here. The new baseline's real T4/P100
+training, generation, measured results, Yuyao's own interpretation and meeting
+recording are pending. No GPU result, human judgment or meeting record was created.
+Affected files: `notebooks/Yuyao_Ding/p2_baseline.ipynb`,
+`src/p2_partner_baseline.py`, `scripts/p2_train_worker.py`,
+`tests/test_p2_partner_baseline.py`, `config/requirements-part2-baseline.txt`,
+`eval/p2_yuyao_baseline_prompts.json`, `eval/PART2_YUYAO_BASELINE.md`.

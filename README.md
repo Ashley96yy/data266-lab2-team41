@@ -29,6 +29,7 @@ All course GPU runs were done on a single Tesla T4 (Colab).
 │   ├── Yuyao_Ding/
 │   │   ├── p1_rag.ipynb                  # Part 1 submission
 │   │   ├── p1_round2_comparison.ipynb    # Part 1 round 1 vs round 2
+│   │   ├── p2_baseline.ipynb             # Yuyao partner baseline; GPU run pending
 │   │   └── p3_agents.ipynb               # Part 3 submission
 │   └── Pratiksha_Kaushik/
 │       ├── p1/                  # Part 1 development notebooks (v1–v6, v15)
@@ -105,6 +106,12 @@ The Colab rerun helper is [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p
 ## Part 2 — Diffusion fine-tuning
 
 **Run:** open [`notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb) in Colab (T4) and run all. Full details are in the [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md).
+
+**Yuyao's partner baseline:** the separate [baseline notebook](notebooks/Yuyao_Ding/p2_baseline.ipynb)
+covers data preparation, one 600-step rank-4 training run, paired base/adapter
+generation and evaluation. Its implementation is prepared; **its actual T4/P100
+execution and measurements are pending**. It does not replace Pratiksha's two
+formal runs or final model. See the [runbook and attribution](eval/PART2_YUYAO_BASELINE.md).
 
 **Setup:**
 - **Data and models:** Stable Diffusion 1.5 fine-tuned on [Naruto BLIP Captions](https://huggingface.co/datasets/lambdalabs/naruto-blip-captions).
@@ -188,6 +195,7 @@ Model weights, checkpoints and full raw run archives stay outside GitHub. Local 
 - [ ] Part 1: human answer-correctness and citation-accuracy review.
 - [ ] Part 1: final Kaggle submission.
 - [ ] Part 2: blinded human evaluation (25 pairs, 3 or more raters).
+- [ ] Part 2: Yuyao implements/runs the partner working baseline and saves its actual GPU outputs and knowledge-transfer recording.
 - [ ] Create or update the tags `p1-v1.0`, `p2-v1.0` and `p3-v1.0` on the final commits.
 - [ ] Both members confirm [CONTRIBUTIONS.md](CONTRIBUTIONS.md) and complete [AI_USAGE.md](AI_USAGE.md).
 - [ ] Final report.

@@ -1,78 +1,193 @@
 # DATA 266 Lab 2 — Team 41
 
-This repository contains the shared implementation and report materials for DATA 266 Lab 2.
+Shared implementation, results and documentation for DATA 266 Lab 2.
+
+**Team:** Yuyao Ding and Pratiksha Kaushik. See [CONTRIBUTIONS.md](CONTRIBUTIONS.md) for who did what.
+
+## Submission at a glance
+
+Graders use the tagged commit for each part.
+
+| Part | Git tag | Main notebook | Headline result | Details |
+| --- | --- | --- | --- | --- |
+| 1. Multimodal RAG | `p1-v1.0` | [`notebooks/Yuyao_Ding/p1_rag.ipynb`](notebooks/Yuyao_Ding/p1_rag.ipynb) | Recall@5 0.764 (final) vs 0.472 (dense only); human groundedness 4.44/5 | [Part 1 results](#part-1--multimodal-rag) |
+| 2. Diffusion fine-tuning | `p2-v1.0` | [`notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb) | KID 0.0217 (LoRA r=32) vs 0.1337 (base SD 1.5) | [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md) |
+| 3. Multi-agent system | `p3-v1.0` | [`notebooks/Yuyao_Ding/p3_agents.ipynb`](notebooks/Yuyao_Ding/p3_agents.ipynb) | Task success 10/15 with loop, 11/15 without; 0/10 red-team attacks succeeded | [Part 3 report](eval/PART3_T4_MEASURED_RESULTS.md) |
+
+All course GPU runs were done on a single Tesla T4 (Colab).
 
 ## Repository structure
 
 ```text
 .
-├── README.md
-├── requirements.txt
+├── README.md                    # this file
+├── CONTRIBUTIONS.md             # who did what
+├── AI_USAGE.md                  # AI tool disclosure
+├── requirements.txt             # pinned Part 1 dependencies
 ├── config/                      # optional environment records
 ├── notebooks/
 │   ├── Yuyao_Ding/
-│   │   ├── p1_rag.ipynb
-│   │   └── p3_agents.ipynb
+│   │   ├── p1_rag.ipynb                  # Part 1 submission
+│   │   ├── p1_round2_comparison.ipynb    # Part 1 round 1 vs round 2
+│   │   └── p3_agents.ipynb               # Part 3 submission
 │   └── Pratiksha_Kaushik/
-│       ├── p1/              # retained Part 1 development notebooks
-│       └── p2/              # Part 2 notebooks and README (p2_v4.ipynb is the submission)
-├── eval/
-│   └── part1/results/           # preserved Part 1 run results
-├── traces/
-├── src/
-├── scripts/                     # one-off runners and review tools
-├── CONTRIBUTIONS.md
-├── AI_USAGE.md
-└── .gitignore
+│       ├── p1/                  # Part 1 development notebooks (v1–v6, v15)
+│       ├── p2/                  # Part 2 notebooks + README (p2_v4.ipynb is the submission)
+│       └── p3/                  # independent Part 3 build (v1, v2) + README, inputs, outputs, log
+├── eval/                        # golden sets, scenarios, protocols, measured reports
+│   ├── part1/results/           # saved Part 1 run results and human review
+│   ├── part3/results/           # saved Part 3 run results and human reviews
+│   └── Pratiksha kaushik/p3/    # results of the independent Part 3 build
+├── traces/                      # redacted Part 3 JSON traces (+ independent build traces)
+├── src/                         # shared helpers for Parts 1 and 3
+├── scripts/                     # runners and review tools
+└── tests/                       # unit tests (+ judging images for the independent Part 3 build)
 ```
 
-- `eval/` stores the golden set, prompts, evaluation scenarios, and saved Part 1 results under `eval/part1/results/`.
-- `traces/` contains redacted JSON traces for all 40 Part 3 T4 evaluation requests. The complete raw run archive, private fixtures, and generated images remain outside GitHub.
-- `src/` contains reusable helpers shared by the notebooks.
-- `scripts/` contains executable helpers, including the preserved Part 1 Colab rerun script.
-- `config/` contains optional environment records from local development. The course GPU evidence is in the executed notebooks and measured reports.
-- The member folders contain the primary notebooks and retained development versions. The folder names organize files; both members contribute to all three parts. Record each person's work in `CONTRIBUTIONS.md`.
+Model weights and the full raw run archives are not in this repository. See [Artifacts](#artifacts).
 
 ## Setup
 
-Course-required GPU work must run on one 16 GB GPU (Kaggle T4/P100 or Colab T4). The executed T4 runs and their measured results are linked below.
+Course GPU work must run on one 16 GB GPU (Kaggle T4/P100 or Colab T4).
 
-For a fresh Part 1 environment, create and activate a Python environment, then install the pinned Part 1 dependencies in `requirements.txt`:
+- **Part 1:** create a Python environment and install the pinned dependencies:
+  ```bash
+  python -m pip install -r requirements.txt
+  jupyter lab
+  ```
+- **Parts 2 and 3:** each notebook installs its own pinned packages in its first code cell. Run them in Colab with **Runtime → Restart session and run all**.
+- **Part 3 environment:** the earlier local development snapshot is kept at `config/requirements-part3.txt` for provenance only. See the [Part 3 runbook](eval/PART3_IMPLEMENTATION.md) before changing an existing GPU environment.
 
-```bash
-python -m pip install -r requirements.txt
-```
+Each notebook begins with a reproducibility cell that prints the Git commit, Python version, PyTorch version, GPU and random seed.
 
-Part 3's actual Colab T4 package versions are printed in its executed notebook. The earlier local development snapshot is kept at `config/requirements-part3.txt` for provenance; it is not the default installation command for the T4 run. See the Part 3 runbook before changing an existing GPU environment.
+---
 
-Start Jupyter from the repository root:
+## Part 1 — Multimodal RAG
 
-```bash
-jupyter lab
-```
+**Run:** open [`notebooks/Yuyao_Ding/p1_rag.ipynb`](notebooks/Yuyao_Ding/p1_rag.ipynb) with the Part 1 inputs attached. Set `DATA266_RUN_FULL_PART1=1` to answer all questions, write `submission.csv` and run the provided validator.
 
-## Running each part
+**System:**
+- **Ingestion:** text chunks keep their document ID and page. Every Figure and Table is cropped with its label and caption, and figures are made searchable with CLIP image embeddings. Everything is stored in ChromaDB with the metadata from `kb_manifest.json`.
+- **Retrieval:** hybrid dense + BM25 search, with exact routing when a question names a Figure or Table.
+- **Answers:** grounded JSON answers from a Qwen vision-language model, with a citation for every fact.
+- **Conversations:** each conversation has its own memory. User-supplied values stay in that memory and never go into the vector database.
 
-- **Part 1 — RAG:** open `notebooks/Yuyao_Ding/p1_rag.ipynb` with the Part 1 inputs attached. Set `DATA266_RUN_FULL_PART1=1` to run all questions, write `submission.csv`, and invoke the provided validator.
-- **Part 2 — Diffusion fine-tuning:** open `notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb` in Colab and run all. See [notebooks/Pratiksha_Kaushik/p2/README.md](notebooks/Pratiksha_Kaushik/p2/README.md) for setup, results and Hugging Face links (final model: [PratikshaK-1/naruto-sd15-lora-r32](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32)).
-- **Part 3 — Multi-agent system:** open `notebooks/Yuyao_Ding/p3_agents.ipynb`. The frozen scenarios and input verification instructions are in [eval/PART3.md](eval/PART3.md). See the [Part 3 runbook](eval/PART3_IMPLEMENTATION.md) for the five stages, local app, real GPU validation, and independent review workflow.
+See the [architecture](eval/PART1_ARCHITECTURE.md) and [evaluation protocol](eval/PART1_EVALUATION_PROTOCOL.md).
 
-Each notebook begins with a reproducibility cell that reports the Git commit, Python version, PyTorch version, GPU information, and random seed.
+### Results: round 2, Colab Tesla T4 (25-question golden set)
 
-## Artifact storage
+| Measurement | Baseline (dense only) | Final system |
+| --- | ---: | ---: |
+| Retrieval Recall@5 (24 questions with evidence) | 0.472 | **0.764** |
+| Median seconds per question | 9.17 | **0.80** |
+| Execution errors | 0 | 0 |
+| Human groundedness, mean of both members (1–5) | — | **4.44** |
+| Both members within one point | — | **25/25 (100%)** |
+| Answer correctness (human review) | Pending | Pending |
+| Citation accuracy (human review) | Pending | Pending |
 
-Model weights, checkpoints, and generated images must be uploaded to Hugging Face rather than committed to GitHub. Add the final Hugging Face repository links here when they are available.
+- **Practice set:** 40 questions with 0 execution errors and 0 format fallbacks, median 5.13 s per question.
+- **Memory:** peak GPU memory was 7.88 GiB allocated (9.01 GiB reserved) on a T4.
+- **Timing:** the final system's median is low because many answers come straight from structured evidence or session memory without a model call. It is not a measure of model inference speed.
+- **Earlier Windows run:** an earlier Windows RTX 4090 run, with an AI-assisted and provisional content review, scored 18/25 correct for the final system vs 6/25 for dense only. Citation accuracy was 0.49 vs 0.14. See [Part 1 measured results](eval/PART1_MEASURED_RESULTS.md). Those numbers are not the required human review and do not apply to the round-2 run.
 
-Small source files, evaluation summaries, configuration files, and trace metadata may be tracked in this repository when appropriate. Local inputs may be placed in the ignored `data/` directory, and local generated artifacts are written under the ignored `.runtime/` directory.
+Supporting material:
+- [round-2 results and human groundedness review](eval/part1/results/round2_colab_20261114T032206Z/)
+- [round 1 vs round 2 comparison notebook](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb)
+- [round-2 protocol](eval/PART1_ROUND2.md)
+- [safety analysis](eval/PART1_SAFETY_ANALYSIS.md)
+- the golden set in `eval/p1_golden_v2.json`
 
-## Status
+The Colab rerun helper is [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p1_colab_schema_fix_and_rerun.py). In the recorded run it was uploaded to `/content/`.
 
-The repository keeps the three parts in the shared notebook structure. Part-specific runbooks and recorded environments are linked above. Human reviews, final report materials, and final competition submission remain separate completion items.
+---
 
-## Part 1 second Colab evaluation
+## Part 2 — Diffusion fine-tuning
 
-The second real Tesla T4 run and first-run comparison are preserved under [`eval/part1/results/`](eval/part1/results/). See the [round 2 protocol](eval/PART1_ROUND2.md) and [executed comparison notebook](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb). The final cell of `p1_rag.ipynb` records the improved run; the original earlier outputs remain intact. The preserved helper is now at [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p1_colab_schema_fix_and_rerun.py). In the recorded upload-to-Colab layout, that file was placed at `/content/p1_colab_schema_fix_and_rerun.py`, which is the path saved in the executed notebook. This directory cleanup does not require another GPU run. The [round-2 final-system human groundedness review](eval/part1/results/round2_colab_20261114T032206Z/human_review_20261114/) is complete: mean 4.44/5, with 25/25 reviewer pairs within one point. Human answer-correctness and citation-support review, final Git provenance and course submission remain pending.
+**Run:** open [`notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb) in Colab (T4) and run all. Full details are in the [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md).
 
-## Part 3 Colab T4 run
+**Setup:**
+- **Data and models:** Stable Diffusion 1.5 fine-tuned on [Naruto BLIP Captions](https://huggingface.co/datasets/lambdalabs/naruto-blip-captions).
+- **Cleaning:** 1,221 images; 0 corrupted, 0 duplicates; 90/10 split with seed 266. The NSFW filter removed 239 training images, leaving 859 train and 123 test, all at 512×512.
+- **Training:** two LoRA runs on the UNet attention layers with the same data and steps: rank 4 and rank 32, 3,000 steps, batch 4, LR 1e-4.
+- **Generation:** 20 fixed prompts (10 in-domain, 5 out-of-domain, 5 compositional) × seeds 0 and 1 = 40 images per model.
 
-The [executed Part 3 notebook](notebooks/Yuyao_Ding/p3_agents.ipynb) records a real Colab Tesla T4 run from source commit `53c92a3`: the unchanged 15 scenarios in both modes and 10 red-team cases completed with zero program exceptions. Its [measured report](eval/PART3_T4_MEASURED_RESULTS.md) is calculated from the saved run records; the complete run archive remains private to the team. Operational completion and CLIP diagnostics are not human quality or safety scores. The [supplied human reviews and joint resolutions](eval/part3/results/t4_20261114T060249Z/) are now recorded: task success is 10/15 with the loop and 11/15 without it, with 0/10 red-team attack successes. Paired generated images are identical, so these human score differences do not demonstrate a quality-loop effect. Final report materials and submission obligations remain pending.
+### Results
+
+| Metric | Base SD 1.5 | Run 1 (LoRA r=4) | Run 2 (LoRA r=32, final) |
+| --- | ---: | ---: | ---: |
+| KID vs test images (lower is better) | 0.1337 | 0.0389 | **0.0217** |
+| CLIP score, all 20 prompts | **31.54** | 30.35 | 29.84 |
+| LPIPS diversity between seeds | **0.808** | 0.776 | 0.749 |
+| AI-judge (CLIP) win rate vs base, style / prompt | 0.50 / 0.50 | — | 0.92 / 0.20 |
+| Human win rate vs base (25 blinded pairs) | 0.50 | — | Pending |
+| GPU-hours (train) | — | 1.275 | 1.372 |
+| Peak GPU memory (train) | — | 3.54 GB | 3.61 GB |
+
+- **Final model:** Run 2. It has the best domain style at almost the same cost as Run 1.
+- **Failure modes:** weaker prompt match on in-domain prompts, and less diversity between seeds.
+- **Safety:** no sign of memorization. No generation is closer to the training set than unseen test images are.
+
+**Hugging Face:**
+- [final model (r=32)](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32)
+- [comparison model (r=4)](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4)
+- [all 120 generated images](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations)
+
+---
+
+## Part 3 — Multi-agent system
+
+**Run:** open [`notebooks/Yuyao_Ding/p3_agents.ipynb`](notebooks/Yuyao_Ding/p3_agents.ipynb). The frozen scenarios and input verification steps are in [eval/PART3.md](eval/PART3.md). The [Part 3 runbook](eval/PART3_IMPLEMENTATION.md) covers the five stages, the local app, GPU validation and the review workflow.
+
+### Results: Colab Tesla T4, source commit `53c92a3`
+
+| Measurement | With quality loop | Without quality loop | Red team |
+| --- | ---: | ---: | ---: |
+| Cases | 15 | 15 | 10 |
+| Execution errors | 0 | 0 | 0 |
+| Human task success | **10/15 (66.7%)** | **11/15 (73.3%)** | N/A |
+| Human attack success rate | N/A | N/A | **0/10 (0%)** |
+| Independent reviewer agreement | 13/15 (86.7%) | 12/15 (80.0%) | 9/10 (90.0%) |
+| Critic/human agreement | 6/9 (66.7%) | 5/9 (55.6%) | 1/1 (100%) |
+| Median seconds per request | 17.23 | 16.74 | 0.0002 |
+
+- **Memory:** peak GPU memory was 10.32 GiB allocated (11.04 GiB reserved).
+- **Quality-loop result:** the critic accepted every first attempt, so the loop never revised an image. The paired images in the two modes are identical. The 10/15 vs 11/15 difference therefore comes from the reviewers' judgments, not from the quality loop.
+- **Red-team scope:** the 0/10 attack-success result applies only to this small fixed test set.
+
+Supporting material:
+- [measured report](eval/PART3_T4_MEASURED_RESULTS.md)
+- [human reviews and joint adjudication](eval/part3/results/t4_20261114T060249Z/)
+- [system card draft](eval/PART3_SYSTEM_CARD_DRAFT.md)
+- [redacted request traces](traces/t4_20261114T060249Z/)
+
+**Independent second build:** Pratiksha Kaushik also built and ran a separate Part 3 system (Qwen2.5-VL-3B with SD 1.5, InstructPix2Pix and the Part 2 LoRA). It is kept for comparison, with per-question tables, in [`notebooks/Pratiksha_Kaushik/p3/`](notebooks/Pratiksha_Kaushik/p3/README.md).
+
+---
+
+## Artifacts
+
+| What | Where |
+| --- | --- |
+| Part 2 LoRA adapters and model cards | [r=32 (final)](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32), [r=4](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4) on Hugging Face |
+| Part 2 generated images (120) | [Hugging Face dataset](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations) |
+| Part 2 run outputs (cleaned data, eval files, logs) | [Google Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link) |
+| Part 1 saved results | [`eval/part1/results/`](eval/part1/results/) |
+| Part 3 saved results and redacted traces | [`eval/part3/results/`](eval/part3/results/), [`traces/`](traces/) |
+
+Model weights, checkpoints and full raw run archives stay outside GitHub. Local inputs go in the ignored `data/` directory, and local generated artifacts go in the ignored `.runtime/` directory.
+
+## Documentation
+
+- [CONTRIBUTIONS.md](CONTRIBUTIONS.md): who did what, by part and task.
+- [AI_USAGE.md](AI_USAGE.md): every use of AI tools and how it was checked.
+- [eval/README.md](eval/README.md): guide to the evaluation files.
+
+## Remaining before final submission
+
+- [ ] Part 1: human answer-correctness and citation-accuracy review.
+- [ ] Part 1: final Kaggle submission.
+- [ ] Part 2: blinded human evaluation (25 pairs, 3 or more raters).
+- [ ] Create or update the tags `p1-v1.0`, `p2-v1.0` and `p3-v1.0` on the final commits.
+- [ ] Both members confirm [CONTRIBUTIONS.md](CONTRIBUTIONS.md) and complete [AI_USAGE.md](AI_USAGE.md).
+- [ ] Final report.

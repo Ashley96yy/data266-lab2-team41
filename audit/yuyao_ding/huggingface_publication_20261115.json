@@ -1,0 +1,640 @@
+{
+  "verified_on": "2026-11-15",
+  "publication_scope": "Existing original artifacts only; no training, inference or human relabeling.",
+  "repos": [
+    {
+      "repo_id": "ashley999999/data266-team41-yuyao-lora-r4-600steps",
+      "repo_type": "model",
+      "uploaded_revision": "2f598098c851fbf4859ecc1a9c191d912ee1e452",
+      "artifact_prefix": "data266-team41-yuyao-lora-r4-600steps",
+      "verified_files": [
+        {
+          "path": "data266-team41-yuyao-lora-r4-600steps/README.md",
+          "sha256": "c8b900cd3cd5d17c7512e1ac7447d91dfa6dde72a2624641e0193c9d4550915a",
+          "size_bytes": 3176
+        },
+        {
+          "path": "data266-team41-yuyao-lora-r4-600steps/artifact_manifest.json",
+          "sha256": "f3c13c2cdd6d5ece7653e4271d2fea205a3cff9c521ac40b12f95fbd9fcb959f",
+          "size_bytes": 666
+        },
+        {
+          "path": "data266-team41-yuyao-lora-r4-600steps/experiment.json",
+          "sha256": "49b897ebc5d3d4cfaff0df625d43e1fe61502bc00050164a67a6b9c22e1d1351",
+          "size_bytes": 1657
+        },
+        {
+          "path": "data266-team41-yuyao-lora-r4-600steps/pytorch_lora_weights.safetensors",
+          "sha256": "b40c06bf43e61565c293ce5d1c6c760f17a43e996b6af69339ee33cb50f22f03",
+          "size_bytes": 3226184
+        }
+      ],
+      "image_count": 0,
+      "verification": "Every file size and LFS SHA-256 or Git blob SHA-1 matched the local SHA-256-manifested publication copy.",
+      "verified_revision": "8acc7c979b35783fc0f8af3ae1780c8fc8504277",
+      "url": "https://huggingface.co/ashley999999/data266-team41-yuyao-lora-r4-600steps",
+      "root_card_sha256": "0555801b2cb92f831dd13ca8f540e48f27c260c8039d710952f4e210e518dad0",
+      "downloaded_adapter_sha256": "b40c06bf43e61565c293ce5d1c6c760f17a43e996b6af69339ee33cb50f22f03"
+    },
+    {
+      "repo_id": "ashley999999/data266-team41-yuyao-part2-generations",
+      "repo_type": "dataset",
+      "uploaded_revision": "7b0d20b0d46a5840dda9d7d46e611b024e20243d",
+      "artifact_prefix": "data266-team41-yuyao-part2-generations",
+      "verified_files": [
+        {
+          "path": "data266-team41-yuyao-part2-generations/README.md",
+          "sha256": "af797b0ba7eea5192454173407c29a76d31dab07d673b8a783691a9c8b1651b1",
+          "size_bytes": 2447
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/artifact_manifest.json",
+          "sha256": "4885ad341f67b599d931786e27bb46ad091c2403ef5bffb6901e620632e0f6fd",
+          "size_bytes": 13870
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p00_s0.png",
+          "sha256": "65ebf4dbf10472e8a051465552974e3b7a75936c319f459ce301e5485264e17e",
+          "size_bytes": 408772
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p00_s1.png",
+          "sha256": "a68af46f0d4d2220666a362b957ee0bbe9ab4ae2bf0507bead0207dbbc904123",
+          "size_bytes": 434565
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p01_s0.png",
+          "sha256": "d999395d2ac33ad3bb80cb18de84218fdbef15a5ac6e30b2579d3147287cfa59",
+          "size_bytes": 470228
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p01_s1.png",
+          "sha256": "da5744b4b22b91bfeae0b0b7e44821ba746b30cb09084774aac93b84f3866639",
+          "size_bytes": 440871
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p02_s0.png",
+          "sha256": "0ca60f40c1c2039cae61a789e8ca23b29fda0fb2e710660b4f016ba7fce6e4f3",
+          "size_bytes": 444716
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p02_s1.png",
+          "sha256": "0707fb79df00485718b91b11a3808150130863599c9dbb263b4a721cb97ab889",
+          "size_bytes": 402142
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p03_s0.png",
+          "sha256": "f9591f3d98d092a6f303e4152b6a0a939736b0a1130ceef2d9a304537dba326c",
+          "size_bytes": 535399
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p03_s1.png",
+          "sha256": "c2325e3fdd98ed3e57e7190cf42a3161b704baf16552ef4a641f583c96103974",
+          "size_bytes": 473897
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p04_s0.png",
+          "sha256": "816005ccc44a834af2eb4ed42231c5cc289402d8c6ba0263abe8df2c3f948765",
+          "size_bytes": 477885
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p04_s1.png",
+          "sha256": "27d8cb801b8b4de2c42b5c435be398053e10fb59bb8c55cdd1848d03ed78c809",
+          "size_bytes": 405987
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p05_s0.png",
+          "sha256": "bd3aac2c3e3461f9c0953480634cc1fb39b3258021421bfcc04da6ea85ddad1a",
+          "size_bytes": 397444
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p05_s1.png",
+          "sha256": "285ab544a54c971a41f8b1c393d2af1d329ac49f84ddd0f5e1e78319d1676895",
+          "size_bytes": 367658
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p06_s0.png",
+          "sha256": "dc7736c647a56f482d456336a4a07a5c45b40010af9339f111558820ecb068de",
+          "size_bytes": 435398
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p06_s1.png",
+          "sha256": "ebd35cc2d702fa2f7fa96e1da7ce7360fad0225ce15cf95da5f64a68fcb0482b",
+          "size_bytes": 414499
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p07_s0.png",
+          "sha256": "d068c0634a91b6c0c4a94a607df44313518341eef777d76de29c8e0dc33cee9b",
+          "size_bytes": 462219
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p07_s1.png",
+          "sha256": "0af3c5f886141594eda1326ae5e1990aaef0e00df889df88cc1a271737a38595",
+          "size_bytes": 412300
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p08_s0.png",
+          "sha256": "417d416ac092af066555ad89aa1577e8823a7522782baad981ac8f7cd7c76d15",
+          "size_bytes": 466545
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p08_s1.png",
+          "sha256": "291fdbd52d830b9b198ae3c21ef9f408e50c41de4974e67147c8e73e7600898e",
+          "size_bytes": 412374
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p09_s0.png",
+          "sha256": "126aa5e3da83089dd58190966626985673560f4c6e2e1ac51fde2fa355f3d404",
+          "size_bytes": 617662
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p09_s1.png",
+          "sha256": "89a1496e5f5290ba0c185ab898de05ebb60415c210980885491ac8be0c10d516",
+          "size_bytes": 477700
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p10_s0.png",
+          "sha256": "5275fe907f31ea6ac6611a9241d09c20115c6b871872032ce9c4aa2c2ddbf2dd",
+          "size_bytes": 527166
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p10_s1.png",
+          "sha256": "c6b1fe895f9a4aab2373419849d84710f7c2f48ed21e271f6bbd4661f52fc538",
+          "size_bytes": 436406
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p11_s0.png",
+          "sha256": "901aab9c412af550231067eefae564e7e843c2bb75836fd0b5f24754214e4a69",
+          "size_bytes": 434292
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p11_s1.png",
+          "sha256": "e529419738888297cbd9578adced8d4eb48202d3a1395ff63354bccf98f18dd3",
+          "size_bytes": 496067
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p12_s0.png",
+          "sha256": "b9febd8a1a9e71d49f7dc8174c6e0c36b0a5fc1679d7bbf7678c1e94a8650ac3",
+          "size_bytes": 458002
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p12_s1.png",
+          "sha256": "483bee6252e2af9f5d4116d6caf6c8b6a95dd8e551eb1e6d3629f791e22ea793",
+          "size_bytes": 458695
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p13_s0.png",
+          "sha256": "fcd855a62a53118bc037962bd184f8051d434ce1f2be29d980e05a3fc873540a",
+          "size_bytes": 431437
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p13_s1.png",
+          "sha256": "451a9ed80eb232490c6dbb1faa086edae137e4eb9e6ce871f2743283caefdd90",
+          "size_bytes": 413594
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p14_s0.png",
+          "sha256": "4cc52f81b4287daaf075683858a9d53bbcace5c912cb169df2e30a9333664c59",
+          "size_bytes": 503318
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p14_s1.png",
+          "sha256": "64c29fdf72c9172759c48c63ff719c7109c80e8846d9cf1f2df207a49ed7f64d",
+          "size_bytes": 425358
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p15_s0.png",
+          "sha256": "049a75f27092956af42f8672d85c5a6f9a7d87a18ca685a6a00bc822458355cc",
+          "size_bytes": 417307
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p15_s1.png",
+          "sha256": "dce6c7f6af9278346784a2edd715985df2e24348cd16653976618695be1655b0",
+          "size_bytes": 408400
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p16_s0.png",
+          "sha256": "b3b0815be1c428ebe23ac48db383a944e7fd6147ecc2582323bf559b9276a6ed",
+          "size_bytes": 421066
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p16_s1.png",
+          "sha256": "668354325c0088c0d82816b3fcbd4b79fe1fef9b1e977b7340a9d876ff12efac",
+          "size_bytes": 434867
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p17_s0.png",
+          "sha256": "8d0a70295ea2137153e8c804e36af781bc40b38110292e82d276d7ff7c715566",
+          "size_bytes": 514491
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p17_s1.png",
+          "sha256": "6857bfb3441faeb879d5dc776594edc1eaef230da3141593d9aecd554f14b796",
+          "size_bytes": 376398
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p18_s0.png",
+          "sha256": "2de15427cc21c2d10ee7101a3524cd42d1f2371f8d631c51424fbdb67afdccfe",
+          "size_bytes": 513626
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p18_s1.png",
+          "sha256": "85090e49f39d57045f5707f2674a54c84ca4acbfffe330c3da4f993eb6db9d5d",
+          "size_bytes": 480155
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p19_s0.png",
+          "sha256": "e9c4a470ad900801f7de4f9402eb27af8a1cc00eac80d618ef16bac39fb27d33",
+          "size_bytes": 842
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/base_p19_s1.png",
+          "sha256": "4ecb454853c588975b16c9f5425de79e6fef6faa3fb3e95196a81490e82636ab",
+          "size_bytes": 411944
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/experiment.json",
+          "sha256": "49b897ebc5d3d4cfaff0df625d43e1fe61502bc00050164a67a6b9c22e1d1351",
+          "size_bytes": 1657
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/metadata.jsonl",
+          "sha256": "1d31c1b49023ee6bc978df56bd1afae4b31aad58c6ec892c341550b28d629399",
+          "size_bytes": 41333
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/prompts.json",
+          "sha256": "4298b0378332c6dc9b2e56eb9c5712b436416daba6ecc0f938c30ae4254db046",
+          "size_bytes": 2912
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/results.json",
+          "sha256": "b85c3362305307e57053d7b39410fbbe5df3307ceaa847d6bac34cfe097eeb5c",
+          "size_bytes": 1404
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p00_s0.png",
+          "sha256": "c098e2f98a1743e52c7f35330e31e1723cdc7a9afd7ed658fea8a30414a3e198",
+          "size_bytes": 384721
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p00_s1.png",
+          "sha256": "41e6dacf1a480283bbd935a5cba3098d3898b56713e63fe86f2a3672e833c87a",
+          "size_bytes": 412347
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p01_s0.png",
+          "sha256": "fc8f9cc20bfa6e52821fb93c729a6486812d0b073724d09c3d72ddbed0b6de04",
+          "size_bytes": 452584
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p01_s1.png",
+          "sha256": "8fc215316f6951db44533e4e0bf99ed3557bbb1bae87cf042089e2236030fadc",
+          "size_bytes": 423659
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p02_s0.png",
+          "sha256": "9fc51aa84f7cdfe62612968e2f28ae69c24679903b3c3817a49ebb5a410c4ba8",
+          "size_bytes": 399371
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p02_s1.png",
+          "sha256": "0453c2cf53e5650c62fde003995eeac5f1cf7785e6c9a948435253c70d1c37b3",
+          "size_bytes": 321559
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p03_s0.png",
+          "sha256": "8986b2b33b98796eaa01ba3e075a6a8fe5e1f1a00c861c6d67356ce6349e5cbe",
+          "size_bytes": 403255
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p03_s1.png",
+          "sha256": "d1abcef46a20ee003e98eab3f34b2b9636508a286316b540110888154c80e3ba",
+          "size_bytes": 400297
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p04_s0.png",
+          "sha256": "cdd2253642f41d73e3af96890b3d05580b2d97296bd6f9bbfc267d80743c7d51",
+          "size_bytes": 458389
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p04_s1.png",
+          "sha256": "2344b52502041e1d32248d84f2cbb577f12cabf4ac35ca0f5c2172a90adb960b",
+          "size_bytes": 460513
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p05_s0.png",
+          "sha256": "22d3c6c40e51dd8b366ea81042ee9c75e94cdd174ce4b1be955daed1dff34583",
+          "size_bytes": 434080
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p05_s1.png",
+          "sha256": "bfb3e32aa579a4370ac921521bc8bc9d5cb6f60002a09fb80f6bf05f16c47f24",
+          "size_bytes": 371117
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p06_s0.png",
+          "sha256": "b0109643868ddcc656fff246993ef54db8858f4c942f8cb1339736c781331422",
+          "size_bytes": 424448
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p06_s1.png",
+          "sha256": "2d2c536646c11a15effdebdfc9f497d3e703a4b78005e050fa61d166377594f8",
+          "size_bytes": 445368
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p07_s0.png",
+          "sha256": "4a34f086a6a0e1df9ddc217278e46096d56baf0eee85e79475bca5185d032f95",
+          "size_bytes": 450887
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p07_s1.png",
+          "sha256": "60dc244b692a1bb837bae0d39b40c6de5d544a5504fe02e502a0aa078ff5bfae",
+          "size_bytes": 404852
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p08_s0.png",
+          "sha256": "109ea302b84978b1b19a40c91c435576a9b191a1eb671e755692f7baedc75e37",
+          "size_bytes": 503003
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p08_s1.png",
+          "sha256": "c55bcd82674f1ddd3302678f19765a1eb228a56947047c7a6f6dbd0b292699e2",
+          "size_bytes": 420437
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p09_s0.png",
+          "sha256": "8568c4213208ae227e681ef70ff8ed7890a41b61f62b5f11af31a52595eea3ed",
+          "size_bytes": 566614
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p09_s1.png",
+          "sha256": "c26bda4bf9a4c0cf6f973bbe97512e470e8eaa5613145e83d8df40464c9e5d26",
+          "size_bytes": 446985
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p10_s0.png",
+          "sha256": "50a0a0b4c9913ab305fd76dab1409197fc29bac910a677555c1f14b70bbbd898",
+          "size_bytes": 542545
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p10_s1.png",
+          "sha256": "0c592e0bf1155798f7d30db006328b521a125e7c26828f8c7e24360a0b9b42ae",
+          "size_bytes": 442275
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p11_s0.png",
+          "sha256": "3a88e3099ec86dcb5bb3abcb629374650eed513bd85305fe49d76dfafcc6810d",
+          "size_bytes": 402254
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p11_s1.png",
+          "sha256": "d262d929eee57c9256b1596aa6b71c07ba96cc21702d90ee36f1959d2a0858fd",
+          "size_bytes": 478255
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p12_s0.png",
+          "sha256": "a45e55016b877057134c00c2b6ef24866f4364fdadce777ab0660667558c0638",
+          "size_bytes": 458581
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p12_s1.png",
+          "sha256": "0b4115606107ed9f158ff3b85b553b2feb93463e81eb61ad1badbe8fea16afe4",
+          "size_bytes": 455393
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p13_s0.png",
+          "sha256": "c1a3739e23f2338f985d107a23cc5ac96c45c011dc03830ef96c99221632c2e6",
+          "size_bytes": 388863
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p13_s1.png",
+          "sha256": "da720412719e3d4ff4c09dd4da7ed94d0ac011e62ce944155e63f2a253e1f30e",
+          "size_bytes": 419618
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p14_s0.png",
+          "sha256": "69176a6c952a644de33c7378199c240e8433c37e29ac7e29645809c705ce7812",
+          "size_bytes": 459912
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p14_s1.png",
+          "sha256": "9d801caa7b77474e99f70ad4d5670b5eabc0359868bb843b525c6be4a773024e",
+          "size_bytes": 392437
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p15_s0.png",
+          "sha256": "e2e1b7d5a66186b236591587562a3b3cef15d56f537ff37d7c965d17660f527f",
+          "size_bytes": 383427
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p15_s1.png",
+          "sha256": "b68d9fc11360a655d0e6450a248f5d6de85c94ff4bc4800cc2ee1761b91b9ec8",
+          "size_bytes": 348235
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p16_s0.png",
+          "sha256": "afe0b2d727a5f18d086315ad1bea74f4d0a6b20f5861e1af5e9e3bd96e97a90e",
+          "size_bytes": 436766
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p16_s1.png",
+          "sha256": "37ff37c4e54101a0d072c84ac1c300bcd0a2b12fa004cca73cdd83e1740eda80",
+          "size_bytes": 362191
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p17_s0.png",
+          "sha256": "682e04d29766f0f3ccf636cc4098699175286400f2b313b345d668f2c6ede1b8",
+          "size_bytes": 387255
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p17_s1.png",
+          "sha256": "274eb12a6e9e13b9483d9d574562f7c417849bcb00e76a124d2c2f42291f07f7",
+          "size_bytes": 341530
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p18_s0.png",
+          "sha256": "29a3294db6abaf4ce9c241deac1609f07b339a27629355e7a845f845a8d4ad7c",
+          "size_bytes": 435106
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p18_s1.png",
+          "sha256": "abb5fc5c4f686281a5364605a7e2977296e1797ab363c7a993037d3ac79578cf",
+          "size_bytes": 442662
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p19_s0.png",
+          "sha256": "e9ed5cf229ebe19a03c76b43a9231d4f76df50bc44fdc6bca196751440798708",
+          "size_bytes": 437362
+        },
+        {
+          "path": "data266-team41-yuyao-part2-generations/yuyao_lora_r4_p19_s1.png",
+          "sha256": "b6f7328542968a156d5c99b55f809dd9f9357a0373c06c7c841344a0b0b2d9ea",
+          "size_bytes": 422209
+        }
+      ],
+      "image_count": 80,
+      "verification": "Every file size and LFS SHA-256 or Git blob SHA-1 matched the local SHA-256-manifested publication copy.",
+      "verified_revision": "086876ab1dc8af1907337658219d9abaf525e212",
+      "url": "https://huggingface.co/datasets/ashley999999/data266-team41-yuyao-part2-generations",
+      "root_card_sha256": "995c31dd9ff7889af2a60529ea4f5780f11447b388081666abab22b462e2a847"
+    },
+    {
+      "repo_id": "ashley999999/data266-team41-part3-t4-generations",
+      "repo_type": "dataset",
+      "uploaded_revision": "c0e284426915c490e5e030eb4bb5a56d6afee480",
+      "artifact_prefix": "data266-team41-part3-t4-generations",
+      "verified_files": [
+        {
+          "path": "data266-team41-part3-t4-generations/README.md",
+          "sha256": "ccf29b68d8669f0c023ec4abb4c539215cc8ec3d770b40f6a289cfc1655a7293",
+          "size_bytes": 3409
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/artifact_manifest.json",
+          "sha256": "3cd6db91df0dc5da92e3d0b0495da8be2b4fd3466b53fe9bd290a9235e9ec08d",
+          "size_bytes": 4482
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/diagnostic_base.png",
+          "sha256": "b7e64bfe635ae1468ca36a70fcb1b32f56ab0821ff5ed6cb955977433b1a6306",
+          "size_bytes": 193022
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/diagnostic_domain.png",
+          "sha256": "75433b951351d6a90e2b0fbe16fece4632ebb624e3ede9f1d5e555ba2f8a4b6c",
+          "size_bytes": 157272
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/diagnostic_enhance.png",
+          "sha256": "1524c1912c8925922ffc3cf5c69f788064f1ff869686aceef1aa06cf7fee2988",
+          "size_bytes": 2556
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/diagnostic_ink.png",
+          "sha256": "2eb87cc7ddf96c588287ee62f49e02db9d4d940d800f154105e83367cdb344ce",
+          "size_bytes": 64747
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/experiment.json",
+          "sha256": "79b37d195113f70638d62dbf53bee47b88bb97b58364b507b33266dc74f516e0",
+          "size_bytes": 845
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/metadata.jsonl",
+          "sha256": "309aff423dcb117846b4a992f98978f907f714001cff532bb05a73914797c739",
+          "size_bytes": 35149
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/red_team_P3-RT03_attempt0.png",
+          "sha256": "4b12aea9d8ce1c11650596f34e406efe0dead21a9fb91614109dfad9b7ddb922",
+          "size_bytes": 222557
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/with_P3-S04_attempt0.png",
+          "sha256": "5bd14de0fc17227504d0dd059d2e306fe95f5578f0047285656a76a417466aa1",
+          "size_bytes": 506265
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/with_P3-S05_attempt0.png",
+          "sha256": "dad2110e892896bc2701d60e742737a0f1ed9b629cdd7ec82b58d71aee4acc97",
+          "size_bytes": 216158
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/with_P3-S06_attempt0.png",
+          "sha256": "a51347248d81b67e7a24a8640500b6af335eb51c654796cdd3c4309e5ec55d1b",
+          "size_bytes": 359491
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/with_P3-S07_attempt0.png",
+          "sha256": "b075f3222754acef1b9064514212fa1f166ab542b2deef65b3c6d0fa8bcddbb4",
+          "size_bytes": 1912588
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/with_P3-S08_attempt0.png",
+          "sha256": "4fb5298bcf734f8adeb443e461088fc8c7bec81bec2c78f841b23710e25e1821",
+          "size_bytes": 1650074
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/with_P3-S09_attempt0.png",
+          "sha256": "d0d332dbf30d377413c9b5012c78c1f6b528810cae006b1068bd8907a9c51613",
+          "size_bytes": 2749956
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/with_P3-S10_attempt0.png",
+          "sha256": "844213a53ebf785493f06bd1d067f08bda9879d5ec438a25b667cbef759b4120",
+          "size_bytes": 488491
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/with_P3-S11_attempt0.png",
+          "sha256": "817f376fdb7223a9f4f5a3c22f11cc628a75e8e37788dad6bbe279ae4e399b64",
+          "size_bytes": 607539
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/with_P3-S12_attempt0.png",
+          "sha256": "1b8fe93029d8e22f5fe8db6ccf6cad49523bfaa2e0ac43654dfb532b8f1229dc",
+          "size_bytes": 580539
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/without_P3-S04_attempt0.png",
+          "sha256": "5bd14de0fc17227504d0dd059d2e306fe95f5578f0047285656a76a417466aa1",
+          "size_bytes": 506265
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/without_P3-S05_attempt0.png",
+          "sha256": "dad2110e892896bc2701d60e742737a0f1ed9b629cdd7ec82b58d71aee4acc97",
+          "size_bytes": 216158
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/without_P3-S06_attempt0.png",
+          "sha256": "a51347248d81b67e7a24a8640500b6af335eb51c654796cdd3c4309e5ec55d1b",
+          "size_bytes": 359491
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/without_P3-S07_attempt0.png",
+          "sha256": "b075f3222754acef1b9064514212fa1f166ab542b2deef65b3c6d0fa8bcddbb4",
+          "size_bytes": 1912588
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/without_P3-S08_attempt0.png",
+          "sha256": "4fb5298bcf734f8adeb443e461088fc8c7bec81bec2c78f841b23710e25e1821",
+          "size_bytes": 1650074
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/without_P3-S09_attempt0.png",
+          "sha256": "d0d332dbf30d377413c9b5012c78c1f6b528810cae006b1068bd8907a9c51613",
+          "size_bytes": 2749956
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/without_P3-S10_attempt0.png",
+          "sha256": "844213a53ebf785493f06bd1d067f08bda9879d5ec438a25b667cbef759b4120",
+          "size_bytes": 488491
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/without_P3-S11_attempt0.png",
+          "sha256": "817f376fdb7223a9f4f5a3c22f11cc628a75e8e37788dad6bbe279ae4e399b64",
+          "size_bytes": 607539
+        },
+        {
+          "path": "data266-team41-part3-t4-generations/without_P3-S12_attempt0.png",
+          "sha256": "1b8fe93029d8e22f5fe8db6ccf6cad49523bfaa2e0ac43654dfb532b8f1229dc",
+          "size_bytes": 580539
+        }
+      ],
+      "image_count": 23,
+      "verification": "Every file size and LFS SHA-256 or Git blob SHA-1 matched the local SHA-256-manifested publication copy.",
+      "verified_revision": "67e606a8b91b2f5e907cac93fb1923c12ae5e2a0",
+      "url": "https://huggingface.co/datasets/ashley999999/data266-team41-part3-t4-generations",
+      "root_card_sha256": "ec2dd18b65ef4b59589e6111e7f9e9893332b78b504d8dd7cf9b8c70db7533df"
+    }
+  ],
+  "totals": {
+    "artifact_files_verified": 117,
+    "generated_pngs": 103,
+    "adapter_files": 1
+  },
+  "layout": "User uploaded each prepared directory as a nested folder. Root cards were added without changing the original uploaded files; dataset cards select the nested PNGs, and the adapter loading example supplies subfolder.",
+  "privacy": "Generation/adapter allowlist only. No original course PDFs, raw dataset images, private input fixtures, consented portrait, credentials, caches or full raw agent traces were uploaded.",
+  "viewer_status_at_verification": "Root cards and original artifacts are public and readable. Dataset Viewer reports available soon; datasets-server returned not-ready/busy (500). Viewer completion is not asserted.",
+  "training_scope": "Yuyao partner adapter is rank 4, 600 steps, separate from Pratiksha formal rank-4/rank-32 3000-step experiments. Part 3 reuses the existing final rank-32 adapter."
+}

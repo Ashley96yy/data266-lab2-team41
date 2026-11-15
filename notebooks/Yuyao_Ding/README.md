@@ -126,7 +126,11 @@ images and weights are retained; the public notebook omits embedded previews
 containing source images. See the [runbook](../../eval/yuyao_ding/PART2_YUYAO_BASELINE.md)
 and [recorded provenance](../../eval/yuyao_ding/part2/results/yuyao_t4_20261115T034917Z/).
 
+Published artifacts: [rank-4 600-step adapter](https://huggingface.co/ashley999999/data266-team41-yuyao-lora-r4-600steps) and [80 paired generated images](https://huggingface.co/datasets/ashley999999/data266-team41-yuyao-part2-generations). These preserve the already completed T4 run; the model card supplies the nested adapter `subfolder` path. No raw training images are included.
+
 ## Part 3: main multi-agent system
+
+[Published T4 generated outputs](https://huggingface.co/datasets/ashley999999/data266-team41-part3-t4-generations): 19 assessed generation attempts and 4 separate diagnostics, with settings, hashes and existing adjudicated labels. Caption/refusal/broken-input cases produce no output PNG; the original private fixtures and adult portrait are excluded. Part 3 reuses Pratiksha's existing rank-32 adapter rather than training new weights.
 
 The implementation connects Planner, Vision Understanding, Prompt Engineering,
 Image Generation and Critique through a shared typed state. It supports caption

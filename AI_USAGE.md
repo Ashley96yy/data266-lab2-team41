@@ -119,3 +119,6 @@ snapshot verification lets earlier migration checks still validate the preserved
 GPU notebook prefix. No model loading, training or GPU inference occurred. The
 paired-image/no-revision limitation remains explicit; no improved quality-loop
 result or general safety claim was introduced.
+
+
+Hugging Face artifact publication (2026-11-15 PT): Codex prepared generation-only/adapter allowlists, model and dataset cards, metadata and SHA-256 manifests for the existing Yuyao Part 2 baseline and actual Part 3 T4 run. Yuyao uploaded the three prepared directories through the Hugging Face website. Codex verified all 117 source artifact files against remote file sizes and LFS SHA-256 or Git blob IDs, then added root cards through the website editor to document the uploaded nested layout and configure image-folder discovery. Public artifact links and pinned publication revisions are recorded in the repository. Original weights, image bytes, execution records, prompts and human labels remain unchanged. No model training, generation, human rating or GPU validation was repeated. Private input fixtures, the adult portrait, raw training/test pixels, credentials, caches and full raw traces were excluded. Dataset Viewer indexing was still pending at verification; no working viewer or new experimental improvement is claimed.

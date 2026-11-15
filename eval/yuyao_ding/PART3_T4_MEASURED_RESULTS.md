@@ -34,7 +34,7 @@ Enhancement is explicitly a geometry-preserving Pillow photometric backend with 
 
 Every experimental number in this report is calculated from saved records. Human labels and all disagreement reasons come from the three submitted reviewer files; aggregation does not create human judgments. Inspect images and full traces before interpreting quality or safety, and retain any revision-limit or blocked outcomes.
 
-Redacted per-request JSON traces for the 40 evaluated cases are published under [traces/t4_20261114T060249Z](../../traces/yuyao_ding/t4_20261114T060249Z/). The full raw traces and images remain in the team's private run archive.
+Redacted per-request JSON traces for the 40 evaluated cases are published under [traces/t4_20261114T060249Z](../../traces/yuyao_ding/t4_20261114T060249Z/). The full raw traces and original input images remain in the team's private run archive. A generation-only copy of the [23 T4 output images](https://huggingface.co/datasets/ashley999999/data266-team41-part3-t4-generations) is now published on Hugging Face: 19 assessed attempts plus 4 separate diagnostics. The private adult portrait and other source fixtures are excluded; no image was regenerated for publication.
 
 The final human metrics are also saved as actual output of the appended CPU-only
 cell in [the main notebook](../../notebooks/Yuyao_Ding/p3_agents.ipynb), with

@@ -209,9 +209,14 @@ Supporting material:
 | --- | --- |
 | Part 2 LoRA adapters and model cards | [r=32 (final)](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32), [r=4](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4) on Hugging Face |
 | Part 2 generated images (120) | [Hugging Face dataset](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations) |
+| Yuyao Part 2 partner baseline weights (r=4, 600 steps) | [Hugging Face model](https://huggingface.co/ashley999999/data266-team41-yuyao-lora-r4-600steps) |
+| Yuyao Part 2 paired generated images (80) | [Hugging Face dataset](https://huggingface.co/datasets/ashley999999/data266-team41-yuyao-part2-generations) |
+| Part 3 actual T4 generated outputs (23; includes 4 diagnostics) | [Hugging Face dataset](https://huggingface.co/datasets/ashley999999/data266-team41-part3-t4-generations) |
 | Part 2 run outputs (cleaned data, eval files, logs) | [Google Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link) |
 | Part 1 saved results | [`eval/yuyao_ding/part1/results/`](eval/yuyao_ding/part1/results/) |
 | Part 3 saved results and redacted traces | [`eval/yuyao_ding/part3/results/`](eval/yuyao_ding/part3/results/), [`traces/`](traces/) |
+
+The three Yuyao Hugging Face repositories were verified against all 117 prepared artifact files (103 PNGs and one adapter, plus metadata/cards); see the [publication verification record](audit/yuyao_ding/huggingface_publication_20261115.json). Original files remain in same-named subfolders. The root model card includes the required `subfolder` loading argument, and root dataset cards point to the nested images. The 23 Part 3 images are 19 assessed generation attempts plus 4 independent diagnostics; they are not 23 scored scenarios. Dataset Viewer indexing was still pending at verification.
 
 Model weights, checkpoints and full raw run archives stay outside GitHub. Local inputs go in the ignored `data/` directory, and local generated artifacts go in the ignored `.runtime/` directory.
 

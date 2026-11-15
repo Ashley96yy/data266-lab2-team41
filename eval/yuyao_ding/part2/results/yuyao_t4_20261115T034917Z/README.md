@@ -102,3 +102,7 @@ knowledge-transfer/design meeting recording are still pending. Do not invent eit
 of this baseline is now recorded; these remaining interpretation/documentation
 items do not require repeating training. Publish any supplemental weights/images
 to an authorized Hugging Face location if they are needed for final sharing.
+
+## Published weights and generated outputs
+
+The [partner adapter](https://huggingface.co/ashley999999/data266-team41-yuyao-lora-r4-600steps) and [80 paired generated images](https://huggingface.co/datasets/ashley999999/data266-team41-yuyao-part2-generations) were published from the preserved run, with original bytes and per-file hashes checked. The root model card documents the required adapter subfolder. No original training/test pixels, private fixtures, checkpoints or full raw logs are included in these publication repositories. This is the separate 600-step baseline, not the formal final model. See the [publication verification record](../../../../../audit/yuyao_ding/huggingface_publication_20261115.json).

@@ -1,0 +1,23 @@
+{
+  "request": "",
+  "image_path": "/content/drive/MyDrive/data266-lab2/p3/inputs/cats.jpg",
+  "use_critique": true,
+  "request_id": "handling_94cb",
+  "out_dir": "/content/drive/MyDrive/data266-lab2/p3/outputs/misc",
+  "status": "clarify",
+  "message": "Please type a request, for example 'describe this image' or 'make it a watercolor'.",
+  "intent": "",
+  "route": [],
+  "planner": {},
+  "vision": {},
+  "prompt": "",
+  "negative_prompt": "",
+  "generation": {},
+  "critiques": [],
+  "revision_instruction": "",
+  "revisions": 0,
+  "attempts": [],
+  "output_path": null,
+  "trace": [],
+  "total_sec": 0.0
+}

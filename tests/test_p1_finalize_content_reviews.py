@@ -8,9 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 loader = importlib.util.spec_from_file_location('p1_finalizer', ROOT / 'scripts/finalize_p1_content_review.py')
 forms = importlib.util.module_from_spec(loader)
 loader.loader.exec_module(forms)
-RESULTS = ROOT / 'eval/part1/results/round2_colab_20261114T032206Z'
+RESULTS = ROOT / 'eval/yuyao_ding/part1/results/round2_colab_20261114T032206Z'
 CONTENT = RESULTS / 'content_review_20261115'
-SPEC = ROOT / 'eval/p1_golden_v2.json'
+SPEC = ROOT / 'eval/yuyao_ding/p1_golden_v2.json'
 
 
 class FinalizeContentReviewTest(unittest.TestCase):

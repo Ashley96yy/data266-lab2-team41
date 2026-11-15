@@ -18,7 +18,7 @@ human or citation-support scores have been invented. See the executed comparison
 notebook and its notebook-generated ROUND2_IMPROVEMENT.md report for actual numbers.
 
 The preserved round directories are under [`part1/results/`](part1/results/).
-The [comparison notebook](../notebooks/Yuyao_Ding/p1_round2_comparison.ipynb)
+The [comparison notebook](../../notebooks/Yuyao_Ding/p1_round2_comparison.ipynb)
 reads that location. This directory reorganization preserves the result-file
 contents and the notebook's saved outputs; it does not require another GPU run.
 

@@ -70,8 +70,8 @@ def merge(run_path,spec_path,review_path,a_path,b_path,out):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);s=p.add_subparsers(dest='command',required=True)
-    e=s.add_parser('export');e.add_argument('--run',required=True);e.add_argument('--spec',default=str(ROOT/'eval/p1_golden_v2.json'));e.add_argument('--output',required=True);e.add_argument('--input-dir',default=str(ROOT/'data/part1'))
-    i=s.add_parser('import');i.add_argument('--run',required=True);i.add_argument('--spec',default=str(ROOT/'eval/p1_golden_v2.json'));i.add_argument('--review',required=True);i.add_argument('--member-a',required=True);i.add_argument('--member-b',required=True);i.add_argument('--output',required=True)
+    e=s.add_parser('export');e.add_argument('--run',required=True);e.add_argument('--spec',default=str(ROOT/'eval/yuyao_ding/p1_golden_v2.json'));e.add_argument('--output',required=True);e.add_argument('--input-dir',default=str(ROOT/'data/part1'))
+    i=s.add_parser('import');i.add_argument('--run',required=True);i.add_argument('--spec',default=str(ROOT/'eval/yuyao_ding/p1_golden_v2.json'));i.add_argument('--review',required=True);i.add_argument('--member-a',required=True);i.add_argument('--member-b',required=True);i.add_argument('--output',required=True)
     a=p.parse_args()
     if a.command=='export':export(a.run,a.spec,a.output,a.input_dir)
     else:merge(a.run,a.spec,a.review,a.member_a,a.member_b,a.output)

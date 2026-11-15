@@ -48,8 +48,8 @@ now complete these measurements. Recompute with:
 
 ```bash
 python scripts/finalize_p1_content_review.py \
-  --review eval/part1/results/round2_colab_20261114T032206Z/content_review_20261115/part1-content-review.original.json \
-  --corrections eval/part1/results/round2_colab_20261114T032206Z/content_review_20261115/corrections.json \
+  --review eval/yuyao_ding/part1/results/round2_colab_20261114T032206Z/content_review_20261115/part1-content-review.original.json \
+  --corrections eval/yuyao_ding/part1/results/round2_colab_20261114T032206Z/content_review_20261115/corrections.json \
   --output .runtime/part1-content-recomputed
 ```
 

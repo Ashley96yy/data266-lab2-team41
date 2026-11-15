@@ -59,7 +59,7 @@ python - <<'PY'
 import json
 from pathlib import Path
 from src.p3_evaluation import summarize
-root = Path('eval/part3/results/t4_20261114T060249Z')
+root = Path('eval/yuyao_ding/part3/results/t4_20261114T060249Z')
 for mode in ('with', 'without', 'red_team'):
     run = json.loads((root / f'{mode}.reviewed.json').read_text())
     print(mode, json.dumps(summarize(run), indent=2))

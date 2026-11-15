@@ -23,7 +23,7 @@ inference was rerun during this cleanup.
 The original Colab-generated report contained a hardcoded statement that T4/P100
 hardware was unverified, contradicting the completed T4 manifest. The reporting
 function was corrected and run on the preserved JSON records using CPU only.
-`eval/PART3_T4_MEASURED_RESULTS.md` differs from the original report only in that
+`eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md` differs from the original report only in that
 hardware-status sentence and a provenance wording sentence; every numerical
 result is unchanged. The corrected Markdown display in the primary Notebook is
 marked as postprocessed. The private archive preserves the original report.

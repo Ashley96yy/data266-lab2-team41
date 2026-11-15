@@ -12,7 +12,7 @@ Graders use the tagged commit for each part.
 | --- | --- | --- | --- | --- |
 | 1. Multimodal RAG | `p1-v1.0` | [`notebooks/Yuyao_Ding/p1_rag.ipynb`](notebooks/Yuyao_Ding/p1_rag.ipynb) | Recall@5 0.764 (final) vs 0.472 (dense only); human groundedness 4.44/5 | [Part 1 results](#part-1--multimodal-rag) |
 | 2. Diffusion fine-tuning | `p2-v1.0` | [`notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb) | KID 0.0217 (LoRA r=32) vs 0.1337 (base SD 1.5) | [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md) |
-| 3. Multi-agent system | `p3-v1.0` | [`notebooks/Yuyao_Ding/p3_agents.ipynb`](notebooks/Yuyao_Ding/p3_agents.ipynb) | Task success 10/15 with loop, 11/15 without; 0/10 red-team attacks succeeded | [Part 3 report](eval/PART3_T4_MEASURED_RESULTS.md) |
+| 3. Multi-agent system | `p3-v1.0` | [`notebooks/Yuyao_Ding/p3_agents.ipynb`](notebooks/Yuyao_Ding/p3_agents.ipynb) | Task success 10/15 with loop, 11/15 without; 0/10 red-team attacks succeeded | [Part 3 report](eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md) |
 
 All course GPU runs were done on a single Tesla T4 (Colab).
 
@@ -36,9 +36,11 @@ All course GPU runs were done on a single Tesla T4 (Colab).
 │       ├── p2/                  # Part 2 notebooks + README (p2_v4.ipynb is the submission)
 │       └── p3/                  # independent Part 3 build (v1, v2) + README
 ├── eval/                        # golden sets, scenarios, protocols, measured reports
-│   ├── part1/results/           # saved Part 1 run results and human review
-│   ├── part3/results/           # saved Part 3 run results and human reviews
-│   └── pratiksha_p3/            # results of the independent Part 3 build
+│   ├── yuyao_ding/             # main Parts 1/3 + Yuyao Part 2 baseline
+│   │   ├── part1/results/      # original rounds and completed human review
+│   │   ├── part2/results/      # partner baseline evidence
+│   │   └── part3/results/      # main-system reviews and metrics
+│   └── pratiksha_p3/           # Pratiksha independent Part 3 evaluation
 ├── traces/                      # redacted Part 3 JSON traces (+ pratiksha_p3/ for the independent build)
 ├── src/                         # shared helpers for Parts 1 and 3
 ├── scripts/                     # runners and review tools
@@ -57,7 +59,7 @@ Course GPU work must run on one 16 GB GPU (Kaggle T4/P100 or Colab T4).
   jupyter lab
   ```
 - **Parts 2 and 3:** each notebook installs its own pinned packages in its first code cell. Run them in Colab with **Runtime → Restart session and run all**.
-- **Part 3 environment:** the earlier local development snapshot is kept at `config/requirements-part3.txt` for provenance only. See the [Part 3 runbook](eval/PART3_IMPLEMENTATION.md) before changing an existing GPU environment.
+- **Part 3 environment:** the earlier local development snapshot is kept at `config/requirements-part3.txt` for provenance only. See the [Part 3 runbook](eval/yuyao_ding/PART3_IMPLEMENTATION.md) before changing an existing GPU environment.
 
 Each notebook begins with a reproducibility cell that prints the Git commit, Python version, PyTorch version, GPU and random seed.
 
@@ -73,7 +75,7 @@ Each notebook begins with a reproducibility cell that prints the Git commit, Pyt
 - **Answers:** grounded JSON answers from a Qwen vision-language model, with a citation for every fact.
 - **Conversations:** each conversation has its own memory. User-supplied values stay in that memory and never go into the vector database.
 
-See the [architecture](eval/PART1_ARCHITECTURE.md) and [evaluation protocol](eval/PART1_EVALUATION_PROTOCOL.md).
+See the [architecture](eval/yuyao_ding/PART1_ARCHITECTURE.md) and [evaluation protocol](eval/yuyao_ding/PART1_EVALUATION_PROTOCOL.md).
 
 ### Results: round 2, Colab Tesla T4 (25-question golden set)
 
@@ -90,15 +92,15 @@ See the [architecture](eval/PART1_ARCHITECTURE.md) and [evaluation protocol](eva
 - **Practice set:** 40 questions with 0 execution errors and 0 format fallbacks, median 5.13 s per question.
 - **Memory:** peak GPU memory was 7.88 GiB allocated (9.01 GiB reserved) on a T4.
 - **Timing:** the final system's median is low because many answers come straight from structured evidence or session memory without a model call. It is not a measure of model inference speed.
-- **Earlier Windows run:** an earlier Windows RTX 4090 run, with an AI-assisted and provisional content review, scored 18/25 correct for the final system vs 6/25 for dense only. Citation accuracy was 0.49 vs 0.14. See [Part 1 measured results](eval/PART1_MEASURED_RESULTS.md). Those numbers are not the required human review and do not apply to the round-2 run.
+- **Earlier Windows run:** an earlier Windows RTX 4090 run, with an AI-assisted and provisional content review, scored 18/25 correct for the final system vs 6/25 for dense only. Citation accuracy was 0.49 vs 0.14. See [Part 1 measured results](eval/yuyao_ding/PART1_MEASURED_RESULTS.md). Those numbers are not the required human review and do not apply to the round-2 run.
 
 Supporting material:
-- [completed source-content review, result table and numerical-scoring boundary](eval/part1/results/round2_colab_20261114T032206Z/content_review_20261115/RESULTS.md)
-- [round-2 results and human groundedness review](eval/part1/results/round2_colab_20261114T032206Z/)
+- [completed source-content review, result table and numerical-scoring boundary](eval/yuyao_ding/part1/results/round2_colab_20261114T032206Z/content_review_20261115/RESULTS.md)
+- [round-2 results and human groundedness review](eval/yuyao_ding/part1/results/round2_colab_20261114T032206Z/)
 - [round 1 vs round 2 comparison notebook](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb)
-- [round-2 protocol](eval/PART1_ROUND2.md)
-- [safety analysis](eval/PART1_SAFETY_ANALYSIS.md)
-- the golden set in `eval/p1_golden_v2.json`
+- [round-2 protocol](eval/yuyao_ding/PART1_ROUND2.md)
+- [safety analysis](eval/yuyao_ding/PART1_SAFETY_ANALYSIS.md)
+- the golden set in `eval/yuyao_ding/p1_golden_v2.json`
 
 The Colab rerun helper is [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p1_colab_schema_fix_and_rerun.py). In the recorded run it was uploaded to `/content/`.
 
@@ -110,15 +112,15 @@ The Colab rerun helper is [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p
 
 **Yuyao's partner baseline:** the separate [executed baseline notebook](notebooks/Yuyao_Ding/p2_baseline.ipynb)
 completed data preparation, 600-step rank-4 LoRA training, 40 base plus 40 adapted
-images and evaluation on a real single Colab Tesla T4. Its [measured record](eval/part2/results/yuyao_t4_20261115T034917Z/)
+images and evaluation on a real single Colab Tesla T4. Its [measured record](eval/yuyao_ding/part2/results/yuyao_t4_20261115T034917Z/)
 has KID 0.1337 → 0.0910, CLIP 31.1084 → 30.7026 and LPIPS 0.8116 → 0.7928.
 Peak training allocation was 3.6810 GiB. The initial pre-training logging failure,
 source transition and private original artifacts are preserved. This shorter
 baseline is separate from Pratiksha's two formal runs and final model. The
-[AI-assisted result analysis](eval/part2/results/yuyao_t4_20261115T034917Z/ANALYSIS.md)
+[AI-assisted result analysis](eval/yuyao_ding/part2/results/yuyao_t4_20261115T034917Z/ANALYSIS.md)
 explains metric tradeoffs and concrete output limitations; Yuyao's verification/
 rewording and actual knowledge-transfer recording remain pending.
-See the [runbook and attribution](eval/PART2_YUYAO_BASELINE.md).
+See the [runbook and attribution](eval/yuyao_ding/PART2_YUYAO_BASELINE.md).
 
 **Setup:**
 - **Data and models:** Stable Diffusion 1.5 fine-tuned on [Naruto BLIP Captions](https://huggingface.co/datasets/lambdalabs/naruto-blip-captions).
@@ -151,7 +153,7 @@ See the [runbook and attribution](eval/PART2_YUYAO_BASELINE.md).
 
 ## Part 3 — Multi-agent system
 
-**Run:** open [`notebooks/Yuyao_Ding/p3_agents.ipynb`](notebooks/Yuyao_Ding/p3_agents.ipynb). The frozen scenarios and input verification steps are in [eval/PART3.md](eval/PART3.md). The [Part 3 runbook](eval/PART3_IMPLEMENTATION.md) covers the five stages, the local app, GPU validation and the review workflow.
+**Run:** open [`notebooks/Yuyao_Ding/p3_agents.ipynb`](notebooks/Yuyao_Ding/p3_agents.ipynb). The frozen scenarios and input verification steps are in [eval/yuyao_ding/PART3.md](eval/yuyao_ding/PART3.md). The [Part 3 runbook](eval/yuyao_ding/PART3_IMPLEMENTATION.md) covers the five stages, the local app, GPU validation and the review workflow.
 
 ### Results: Colab Tesla T4, source commit `53c92a3`
 
@@ -170,9 +172,9 @@ See the [runbook and attribution](eval/PART2_YUYAO_BASELINE.md).
 - **Red-team scope:** the 0/10 attack-success result applies only to this small fixed test set.
 
 Supporting material:
-- [measured report](eval/PART3_T4_MEASURED_RESULTS.md)
-- [human reviews and joint adjudication](eval/part3/results/t4_20261114T060249Z/)
-- [system card draft](eval/PART3_SYSTEM_CARD_DRAFT.md)
+- [measured report](eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md)
+- [human reviews and joint adjudication](eval/yuyao_ding/part3/results/t4_20261114T060249Z/)
+- [system card draft](eval/yuyao_ding/PART3_SYSTEM_CARD_DRAFT.md)
 - [redacted request traces](traces/t4_20261114T060249Z/)
 
 **Independent second build:** Pratiksha Kaushik also built and ran a separate Part 3 system (Qwen2.5-VL-3B with SD 1.5, InstructPix2Pix and the Part 2 LoRA). It is kept for comparison, with per-question tables, in [`notebooks/Pratiksha_Kaushik/p3/`](notebooks/Pratiksha_Kaushik/p3/README.md).
@@ -186,8 +188,8 @@ Supporting material:
 | Part 2 LoRA adapters and model cards | [r=32 (final)](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32), [r=4](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4) on Hugging Face |
 | Part 2 generated images (120) | [Hugging Face dataset](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations) |
 | Part 2 run outputs (cleaned data, eval files, logs) | [Google Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link) |
-| Part 1 saved results | [`eval/part1/results/`](eval/part1/results/) |
-| Part 3 saved results and redacted traces | [`eval/part3/results/`](eval/part3/results/), [`traces/`](traces/) |
+| Part 1 saved results | [`eval/yuyao_ding/part1/results/`](eval/yuyao_ding/part1/results/) |
+| Part 3 saved results and redacted traces | [`eval/yuyao_ding/part3/results/`](eval/yuyao_ding/part3/results/), [`traces/`](traces/) |
 
 Model weights, checkpoints and full raw run archives stay outside GitHub. Local inputs go in the ignored `data/` directory, and local generated artifacts go in the ignored `.runtime/` directory.
 

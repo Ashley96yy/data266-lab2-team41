@@ -2,7 +2,7 @@
 
 DATA 266 Lab 2, Team 41, Part 3. This folder holds Pratiksha Kaushik's own implementation of the Part 3 multi-agent system. It runs end to end in one Colab notebook on a Tesla T4.
 
-The team's main Part 3 submission is Yuyao Ding's [`notebooks/Yuyao_Ding/p3_agents.ipynb`](../../Yuyao_Ding/p3_agents.ipynb), with results in [`eval/PART3_T4_MEASURED_RESULTS.md`](../../../eval/PART3_T4_MEASURED_RESULTS.md). This version is a second, independent build, kept for comparison.
+The team's main Part 3 submission is Yuyao Ding's [`notebooks/Yuyao_Ding/p3_agents.ipynb`](../../Yuyao_Ding/p3_agents.ipynb), with results in [`eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md`](../../../eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md). This version is a second, independent build, kept for comparison.
 
 ## Notebooks
 

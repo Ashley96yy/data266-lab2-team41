@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from src.p1_evaluation import load_specification, digest as semantic_digest
 
-DEFAULT_RESULTS = ROOT / 'eval/part1/results/round2_colab_20261114T032206Z'
+DEFAULT_RESULTS = ROOT / 'eval/yuyao_ding/part1/results/round2_colab_20261114T032206Z'
 PDF_NAMES = {'DOC1': 'Document.pdf',
              'DOC2': 'Document2_Supplement_A_Outturns_2011-2013.pdf',
              'DOC3': 'Document3_Briefing_B_Labour_Prices_Policy.pdf'}
@@ -144,7 +144,7 @@ def export(results, spec_path, output, input_dir):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--results', type=Path, default=DEFAULT_RESULTS)
-    parser.add_argument('--spec', type=Path, default=ROOT / 'eval/p1_golden_v2.json')
+    parser.add_argument('--spec', type=Path, default=ROOT / 'eval/yuyao_ding/p1_golden_v2.json')
     parser.add_argument('--input-dir', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()

@@ -1,5 +1,5 @@
 # Added packages only. Existing CUDA/PyTorch packages are excluded.
-# Use the constraint snapshot and a dry run before installation; see eval/PART1_WINDOWS.md.
+# Use the constraint snapshot and a dry run before installation; see eval/yuyao_ding/PART1_WINDOWS.md.
 PyMuPDF==1.26.5
 pdfplumber==0.11.9
 chromadb==1.5.9

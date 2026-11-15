@@ -39,7 +39,7 @@ The current local-only bundle is
 `data/part3/part3_fixture_bundle_v3.zip`.
 It contains the 21 ready inputs plus the plans, manifest, and verifier. The
 archive is ignored by Git. Extract it at a fresh repository root, then run
-`python eval/verify_p3_fixture_manifest.py`. This checks the
+`python eval/yuyao_ding/verify_p3_fixture_manifest.py`. This checks the
 21 SHA-256 hashes. Keep the portrait and bundle limited to team/course testing;
 ask the subject before sharing them with anyone else or uploading to a service.
 

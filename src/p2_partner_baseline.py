@@ -112,7 +112,7 @@ def start_run(root, output=None, config=None):
     cfg = config or BaselineConfig()
     cfg.validate()
     gpu = gpu_check()
-    prompt_file = root / 'eval/p2_yuyao_baseline_prompts.json'
+    prompt_file = root / 'eval/yuyao_ding/p2_yuyao_baseline_prompts.json'
     validate_prompts(read(prompt_file)['prompts'])
     output = Path(output).resolve() if output else root / '.runtime/part2-yuyao' / datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
     # A restart may explicitly resume the same run, never silently load a teammate run.

@@ -50,7 +50,7 @@ python - <<'PY'
 import json
 from pathlib import Path
 from statistics import mean
-root = Path('eval/part1/results/round2_colab_20261114T032206Z/human_review_20261114')
+root = Path('eval/yuyao_ding/part1/results/round2_colab_20261114T032206Z/human_review_20261114')
 a, b = [json.loads((root / f'part1-member-{m}-ratings.json').read_text()) for m in ('A', 'B')]
 assert a['run_sha256'] == b['run_sha256']
 assert [r['question_id'] for r in a['records']] == [r['question_id'] for r in b['records']]

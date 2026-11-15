@@ -12,7 +12,7 @@ import sys
 import time
 from datetime import datetime,timezone
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT));os.chdir(ROOT)
 os.environ.setdefault('GRADIO_ANALYTICS_ENABLED','False')
 REVISIONS=dict(vision='66285546d2b821cf421d4f5eb2576359d3770cd3',
@@ -36,7 +36,7 @@ def main():
     try:manifest['source_commit']=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     except Exception:manifest['source_commit']='unavailable'
     manifest['source_hashes']={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in ROOT.glob('src/p3_*.py')}
-    manifest['frozen_hashes']={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in ROOT.glob('eval/p3*.json')}
+    manifest['frozen_hashes']={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in ROOT.glob('eval/yuyao_ding/p3*.json')}
     write(target/'manifest.json',manifest)
     start=time.perf_counter()
     try:
@@ -99,7 +99,7 @@ def main():
         manifest['stages']['independent_diagnostics']='completed'
         write(target/'manifest.json',manifest)
         if not args.skip_evaluation:
-            for name,spec,enabled in [('with','eval/p3_scenarios.json',True),('without','eval/p3_scenarios.json',False),('red_team','eval/p3_red_team.json',True)]:
+            for name,spec,enabled in [('with','eval/yuyao_ding/p3_scenarios.json',True),('without','eval/yuyao_ding/p3_scenarios.json',False),('red_team','eval/yuyao_ding/p3_red_team.json',True)]:
                 print('FROZEN EVALUATION',name,'UNSCORED',flush=True)
                 result=run_cases(pipeline,load_cases(spec),root=ROOT,critique_enabled=enabled,checkpoint_path=target/f'{name}.json')
                 result['model_revisions']=REVISIONS;result['source_hashes']=manifest['source_hashes']

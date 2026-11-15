@@ -8,7 +8,7 @@ completed their own interpretation. No training, generation or metric-model
 inference was repeated. Derived differences were computed in a separately
 executed CPU-only notebook cell from the saved numeric records; see
 [analysis_computed.json](analysis_computed.json) and the
-[executed notebook](../../../../notebooks/Yuyao_Ding/p2_baseline.ipynb).
+[executed notebook](../../../../../notebooks/Yuyao_Ding/p2_baseline.ipynb).
 
 ## What changed in this run
 

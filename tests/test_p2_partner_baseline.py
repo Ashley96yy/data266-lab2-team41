@@ -18,7 +18,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 class PartnerBaselineTest(unittest.TestCase):
-    def prompts(self):return read(ROOT/'eval/p2_yuyao_baseline_prompts.json')['prompts']
+    def prompts(self):return read(ROOT/'eval/yuyao_ding/p2_yuyao_baseline_prompts.json')['prompts']
 
     def test_fixed_config_and_prompt_coverage(self):
         BaselineConfig().validate()
@@ -90,7 +90,7 @@ class PartnerBaselineTest(unittest.TestCase):
 
     def test_recorded_notebook_has_provenance_outputs_and_all_cells_parse(self):
         nb=read(ROOT/'notebooks/Yuyao_Ding/p2_baseline.ipynb')
-        validation=read(ROOT/'eval/part2/results/yuyao_t4_20261115T034917Z/integration_validation.json')
+        validation=read(ROOT/'eval/yuyao_ding/part2/results/yuyao_t4_20261115T034917Z/integration_validation.json')
         self.assertEqual(nb['cells'][0]['cell_type'],'code')
         first=''.join(nb['cells'][0]['source'])
         for text in ('Git commit:','Python:','PyTorch:','GPU:','SEED:'):
@@ -105,11 +105,23 @@ class PartnerBaselineTest(unittest.TestCase):
         for proof in validation['canonical_code_source_and_execution_counts']:
             cell=nb['cells'][proof['canonical_cell']]
             self.assertEqual(cell['execution_count'],proof['execution_count'])
-            self.assertEqual(hashlib.sha256(''.join(cell['source']).encode()).hexdigest(),proof['source_sha256'])
+            source=''.join(cell['source'])
+            current_hash=hashlib.sha256(source.encode()).hexdigest()
+            if current_hash!=proof['source_sha256']:
+                relocation=nb['metadata']['data266_eval_directory_relocation']
+                migrated=next(r for r in relocation['changed_code_cells'] if r['cell_index']==proof['canonical_cell'])
+                self.assertEqual(migrated['old_source_sha256'],proof['source_sha256'])
+                self.assertEqual(migrated['new_source_sha256'],current_hash)
+                # Only the evaluation directory prefix may differ after execution.
+                original=source.replace('eval/yuyao_ding/','eval/')
+                self.assertEqual(hashlib.sha256(original.encode()).hexdigest(),proof['source_sha256'])
+                self.assertEqual(hashlib.sha256(json.dumps(cell['outputs'],sort_keys=True).encode()).hexdigest(),migrated['outputs_sha256'])
+            else:
+                self.assertEqual(current_hash,proof['source_sha256'])
 
     def test_recorded_metrics_match_saved_image_ledger_and_lpips_pairs(self):
         from statistics import mean,median
-        folder=ROOT/'eval/part2/results/yuyao_t4_20261115T034917Z'
+        folder=ROOT/'eval/yuyao_ding/part2/results/yuyao_t4_20261115T034917Z'
         ledger=read(folder/'generation_ledger.json')
         scores=read(folder/'lpips_pairs.json')
         self.assertEqual(len(ledger),80)

@@ -136,7 +136,7 @@ def export(archive: Path, output_root: Path) -> dict:
 
     public_cases = {}
     for name in ("p3_scenarios.json", "p3_red_team.json"):
-        spec = json.loads((ROOT / "eval" / name).read_text(encoding="utf-8"))
+        spec = json.loads((ROOT / "eval" / "yuyao_ding" / name).read_text(encoding="utf-8"))
         for case in spec["cases"]:
             if case["id"] in public_cases:
                 raise ValueError(f"Duplicate frozen case: {case['id']}")

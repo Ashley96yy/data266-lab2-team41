@@ -34,7 +34,7 @@ existing `.venv` selected:
 ```powershell
 $env:PYTHONUTF8='1'
 .\.venv\Scripts\python.exe -m unittest discover -s tests -p 'test_p3*.py'
-.\.venv\Scripts\python.exe eval/verify_p3_fixture_manifest.py --require-complete
+.\.venv\Scripts\python.exe eval/yuyao_ding/verify_p3_fixture_manifest.py --require-complete
 .\.venv\Scripts\python.exe -m src.p3_app
 ```
 
@@ -45,7 +45,7 @@ and Restart & Run All. Default execution creates new real GPU diagnostics and th
 unchanged 15x2+10 suite, then computes every report number from saved records.
 Replay is only enabled by an explicit DATA266_P3_REPLAY_DIR and is printed as replay.
 
-The preferred standalone full validator is eval/validate_p3_revision.py. The older
+The preferred standalone full validator is eval/yuyao_ding/validate_p3_revision.py. The older
 src.p3_evaluation CLI uses the same Prompt Agent but runs one specified condition;
 use new output paths and preserve earlier runs. Model revisions are pinned in the
 validator and .runtime/model-revisions.json for local app startup.
@@ -73,7 +73,7 @@ The unchanged cases were used during development; disclose this rather than
 claiming an untouched holdout. Human metrics remain pending until real reviews.
 
 A completed Colab Tesla T4 execution from source commit `53c92a3` is recorded in
-`notebooks/Yuyao_Ding/p3_agents.ipynb` and `eval/PART3_T4_MEASURED_RESULTS.md`.
+`notebooks/Yuyao_Ding/p3_agents.ipynb` and `eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md`.
 The 15 paired scenarios and 10 red-team cases had zero execution errors. The
 earlier 14 GiB allocator budget on RTX 4090 remains separate historical evidence.
 The [supplied human reviews and joint adjudication](part3/results/t4_20261114T060249Z/) have been imported without another GPU run. Recordings, the team's own IEEE report/system card, approved artifact hosting and the final tag remain required.

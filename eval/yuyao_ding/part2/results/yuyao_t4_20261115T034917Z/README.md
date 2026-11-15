@@ -61,7 +61,7 @@ log hash. The complete original log is in the private ZIP.
 
 ## Notebook and artifact provenance
 
-The public [executed notebook](../../../../notebooks/Yuyao_Ding/p2_baseline.ipynb)
+The public [executed notebook](../../../../../notebooks/Yuyao_Ding/p2_baseline.ipynb)
 retains ten original code cells, execution counts and numerical outputs, followed
 by one separately executed file-backed CPU analysis cell (eleven code cells total). The
 uploaded original has twelve executed code cells with zero stored error outputs.

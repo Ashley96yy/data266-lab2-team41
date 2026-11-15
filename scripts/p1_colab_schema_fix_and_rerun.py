@@ -253,7 +253,7 @@ provenance=dict(schema_fix_source_sha256=SCHEMA_FIX_SOURCE_SHA256,git_commit=git
 runner_source=Path('/content/p1_colab_schema_fix_and_rerun.py')
 if runner_source.is_file():
     shutil.copy2(runner_source,RUNTIME_OUTPUT_ROOT/runner_source.name)
-frozen_path=REPO_ROOT/'eval/p1_golden_v2.json'
+frozen_path=REPO_ROOT/'eval/yuyao_ding/p1_golden_v2.json'
 frozen_before=hashlib.sha256(frozen_path.read_bytes()).hexdigest()
 print('FORMAT FIX: dictionary label arrays and duplicate references; strict evidence checks remain active.')
 print('Schema fix source:',SCHEMA_FIX_SOURCE_SHA256)
@@ -324,7 +324,7 @@ import hashlib
 from src.p1_evaluation import (load_specification, inference_questions, execute_questions,
                                make_review_template, summarize, digest)
 P1_EVAL_ENABLED = os.environ.get('DATA266_RUN_P1_EVAL', '1') == '1'
-P1_SPEC_PATH = REPO_ROOT / 'eval/p1_golden_v2.json'
+P1_SPEC_PATH = REPO_ROOT / 'eval/yuyao_ding/p1_golden_v2.json'
 p1_specification = load_specification(P1_SPEC_PATH)
 p1_questions = inference_questions(p1_specification)
 print('Golden version:', p1_specification['set_id'])

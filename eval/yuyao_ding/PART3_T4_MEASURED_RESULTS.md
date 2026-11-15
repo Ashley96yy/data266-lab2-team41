@@ -34,7 +34,7 @@ Enhancement is explicitly a geometry-preserving Pillow photometric backend with 
 
 Every experimental number in this report is calculated from saved records. Human labels and all disagreement reasons come from the three submitted reviewer files; aggregation does not create human judgments. Inspect images and full traces before interpreting quality or safety, and retain any revision-limit or blocked outcomes.
 
-Redacted per-request JSON traces for the 40 evaluated cases are published under [traces/t4_20261114T060249Z](../traces/t4_20261114T060249Z/). The full raw traces and images remain in the team's private run archive.
+Redacted per-request JSON traces for the 40 evaluated cases are published under [traces/t4_20261114T060249Z](../../traces/t4_20261114T060249Z/). The full raw traces and images remain in the team's private run archive.
 
 ## Human-review interpretation limits
 

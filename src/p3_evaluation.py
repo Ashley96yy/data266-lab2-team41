@@ -13,7 +13,7 @@ def run_cases(orchestrator, specification, *, root='.', critique_enabled=True,
     root=Path(root).resolve()
     # Verify the entire frozen fixture bundle before any model call.
     import subprocess, sys
-    subprocess.run([sys.executable,str(root/'eval/verify_p3_fixture_manifest.py'),'--require-complete'],cwd=root,check=True)
+    subprocess.run([sys.executable,str(root/'eval/yuyao_ding/verify_p3_fixture_manifest.py'),'--require-complete'],cwd=root,check=True)
     records=[]
     result=dict(set_id=specification['set_id'],critique_enabled=critique_enabled,
                 specification_sha256=hashlib.sha256(json.dumps(specification,sort_keys=True).encode()).hexdigest(),
@@ -82,7 +82,7 @@ def main():
     from src.p3_generation import DiffusionGenerator
     from src.p3_orchestration import AgentOrchestrator
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--spec',default='eval/p3_scenarios.json')
+    parser.add_argument('--spec',default='eval/yuyao_ding/p3_scenarios.json')
     parser.add_argument('--output',required=True)
     parser.add_argument('--without-critique',action='store_true')
     parser.add_argument('--vision-revision',required=True)

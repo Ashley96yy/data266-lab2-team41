@@ -12,7 +12,7 @@ spec.loader.exec_module(forms)
 
 class ContentReviewContractTest(unittest.TestCase):
     def setUp(self):
-        self.expected = forms.contract(forms.DEFAULT_RESULTS, ROOT / 'eval/p1_golden_v2.json')
+        self.expected = forms.contract(forms.DEFAULT_RESULTS, ROOT / 'eval/yuyao_ding/p1_golden_v2.json')
 
     def synthetic_complete(self):
         value = copy.deepcopy(self.expected)

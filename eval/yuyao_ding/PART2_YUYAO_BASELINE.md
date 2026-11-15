@@ -11,13 +11,13 @@ claim that the course explicitly specifies 600 steps.
 
 ## Files and scope
 
-- Notebook: [`notebooks/Yuyao_Ding/p2_baseline.ipynb`](../notebooks/Yuyao_Ding/p2_baseline.ipynb).
-- Helpers: [`src/p2_partner_baseline.py`](../src/p2_partner_baseline.py).
-- Measured GPU worker: [`scripts/p2_train_worker.py`](../scripts/p2_train_worker.py).
-- Environment: [`config/requirements-part2-baseline.txt`](../config/requirements-part2-baseline.txt).
+- Notebook: [`notebooks/Yuyao_Ding/p2_baseline.ipynb`](../../notebooks/Yuyao_Ding/p2_baseline.ipynb).
+- Helpers: [`src/p2_partner_baseline.py`](../../src/p2_partner_baseline.py).
+- Measured GPU worker: [`scripts/p2_train_worker.py`](../../scripts/p2_train_worker.py).
+- Environment: [`config/requirements-part2-baseline.txt`](../../config/requirements-part2-baseline.txt).
 - Frozen prompts: [`p2_yuyao_baseline_prompts.json`](p2_yuyao_baseline_prompts.json).
 
-The teammate's [executed full Part 2 notebook](../notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb)
+The teammate's [executed full Part 2 notebook](../../notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb)
 and the rank-4/rank-32, 3,000-step models remain intact. This baseline reuses and
 credits its dataset cleaning/split protocol, LoRA attention targets, fixed 20
 prompts and sampler. It does not relabel the teammate's results as Yuyao's run.

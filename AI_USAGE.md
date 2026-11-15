@@ -69,3 +69,22 @@ numeric artifacts; the ten original T4 code cells and their outputs were retaine
 No training, generation, metric-model inference or human scoring was repeated.
 The draft is explicitly AI-assisted; Yuyao's verification and rewording, the real
 meeting record and any independent human-preference evaluation remain separate.
+
+
+Part 1 source-content review preparation (2026-11-15 PT): Codex added a local
+HTML exporter for the saved second-round baseline/final predictions. It displays
+frozen references and original private PDF pages, collects answer correctness and
+per-citation support, and binds exports to the recorded evidence hashes. Synthetic
+contract tests check identity and label validation. No human labels, new inference
+or changes to the completed two-member groundedness scores were made.
+
+Part 1 content-review integration (2026-11-15 PT): Codex validated the supplied
+Yuyao Ding correctness and per-citation judgments against saved prediction,
+specification and run hashes. Baseline P1V2-11 was corrected only after explicit
+user confirmation; original bytes and the correction authority are preserved.
+The older token-only numeric check is retained separately because final P1V2-09
+expresses a decrease of 1.6 as -1.6. Human source judgments apply the unchanged
+frozen numerical/content rubric; no inference rule or reference was changed.
+Existing independent groundedness scores remain unchanged. File validation does
+not establish how the human review was conducted. CPU notebook aggregation and
+its source provenance are distinct from the original Colab T4 inference.

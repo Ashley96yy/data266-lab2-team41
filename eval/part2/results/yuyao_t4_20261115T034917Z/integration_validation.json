@@ -1,0 +1,118 @@
+{
+  "source_run": "20261115T034917Z",
+  "actual_t4_verified": true,
+  "training_requested_steps": 600,
+  "checkpoint_600_recorded_in_log": true,
+  "adapter_sha256_verified": true,
+  "adapter_parameters_verified": 797184,
+  "generation_image_hashes_verified": 80,
+  "generation_image_dimensions_verified": [
+    512,
+    512
+  ],
+  "paired_generation_identities_verified": true,
+  "source_hashes_match_repository": true,
+  "frozen_prompts_match_repository": true,
+  "training_test_source_ids_disjoint": true,
+  "training_images": 858,
+  "test_images": 123,
+  "supplied_notebook_code_cells": 12,
+  "supplied_notebook_error_outputs": 0,
+  "canonical_code_cells": 11,
+  "canonical_code_source_and_execution_counts": [
+    {
+      "canonical_cell": 0,
+      "original_cell": 1,
+      "execution_count": 2,
+      "source_sha256": "f915d3c3d2fc6d75b75e6f181a09ea0362e326c9dedaf066cd3ed5d5db9c913f"
+    },
+    {
+      "canonical_cell": 3,
+      "original_cell": 4,
+      "execution_count": 3,
+      "source_sha256": "18614a184219ab8043cca5d3a74eeb0eba6b40831ef7ea1c6be618145b036633"
+    },
+    {
+      "canonical_cell": 5,
+      "original_cell": 6,
+      "execution_count": 4,
+      "source_sha256": "3e087c18020d49062225225312bf8d7121d197f64f1bc165f40227f7f0ec99ae"
+    },
+    {
+      "canonical_cell": 7,
+      "original_cell": 8,
+      "execution_count": 5,
+      "source_sha256": "cc8e6a65d6f73c672e476a8fdba6cbb000282bf1d159f1c3a548fa1047ee4e99"
+    },
+    {
+      "canonical_cell": 9,
+      "original_cell": 11,
+      "execution_count": 8,
+      "source_sha256": "6f764b2c178e6502caeefe83a719a7a7ca3fef87428183dd1702016ad5f6a040"
+    },
+    {
+      "canonical_cell": 11,
+      "original_cell": 13,
+      "execution_count": 9,
+      "source_sha256": "ad03f6b904e1b359fd4d49c5e50f492d40991911bb8b9805926f1a38f8c81ea1"
+    },
+    {
+      "canonical_cell": 13,
+      "original_cell": 15,
+      "execution_count": 10,
+      "source_sha256": "697df2fa4c1306bd183a0b23059ae10888618b3976c53d2df1b03353d134b861"
+    },
+    {
+      "canonical_cell": 15,
+      "original_cell": 17,
+      "execution_count": 11,
+      "source_sha256": "d4c2ecb965c8868c30d63c462692f7b0d187c19f1a3356c47cf52b28c2960ab6"
+    },
+    {
+      "canonical_cell": 16,
+      "original_cell": 18,
+      "execution_count": 12,
+      "source_sha256": "b78dae0970d2cf000c8d92ddc863f38938d52dcaf9569a2fd5e0e652d17f4364"
+    },
+    {
+      "canonical_cell": 19,
+      "original_cell": 21,
+      "execution_count": 13,
+      "source_sha256": "15c17ba34bdb3211113a1a35dfba5ebaaad58436393d1a9a40199d34a96af043"
+    }
+  ],
+  "canonical_notebook_sha256": "5ab8fb01b3c105efe38f26b9ee30e10d7c4e4bd0c8b5026fad91ca3ed00150c9",
+  "canonical_visual_payloads_omitted": [
+    {
+      "original_cell": 17,
+      "original_output": 0,
+      "mime": "image/png",
+      "sha256": "c78ea124fe11f92871c38ef93d2cb729090416462ee08a5db640b1c8612c1ca3"
+    },
+    {
+      "original_cell": 17,
+      "original_output": 1,
+      "mime": "image/png",
+      "sha256": "27a399c9245e317697b82adf4a14a2cd982e288b0604fcaa74dc43e39645b6dc"
+    },
+    {
+      "original_cell": 18,
+      "original_output": 1,
+      "mime": "image/png",
+      "sha256": "eabef3125b520131fda81d3eab480a8000006eb552ce08a4940307dbf5d50548"
+    }
+  ],
+  "log_recovery": "Initial ValueError occurred before GPU allocation; log contains both failed statistics and subsequent checkpoint-600 completion.",
+  "no_new_inference": true,
+  "metrics_check": "Reaggregated CLIP scores, LPIPS pairs, safety flags and timings from saved records. KID checked against saved notebook output/results only, not recomputed by new inference.",
+  "human_preference": null,
+  "own_interpretation_and_meeting_recording": "AI-assisted draft added; Yuyao verification/rewording and actual meeting record pending",
+  "postrun_cpu_analysis": {
+    "cell_index": 21,
+    "execution_count": 1,
+    "execution_scope": "Separate file-backed CPU analysis; no new GPU inference",
+    "source_sha256": "046ffc713899c543cf74de1493ada4be0e8604dad0a63f776b85a4f99a8217e5",
+    "executed_analysis_notebook_sha256": "459100a69f7a98a0e516f1c188f8fd553bd81ccdc1be1de4b1abd963259f6729",
+    "input_data_commit": "39bb9487753606305dfc8e18a56e7bf7b8f9e693"
+  }
+}

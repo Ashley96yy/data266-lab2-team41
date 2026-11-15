@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "gpu": "Tesla T4",
+  "adapter_sha256": "b40c06bf43e61565c293ce5d1c6c760f17a43e996b6af69339ee33cb50f22f03",
+  "trainable_parameters": 797184,
+  "rank": 4,
+  "learning_rate": 0.0001,
+  "requested_steps": 600,
+  "micro_batch": 1,
+  "gradient_accumulation": 4,
+  "effective_batch": 4,
+  "wall_seconds_this_invocation": 1186.685664718,
+  "cumulative_wall_seconds": 1198.7448562230002,
+  "peak_allocated_gib": 3.681016445159912,
+  "peak_reserved_gib": 4.11328125,
+  "trainer_sha256": "7d67f3ed756a3cb79183153349ebb2d141c999f898da964edb2ea4af5d72d6ab",
+  "external_tracking": "disabled: report_to converted to Python None"
+}

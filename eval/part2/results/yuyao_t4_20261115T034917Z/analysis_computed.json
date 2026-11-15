@@ -1,0 +1,76 @@
+{
+  "execution_scope": "File-backed CPU notebook analysis; no training, generation or metric-model inference",
+  "analysis_python": "3.12.2",
+  "input_data_commit": "39bb9487753606305dfc8e18a56e7bf7b8f9e693",
+  "kid_base": 0.1336551010608673,
+  "kid_lora": 0.09096148610115051,
+  "kid_relative_reduction_percent": 31.943124221105393,
+  "clip_score_delta": -0.4058213233947754,
+  "clip_category_deltas": {
+    "in_domain": -0.8661025047302253,
+    "ood": -1.1779260635376012,
+    "compositional": 1.2868457794189432
+  },
+  "lpips_delta": -0.018859395384788535,
+  "generation_median_seconds_delta": 0.2504672010002196,
+  "generation_median_relative_increase_percent": 5.157128774295068,
+  "successful_training_minutes": 19.778094411966666,
+  "successful_training_worker_hours": 0.32963490686611113,
+  "cumulative_worker_hours": 0.3329846822841667,
+  "earlier_failed_initialization_seconds": 12.059191505000172,
+  "trainable_parameters": 797184,
+  "training_peak_allocated_gib": 3.681016445159912,
+  "nearest_training_cosine_min": 0.5259116291999817,
+  "nearest_training_cosine_max": 0.751332700252533,
+  "diagnostic_cases": [
+    {
+      "model": "base",
+      "prompt_id": 5,
+      "seed": 0,
+      "clip_score": 28.257179260253906,
+      "nsfw": false,
+      "sha256": "bd3aac2c3e3461f9c0953480634cc1fb39b3258021421bfcc04da6ea85ddad1a"
+    },
+    {
+      "model": "base",
+      "prompt_id": 7,
+      "seed": 0,
+      "clip_score": 26.887279510498047,
+      "nsfw": false,
+      "sha256": "d068c0634a91b6c0c4a94a607df44313518341eef777d76de29c8e0dc33cee9b"
+    },
+    {
+      "model": "base",
+      "prompt_id": 15,
+      "seed": 0,
+      "clip_score": 26.83136749267578,
+      "nsfw": false,
+      "sha256": "049a75f27092956af42f8672d85c5a6f9a7d87a18ca685a6a00bc822458355cc"
+    },
+    {
+      "model": "yuyao_lora_r4",
+      "prompt_id": 5,
+      "seed": 0,
+      "clip_score": 27.44828987121582,
+      "nsfw": false,
+      "sha256": "22d3c6c40e51dd8b366ea81042ee9c75e94cdd174ce4b1be955daed1dff34583"
+    },
+    {
+      "model": "yuyao_lora_r4",
+      "prompt_id": 7,
+      "seed": 0,
+      "clip_score": 27.0113582611084,
+      "nsfw": false,
+      "sha256": "4a34f086a6a0e1df9ddc217278e46096d56baf0eee85e79475bca5185d032f95"
+    },
+    {
+      "model": "yuyao_lora_r4",
+      "prompt_id": 15,
+      "seed": 0,
+      "clip_score": 26.959367752075195,
+      "nsfw": false,
+      "sha256": "e2e1b7d5a66186b236591587562a3b3cef15d56f537ff37d7c965d17660f527f"
+    }
+  ],
+  "human_preference": null
+}

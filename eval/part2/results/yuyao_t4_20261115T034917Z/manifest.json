@@ -1,0 +1,70 @@
+{
+  "status": "completed",
+  "owner": "Yuyao Ding",
+  "interpretation": "Partner working baseline; not the team final comparison or an untouched holdout.",
+  "config": {
+    "seed": 266,
+    "resolution": 512,
+    "rank": 4,
+    "train_steps": 600,
+    "micro_batch": 1,
+    "gradient_accumulation": 4,
+    "learning_rate": 0.0001,
+    "inference_steps": 30,
+    "guidance_scale": 7.5
+  },
+  "gpu": {
+    "name": "Tesla T4",
+    "total_gib": 14.56317138671875
+  },
+  "source_commit": "ef31e7bdd3088c10e59b44f259c928e299da4a4f",
+  "source_hashes": {
+    "src/p2_partner_baseline.py": "ea8056252698856e6575ff8aa68ed89dfb0475b0c9e070f85108f26a5ec30ff7",
+    "scripts/p2_train_worker.py": "a30cd957418b91bd3f7880577a40402dbc077e60b8fa6d6538a8da6fe9d2f4f1"
+  },
+  "prompts_sha256": "4298b0378332c6dc9b2e56eb9c5712b436416daba6ecc0f938c30ae4254db046",
+  "official_trainer_commit": "2a1433913c7044f34fa4767dd84b28bba0bb0ecf",
+  "official_trainer_sha256": "7d67f3ed756a3cb79183153349ebb2d141c999f898da964edb2ea4af5d72d6ab",
+  "model_revisions": {
+    "base": "451f4fe16113bff5a5d2269ed5ad43b0592e9a14",
+    "clip": "57c216476eefef5ab752ec549e440a49ae4ae5f3",
+    "safety": "cb41f3a270d63d454d385fc2e4f571c487c253c5",
+    "safety_processor": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268"
+  },
+  "dataset_revision": "1ed13e8ef280bd45e3bbac4cfa8bbd9d64ec9f89",
+  "packages": {
+    "torch": "2.14.1+cu130",
+    "torchvision": "0.29.1+cu130",
+    "diffusers": "0.42.1",
+    "transformers": "5.22.1",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "huggingface-hub": "1.33.0",
+    "datasets": "3.1.0",
+    "Pillow": "11.3.0",
+    "torchmetrics": "1.6.0",
+    "torch-fidelity": "0.3.0",
+    "lpips": "0.1.4",
+    "ImageHash": "4.3.1"
+  },
+  "stages": {
+    "data": "completed",
+    "training": "completed",
+    "generation": "completed",
+    "evaluation": "completed"
+  },
+  "training_compatibility_fixes": [
+    {
+      "reason": "Convert report_to CLI string none into Python None before Accelerator initialization; no model/data/training-setting change.",
+      "previous_source_hashes": {
+        "src/p2_partner_baseline.py": "ea8056252698856e6575ff8aa68ed89dfb0475b0c9e070f85108f26a5ec30ff7",
+        "scripts/p2_train_worker.py": "29bed9c4f61c14cc4735ba55f0eb213caed1caadc346eb3ff06165f83e64722f"
+      },
+      "training_source_commit": "9e6039015f14fe0d119ccfeb80d9758d3271f59b",
+      "worker_sha256": "a30cd957418b91bd3f7880577a40402dbc077e60b8fa6d6538a8da6fe9d2f4f1",
+      "previous_training_started": false
+    }
+  ],
+  "training_source_commit": "9e6039015f14fe0d119ccfeb80d9758d3271f59b",
+  "human_evaluation": "Not performed for this separate partner baseline."
+}

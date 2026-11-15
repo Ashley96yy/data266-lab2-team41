@@ -1,0 +1,74 @@
+{
+  "source_log_sha256": "889926c6106972a577d6c09dc919033bc04aed8b1a1824fef798649ee8eff5de",
+  "note": "Exact selected lines from the recorded log; full log remains private. The initial failure is retained separately.",
+  "lines": [
+    {
+      "source_line": 34,
+      "text": "ValueError: Unsupported logging capability: none. Choose between ['all', 'aim', 'tensorboard', 'wandb', 'trackio', 'comet_ml', 'mlflow', 'clearml', 'dvclive', 'swanlab']"
+    },
+    {
+      "source_line": 68,
+      "text": "11/15/2026 04:03:47 - INFO - data266_official_lora - [RANK 0]   Num examples = 858"
+    },
+    {
+      "source_line": 69,
+      "text": "11/15/2026 04:03:47 - INFO - data266_official_lora - [RANK 0]   Num Epochs = 3"
+    },
+    {
+      "source_line": 70,
+      "text": "11/15/2026 04:03:47 - INFO - data266_official_lora - [RANK 0]   Instantaneous batch size per device = 1"
+    },
+    {
+      "source_line": 71,
+      "text": "11/15/2026 04:03:47 - INFO - data266_official_lora - [RANK 0]   Total train batch size (w. parallel, distributed & accumulation) = 4"
+    },
+    {
+      "source_line": 72,
+      "text": "11/15/2026 04:03:47 - INFO - data266_official_lora - [RANK 0]   Gradient Accumulation steps = 4"
+    },
+    {
+      "source_line": 73,
+      "text": "11/15/2026 04:03:47 - INFO - data266_official_lora - [RANK 0]   Total optimization steps = 600"
+    },
+    {
+      "source_line": 3118,
+      "text": "11/15/2026 04:23:13 - INFO - accelerate.accelerator - [RANK 0] Saving current state to /content/data266-lab2-team41/.runtime/part2-yuyao/20261115T034917Z/adapter/checkpoint-600"
+    },
+    {
+      "source_line": 3119,
+      "text": "Model weights saved in /content/data266-lab2-team41/.runtime/part2-yuyao/20261115T034917Z/adapter/checkpoint-600/pytorch_lora_weights.safetensors"
+    },
+    {
+      "source_line": 3120,
+      "text": "11/15/2026 04:23:13 - INFO - accelerate.checkpointing - [RANK 0] Optimizer state saved in /content/data266-lab2-team41/.runtime/part2-yuyao/20261115T034917Z/adapter/checkpoint-600/optimizer.bin"
+    },
+    {
+      "source_line": 3121,
+      "text": "11/15/2026 04:23:13 - INFO - accelerate.checkpointing - [RANK 0] Scheduler state saved in /content/data266-lab2-team41/.runtime/part2-yuyao/20261115T034917Z/adapter/checkpoint-600/scheduler.bin"
+    },
+    {
+      "source_line": 3122,
+      "text": "11/15/2026 04:23:13 - INFO - accelerate.checkpointing - [RANK 0] Sampler state for dataloader 0 saved in /content/data266-lab2-team41/.runtime/part2-yuyao/20261115T034917Z/adapter/checkpoint-600/sampler.bin"
+    },
+    {
+      "source_line": 3123,
+      "text": "11/15/2026 04:23:13 - INFO - accelerate.checkpointing - [RANK 0] Gradient scaler state saved in /content/data266-lab2-team41/.runtime/part2-yuyao/20261115T034917Z/adapter/checkpoint-600/scaler.pt"
+    },
+    {
+      "source_line": 3124,
+      "text": "11/15/2026 04:23:13 - INFO - accelerate.checkpointing - [RANK 0] Random states saved in /content/data266-lab2-team41/.runtime/part2-yuyao/20261115T034917Z/adapter/checkpoint-600/random_states_0.pkl"
+    },
+    {
+      "source_line": 3125,
+      "text": "11/15/2026 04:23:13 - INFO - data266_official_lora - [RANK 0] Saved state to /content/data266-lab2-team41/.runtime/part2-yuyao/20261115T034917Z/adapter/checkpoint-600"
+    },
+    {
+      "source_line": 3127,
+      "text": "Steps: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 600/600 [19:25<00:00,  1.95s/it, lr=0, step_loss=0.00555]     There are modules in UNet2DConditionModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32."
+    },
+    {
+      "source_line": 3130,
+      "text": "Steps: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 600/600 [19:25<00:00,  1.94s/it, lr=0, step_loss=0.00555]"
+    }
+  ]
+}

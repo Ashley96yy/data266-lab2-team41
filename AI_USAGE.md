@@ -20,3 +20,52 @@ For each use, record:
 | 2026-11-14 | Codex; model ID not exposed | Fixed Part 3 approved body-part count preservation and T4 hardware-status reporting; checked the user-provided executed Colab notebook and private run archive; removed temporary setup cells and stale Windows demo instructions from the primary notebook | User executed the unchanged 15×2+10 cases on Tesla T4. The archived run and frozen hashes were checked, the report was recalculated from saved records with no numerical change, 41 Colab tests passed, and 42 local CPU contracts passed. Human judgments and final report authorship remain pending | `src/p3_prompt_rewrite.py`, `src/p3_reporting.py`, Part 3 tests/notebook, `eval/PART3_T4_MEASURED_RESULTS.md`, Part 3 documentation |
 
 Additional team disclosures, including any Part 2 tool use, require confirmation from the responsible member before final submission.
+
+## Part 2 partner baseline preparation — 2026-11-14
+
+Codex prepared Yuyao Ding's separate working-baseline notebook and helper code,
+adapting Pratiksha Kaushik's existing data/prompt/sampler protocol and the official
+Apache-2.0 Diffusers v0.42.1 LoRA example. The official trainer is pinned by commit
+and inspected source hash. The work includes one-GPU guards, dependency constraints
+that preserve CUDA/PyTorch, private artifacts, checkpoint restart, paired metrics,
+and run provenance. Existing team experiments and weights were not overwritten.
+Only CPU contract/static checks were run here. The new baseline's real T4/P100
+training, generation, measured results, Yuyao's own interpretation and meeting
+recording are pending. No GPU result, human judgment or meeting record was created.
+Affected files: `notebooks/Yuyao_Ding/p2_baseline.ipynb`,
+`src/p2_partner_baseline.py`, `scripts/p2_train_worker.py`,
+`tests/test_p2_partner_baseline.py`, `config/requirements-part2-baseline.txt`,
+`eval/p2_yuyao_baseline_prompts.json`, `eval/PART2_YUYAO_BASELINE.md`.
+
+Part 2 follow-up: the user's first Colab T4 training attempt failed in Accelerator
+initialization because the CLI string `none` was treated as a tracker name; its
+reported allocated/reserved GPU peaks were zero. Codex added argument
+normalization to Python `None` in the worker, preserving the pinned trainer, and
+a narrowly checked recovery that archives the failed attempt and records the
+source transition without discarding prepared data. CPU regression tests cover
+this boundary. No successful GPU training or new model result is claimed yet.
+
+
+Part 2 executed evidence import (2026-11-14 PT; run ID `20261115T034917Z` UTC):
+the user supplied the executed baseline notebook and a private 80-image/adapter
+bundle after actual Colab T4 execution. Codex checked archive integrity, all image
+hashes and dimensions, adapter hash/tensor-header parameter count, source/prompt
+hashes, checkpoint-600 log evidence, split isolation and saved aggregate metrics.
+Original files remain private and unchanged. The canonical notebook retains the
+original code and numeric outputs, omitting the clone/recovery setup cells,
+interactive widgets and three embedded visual previews. Metadata discloses the
+interactive recovery and both source commits; no uninterrupted run is claimed.
+No new training, generation, human rating or metric-model evaluation was performed.
+The measured result record and contributions now reflect actual execution; Yuyao's
+own interpretation, real meeting record and the team's human-preference evaluation
+were not created by the import.
+
+
+Part 2 result interpretation supplement (2026-11-14 PT): Codex inspected selected
+private generated images and drafted the metric tradeoffs, count/hat-subtype
+limitations and safety/memorization caveats in the baseline notebook and results
+`ANALYSIS.md`. One separate CPU notebook cell computed differences from saved
+numeric artifacts; the ten original T4 code cells and their outputs were retained.
+No training, generation, metric-model inference or human scoring was repeated.
+The draft is explicitly AI-assisted; Yuyao's verification and rewording, the real
+meeting record and any independent human-preference evaluation remain separate.

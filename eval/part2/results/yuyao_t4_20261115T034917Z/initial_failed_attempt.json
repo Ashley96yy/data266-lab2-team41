@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "gpu": "Tesla T4",
+  "error_type": "ValueError",
+  "wall_seconds_this_invocation": 12.059191505000058,
+  "cumulative_wall_seconds": 12.059191505000058,
+  "peak_allocated_gib": 0,
+  "peak_reserved_gib": 0,
+  "trainer_sha256": "7d67f3ed756a3cb79183153349ebb2d141c999f898da964edb2ea4af5d72d6ab"
+}

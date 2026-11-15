@@ -68,3 +68,18 @@ or rubrics, alongside practice-driven arithmetic fixes. The revised paired
 run is labeled a development-set evaluation. It must not be presented as an
 independent holdout under the original no-feedback protocol. See the dated
 compatibility log and commit history; the team must review this limitation.
+
+## Recorded source-content review method (2026-11-15)
+
+The completed second-round source-content review and all per-case decisions are
+in `part1/results/round2_colab_20261114T032206Z/content_review_20261115/`.
+The named human reviewer checks the full answer against frozen facts, numerical
+targets (±1%), units and direction; correct status is also enforced during
+aggregation. The original token-presence helper remains in the source and audit
+but is not substituted for this numerical content judgment. It cannot distinguish
+some equivalent expressions, such as a decline of x versus a signed change of -x.
+The one observed discrepancy is explicitly reported with the generated answer
+and unchanged reference; no case-specific inference/scoring rule was added.
+This method distinction from the earlier helper-based summaries is disclosed.
+One substantive baseline-label correction was applied only after explicit user
+confirmation and is logged separately from the unchanged original review.

@@ -1,0 +1,20 @@
+{
+  "original_review_sha256": "2d3394a882ba5249e22b49e582be7b244bd606cbca1f92725fb6f0b514e05e26",
+  "corrections_sha256": "0163a83d426e2f0b3711195f6a56e605bfb1ad470290da67730808558bbf8f97",
+  "groundedness_sha256": "42a093211c10ab6d2d0799e486eb6d4201cd8584e488a2f39cdbceee90c32b30",
+  "prediction_sha256": "be81e42d9b7dff813b26753b7fd88f1374259d4cba4fc7efcb9dd530ff574a0d",
+  "source_summary_sha256": "acd6bbcbbc76707201fe83815aa38cef65b230c892a8d47db7c6337b362cc611",
+  "specification_sha256": "e3f7996554f9270144872323c9a6752338daff763af38db4b02c99f850c89566",
+  "original_scores_modified": false,
+  "frozen_references_modified": false,
+  "no_new_inference": true,
+  "source_projection": "Saved compact predictions, rankings and timing; not restored original full run bytes.",
+  "cpu_analysis": {
+    "source_analysis_commit": "b3d953332c34bfa57a5596b0e2c62ebfd000bc74",
+    "python": "3.12.2",
+    "execution_engine": "In-process IPython CPU execution; no network kernel or model",
+    "executed_analysis_notebook_sha256": "9a0dde8a41142b098b8c0ad064dc6013bb05962223f30d4b90c3ee4e484eb307",
+    "cell_source_sha256": "acf353bf2acf6784748d72fc23cc248ddb2a7834d386a4052ac92fd4ff931bb4",
+    "comparison_notebook_sha256": "20ec4e2c04f1e627272034713433c9f5291464eef0d2797b348b1c53faea5581"
+  }
+}

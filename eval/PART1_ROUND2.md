@@ -35,5 +35,6 @@ retroactively assigning the later integration commit. Commit the actual source
 before final reproducibility submission. The [round-2 final-system groundedness
 review](part1/results/round2_colab_20261114T032206Z/human_review_20261114/)
 is now complete: mean 4.44/5 and 25/25 pairs within one point. This applies only
-to that final-system run. Human content and citation review, the team's own report,
-final tag and Kaggle selection remain pending.
+to that final-system run. The [completed content/citation review](part1/results/round2_colab_20261114T032206Z/content_review_20261115/RESULTS.md)
+now supplements these records. The team's own report, final tag and Kaggle
+selection remain pending.

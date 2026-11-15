@@ -82,10 +82,10 @@ See the [architecture](eval/PART1_ARCHITECTURE.md) and [evaluation protocol](eva
 | Retrieval Recall@5 (24 questions with evidence) | 0.472 | **0.764** |
 | Median seconds per question | 9.17 | **0.80** |
 | Execution errors | 0 | 0 |
+| Answer correctness (human source review) | 7/25 (28%) | **19/25 (76%)** |
+| Citation accuracy (human source review) | 14/75 (18.67%) | **28/47 (59.57%)** |
 | Human groundedness, mean of both members (1–5) | — | **4.44** |
 | Both members within one point | — | **25/25 (100%)** |
-| Answer correctness (human review) | Pending | Pending |
-| Citation accuracy (human review) | Pending | Pending |
 
 - **Practice set:** 40 questions with 0 execution errors and 0 format fallbacks, median 5.13 s per question.
 - **Memory:** peak GPU memory was 7.88 GiB allocated (9.01 GiB reserved) on a T4.
@@ -93,6 +93,7 @@ See the [architecture](eval/PART1_ARCHITECTURE.md) and [evaluation protocol](eva
 - **Earlier Windows run:** an earlier Windows RTX 4090 run, with an AI-assisted and provisional content review, scored 18/25 correct for the final system vs 6/25 for dense only. Citation accuracy was 0.49 vs 0.14. See [Part 1 measured results](eval/PART1_MEASURED_RESULTS.md). Those numbers are not the required human review and do not apply to the round-2 run.
 
 Supporting material:
+- [completed source-content review, result table and numerical-scoring boundary](eval/part1/results/round2_colab_20261114T032206Z/content_review_20261115/RESULTS.md)
 - [round-2 results and human groundedness review](eval/part1/results/round2_colab_20261114T032206Z/)
 - [round 1 vs round 2 comparison notebook](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb)
 - [round-2 protocol](eval/PART1_ROUND2.md)
@@ -198,7 +199,7 @@ Model weights, checkpoints and full raw run archives stay outside GitHub. Local 
 
 ## Remaining before final submission
 
-- [ ] Part 1: human answer-correctness and citation-accuracy review.
+- [x] Part 1: human answer-correctness and citation-accuracy review, plus completed two-member groundedness.
 - [ ] Part 1: final Kaggle submission.
 - [ ] Part 2: blinded human evaluation (25 pairs, 3 or more raters).
 - [x] Part 2: Yuyao's partner baseline GPU execution and measured outputs saved.

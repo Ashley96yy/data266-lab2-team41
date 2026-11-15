@@ -27,7 +27,8 @@ Both members are responsible for the whole submission. The tables below show who
 | 1.4 Evaluation and safety | Golden set, baseline vs final evaluation, second Colab evaluation round, safety analysis, architecture documentation | Yuyao Ding | `eval/p1_golden_*`, `eval/PART1_*.md`, `src/p1_evaluation.py` |
 | 1.5 Kaggle | Ordered question runner and submission output | Yuyao Ding | main notebook |
 | Development notebooks | Independent Part 1 RAG notebook versions v1 to v6 and v15 | Pratiksha Kaushik | [`notebooks/Pratiksha_Kaushik/p1/`](notebooks/Pratiksha_Kaushik/p1/) |
-| Human evaluation | Both members rate all 25 final answers for groundedness | Both | **Pending** |
+| Human groundedness evaluation | Both members independently rated all 25 second-round final answers; original ratings and identity correction preserved | Both | [Recorded groundedness](eval/part1/results/round2_colab_20261114T032206Z/human_review_20261114/) |
+| Answer correctness and citation support | Source-content review of 25 baseline and 25 final answers; one baseline label corrected only after explicit user confirmation | Yuyao Ding | [Recorded content review](eval/part1/results/round2_colab_20261114T032206Z/content_review_20261115/) |
 
 ## Part 2: Diffusion fine-tuning
 

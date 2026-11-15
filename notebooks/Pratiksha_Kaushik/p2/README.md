@@ -31,16 +31,28 @@ image = pipe("a man with blue hair and a headband").images[0]
 
 ## Notebooks
 
+```text
+p2/
+├── README.md            # this file
+├── p2_v4.ipynb          # SUBMISSION: the whole of Part 2, executed
+└── development/         # earlier versions, kept to show how the work developed
+    ├── p2_baseline.ipynb
+    ├── p2_run1_v1.ipynb
+    ├── p2_run2_v2.ipynb
+    ├── p2_v2.ipynb
+    └── p2_v3.ipynb
+```
+
 | Notebook | Status | Contents |
 |---|---|---|
 | [p2_v4.ipynb](p2_v4.ipynb) | **Submission, executed** | The whole of Part 2 in one notebook: baseline, Run 1, Run 2, final choice, grids, human and AI evaluation, failure modes, safety, model cards, Hugging Face upload |
-| [p2_v3.ipynb](p2_v3.ipynb) | Earlier draft, not executed | Combined notebook before the final section was finished |
-| [p2_v2.ipynb](p2_v2.ipynb) | Earlier draft, executed | First combined notebook (baseline, Run 1, Run 2) |
-| [p2_baseline.ipynb](p2_baseline.ipynb) | Development, executed | 2.1 data preparation, fixed prompts, base-model metrics |
-| [p2_run1_v1.ipynb](p2_run1_v1.ipynb) | Development, executed | Run 1 training and metrics |
-| [p2_run2_v2.ipynb](p2_run2_v2.ipynb) | Development, executed | Run 2 training and metrics |
+| [development/p2_v3.ipynb](development/p2_v3.ipynb) | Draft, not executed | Combined notebook before the final section was finished |
+| [development/p2_v2.ipynb](development/p2_v2.ipynb) | Draft, executed | First combined notebook (baseline, Run 1, Run 2) |
+| [development/p2_baseline.ipynb](development/p2_baseline.ipynb) | Development, executed | 2.1 data preparation and the 20 fixed prompts, first committed on 2026-11-09 before any training; base-model metrics |
+| [development/p2_run1_v1.ipynb](development/p2_run1_v1.ipynb) | Development, executed | Run 1 training and metrics |
+| [development/p2_run2_v2.ipynb](development/p2_run2_v2.ipynb) | Development, executed | Run 2 training and metrics |
 
-Graders should use **p2_v4.ipynb**. The other notebooks are kept to show how the work developed.
+Graders should use **p2_v4.ipynb**. It ran top to bottom in one session (cells 1 to 171 in order) with no errors.
 
 ## How to run
 

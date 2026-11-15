@@ -11,7 +11,7 @@ Graders use the tagged commit for each part.
 | Part | Git tag | Main notebook | Headline result | Details |
 | --- | --- | --- | --- | --- |
 | 1. Multimodal RAG | `p1-v1.0` | [`notebooks/Yuyao_Ding/p1_rag.ipynb`](notebooks/Yuyao_Ding/p1_rag.ipynb) | Recall@5 0.764 (final) vs 0.472 (dense only); human groundedness 4.44/5 | [Part 1 results](#part-1--multimodal-rag) |
-| 2. Diffusion fine-tuning | `p2-v1.0` | [`notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb) | KID 0.0217 (LoRA r=32) vs 0.1337 (base SD 1.5) | [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md) |
+| 2. Diffusion fine-tuning | `p2-v1.0` | [`notebooks/Pratiksha_Kaushik/p2/p2_submission.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_submission.ipynb) | KID 0.0217 (LoRA r=32) vs 0.1337 (base SD 1.5) | [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md) |
 | 3. Multi-agent system | `p3-v1.0` | [`notebooks/Yuyao_Ding/p3_agents.ipynb`](notebooks/Yuyao_Ding/p3_agents.ipynb) | Task success 10/15 with loop, 11/15 without; 0/10 red-team attacks succeeded | [Part 3 report](eval/PART3_T4_MEASURED_RESULTS.md) |
 
 All course GPU runs were done on a single Tesla T4 (Colab).
@@ -33,7 +33,7 @@ All course GPU runs were done on a single Tesla T4 (Colab).
 │   │   └── p3_agents.ipynb               # Part 3 submission
 │   └── Pratiksha_Kaushik/
 │       ├── p1/                  # Part 1 development notebooks (v1–v6, v15)
-│       ├── p2/                  # Part 2 notebooks + README (p2_v4.ipynb is the submission)
+│       ├── p2/                  # Part 2 notebooks + README (p2_submission.ipynb is the submission)
 │       └── p3/                  # independent Part 3 build (v1, v2) + README
 ├── eval/                        # golden sets, scenarios, protocols, measured reports
 │   ├── part1/results/           # saved Part 1 run results and human review
@@ -105,7 +105,7 @@ The Colab rerun helper is [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p
 
 ## Part 2 — Diffusion fine-tuning
 
-**Run:** open [`notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb) in Colab (T4) and run all. Full details are in the [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md).
+**Run:** open [`notebooks/Pratiksha_Kaushik/p2/p2_submission.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_submission.ipynb) in Colab (T4) and run all. Full details are in the [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md).
 
 **Yuyao's partner baseline:** the separate [executed baseline notebook](notebooks/Yuyao_Ding/p2_baseline.ipynb)
 completed data preparation, 600-step rank-4 LoRA training, 40 base plus 40 adapted
@@ -133,7 +133,7 @@ See the [runbook and attribution](eval/PART2_YUYAO_BASELINE.md).
 | CLIP score, all 20 prompts | **31.54** | 30.35 | 29.84 |
 | LPIPS diversity between seeds | **0.808** | 0.776 | 0.749 |
 | AI-judge (CLIP) win rate vs base, style / prompt | 0.50 / 0.50 | — | 0.92 / 0.20 |
-| Human win rate vs base (25 blinded pairs) | 0.50 | — | Pending |
+| Human win rate vs base, style / prompt (25 blinded pairs, 3 raters) | 0.50 / 0.50 | — | **0.83 / 0.40** |
 | GPU-hours (train) | — | 1.275 | 1.372 |
 | Peak GPU memory (train) | — | 3.54 GB | 3.61 GB |
 
@@ -200,7 +200,7 @@ Model weights, checkpoints and full raw run archives stay outside GitHub. Local 
 
 - [ ] Part 1: human answer-correctness and citation-accuracy review.
 - [ ] Part 1: final Kaggle submission.
-- [ ] Part 2: blinded human evaluation (25 pairs, 3 or more raters).
+- [x] Part 2: blinded human evaluation (25 pairs, 3 raters).
 - [x] Part 2: Yuyao's partner baseline GPU execution and measured outputs saved.
 - [ ] Part 2: Yuyao verifies/rewords the AI-assisted baseline interpretation and adds the actual knowledge-transfer recording.
 - [ ] Create or update the tags `p1-v1.0`, `p2-v1.0` and `p3-v1.0` on the final commits.

@@ -66,7 +66,7 @@ these external actions.
 ```powershell
 $env:PYTHONUTF8='1'
 $env:DATA266_PART1_INPUT_DIR=(Join-Path (Get-Location) 'data/part1')
-.\.venv\Scripts\python.exe -m unittest tests.test_p1_evaluation tests.test_p1_evidence tests.test_p1_reasoning_regressions tests.test_p1_labels tests.test_p1_reviews tests.test_p1_intent -v
+.\.venv\Scripts\python.exe -m unittest tests.yuyao_ding.test_p1_evaluation tests.yuyao_ding.test_p1_evidence tests.yuyao_ding.test_p1_reasoning_regressions tests.yuyao_ding.test_p1_labels tests.yuyao_ding.test_p1_reviews tests.yuyao_ding.test_p1_intent -v
 ```
 
 The real-PDF tests require the private inputs; synthetic fixtures are explicitly

@@ -1,1 +1,1 @@
-"""Part 1 repository tests."""
+"""Member-separated tests for DATA 266 Lab 2."""

@@ -18,8 +18,8 @@ notebooks/Pratiksha_Kaushik/
 │   └── development/          # earlier Part 2 notebooks
 └── p3/                       # Part 3 build (p3_agents_v1, v2) + README
 
-eval/pratiksha_p3/            # Part 3 scenarios, red-team cases, results, judgments, system card, run log
-traces/pratiksha_p3/          # JSON trace of every Part 3 request
+eval/pratiksha_kaushik/part3/            # Part 3 scenarios, red-team cases, results, judgments, system card, run log
+traces/pratiksha_kaushik/part3/          # JSON trace of every Part 3 request
 ```
 
 ## Links
@@ -31,7 +31,7 @@ traces/pratiksha_p3/          # JSON trace of every Part 3 request
 | Part 2 comparison model (LoRA r=4) | [PratikshaK-1/naruto-sd15-lora-r4](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4) |
 | Part 2 generated images (120) | [PratikshaK-1/naruto-sd15-p2-generations](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations) |
 | Part 2 run outputs | [Google Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link) |
-| Part 3 evaluation files | [eval/pratiksha_p3/](../../eval/pratiksha_p3/) |
-| Part 3 traces | [traces/pratiksha_p3/](../../traces/pratiksha_p3/) |
+| Part 3 evaluation files | [eval/pratiksha_p3/](../../eval/pratiksha_kaushik/part3/) |
+| Part 3 traces | [traces/pratiksha_p3/](../../traces/pratiksha_kaushik/part3/) |
 
 Images and model weights are kept on Hugging Face and Google Drive, not in GitHub, as the course rules require.

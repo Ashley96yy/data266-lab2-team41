@@ -58,7 +58,7 @@ From the repository root:
 python - <<'PY'
 import json
 from pathlib import Path
-from src.p3_evaluation import summarize
+from src.yuyao_ding.p3_evaluation import summarize
 root = Path('eval/yuyao_ding/part3/results/t4_20261114T060249Z')
 for mode in ('with', 'without', 'red_team'):
     run = json.loads((root / f'{mode}.reviewed.json').read_text())
@@ -66,7 +66,7 @@ for mode in ('with', 'without', 'red_team'):
 PY
 ```
 
-The complete private import can be reproduced with `scripts/finalize_p3_reviews.py`:
+The complete private import can be reproduced with `scripts/yuyao_ding/finalize_p3_reviews.py`:
 pass `--run-dir`, `--member-a`, `--member-b`, `--adjudication`, and fresh
 `--private-output` / `--public-output` directories. Original inference records and
 original reviewer files are never overwritten.

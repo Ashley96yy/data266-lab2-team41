@@ -21,10 +21,10 @@ Both members are responsible for the whole submission. The tables below show who
 
 | Task | Work | Member | Files |
 | --- | --- | --- | --- |
-| 1.1 Ingestion and indexing | PDF text extraction with page-preserving chunks; Figure and Table inventory and cropping; CLIP image embeddings; ChromaDB storage with `kb_manifest.json` metadata | Yuyao Ding | `src/p1_*.py`, main notebook |
-| 1.2 Retrieval and answers | Dense + BM25 fusion; exact figure and table label routing; grounded JSON answers with a Qwen vision-language model; citation completion and answer repair | Yuyao Ding | `src/p1_evidence.py`, `src/p1_labels.py`, `src/p1_intent.py` |
-| 1.3 Conversations | Separate memory per conversation, bounded context, user-value overrides kept out of the vector database | Yuyao Ding | main notebook, `tests/test_p1_*.py` |
-| 1.4 Evaluation and safety | Golden set, baseline vs final evaluation, second Colab evaluation round, safety analysis, architecture documentation | Yuyao Ding | `eval/yuyao_ding/p1_golden_*`, `eval/yuyao_ding/PART1_*.md`, `src/p1_evaluation.py` |
+| 1.1 Ingestion and indexing | PDF text extraction with page-preserving chunks; Figure and Table inventory and cropping; CLIP image embeddings; ChromaDB storage with `kb_manifest.json` metadata | Yuyao Ding | `src/yuyao_ding/p1_*.py`, main notebook |
+| 1.2 Retrieval and answers | Dense + BM25 fusion; exact figure and table label routing; grounded JSON answers with a Qwen vision-language model; citation completion and answer repair | Yuyao Ding | `src/yuyao_ding/p1_evidence.py`, `src/yuyao_ding/p1_labels.py`, `src/yuyao_ding/p1_intent.py` |
+| 1.3 Conversations | Separate memory per conversation, bounded context, user-value overrides kept out of the vector database | Yuyao Ding | main notebook, `tests/yuyao_ding/test_p1_*.py` |
+| 1.4 Evaluation and safety | Golden set, baseline vs final evaluation, second Colab evaluation round, safety analysis, architecture documentation | Yuyao Ding | `eval/yuyao_ding/p1_golden_*`, `eval/yuyao_ding/PART1_*.md`, `src/yuyao_ding/p1_evaluation.py` |
 | 1.5 Kaggle | Ordered question runner and submission output | Yuyao Ding | main notebook |
 | Development notebooks | Independent Part 1 RAG notebook versions v1 to v6 and v15 | Pratiksha Kaushik | [`notebooks/Pratiksha_Kaushik/p1/`](notebooks/Pratiksha_Kaushik/p1/) |
 | Human groundedness evaluation | Both members independently rated all 25 second-round final answers; original ratings and identity correction preserved | Both | [Recorded groundedness](eval/yuyao_ding/part1/results/round2_colab_20261114T032206Z/human_review_20261114/) |
@@ -53,8 +53,8 @@ Hugging Face: [final model (rank 32)](https://huggingface.co/PratikshaK-1/naruto
 | Work | Member | Files |
 | --- | --- | --- |
 | Scenarios, red-team cases, test inputs and fixture manifest | Yuyao Ding | `eval/yuyao_ding/p3_*.json`, `eval/yuyao_ding/PART3.md` |
-| Planner, vision understanding, prompt engineering and rewriting agents | Yuyao Ding | `src/p3_planner.py`, `src/p3_vision.py`, `src/p3_prompt*.py` |
-| Generation, critique, enhancement, orchestration, state and app | Yuyao Ding | `src/p3_*.py` |
+| Planner, vision understanding, prompt engineering and rewriting agents | Yuyao Ding | `src/yuyao_ding/p3_planner.py`, `src/yuyao_ding/p3_vision.py`, `src/yuyao_ding/p3_prompt*.py` |
+| Generation, critique, enhancement, orchestration, state and app | Yuyao Ding | `src/yuyao_ding/p3_*.py` |
 | Tests, Colab T4 run, measured report, redacted traces | Yuyao Ding | `tests/test_p3_*.py`, `eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md`, `traces/` |
 | Independent quality and safety review of all cases | Yuyao Ding and Pratiksha Kaushik, separately | `eval/yuyao_ding/part3/results/t4_20261114T060249Z/part3-member-*-review.json` |
 | Joint adjudication of disagreements | Both | `eval/yuyao_ding/part3/results/t4_20261114T060249Z/part3-adjudication.json` |

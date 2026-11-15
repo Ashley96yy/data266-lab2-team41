@@ -15,7 +15,7 @@ Generate the private form from the repository root using an environment with
 PyMuPDF installed:
 
 ```bash
-python scripts/p1_content_review_forms.py \
+python scripts/yuyao_ding/p1_content_review_forms.py \
   --input-dir /absolute/path/to/the/three/course/PDFs \
   --output .runtime/part1-content-review-new
 ```
@@ -47,7 +47,7 @@ AI-assisted rather than passed through this human-review declaration.
 now complete these measurements. Recompute with:
 
 ```bash
-python scripts/finalize_p1_content_review.py \
+python scripts/yuyao_ding/finalize_p1_content_review.py \
   --review eval/yuyao_ding/part1/results/round2_colab_20261114T032206Z/content_review_20261115/part1-content-review.original.json \
   --corrections eval/yuyao_ding/part1/results/round2_colab_20261114T032206Z/content_review_20261115/corrections.json \
   --output .runtime/part1-content-recomputed

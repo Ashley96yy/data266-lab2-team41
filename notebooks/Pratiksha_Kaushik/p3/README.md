@@ -101,11 +101,11 @@ v2 fixed a bug in reading the critic's score, lets the critic see the original a
 
 ### Human evaluation
 
-Pratiksha Kaushik judged all 30 items (15 scenarios × 2 modes) against their rubrics: 30/30 pass. She accepted the critic's first attempt in 8 of 9 generation cases. The judgments are in [`eval/pratiksha_p3/p3_human_judgments.csv`](../../../eval/pratiksha_p3/p3_human_judgments.csv).
+Pratiksha Kaushik judged all 30 items (15 scenarios × 2 modes) against their rubrics: 30/30 pass. She accepted the critic's first attempt in 8 of 9 generation cases. The judgments are in [`eval/pratiksha_p3/p3_human_judgments.csv`](../../../eval/pratiksha_kaushik/part3/p3_human_judgments.csv).
 
 ## Per-question comparison
 
-Every scenario and red-team case, one row each. Taken from the saved results files (`p3_results_*.csv`, `p3_redteam_results*.csv`) and your judgment file (`p3_human_judgments.csv`), all in [`eval/pratiksha_p3/`](../../../eval/pratiksha_p3/).
+Every scenario and red-team case, one row each. Taken from the saved results files (`p3_results_*.csv`, `p3_redteam_results*.csv`) and your judgment file (`p3_human_judgments.csv`), all in [`eval/pratiksha_p3/`](../../../eval/pratiksha_kaushik/part3/).
 
 - **s:** seconds for the request.
 - **CLIP:** prompt–image similarity × 100. The critic accepts at 22.0 or above.
@@ -199,8 +199,8 @@ The notebook ends with a Gradio app that shows each agent's output for a request
 | What | Where |
 | --- | --- |
 | Notebooks | this folder: `p3_agents_v2.ipynb` (latest), `p3_agents_v1.ipynb` |
-| Scenarios, red-team cases, results CSVs, human judgments, system card, run log, architecture diagram | [`eval/pratiksha_p3/`](../../../eval/pratiksha_p3/) |
-| JSON trace of every request (88) | [`traces/pratiksha_p3/`](../../../traces/pratiksha_p3/) |
+| Scenarios, red-team cases, results CSVs, human judgments, system card, run log, architecture diagram | [`eval/pratiksha_p3/`](../../../eval/pratiksha_kaushik/part3/) |
+| JSON trace of every request (88) | [`traces/pratiksha_p3/`](../../../traces/pratiksha_kaushik/part3/) |
 | Input images, generated images, judging images | Not in GitHub. Kept in Google Drive under `MyDrive/data266-lab2/p3/` |
 
 The images aren't committed, for two reasons. The course rules say generated images go to Hugging Face, not GitHub. The inputs also include a photo of a real person (`person.jpg`), and the red-team outputs include an edited image of that person.

@@ -35,7 +35,7 @@ existing `.venv` selected:
 $env:PYTHONUTF8='1'
 .\.venv\Scripts\python.exe -m unittest discover -s tests -p 'test_p3*.py'
 .\.venv\Scripts\python.exe eval/yuyao_ding/verify_p3_fixture_manifest.py --require-complete
-.\.venv\Scripts\python.exe -m src.p3_app
+.\.venv\Scripts\python.exe -m src.yuyao_ding.p3_app
 ```
 
 The app listens on http://127.0.0.1:7860, with an English interface and no public
@@ -46,15 +46,15 @@ unchanged 15x2+10 suite, then computes every report number from saved records.
 Replay is only enabled by an explicit DATA266_P3_REPLAY_DIR and is printed as replay.
 
 The preferred standalone full validator is eval/yuyao_ding/validate_p3_revision.py. The older
-src.p3_evaluation CLI uses the same Prompt Agent but runs one specified condition;
+src.yuyao_ding.p3_evaluation CLI uses the same Prompt Agent but runs one specified condition;
 use new output paths and preserve earlier runs. Model revisions are pinned in the
 validator and .runtime/model-revisions.json for local app startup.
 
 ## Independent human review
 
 ```powershell
-.\.venv\Scripts\python.exe scripts/p3_review_forms.py export --run-dir RUN_DIR --output NEW_LOCAL_REVIEW_DIR
-.\.venv\Scripts\python.exe scripts/p3_review_forms.py import --run-dir RUN_DIR --member-a MEMBER_A_JSON --member-b MEMBER_B_JSON --output NEW_REVIEWED_RUN_DIR
+.\.venv\Scripts\python.exe scripts/yuyao_ding/p3_review_forms.py export --run-dir RUN_DIR --output NEW_LOCAL_REVIEW_DIR
+.\.venv\Scripts\python.exe scripts/yuyao_ding/p3_review_forms.py import --run-dir RUN_DIR --member-a MEMBER_A_JSON --member-b MEMBER_B_JSON --output NEW_REVIEWED_RUN_DIR
 ```
 
 Both members independently fill the blank English forms. Critic predictions are

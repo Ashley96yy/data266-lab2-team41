@@ -24,7 +24,7 @@ contents and the notebook's saved outputs; it does not require another GPU run.
 
 The genuine executed p1_rag notebook is preserved; the canonical copy adds only
 Markdown labels to distinguish rounds. The helper source is now
-`scripts/p1_colab_schema_fix_and_rerun.py`; its bytes are unchanged. Its final
+`scripts/yuyao_ding/p1_colab_schema_fix_and_rerun.py`; its bytes are unchanged. Its final
 cell still expects that file to be uploaded as
 `/content/p1_colab_schema_fix_and_rerun.py` in the recorded Colab layout.
 Original archives/full retrieved contexts/images are local-only under

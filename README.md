@@ -35,19 +35,40 @@ All course GPU runs were done on a single Tesla T4 (Colab).
 │       ├── p1/                  # Part 1 development notebooks (v1–v6, v15)
 │       ├── p2/                  # Part 2 notebooks + README (p2_v4.ipynb is the submission)
 │       └── p3/                  # independent Part 3 build (v1, v2) + README
-├── eval/                        # golden sets, scenarios, protocols, measured reports
+├── eval/
 │   ├── yuyao_ding/             # main Parts 1/3 + Yuyao Part 2 baseline
-│   │   ├── part1/results/      # original rounds and completed human review
-│   │   ├── part2/results/      # partner baseline evidence
-│   │   └── part3/results/      # main-system reviews and metrics
-│   └── pratiksha_p3/           # Pratiksha independent Part 3 evaluation
-├── traces/                      # redacted Part 3 JSON traces (+ pratiksha_p3/ for the independent build)
-├── src/                         # shared helpers for Parts 1 and 3
-├── scripts/                     # runners and review tools
-└── tests/                       # unit tests
+│   └── pratiksha_kaushik/      # Pratiksha's independent evaluation records
+├── traces/
+│   ├── yuyao_ding/             # main Part 3 T4 request traces
+│   └── pratiksha_kaushik/      # independent Part 3 request traces
+├── src/                        # Python packages: one namespace per member
+│   ├── yuyao_ding/
+│   └── pratiksha_kaushik/
+├── scripts/                    # member runners and review tools
+│   ├── yuyao_ding/
+│   └── pratiksha_kaushik/
+├── tests/                      # member test packages
+│   ├── yuyao_ding/
+│   └── pratiksha_kaushik/
+├── config/                     # member environment records
+│   ├── yuyao_ding/
+│   └── pratiksha_kaushik/
+└── audit/                      # member provenance and preserved history
+    ├── yuyao_ding/
+    └── pratiksha_kaushik/
 ```
 
 Model weights and the full raw run archives are not in this repository. See [Artifacts](#artifacts).
+
+The root README, dependency entry point, contribution/AI disclosures, and Python
+package entry points are shared. Member folders describe file ownership; an empty
+member code folder with a README does not claim additional work. Pratiksha's
+current implementations remain in her notebooks. Live imports and commands use
+member namespaces, for example `python -m src.yuyao_ding.p3_app`. Notebook folders
+retain their existing capitalization; Python/member packages use lowercase names. Historical
+paths/hashes in original records remain unchanged; see the
+[member-directory mapping](audit/yuyao_ding/workspace_relocation.json).
+
 
 ## Setup
 
@@ -59,7 +80,7 @@ Course GPU work must run on one 16 GB GPU (Kaggle T4/P100 or Colab T4).
   jupyter lab
   ```
 - **Parts 2 and 3:** each notebook installs its own pinned packages in its first code cell. Run them in Colab with **Runtime → Restart session and run all**.
-- **Part 3 environment:** the earlier local development snapshot is kept at `config/requirements-part3.txt` for provenance only. See the [Part 3 runbook](eval/yuyao_ding/PART3_IMPLEMENTATION.md) before changing an existing GPU environment.
+- **Part 3 environment:** the earlier local development snapshot is kept at `config/yuyao_ding/requirements-part3.txt` for provenance only. See the [Part 3 runbook](eval/yuyao_ding/PART3_IMPLEMENTATION.md) before changing an existing GPU environment.
 
 Each notebook begins with a reproducibility cell that prints the Git commit, Python version, PyTorch version, GPU and random seed.
 
@@ -102,7 +123,7 @@ Supporting material:
 - [safety analysis](eval/yuyao_ding/PART1_SAFETY_ANALYSIS.md)
 - the golden set in `eval/yuyao_ding/p1_golden_v2.json`
 
-The Colab rerun helper is [`scripts/p1_colab_schema_fix_and_rerun.py`](scripts/p1_colab_schema_fix_and_rerun.py). In the recorded run it was uploaded to `/content/`.
+The Colab rerun helper is [`scripts/yuyao_ding/p1_colab_schema_fix_and_rerun.py`](scripts/yuyao_ding/p1_colab_schema_fix_and_rerun.py). In the recorded run it was uploaded to `/content/`.
 
 ---
 
@@ -175,7 +196,7 @@ Supporting material:
 - [measured report](eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md)
 - [human reviews and joint adjudication](eval/yuyao_ding/part3/results/t4_20261114T060249Z/)
 - [system card draft](eval/yuyao_ding/PART3_SYSTEM_CARD_DRAFT.md)
-- [redacted request traces](traces/t4_20261114T060249Z/)
+- [redacted request traces](traces/yuyao_ding/t4_20261114T060249Z/)
 
 **Independent second build:** Pratiksha Kaushik also built and ran a separate Part 3 system (Qwen2.5-VL-3B with SD 1.5, InstructPix2Pix and the Part 2 LoRA). It is kept for comparison, with per-question tables, in [`notebooks/Pratiksha_Kaushik/p3/`](notebooks/Pratiksha_Kaushik/p3/README.md).
 
@@ -202,7 +223,7 @@ Model weights, checkpoints and full raw run archives stay outside GitHub. Local 
 ## Remaining before final submission
 
 - [x] Part 1: human answer-correctness and citation-accuracy review, plus completed two-member groundedness.
-- [ ] Part 1: final Kaggle submission.
+- [x] Part 1: Kaggle submission completed, as confirmed by Yuyao.
 - [ ] Part 2: blinded human evaluation (25 pairs, 3 or more raters).
 - [x] Part 2: Yuyao's partner baseline GPU execution and measured outputs saved.
 - [ ] Part 2: Yuyao verifies/rewords the AI-assisted baseline interpretation and adds the actual knowledge-transfer recording.

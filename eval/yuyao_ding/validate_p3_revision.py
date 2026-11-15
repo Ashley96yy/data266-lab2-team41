@@ -35,19 +35,19 @@ def main():
         model_revisions=REVISIONS,seed=266,scored=False,interpretation='Development rerun after recorded implementation fixes; two independent human reviews pending.',stages={})
     try:manifest['source_commit']=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     except Exception:manifest['source_commit']='unavailable'
-    manifest['source_hashes']={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in ROOT.glob('src/p3_*.py')}
+    manifest['source_hashes']={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in ROOT.glob('src/yuyao_ding/p3_*.py')}
     manifest['frozen_hashes']={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in ROOT.glob('eval/yuyao_ding/p3*.json')}
     write(target/'manifest.json',manifest)
     start=time.perf_counter()
     try:
         import torch
         from PIL import Image,ImageDraw
-        from src.p3_vision import load_qwen_vision,run_qwen_vision
-        from src.p3_generation import DiffusionGenerator,GenerationSettings
-        from src.p3_prompt import build_generation_prompt
-        from src.p3_critique import VisionCritic
-        from src.p3_orchestration import AgentOrchestrator
-        from src.p3_evaluation import run_cases,load_cases
+        from src.yuyao_ding.p3_vision import load_qwen_vision,run_qwen_vision
+        from src.yuyao_ding.p3_generation import DiffusionGenerator,GenerationSettings
+        from src.yuyao_ding.p3_prompt import build_generation_prompt
+        from src.yuyao_ding.p3_critique import VisionCritic
+        from src.yuyao_ding.p3_orchestration import AgentOrchestrator
+        from src.yuyao_ding.p3_evaluation import run_cases,load_cases
         if not torch.cuda.is_available():raise RuntimeError('CUDA is required for this validation.')
         torch.manual_seed(266);torch.cuda.manual_seed_all(266);torch.cuda.reset_peak_memory_stats()
         manifest.update(python=sys.version.split()[0],torch=torch.__version__,cuda=torch.version.cuda,gpu=torch.cuda.get_device_name(0))
@@ -62,7 +62,7 @@ def main():
         vision=partial(run_qwen_vision,processor=processor,model=model)
         generator=DiffusionGenerator(base_revision=REVISIONS['base'],lora_revision=REVISIONS['lora'])
         critic=VisionCritic(processor,model)
-        from src.p3_prompt_rewrite import QwenPromptEngineer
+        from src.yuyao_ding.p3_prompt_rewrite import QwenPromptEngineer
         engineer=QwenPromptEngineer(processor,model,critic.similarity.get_tokenizer)
         pipeline=AgentOrchestrator(vision,generator,critic,output_dir=target/'requests',prompt_engineer=engineer)
         observation=vision(source,['What main objects and colors are visible?','What readable text is visible?'])

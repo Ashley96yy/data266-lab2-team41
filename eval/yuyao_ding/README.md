@@ -9,7 +9,7 @@ and roles, and the [shared evaluation index](../README.md) for other contributor
 | --- | --- | --- |
 | 1. Multimodal RAG | [Frozen version-2 golden set](p1_golden_v2.json), [evaluation protocol](PART1_EVALUATION_PROTOCOL.md), [architecture](PART1_ARCHITECTURE.md), [safety analysis](PART1_SAFETY_ANALYSIS.md) | [Both original Colab rounds](part1/results/), [completed source-content review](part1/results/round2_colab_20261114T032206Z/content_review_20261115/RESULTS.md), [two-member groundedness](part1/results/round2_colab_20261114T032206Z/human_review_20261114/) |
 | 2. Partner baseline | [Frozen prompts](p2_yuyao_baseline_prompts.json), [baseline runbook](PART2_YUYAO_BASELINE.md) | [Actual T4 baseline, metrics and provenance](part2/results/yuyao_t4_20261115T034917Z/), [AI-assisted interpretation](part2/results/yuyao_t4_20261115T034917Z/ANALYSIS.md) |
-| 3. Multi-agent system | [15 scenarios](p3_scenarios.json), [10 red-team cases](p3_red_team.json), [fixture manifest](p3_fixture_manifest.json), [evaluation plan](PART3.md), [implementation](PART3_IMPLEMENTATION.md) | [T4 measured report](PART3_T4_MEASURED_RESULTS.md), [reviews and adjudication](part3/results/t4_20261114T060249Z/), [redacted request traces](../../traces/t4_20261114T060249Z/) |
+| 3. Multi-agent system | [15 scenarios](p3_scenarios.json), [10 red-team cases](p3_red_team.json), [fixture manifest](p3_fixture_manifest.json), [evaluation plan](PART3.md), [implementation](PART3_IMPLEMENTATION.md) | [T4 measured report](PART3_T4_MEASURED_RESULTS.md), [reviews and adjudication](part3/results/t4_20261114T060249Z/), [redacted request traces](../../traces/yuyao_ding/t4_20261114T060249Z/) |
 
 ## Layout
 
@@ -64,3 +64,9 @@ old paths using [relocation_manifest.json](relocation_manifest.json). In particu
 recorded source hashes should not be asserted to match newly relocated source.
 The separate migration record verifies the byte-preserved inputs/results and
 records each changed notebook code cell alongside its original output hash.
+
+
+The later member-directory organization also namespaced source/scripts/tests and
+moved audit/trace assets. Its [migration record](../../audit/yuyao_ding/workspace_relocation.json)
+supplements the earlier evaluation split. Both records preserve the original
+payloads and notebook outputs; historical hashes describe their original source.

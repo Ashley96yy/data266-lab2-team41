@@ -6,7 +6,7 @@ final submission entry points are in [the repository README](../README.md).
 | Workspace | Contents |
 | --- | --- |
 | [Yuyao Ding](yuyao_ding/README.md) | Main Part 1 and Part 3 specifications, protocols, recorded results and human reviews; Yuyao's Part 2 partner baseline |
-| [Pratiksha Kaushik — Part 3](pratiksha_p3/) | Scenarios, results, judgments, architecture and system card for Pratiksha's independent Part 3 build |
+| [Pratiksha Kaushik — Part 3](pratiksha_kaushik/part3/) | Scenarios, results, judgments, architecture and system card for Pratiksha's independent Part 3 build |
 
 Pratiksha's formal Part 2 experiment is documented in
 [her Part 2 README](../notebooks/Pratiksha_Kaushik/p2/README.md), with artifact

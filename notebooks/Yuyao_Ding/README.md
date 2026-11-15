@@ -36,12 +36,12 @@ eval/yuyao_ding/
 ├── part1/results/                   # original rounds and completed human reviews
 ├── part2/results/                   # partner baseline metrics and provenance
 └── part3/results/                   # main Part 3 reviews, adjudication and metrics
-traces/t4_20261114T060249Z/           # redacted main Part 3 request traces
+traces/yuyao_ding/t4_20261114T060249Z/           # redacted main Part 3 request traces
 ```
 
 The `eval/` and `traces/` paths are at the repository root, not inside this
-notebook folder. Reusable implementations live in [`src/`](../../src/), and
-runners, evidence-export tools and review forms live in [`scripts/`](../../scripts/).
+notebook folder. Reusable implementations live in [`src/yuyao_ding/`](../../src/yuyao_ding/), and
+runners, evidence-export tools and review forms live in [`scripts/yuyao_ding/`](../../scripts/yuyao_ding/).
 
 ## Part 1: main multimodal RAG system
 
@@ -137,7 +137,7 @@ The Planner handles refusal, clarification and readable input errors. Image text
 is treated as data rather than an instruction. Critique records CLIP similarity
 and separate VLM quality/safety judgments, with at most two quality revisions.
 Timed agent events are saved as JSON traces. The English Gradio interface shows
-agent outputs; the local entry point is `python -m src.p3_app` from the repository
+agent outputs; the local entry point is `python -m src.yuyao_ding.p3_app` from the repository
 root with the appropriate GPU environment and private inputs available.
 
 ### Recorded T4 evaluation and human review
@@ -179,7 +179,7 @@ separate historical records, not substitutes for the actual T4 run.
 | Part 3 runbook | [PART3_IMPLEMENTATION.md](../../eval/yuyao_ding/PART3_IMPLEMENTATION.md) |
 | Part 3 measured report | [PART3_T4_MEASURED_RESULTS.md](../../eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md) |
 | Part 3 independent reviews and adjudication | [T4 review record](../../eval/yuyao_ding/part3/results/t4_20261114T060249Z/) |
-| Part 3 published request traces | [Redacted JSON traces](../../traces/t4_20261114T060249Z/) |
+| Part 3 published request traces | [Redacted JSON traces](../../traces/yuyao_ding/t4_20261114T060249Z/) |
 | Part 3 system-card draft | [PART3_SYSTEM_CARD_DRAFT.md](../../eval/yuyao_ding/PART3_SYSTEM_CARD_DRAFT.md) |
 
 Keep original course PDFs, private fixtures and portraits, generated image files,

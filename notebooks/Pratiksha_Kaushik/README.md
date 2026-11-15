@@ -26,6 +26,7 @@ traces/pratiksha_p3/          # JSON trace of every Part 3 request
 
 | What | Where |
 | --- | --- |
+| Part 1 data and outputs | [Google Drive folder](https://drive.google.com/drive/folders/1gzCpIAkHvJvOtVwFEoUw1UiM9SIOwvpc) |
 | Part 2 final model (LoRA r=32) | [PratikshaK-1/naruto-sd15-lora-r32](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32) |
 | Part 2 comparison model (LoRA r=4) | [PratikshaK-1/naruto-sd15-lora-r4](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4) |
 | Part 2 generated images (120) | [PratikshaK-1/naruto-sd15-p2-generations](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations) |

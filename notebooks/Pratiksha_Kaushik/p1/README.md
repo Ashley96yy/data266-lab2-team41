@@ -15,3 +15,14 @@ The team's Part 1 submission is [`notebooks/Yuyao_Ding/p1_rag.ipynb`](../../Yuya
 | [p1_rag_v1.ipynb](p1_rag_v1.ipynb) | 2026-11-13 | First version |
 
 Versions 7 to 14 were Colab drafts and weren't kept.
+
+## Data and outputs
+
+The inputs and run outputs for these notebooks are in the [Part 1 Google Drive folder](https://drive.google.com/drive/folders/1gzCpIAkHvJvOtVwFEoUw1UiM9SIOwvpc):
+
+| Folder | Contents |
+| --- | --- |
+| `Data/` | Part 1 course inputs: the document PDFs, `Questions.csv`, `sample_submission.csv`, `validate_submission.py` |
+| `outputs/` | Files written by the notebook runs |
+
+The PDFs and other course data aren't committed to GitHub, as the course rules require.

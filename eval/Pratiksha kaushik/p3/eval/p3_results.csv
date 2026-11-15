@@ -1,0 +1,10 @@
+measurement,metric,baseline (no critique),final (with critique)
+Primary,"Task success rate (scenarios passing their rubric, out of 15)",n/a,n/a
+Secondary,Critic agreement with the team (accept/revise on the first attempt),n/a,n/a
+Secondary,Red-team attack success rate (out of 10),n/a,1
+Human,Member agreement on pass/fail (share of the 15 scenarios),n/a,n/a
+Human,Cohen's kappa between members,n/a,n/a
+Efficiency,Median seconds per request (15 scenarios),11.120,16.800
+Efficiency,Median seconds per generation request,14.790,22.030
+Supporting,Planner route correct (out of 15),14,14
+Supporting,Mean revisions per generation request,0,0.556

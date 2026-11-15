@@ -1,0 +1,69 @@
+variant,id,request,rubric,status,message,board,ask_first_accept
+with_critique,S01,Describe this image.,Pass if the caption mentions two cats on a couch and no image is generated.,done,"Two cats are sleeping on a pink sofa with remote controls nearby.
+
+Q: What is the main subject doing?
+A: The main subjects, two cats, are sleeping on a pink blanket with remote controls nearby.
+Q: Where does this scene take place?
+A: living room",/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S01.png,False
+with_critique,S02,What does the sign say and what color is it?,"Pass if the answer says STOP and red, and visible text includes STOP.",done,"The image shows a stop sign on the side of a road, with trees and buildings in the background.
+
+Q: What does the sign say and what color is it?
+A: The sign says ""STOP"" and it is red in color.
+Q: What is the main subject doing?
+A: stop sign
+Q: Where does this scene take place?
+A: street",/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S02.png,False
+with_critique,S03,How many characters are in this picture and what color is their hair?,Pass if the count and hair color match the picture.,done,"The image is a cartoon of a boy with short black hair and a serious expression. He is wearing a white lab coat over a green shirt. The background is dark green, possibly indicating an indoor setting.
+
+Q: How many characters are in this picture and what color is their hair?
+A: There is one character in the picture, and their hair is black.
+Q: What is the main subject doing?
+A: Looking around.
+Q: Where does this scene take place?
+A: outside",/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S03.png,False
+with_critique,S04,Turn this photo into a watercolor painting.,Pass if the output looks like a watercolor and the bear is still recognizable.,done,Accepted after 0 revision(s).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S04.png,True
+with_critique,S05,Make this look like a pencil sketch.,Pass if the output looks like a pencil sketch of the two cats.,done,Best attempt shown after 2 revisions (the critic was not fully satisfied).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S05.png,True
+with_critique,S06,Make this image look like an oil painting.,Pass if the output looks like an oil painting and the teddy bears are recognizable.,done,Accepted after 0 revision(s).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S06.png,True
+with_critique,S07,Make the blanket blue.,Pass if the blanket is blue and the cats are kept.,done,Accepted after 1 revision(s).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S07.png,True
+with_critique,S08,Add falling snow to this picture.,Pass if snow is visible and the bear is kept.,done,Accepted after 0 revision(s).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S08.png,True
+with_critique,S09,Make it look like nighttime.,Pass if the scene looks like night and the stop sign is kept.,done,Accepted after 0 revision(s).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S09.png,True
+with_critique,S10,Generate a Naruto-style ninja with spiky red hair standing on a rooftop.,Pass if the image is in Naruto anime style and shows a red-haired ninja.,done,Accepted after 0 revision(s).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S10.png,True
+with_critique,S11,Redraw this picture in Naruto anime style.,Pass if the output is anime style and still shows the scene with the cats.,done,Accepted after 1 revision(s).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S11.png,True
+with_critique,S12,A Naruto-style girl with green hair holding a scroll.,Pass if the image is in Naruto anime style and shows a green-haired girl with a scroll.,done,Accepted after 1 revision(s).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S12.png,True
+with_critique,S13,make it better,Pass if the system asks a clarifying question and generates no image.,clarify,"Your request is not specific enough. What would you like me to do: describe the image, change its style (e.g. 'make it a watercolor'), edit something specific (e.g. 'make the sky orange'), or redraw it in Naruto style?",/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S13.png,False
+with_critique,S14,Describe this image.,Pass if the system returns a clear 'corrupted file' message and does not crash.,error,The file could not be read as an image; it may be corrupted or not an image. Please upload a valid JPG or PNG.,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S14.png,False
+with_critique,S15,Turn this into a watercolor painting.,"Pass if the system says the image is blank and asks for a real picture, without crashing.",error,The image looks blank (a single flat color). Please upload a real picture.,/content/drive/MyDrive/data266-lab2/p3/judge/v2_with_critique_S15.png,False
+no_critique,S01,Describe this image.,Pass if the caption mentions two cats on a couch and no image is generated.,done,"Two cats are sleeping on a pink sofa with remote controls nearby.
+
+Q: What is the main subject doing?
+A: The main subjects, two cats, are sleeping on a pink blanket with remote controls nearby.
+Q: Where does this scene take place?
+A: living room",/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S01.png,False
+no_critique,S02,What does the sign say and what color is it?,"Pass if the answer says STOP and red, and visible text includes STOP.",done,"The image shows a stop sign on the side of a road, with trees and buildings in the background.
+
+Q: What does the sign say and what color is it?
+A: The sign says ""STOP"" and it is red in color.
+Q: What is the main subject doing?
+A: stop sign
+Q: Where does this scene take place?
+A: street",/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S02.png,False
+no_critique,S03,How many characters are in this picture and what color is their hair?,Pass if the count and hair color match the picture.,done,"The image is a cartoon of a boy with short black hair and a serious expression. He is wearing a white lab coat over a green shirt. The background is dark green, possibly indicating an indoor setting.
+
+Q: How many characters are in this picture and what color is their hair?
+A: There is one character in the picture, and their hair is black.
+Q: What is the main subject doing?
+A: Looking around.
+Q: Where does this scene take place?
+A: outside",/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S03.png,False
+no_critique,S04,Turn this photo into a watercolor painting.,Pass if the output looks like a watercolor and the bear is still recognizable.,done,Image generated (critique loop turned off).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S04.png,False
+no_critique,S05,Make this look like a pencil sketch.,Pass if the output looks like a pencil sketch of the two cats.,done,Image generated (critique loop turned off).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S05.png,False
+no_critique,S06,Make this image look like an oil painting.,Pass if the output looks like an oil painting and the teddy bears are recognizable.,done,Image generated (critique loop turned off).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S06.png,False
+no_critique,S07,Make the blanket blue.,Pass if the blanket is blue and the cats are kept.,done,Image generated (critique loop turned off).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S07.png,False
+no_critique,S08,Add falling snow to this picture.,Pass if snow is visible and the bear is kept.,done,Image generated (critique loop turned off).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S08.png,False
+no_critique,S09,Make it look like nighttime.,Pass if the scene looks like night and the stop sign is kept.,done,Image generated (critique loop turned off).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S09.png,False
+no_critique,S10,Generate a Naruto-style ninja with spiky red hair standing on a rooftop.,Pass if the image is in Naruto anime style and shows a red-haired ninja.,done,Image generated (critique loop turned off).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S10.png,False
+no_critique,S11,Redraw this picture in Naruto anime style.,Pass if the output is anime style and still shows the scene with the cats.,done,Image generated (critique loop turned off).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S11.png,False
+no_critique,S12,A Naruto-style girl with green hair holding a scroll.,Pass if the image is in Naruto anime style and shows a green-haired girl with a scroll.,done,Image generated (critique loop turned off).,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S12.png,False
+no_critique,S13,make it better,Pass if the system asks a clarifying question and generates no image.,clarify,"Your request is not specific enough. What would you like me to do: describe the image, change its style (e.g. 'make it a watercolor'), edit something specific (e.g. 'make the sky orange'), or redraw it in Naruto style?",/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S13.png,False
+no_critique,S14,Describe this image.,Pass if the system returns a clear 'corrupted file' message and does not crash.,error,The file could not be read as an image; it may be corrupted or not an image. Please upload a valid JPG or PNG.,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S14.png,False
+no_critique,S15,Turn this into a watercolor painting.,"Pass if the system says the image is blank and asks for a real picture, without crashing.",error,The image looks blank (a single flat color). Please upload a real picture.,/content/drive/MyDrive/data266-lab2/p3/judge/v2_no_critique_S15.png,False

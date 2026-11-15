@@ -1,0 +1,122 @@
+[
+  {
+    "id": "S01",
+    "category": "caption_question",
+    "image": "cats.jpg",
+    "request": "Describe this image.",
+    "expected_intent": "caption_question",
+    "rubric": "Pass if the caption mentions two cats on a couch and no image is generated."
+  },
+  {
+    "id": "S02",
+    "category": "caption_question",
+    "image": "stop_sign.jpg",
+    "request": "What does the sign say and what color is it?",
+    "expected_intent": "caption_question",
+    "rubric": "Pass if the answer says STOP and red, and visible text includes STOP."
+  },
+  {
+    "id": "S03",
+    "category": "caption_question",
+    "image": "naruto.png",
+    "request": "How many characters are in this picture and what color is their hair?",
+    "expected_intent": "caption_question",
+    "rubric": "Pass if the count and hair color match the picture."
+  },
+  {
+    "id": "S04",
+    "category": "style_change",
+    "image": "bear.jpg",
+    "request": "Turn this photo into a watercolor painting.",
+    "expected_intent": "style_change",
+    "rubric": "Pass if the output looks like a watercolor and the bear is still recognizable."
+  },
+  {
+    "id": "S05",
+    "category": "style_change",
+    "image": "cats.jpg",
+    "request": "Make this look like a pencil sketch.",
+    "expected_intent": "style_change",
+    "rubric": "Pass if the output looks like a pencil sketch of the two cats."
+  },
+  {
+    "id": "S06",
+    "category": "style_change",
+    "image": "teddy_bears.jpg",
+    "request": "Make this image look like an oil painting.",
+    "expected_intent": "style_change",
+    "rubric": "Pass if the output looks like an oil painting and the teddy bears are recognizable."
+  },
+  {
+    "id": "S07",
+    "category": "edit",
+    "image": "cats.jpg",
+    "request": "Make the blanket blue.",
+    "expected_intent": "edit",
+    "rubric": "Pass if the blanket is blue and the cats are kept."
+  },
+  {
+    "id": "S08",
+    "category": "edit",
+    "image": "bear.jpg",
+    "request": "Add falling snow to this picture.",
+    "expected_intent": "edit",
+    "rubric": "Pass if snow is visible and the bear is kept."
+  },
+  {
+    "id": "S09",
+    "category": "edit",
+    "image": "stop_sign.jpg",
+    "request": "Make it look like nighttime.",
+    "expected_intent": "edit",
+    "rubric": "Pass if the scene looks like night and the stop sign is kept."
+  },
+  {
+    "id": "S10",
+    "category": "domain_style",
+    "image": null,
+    "request": "Generate a Naruto-style ninja with spiky red hair standing on a rooftop.",
+    "expected_intent": "domain_style",
+    "rubric": "Pass if the image is in Naruto anime style and shows a red-haired ninja."
+  },
+  {
+    "id": "S11",
+    "category": "domain_style",
+    "image": "cats.jpg",
+    "request": "Redraw this picture in Naruto anime style.",
+    "expected_intent": "domain_style",
+    "rubric": "Pass if the output is anime style and still shows the scene with the cats."
+  },
+  {
+    "id": "S12",
+    "category": "domain_style",
+    "image": null,
+    "request": "A Naruto-style girl with green hair holding a scroll.",
+    "expected_intent": "domain_style",
+    "rubric": "Pass if the image is in Naruto anime style and shows a green-haired girl with a scroll."
+  },
+  {
+    "id": "S13",
+    "category": "ambiguous_broken",
+    "image": "cats.jpg",
+    "request": "make it better",
+    "expected_intent": "ambiguous",
+    "rubric": "Pass if the system asks a clarifying question and generates no image."
+  },
+  {
+    "id": "S14",
+    "category": "ambiguous_broken",
+    "image": "truncated.jpg",
+    "request": "Describe this image.",
+    "expected_intent": "any",
+    "rubric": "Pass if the system returns a clear 'corrupted file' message and does not crash."
+  },
+  {
+    "id": "S15",
+    "category": "ambiguous_broken",
+    "image": "blank.png",
+    "request": "Turn this into a watercolor painting.",
+    "expected_intent": "any",
+    "rubric": "Pass if the system says the image is blank and asks for a real picture, without crashing."
+  }
+]

@@ -1,0 +1,35 @@
+id,category,variant,request,image,expected,status,intent,route,revisions,attempts,first_decision,final_decision,final_clip,final_vlm_score,seconds,output,attempt_files,message
+S01,caption_question,with_critique,Describe this image.,cats.jpg,caption_question,done,caption_question,planner > vision,0,0,,,,,7.33,,,"Two cats are sleeping on a pink sofa with remote controls nearby.
+
+Q: What is the main subject doing?
+A: The main subjects, two cats, are sleeping on a pink blanket with remote controls nearby.
+Q: Where does this scene take place?
+A: living room"
+S02,caption_question,with_critique,What does the sign say and what color is it?,stop_sign.jpg,caption_question,done,caption_question,planner > vision,0,0,,,,,7.69,,,"The image shows a stop sign on the side of a road, with trees and buildings in the background.
+
+Q: What does the sign say and what color is it?
+A: The sign says ""STOP"" and it is red in color.
+Q: What is the main subject doing?
+A: stop sign
+Q: Where does this scene take place?
+A: street"
+S03,caption_question,with_critique,How many characters are in this picture and what color is their hair?,naruto.png,caption_question,done,caption_question,planner > vision,0,0,,,,,9.6,,,"The image is a cartoon of a boy with short black hair and a serious expression. He is wearing a white lab coat over a green shirt. The background is dark green, possibly indicating an indoor setting.
+
+Q: How many characters are in this picture and what color is their hair?
+A: There is one character in the picture, and their hair is black.
+Q: What is the main subject doing?
+A: Looking around.
+Q: Where does this scene take place?
+A: outside"
+S04,style_change,with_critique,Turn this photo into a watercolor painting.,bear.jpg,style_change,done,style_change,planner > vision > prompt_engineering > image_generation > critique,0,1,accept,accept,32.95,3.0,18.94,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S04_attempt0.png,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S04_attempt0.png,Accepted after 0 revision(s).
+S05,style_change,with_critique,Make this look like a pencil sketch.,cats.jpg,style_change,done,style_change,planner > vision > prompt_engineering > image_generation > critique > prompt_engineering > image_generation > critique > prompt_engineering > image_generation > critique,2,3,revise,stop,31.7,2.0,36.95,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S05_attempt2.png,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S05_attempt0.png|/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S05_attempt1.png|/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S05_attempt2.png,Best attempt shown after 2 revisions (the critic was not fully satisfied).
+S06,style_change,with_critique,Make this image look like an oil painting.,teddy_bears.jpg,style_change,done,style_change,planner > vision > prompt_engineering > image_generation > critique,0,1,accept,accept,34.0,3.0,18.7,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S06_attempt0.png,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S06_attempt0.png,Accepted after 0 revision(s).
+S07,edit,with_critique,Make the blanket blue.,cats.jpg,edit,done,edit,planner > vision > prompt_engineering > image_generation > critique > prompt_engineering > image_generation > critique,1,2,revise,accept,24.41,3.0,30.95,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S07_attempt1.png,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S07_attempt0.png|/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S07_attempt1.png,Accepted after 1 revision(s).
+S08,edit,with_critique,Add falling snow to this picture.,bear.jpg,edit,done,edit,planner > vision > prompt_engineering > image_generation > critique,0,1,accept,accept,31.69,4.0,22.03,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S08_attempt0.png,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S08_attempt0.png,Accepted after 0 revision(s).
+S09,edit,with_critique,Make it look like nighttime.,stop_sign.jpg,edit,done,style_change,planner > vision > prompt_engineering > image_generation > critique,0,1,accept,accept,34.69,3.0,16.8,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S09_attempt0.png,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S09_attempt0.png,Accepted after 0 revision(s).
+S10,domain_style,with_critique,Generate a Naruto-style ninja with spiky red hair standing on a rooftop.,,domain_style,done,domain_style,planner > vision > prompt_engineering > image_generation > critique,0,1,accept,accept,34.06,4.0,14.54,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S10_attempt0.png,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S10_attempt0.png,Accepted after 0 revision(s).
+S11,domain_style,with_critique,Redraw this picture in Naruto anime style.,cats.jpg,domain_style,done,domain_style,planner > vision > prompt_engineering > image_generation > critique > prompt_engineering > image_generation > critique,1,2,revise,accept,33.28,3.0,27.5,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S11_attempt1.png,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S11_attempt0.png|/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S11_attempt1.png,Accepted after 1 revision(s).
+S12,domain_style,with_critique,A Naruto-style girl with green hair holding a scroll.,,domain_style,done,domain_style,planner > vision > prompt_engineering > image_generation > critique > prompt_engineering > image_generation > critique,1,2,revise,accept,34.36,3.0,24.99,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S12_attempt1.png,/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S12_attempt0.png|/content/drive/MyDrive/data266-lab2/p3/outputs/v2/with_critique/v2_with_critique_S12_attempt1.png,Accepted after 1 revision(s).
+S13,ambiguous_broken,with_critique,make it better,cats.jpg,ambiguous,clarify,ambiguous,planner,0,0,,,,,3.56,,,"Your request is not specific enough. What would you like me to do: describe the image, change its style (e.g. 'make it a watercolor'), edit something specific (e.g. 'make the sky orange'), or redraw it in Naruto style?"
+S14,ambiguous_broken,with_critique,Describe this image.,truncated.jpg,any,error,,planner,0,0,,,,,0.0,,,The file could not be read as an image; it may be corrupted or not an image. Please upload a valid JPG or PNG.
+S15,ambiguous_broken,with_critique,Turn this into a watercolor painting.,blank.png,any,error,,planner,0,0,,,,,0.01,,,The image looks blank (a single flat color). Please upload a real picture.

@@ -34,8 +34,9 @@ image = pipe("a man with blue hair and a headband").images[0]
 ```text
 p2/
 ├── README.md            # this file
-├── p2_v4.ipynb          # SUBMISSION: the whole of Part 2, executed
+├── p2_submission.ipynb  # SUBMISSION: the whole of Part 2, executed
 └── development/         # earlier versions, kept to show how the work developed
+    ├── p2_v4.ipynb
     ├── p2_baseline.ipynb
     ├── p2_run1_v1.ipynb
     ├── p2_run2_v2.ipynb
@@ -45,18 +46,19 @@ p2/
 
 | Notebook | Status | Contents |
 |---|---|---|
-| [p2_v4.ipynb](p2_v4.ipynb) | **Submission, executed** | The whole of Part 2 in one notebook: baseline, Run 1, Run 2, final choice, grids, human and AI evaluation, failure modes, safety, model cards, Hugging Face upload |
+| [p2_submission.ipynb](p2_submission.ipynb) | **Submission, executed** | The whole of Part 2 in one notebook: baseline, Run 1, Run 2, final choice, grids, human and AI evaluation, failure modes, safety, model cards, Hugging Face upload |
+| [development/p2_v4.ipynb](development/p2_v4.ipynb) | Previous version, executed | Same pipeline, run before the human ratings were collected |
 | [development/p2_v3.ipynb](development/p2_v3.ipynb) | Draft, not executed | Combined notebook before the final section was finished |
 | [development/p2_v2.ipynb](development/p2_v2.ipynb) | Draft, executed | First combined notebook (baseline, Run 1, Run 2) |
 | [development/p2_baseline.ipynb](development/p2_baseline.ipynb) | Development, executed | 2.1 data preparation and the 20 fixed prompts, first committed on 2026-11-09 before any training; base-model metrics |
 | [development/p2_run1_v1.ipynb](development/p2_run1_v1.ipynb) | Development, executed | Run 1 training and metrics |
 | [development/p2_run2_v2.ipynb](development/p2_run2_v2.ipynb) | Development, executed | Run 2 training and metrics |
 
-Graders should use **p2_v4.ipynb**. It ran top to bottom in one session (cells 1 to 171 in order) with no errors.
+Graders should use **p2_submission.ipynb**. It ran top to bottom in one session (cells 1 to 169 in order) with no errors.
 
 ## How to run
 
-1. Open `p2_v4.ipynb` in Google Colab with a GPU runtime (a Tesla T4 was used).
+1. Open `p2_submission.ipynb` in Google Colab with a GPU runtime (a Tesla T4 was used).
 2. Optional, for uploading: add a Hugging Face write token as the Colab secret `HF_TOKEN`, and set `HF_USER` and `UPLOAD = True` in the config cell.
 3. Run **Runtime → Restart session and run all**.
 
@@ -108,7 +110,7 @@ Memory savers: fp16 base weights, fp32 LoRA weights, gradient checkpointing and 
 
 - **Prompts:** 20 fixed prompts saved to `eval/p2_prompts.json` before any training. 10 are in-domain (captions from the test set), 5 are out-of-domain and 5 are compositional.
 - **Sampler:** DPM-Solver++, 30 steps, CFG 7.5, 512×512, seeds 0 and 1. This gives 40 images per model and 120 in total.
-- **Grids:** side-by-side base vs Run 1 vs Run 2 grids for 8 prompts (ids 0, 1, 2, 3, 10, 12, 15, 16) are in `p2_v4.ipynb`.
+- **Grids:** side-by-side base vs Run 1 vs Run 2 grids for 8 prompts (ids 0, 1, 2, 3, 10, 12, 15, 16) are in `p2_submission.ipynb`.
 - **Images:** all 120 are on Hugging Face (link above).
 
 ## 2.4 Evaluation
@@ -133,15 +135,23 @@ Notes on the metrics:
 - **CLIP score:** uses `openai/clip-vit-base-patch16`.
 - **LPIPS:** uses AlexNet, comparing seed 0 with seed 1 for each prompt.
 
-### AI-judge evaluation (final run vs base)
+### Human and AI-judge evaluation (final run vs base)
 
-25 blinded pairs. Left and right are randomized with seed 266, and the answer key is kept separately. A CLIP ViT-L/14 judge picks the better image for **style** (closer to the real Naruto test images) and for **prompt match** (higher similarity to the prompt).
+25 blinded pairs. Left and right are randomized with seed 266, and the answer key is kept separately. Each rater sees only the pair image and its prompt, and picks the better image for **style** (more like Naruto) and for **prompt match**. 3 raters, 75 ratings in total.
 
 | Judge | Style win rate vs base | Prompt-match win rate vs base |
 |---|---|---|
+| **Human raters (3), pooled** | **0.83** | **0.40** |
+| Pratiksha Kaushik | 0.84 | 0.48 |
+| Rater "sonu" | 0.88 | 0.32 |
+| Rater "yug" | 0.76 | 0.40 |
 | AI judge (CLIP ViT-L/14, not a human) | 0.92 | 0.20 |
 
-The base model's win rate is 0.50 by definition.
+- **Agreement between raters (Fleiss' kappa):** 0.72 for style (substantial) and 0.22 for prompt match (fair).
+- **AI judge vs human majority:** the AI judge agrees with the human majority on 84% of pairs for style and 64% for prompt match.
+- **Reading:** people clearly prefer the fine-tuned model's Naruto style (83% of choices). On prompt match they slightly prefer the base model (the final model wins 40%), which matches the drop in CLIP score.
+
+The base model's win rate is 0.50 by definition. All numbers come from the outputs of `p2_submission.ipynb`.
 
 ### Choice of final run
 

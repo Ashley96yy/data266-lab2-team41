@@ -18,6 +18,7 @@ notebooks/Pratiksha_Kaushik/
 │   └── development/          # earlier Part 2 notebooks
 └── p3/                       # Part 3 build (p3_agents_v1, v2) + README
 
+eval/pratiksha_kaushik/part2/            # Part 2 evaluation files (prompts, results, ratings, model card)
 eval/pratiksha_kaushik/part3/            # Part 3 scenarios, red-team cases, results, judgments, system card, run log
 traces/pratiksha_kaushik/part3/          # JSON trace of every Part 3 request
 ```
@@ -30,7 +31,8 @@ traces/pratiksha_kaushik/part3/          # JSON trace of every Part 3 request
 | Part 2 final model (LoRA r=32) | [PratikshaK-1/naruto-sd15-lora-r32](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32) |
 | Part 2 comparison model (LoRA r=4) | [PratikshaK-1/naruto-sd15-lora-r4](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4) |
 | Part 2 generated images (120) | [PratikshaK-1/naruto-sd15-p2-generations](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations) |
-| Part 2 run outputs | [Google Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link) |
+| Part 2 evaluation files (in repo) | [eval/pratiksha_kaushik/part2/](../../eval/pratiksha_kaushik/part2/) |
+| Part 2 run outputs (data, adapters, images, logs) | [Google Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link) |
 | Part 3 evaluation files | [eval/pratiksha_kaushik/part3/](../../eval/pratiksha_kaushik/part3/) |
 | Part 3 traces | [traces/pratiksha_kaushik/part3/](../../traces/pratiksha_kaushik/part3/) |
 

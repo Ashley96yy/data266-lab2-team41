@@ -63,7 +63,7 @@ Graders should use **p2_submission.ipynb**. It ran top to bottom in one session 
 3. Run **Runtime → Restart session and run all**.
 
 Notes:
-- **Storage:** all outputs are saved to Google Drive under `MyDrive/data266-lab2/` ([shared Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link)). The `eval/` and `work/` folders mentioned below are inside that Drive folder, not in this repository.
+- **Storage:** all outputs are saved to Google Drive under `MyDrive/data266-lab2/` ([shared Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link)). The `work/` and `logs/` folders are only in Drive; the small `eval/` files are also copied into this repository (see [Evaluation files](#evaluation-files)).
 - **Reuse:** with `REUSE = True`, finished steps (cleaned data, trained adapters, generated images, human-eval pairs) are loaded from Drive. Metrics are recomputed on every run.
 - **Retraining:** set `RETRAIN = True` to train again. Each run takes about 75 to 85 minutes on a T4.
 - **Choosing the final run:** the notebook picks the run with the lowest KID. Set `FINAL_OVERRIDE = "run1"` or `"run2"` to choose the other one.
@@ -183,19 +183,34 @@ Run 2 (rank 32) is the final model:
 - The data is unbalanced. "A man" begins 424 of 859 training captions, and most images are single-character close-ups, which makes multi-character and compositional prompts harder.
 - KID is computed from only 20 generated images, so small differences between runs should be read with care.
 
-## Outputs saved by the notebook (in Google Drive)
+## Evaluation files
 
-All of these files are in the [Part 2 Google Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU?usp=drive_link).
+The small evaluation files are copied into this repository in [`eval/pratiksha_kaushik/part2/`](../../../eval/pratiksha_kaushik/part2/), byte for byte the same as the Drive versions written by `p2_submission.ipynb`.
 
-| File | Contents |
+| File | Contents | In repo | In Drive |
+|---|---|---|---|
+| `p2_data_cleaning.json` | Cleaning counts, removed ids, split seed, license | [repo](../../../eval/pratiksha_kaushik/part2/p2_data_cleaning.json) | [Drive](https://drive.google.com/file/d/1PansjJgFf-84qAcrRZT3jL4sk_-I7hPN/view) |
+| `p2_prompts.json` | The 20 fixed prompts | [repo](../../../eval/pratiksha_kaushik/part2/p2_prompts.json) | [Drive](https://drive.google.com/file/d/13jJap_2-D1vzkuPdNKICx45bvzYIRC0x/view) |
+| `p2_sampler.json` | Sampler settings | [repo](../../../eval/pratiksha_kaushik/part2/p2_sampler.json) | [Drive](https://drive.google.com/file/d/1oew7zxhEeGwHHvwTjV2nWTJ6MSTU9VA4/view) |
+| `p2_training_table.csv` | Training table for both runs | [repo](../../../eval/pratiksha_kaushik/part2/p2_training_table.csv) | [Drive](https://drive.google.com/file/d/1wePzdBrT2w6VJI9VvymjCaE8ueh2FEak/view) |
+| `p2_results_all_models.csv` | Results for base, Run 1 and Run 2 | [repo](../../../eval/pratiksha_kaushik/part2/p2_results_all_models.csv) | [Drive](https://drive.google.com/file/d/1GxfO1OLP3bFyLGD2u49qGuowcJWt1cE1/view) |
+| `p2_human_ratings.csv` | Human ratings: 3 raters × 25 pairs | [repo](../../../eval/pratiksha_kaushik/part2/p2_human_ratings.csv) | [Drive](https://drive.google.com/file/d/15R-0iE2JVpzGSTgKwT0Dn31hUbjT7nxG/view) |
+| `p2_human_key.csv` | Answer key for the 25 blinded pairs (which side is the final model) | [repo](../../../eval/pratiksha_kaushik/part2/p2_human_key.csv) | [Drive](https://drive.google.com/file/d/1aUj2Dkq6Be5jdvv_oPJCWRHXAcnhv6P9/view) |
+| `p2_ai_judge.csv` | CLIP ViT-L/14 judge decisions and similarity scores for the 25 pairs | [repo](../../../eval/pratiksha_kaushik/part2/p2_ai_judge.csv) | [Drive](https://drive.google.com/file/d/1q0u2MxcOW0RQn20wuxhXwYrpnJgOttJ7/view) |
+| `p2_analysis.md` | Failure modes, final choice, memorization and safety notes | [repo](../../../eval/pratiksha_kaushik/part2/p2_analysis.md) | [Drive](https://drive.google.com/file/d/1n4hQojzOKB_hq7MlbfdXOY8d_pB_j-2b/view) |
+| `p2_model_card.md` | Model card for the final run | [repo](../../../eval/pratiksha_kaushik/part2/p2_model_card.md) | [Drive](https://drive.google.com/file/d/1L4YfTREf6LOC6iivAnFZ1pselWWQSHKj/view) |
+
+## Files kept in Google Drive only
+
+Everything the notebook writes is in the [Part 2 Google Drive folder](https://drive.google.com/drive/folders/1f7xlLwBXvq8Yw1EkglcBFuaAUblfBniU). Large files and images stay there (or on Hugging Face), as the course rules require.
+
+| Drive folder or file | Contents |
 |---|---|
-| `eval/p2_data_cleaning.json` | Cleaning counts, removed ids, split seed, license |
-| `eval/p2_prompts.json` | The 20 fixed prompts |
-| `eval/p2_sampler.json` | Sampler settings |
-| `eval/p2_training_table.csv` | Training table for both runs |
-| `eval/p2_results_all_models.csv` | Results table for base, Run 1 and Run 2 |
-| `eval/p2_human_key.csv` | Answer key for the 25 blinded pairs |
-| `eval/p2_human_ratings.csv` | Human ratings (to be filled in) |
-| `eval/p2_analysis.md` | Failure modes, final choice, memorization and safety notes |
-| `eval/p2_model_card.md` | Model card for the final run |
-| `logs/p2_run_log.txt` | Time-stamped log of every step |
+| [`work/p2_data/`](https://drive.google.com/drive/folders/1ZMDj0Z1LeLKRWJDP3M31Fn466bpIZcQt) | Cleaned 512×512 train (859) and test (123) images with caption CSVs |
+| [`work/p2_runs/`](https://drive.google.com/drive/folders/128ebdlwA6SgYLis7-Nre7VYA6SqNtcX7) | Trained LoRA adapters and training stats for Run 1 and Run 2 (also on Hugging Face) |
+| [`work/p2_gen/`](https://drive.google.com/drive/folders/1SUKKbWR4RcWQIger3WZ_1oZS97IAF8LD) | All 120 generated images with metadata (also on [Hugging Face](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations)) |
+| [`work/p2_human/`](https://drive.google.com/drive/folders/1P-th1eso4c7dHtHkbRvjWLkTIp4x7PZQ) | The 25 blinded pair images and the rater sheet |
+| [`work/p2_clip_embeddings.pt`](https://drive.google.com/file/d/1mB97OIjl89A2APwvawF9zg2Hz_FIcX44/view) | CLIP embeddings used for the memorization check |
+| [`eval/p2_architecture.png`](https://drive.google.com/file/d/1PV6GWDbfviZZazdbaFAJM2ayniLuZho7/view) | Architecture and training diagram for the report |
+| [`logs/p2_run_log.txt`](https://drive.google.com/file/d/1qtbIqk3TMjdCWw5bi6yaMfhjeOG-7xn_/view) | Time-stamped log of every step |
+| [`logs/run1_train_log.txt`](https://drive.google.com/file/d/1X9_XIL5poo3jS1oo7qbqPZ7EMNS19R-x/view), [`logs/run2_train_log.txt`](https://drive.google.com/file/d/10-xoRRwpmm_B6qSUOhlpl3wrTniScbPL/view) | Training logs for each run |

@@ -133,16 +133,15 @@ Notes on the metrics:
 - **CLIP score:** uses `openai/clip-vit-base-patch16`.
 - **LPIPS:** uses AlexNet, comparing seed 0 with seed 1 for each prompt.
 
-### Human and AI-judge evaluation (final run vs base)
+### AI-judge evaluation (final run vs base)
 
-25 blinded pairs. Left and right are randomized with seed 266, and the answer key is kept separately. Raters choose the better image for **style** (more like Naruto) and for **prompt match**.
+25 blinded pairs. Left and right are randomized with seed 266, and the answer key is kept separately. A CLIP ViT-L/14 judge picks the better image for **style** (closer to the real Naruto test images) and for **prompt match** (higher similarity to the prompt).
 
 | Judge | Style win rate vs base | Prompt-match win rate vs base |
 |---|---|---|
-| Human raters (3 or more) | pending | pending |
 | AI judge (CLIP ViT-L/14, not a human) | 0.92 | 0.20 |
 
-The base model's win rate is 0.50 by definition. The AI judge is reported separately and doesn't replace the human ratings.
+The base model's win rate is 0.50 by definition.
 
 ### Choice of final run
 

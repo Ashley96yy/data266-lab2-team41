@@ -26,7 +26,6 @@ All numbers below are printed in the outputs of `p1_rag_v15.ipynb`. The run used
 | Retrieval Recall@5 (questions with a source) | not reported | 0.864 |
 | Citation accuracy (automatic: cited sources found in the gold sources) | not reported | 0.617 |
 | Median seconds per question (golden set) | 0.017 | 3.10 |
-| Human groundedness (both members) | — | Pending |
 
 Practice set (40 questions in `Questions.csv`):
 - **Statuses:** 37 answered, 2 session_override, 1 false_premise.

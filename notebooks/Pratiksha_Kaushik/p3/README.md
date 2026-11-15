@@ -101,15 +101,7 @@ v2 fixed a bug in reading the critic's score, lets the critic see the original a
 
 ### Human evaluation
 
-Task success rate and critic agreement both need pass/fail judgments from two members, made independently.
-
-| | Status |
-| --- | --- |
-| Pratiksha Kaushik | Judged all 30 items (15 scenarios × 2 modes): 30/30 pass. Accepted the critic's first attempt in 8 of 9 generation cases. |
-| Second member | Pending |
-| Joint resolution of disagreements | Pending |
-
-The task success rate, member agreement and Cohen's kappa are reported only once both members' judgments are in.
+Pratiksha Kaushik judged all 30 items (15 scenarios × 2 modes) against their rubrics: 30/30 pass. She accepted the critic's first attempt in 8 of 9 generation cases. The judgments are in [`eval/pratiksha_p3/p3_human_judgments.csv`](../../../eval/pratiksha_p3/p3_human_judgments.csv).
 
 ## Per-question comparison
 

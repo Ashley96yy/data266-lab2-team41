@@ -184,7 +184,7 @@ separate historical records, not substitutes for the actual T4 run.
 | Part 3 measured report | [PART3_T4_MEASURED_RESULTS.md](../../eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md) |
 | Part 3 independent reviews and adjudication | [T4 review record](../../eval/yuyao_ding/part3/results/t4_20261114T060249Z/) |
 | Part 3 published request traces | [Redacted JSON traces](../../traces/yuyao_ding/t4_20261114T060249Z/) |
-| Part 3 system-card draft | [PART3_SYSTEM_CARD_DRAFT.md](../../eval/yuyao_ding/PART3_SYSTEM_CARD_DRAFT.md) |
+| Part 3 system card | [PART3_SYSTEM_CARD.md](../../eval/yuyao_ding/PART3_SYSTEM_CARD.md) |
 
 Keep original course PDFs, private fixtures and portraits, generated image files,
 weights, caches and full retrieved contexts outside GitHub. This README adds no

@@ -196,7 +196,7 @@ Supporting material:
 - [measured report](eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md)
 - [human reviews and joint adjudication](eval/yuyao_ding/part3/results/t4_20261114T060249Z/)
 - [completed CPU notebook result table](eval/yuyao_ding/part3/results/t4_20261114T060249Z/CPU_RESULTS.md)
-- [system card draft](eval/yuyao_ding/PART3_SYSTEM_CARD_DRAFT.md)
+- [system card](eval/yuyao_ding/PART3_SYSTEM_CARD.md)
 - [redacted request traces](traces/yuyao_ding/t4_20261114T060249Z/)
 
 **Independent second build:** Pratiksha Kaushik also built and ran a separate Part 3 system (Qwen2.5-VL-3B with SD 1.5, InstructPix2Pix and the Part 2 LoRA). It is kept for comparison, with per-question tables, in [`notebooks/Pratiksha_Kaushik/p3/`](notebooks/Pratiksha_Kaushik/p3/README.md).

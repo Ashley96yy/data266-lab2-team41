@@ -70,10 +70,11 @@ CPU tests use synthetic fixtures only for contracts, not experimental judgments.
 Real GPU records include model revisions, source hashes, seed, prompt, scheduler
 steps, effective img2img strength, applied steps, LoRA weight and safety results.
 The unchanged cases were used during development; disclose this rather than
-claiming an untouched holdout. Human metrics remain pending until real reviews.
+claiming an untouched holdout. Completed independent reviews and joint decisions
+are saved with the T4 results below.
 
 A completed Colab Tesla T4 execution from source commit `53c92a3` is recorded in
 `notebooks/Yuyao_Ding/p3_agents.ipynb` and `eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md`.
 The 15 paired scenarios and 10 red-team cases had zero execution errors. The
 earlier 14 GiB allocator budget on RTX 4090 remains separate historical evidence.
-The [supplied human reviews and joint adjudication](part3/results/t4_20261114T060249Z/) have been imported without another GPU run. Recordings, the team's own IEEE report/system card, approved artifact hosting and the final tag remain required.
+The [completed human reviews and joint adjudication](part3/results/t4_20261114T060249Z/) were imported without another GPU run. The [system card](PART3_SYSTEM_CARD.md) is finalized, and [generated output images](https://huggingface.co/datasets/ashley999999/data266-team41-part3-t4-generations) are published. Team recordings, the combined IEEE report and final tag are separate submission items.

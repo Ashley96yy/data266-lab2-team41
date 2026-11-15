@@ -1,0 +1,40 @@
+2026-11-14 17:18:27 | ============================================================
+2026-11-14 17:18:27 | part 3 notebook | seed 266 | gpu Tesla T4
+2026-11-14 17:18:27 | p3_scenarios.json written before any run | 15 cases | md5 454ebe67b18b8975cc8849c993f78226
+2026-11-14 17:18:27 | p3_redteam.json written before any run | 10 cases | md5 1de91d73899548d3e0d0865e7311f138
+2026-11-14 17:28:11 | with_critique run finished | 15 cases | median 17.1 s/request
+2026-11-14 17:30:53 | no_critique run finished | 15 cases | median 11.2 s/request
+2026-11-14 17:32:16 | red team | attack success 1 / 10 (10%)
+2026-11-14 17:32:19 | human eval | success with critique nan / 15 | without nan / 15 | member agreement nan | critic agreement nan
+2026-11-14 17:32:19 | part 3 results table
+                                                                                baseline (no critique) final (with critique)
+measurement metric                                                                                                          
+Primary     Task success rate (scenarios passing their rubric, out of 15)                          n/a                   n/a
+Secondary   Critic agreement with the team (accept/revise on the first attempt)                    n/a                   n/a
+            Red-team attack success rate (out of 10)                                               n/a                     1
+Human       Member agreement on pass/fail (share of the 15 scenarios)                              n/a                   n/a
+            Cohen's kappa between members                                                          n/a                   n/a
+Efficiency  Median seconds per request (15 scenarios)                                           11.240                17.120
+            Median seconds per generation request                                               14.500                20.810
+Supporting  Planner route correct (out of 15)                                                       14                    14
+            Mean revisions per generation request                                                    0                 0.778
+2026-11-14 17:32:22 | part 3 checklist {'15 scenarios written before running': True, '10 red-team cases written before running': True, 'run with critique (15)': True, 'run without critique (15)': True, 'revisions never above 2': True, 'JSON trace for every request': True, 'red-team results': True, 'two members judged': False, 'all disagreements resolved': False, 'results table': True, 'system card': True, 'architecture diagram': True}
+2026-11-14 17:51:00 | ============================================================
+2026-11-14 17:51:00 | part 3 notebook | seed 266 | gpu Tesla T4
+2026-11-14 18:04:26 | with_critique run finished | 15 cases | median 16.8 s/request
+2026-11-14 18:07:10 | no_critique run finished | 15 cases | median 11.1 s/request
+2026-11-14 18:08:34 | red team | attack success 1 / 10 (10%)
+2026-11-14 18:08:38 | human eval | success with critique nan / 15 | without nan / 15 | member agreement nan | critic agreement nan
+2026-11-14 18:08:38 | part 3 results table
+                                                                                baseline (no critique) final (with critique)
+measurement metric                                                                                                          
+Primary     Task success rate (scenarios passing their rubric, out of 15)                          n/a                   n/a
+Secondary   Critic agreement with the team (accept/revise on the first attempt)                    n/a                   n/a
+            Red-team attack success rate (out of 10)                                               n/a                     1
+Human       Member agreement on pass/fail (share of the 15 scenarios)                              n/a                   n/a
+            Cohen's kappa between members                                                          n/a                   n/a
+Efficiency  Median seconds per request (15 scenarios)                                           11.120                16.800
+            Median seconds per generation request                                               14.790                22.030
+Supporting  Planner route correct (out of 15)                                                       14                    14
+            Mean revisions per generation request                                                    0                 0.556
+2026-11-14 18:08:41 | part 3 checklist {'15 scenarios written before running': True, '10 red-team cases written before running': True, 'run with critique (15)': True, 'run without critique (15)': True, 'revisions never above 2': True, 'JSON trace for every request': True, 'red-team results': True, 'two members judged': False, 'all disagreements resolved': False, 'results table': True, 'system card': True, 'architecture diagram': True}

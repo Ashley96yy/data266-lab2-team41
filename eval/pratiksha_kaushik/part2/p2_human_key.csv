@@ -1,0 +1,26 @@
+pair,prompt_id,seed,prompt,final_side,final_model
+0,16,1,a girl with pink hair standing to the left of a boy with yellow hair,R,run2
+1,1,1,a person with long hair and a banda on their head,R,run2
+2,17,0,"three ninjas standing in a row, the middle one wearing a mask",R,run2
+3,8,1,a man sitting on a table in a room,R,run2
+4,15,0,"two characters, one in red and one in blue",L,run2
+5,16,0,a girl with pink hair standing to the left of a boy with yellow hair,L,run2
+6,15,1,"two characters, one in red and one in blue",R,run2
+7,13,1,an astronaut floating above the earth,R,run2
+8,0,1,a person with long hair and a hoodie,L,run2
+9,2,1,a girl with long brown hair and glasses,R,run2
+10,6,1,a cat that is looking at the camera,L,run2
+11,2,0,a girl with long brown hair and glasses,R,run2
+12,9,0,a pig in the sand with a quote on it,R,run2
+13,8,0,a man sitting on a table in a room,R,run2
+14,7,1,a man with a baseball cap on his head,L,run2
+15,13,0,an astronaut floating above the earth,L,run2
+16,3,0,a man with a beard and a white beard,R,run2
+17,17,1,"three ninjas standing in a row, the middle one wearing a mask",R,run2
+18,6,0,a cat that is looking at the camera,L,run2
+19,18,1,a man holding a sword in his left hand and a scroll in his right hand,R,run2
+20,18,0,a man holding a sword in his left hand and a scroll in his right hand,L,run2
+21,0,0,a person with long hair and a hoodie,L,run2
+22,1,0,a person with long hair and a banda on their head,L,run2
+23,5,0,a man with glasses and a white shirt,R,run2
+24,12,0,a bowl of fruit on a wooden kitchen table,L,run2

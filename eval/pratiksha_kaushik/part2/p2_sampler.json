@@ -1,0 +1,7 @@
+{
+  "scheduler": "DPMSolverMultistepScheduler",
+  "num_inference_steps": 30,
+  "guidance_scale": 7.5,
+  "height": 512,
+  "width": 512
+}

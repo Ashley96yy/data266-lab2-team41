@@ -1,0 +1,102 @@
+[
+  {
+    "id": 0,
+    "category": "in_domain",
+    "prompt": "a person with long hair and a hoodie"
+  },
+  {
+    "id": 1,
+    "category": "in_domain",
+    "prompt": "a person with long hair and a banda on their head"
+  },
+  {
+    "id": 2,
+    "category": "in_domain",
+    "prompt": "a girl with long brown hair and glasses"
+  },
+  {
+    "id": 3,
+    "category": "in_domain",
+    "prompt": "a man with a beard and a white beard"
+  },
+  {
+    "id": 4,
+    "category": "in_domain",
+    "prompt": "a woman in a pink dress and brown jacket"
+  },
+  {
+    "id": 5,
+    "category": "in_domain",
+    "prompt": "a man with glasses and a white shirt"
+  },
+  {
+    "id": 6,
+    "category": "in_domain",
+    "prompt": "a cat that is looking at the camera"
+  },
+  {
+    "id": 7,
+    "category": "in_domain",
+    "prompt": "a man with a baseball cap on his head"
+  },
+  {
+    "id": 8,
+    "category": "in_domain",
+    "prompt": "a man sitting on a table in a room"
+  },
+  {
+    "id": 9,
+    "category": "in_domain",
+    "prompt": "a pig in the sand with a quote on it"
+  },
+  {
+    "id": 10,
+    "category": "ood",
+    "prompt": "a red sports car parked on a rainy city street"
+  },
+  {
+    "id": 11,
+    "category": "ood",
+    "prompt": "a lighthouse on a rocky cliff at sunset"
+  },
+  {
+    "id": 12,
+    "category": "ood",
+    "prompt": "a bowl of fruit on a wooden kitchen table"
+  },
+  {
+    "id": 13,
+    "category": "ood",
+    "prompt": "an astronaut floating above the earth"
+  },
+  {
+    "id": 14,
+    "category": "ood",
+    "prompt": "a golden retriever running on a beach"
+  },
+  {
+    "id": 15,
+    "category": "compositional",
+    "prompt": "two characters, one in red and one in blue"
+  },
+  {
+    "id": 16,
+    "category": "compositional",
+    "prompt": "a girl with pink hair standing to the left of a boy with yellow hair"
+  },
+  {
+    "id": 17,
+    "category": "compositional",
+    "prompt": "three ninjas standing in a row, the middle one wearing a mask"
+  },
+  {
+    "id": 18,
+    "category": "compositional",
+    "prompt": "a man holding a sword in his left hand and a scroll in his right hand"
+  },
+  {
+    "id": 19,
+    "category": "compositional",
+    "prompt": "a small orange fox sitting on top of a large green frog"
+  }
+]

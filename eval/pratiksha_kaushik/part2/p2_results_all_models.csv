@@ -1,0 +1,14 @@
+,base,run1,run2
+KID in-domain (lower better),0.1337,0.0389,0.0217
+KID std,0.0122,0.0077,0.0056
+CLIP all,31.5401,30.3519,29.8368
+CLIP in_domain,31.192,29.2456,28.017
+CLIP ood,32.3123,30.5672,31.7254
+CLIP compositional,31.4641,32.3491,31.5879
+LPIPS diversity,0.8082,0.7758,0.7486
+NSFW flagged,1.0,2.0,2.0
+median sec/img (gen),5.0752,4.9939,5.393
+GPU-hours (train),0.0,1.2754,1.3722
+peak GPU mem GB (train),,3.5446,3.607
+GPU-hours (generate 40 imgs),0.0552,0.0554,0.0602
+peak GPU mem GB (generate),2.6219,2.6163,2.6302

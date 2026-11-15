@@ -1,0 +1,19 @@
+{
+  "dataset": "lambdalabs/naruto-blip-captions",
+  "license": "not stated on the dataset card; images from narutopedia.com (Naruto is copyrighted), non-commercial research use only",
+  "original": 1221,
+  "corrupted": 0,
+  "exact_duplicates": 0,
+  "near_duplicates": 0,
+  "kept": 1221,
+  "removed_ids": {
+    "corrupted": [],
+    "exact_dup": [],
+    "near_dup": []
+  },
+  "train": 859,
+  "test": 123,
+  "train_nsfw_removed": 239,
+  "split_seed": 266,
+  "resolution": 512
+}

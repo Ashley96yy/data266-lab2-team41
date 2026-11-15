@@ -50,6 +50,15 @@ not copied as an instruction. Failed artistic transformations must not automatic
 be treated as successful prompt injection. Human scores do not remove known critic
 false accepts or the development-set limitation.
 
+## Saved CPU notebook result table
+
+The main Part 3 notebook now appends a self-contained, actually executed CPU
+aggregation cell. [Its exported result table](CPU_RESULTS.md),
+`cpu_result_table.csv` and `cpu_result_table.json` match the existing metrics and
+retain source/input hashes. Use that appended table for final reporting; earlier
+unscored outputs in the same notebook remain the original pre-review snapshot.
+All original review files and T4 outputs remain unchanged. No new inference.
+
 ## Recompute without GPU
 
 From the repository root:

@@ -4,7 +4,7 @@ import ast
 import hashlib
 import json
 import unittest
-from src.yuyao_ding.repository_paths import member_migration, restore_member_source
+from src.yuyao_ding.repository_paths import member_migration, restore_member_source, recorded_notebook_snapshot_digest
 
 ROOT = Path(__file__).resolve().parents[2]
 EVAL = ROOT / 'eval/yuyao_ding'
@@ -28,7 +28,7 @@ class EvaluationRelocationTest(unittest.TestCase):
             nb = json.loads((ROOT / notebook['path']).read_text())
             later=next(r for r in member_migration(ROOT)['notebooks'] if r['path']==notebook['path'])
             self.assertEqual(later['old_notebook_sha256'],notebook['new_notebook_sha256'])
-            self.assertEqual(hashlib.sha256((ROOT / notebook['path']).read_bytes()).hexdigest(),later['new_notebook_sha256'])
+            self.assertEqual(recorded_notebook_snapshot_digest(ROOT / notebook['path']),later['new_notebook_sha256'])
             for row in notebook['changed_code_cells']:
                 cell = nb['cells'][row['cell_index']]
                 source = restore_member_source(''.join(cell['source']), ROOT)

@@ -5,7 +5,7 @@ import importlib
 import json
 import unittest
 
-from src.yuyao_ding.repository_paths import member_migration, recorded_file, restore_member_source
+from src.yuyao_ding.repository_paths import member_migration, recorded_file, restore_member_source, recorded_notebook_snapshot_digest
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -20,7 +20,7 @@ class MemberWorkspaceTest(unittest.TestCase):
                 self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),row['original_sha256'])
         for row in manifest['notebooks']:
             p = ROOT / row['path']
-            self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),row['new_notebook_sha256'])
+            self.assertEqual(recorded_notebook_snapshot_digest(p),row['new_notebook_sha256'])
             nb = json.loads(p.read_text())
             for proof in row['changed_code_cells']:
                 c = nb['cells'][proof['cell_index']]

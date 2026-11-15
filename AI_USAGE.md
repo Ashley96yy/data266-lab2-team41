@@ -107,3 +107,15 @@ remain unchanged; reversible source-reference edits and their hashes are recorde
 in `audit/yuyao_ding/workspace_relocation.json`. Empty companion folders are
 explicitly placeholders, not additional contributions. No model training,
 inference, human rating or CUDA/PyTorch installation was performed.
+
+
+Part 3 CPU result-table supplement (2026-11-15 PT): Codex appended and actually
+executed one self-contained CPU aggregation cell in the main Part 3 notebook,
+using the already supplied reviewed records and adjudication. It verifies review
+file hashes, recomputes each mode with the existing summarizer, checks the stored
+metrics, and exports a report table/CSV/JSON with provenance. Original labels,
+raw result JSON and the original T4 cells/outputs remain unchanged. Append-only
+snapshot verification lets earlier migration checks still validate the preserved
+GPU notebook prefix. No model loading, training or GPU inference occurred. The
+paired-image/no-revision limitation remains explicit; no improved quality-loop
+result or general safety claim was introduced.

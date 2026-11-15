@@ -1,0 +1,73 @@
+{
+  "execution_scope": "File-backed CPU aggregation only; no model loading, training, image generation or GPU inference",
+  "analysis_commit": "8216355a360dfcc3e2a569084c7d8914803dffdb",
+  "analysis_python": "3.12.2",
+  "aggregation_module_sha256": "7ff4badfdba88077d9fe494816c44e4617a395019f04ba90f3d3c164d768602e",
+  "recorded_inference_commit": "53c92a3351d8c9bc9d4c33b4d42ab43df9057753",
+  "recorded_inference_gpu": "Tesla T4",
+  "recorded_inference_seed": 266,
+  "reviewers": [
+    "Yuyao Ding",
+    "Pratiksha Kaushik"
+  ],
+  "input_hashes": {
+    "with.reviewed.json": "05a5dc0e1743efdb38d4d9a27d4c60dc8e01e0dfb31a1a5d8470b4de1003a7e2",
+    "without.reviewed.json": "859be67ec95ec920195a6aadc5cfdfd262aa6b45a77e4786af3c6f166c585c5d",
+    "red_team.reviewed.json": "56214055440f210df7deb8b9881686e246462e88f341d1714bbc8d1da3091c12",
+    "metrics.json": "a19f984fa323f7b46f57295273c89b5acba007a122983d6ae72e2d77e33e752d",
+    "provenance.json": "7d21da598287e129a83f2c9bbb140ac0f2e046b5876e4f601308d02848000af4",
+    "part3-member-A-review.json": "e96174c2b26e298dfb0a2baeab1e0c9240d26a685e32db8c54057d78acd113bf",
+    "part3-member-B-review.json": "afc360d29998b0653976e7ca96afc666ac21a05ca4eb5c1415cbed743884d0f1",
+    "part3-adjudication.json": "64b38c60193b9e883af40a5924a0324789aa7225f28f6817ff5d06d0a420aafb"
+  },
+  "modes": {
+    "with": {
+      "denominator": 15,
+      "passes": 10,
+      "task_success_rate": 0.6666666666666666,
+      "attack_successes": null,
+      "attack_success_rate": null,
+      "reviewer_agreement": 0.8666666666666667,
+      "review_disagreements": 2,
+      "median_seconds": 17.228046595999785,
+      "critic_agreement": 0.6666666666666666,
+      "critic_agreement_denominator": 9,
+      "critic_reviewed_attempts": 9,
+      "case_agreements": 13,
+      "critic_agreements": 6,
+      "human_review_complete": true
+    },
+    "without": {
+      "denominator": 15,
+      "passes": 11,
+      "task_success_rate": 0.7333333333333333,
+      "attack_successes": null,
+      "attack_success_rate": null,
+      "reviewer_agreement": 0.8,
+      "review_disagreements": 3,
+      "median_seconds": 16.736698839999917,
+      "critic_agreement": 0.5555555555555556,
+      "critic_agreement_denominator": 9,
+      "critic_reviewed_attempts": 9,
+      "case_agreements": 12,
+      "critic_agreements": 5,
+      "human_review_complete": true
+    },
+    "red_team": {
+      "denominator": 10,
+      "passes": 10,
+      "task_success_rate": null,
+      "attack_successes": 0,
+      "attack_success_rate": 0.0,
+      "reviewer_agreement": 0.9,
+      "review_disagreements": 1,
+      "median_seconds": 0.00020776250016751874,
+      "critic_agreement": 1.0,
+      "critic_agreement_denominator": 1,
+      "critic_reviewed_attempts": 1,
+      "case_agreements": 9,
+      "critic_agreements": 1,
+      "human_review_complete": true
+    }
+  }
+}

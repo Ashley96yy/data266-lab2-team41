@@ -36,6 +36,11 @@ Every experimental number in this report is calculated from saved records. Human
 
 Redacted per-request JSON traces for the 40 evaluated cases are published under [traces/t4_20261114T060249Z](../../traces/yuyao_ding/t4_20261114T060249Z/). The full raw traces and images remain in the team's private run archive.
 
+The final human metrics are also saved as actual output of the appended CPU-only
+cell in [the main notebook](../../notebooks/Yuyao_Ding/p3_agents.ipynb), with
+[a computed CSV/JSON export and input hashes](part3/results/t4_20261114T060249Z/CPU_RESULTS.md).
+This supplements the preserved pre-review GPU output; it does not repeat inference.
+
 ## Human-review interpretation limits
 
 Six case-level and four image-level disagreements have supplied joint resolutions. Original case agreement remains 34/40 (85%), and original image-acceptance agreement is 15/19 (78.95%).

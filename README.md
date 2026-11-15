@@ -195,6 +195,7 @@ See the [runbook and attribution](eval/yuyao_ding/PART2_YUYAO_BASELINE.md).
 Supporting material:
 - [measured report](eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md)
 - [human reviews and joint adjudication](eval/yuyao_ding/part3/results/t4_20261114T060249Z/)
+- [completed CPU notebook result table](eval/yuyao_ding/part3/results/t4_20261114T060249Z/CPU_RESULTS.md)
 - [system card draft](eval/yuyao_ding/PART3_SYSTEM_CARD_DRAFT.md)
 - [redacted request traces](traces/yuyao_ding/t4_20261114T060249Z/)
 
@@ -226,6 +227,7 @@ Model weights, checkpoints and full raw run archives stay outside GitHub. Local 
 - [x] Part 1: Kaggle submission completed, as confirmed by Yuyao.
 - [ ] Part 2: blinded human evaluation (25 pairs, 3 or more raters).
 - [x] Part 2: Yuyao's partner baseline GPU execution and measured outputs saved.
+- [x] Part 3: completed human metrics calculated and saved as CPU notebook output.
 - [ ] Part 2: Yuyao verifies/rewords the AI-assisted baseline interpretation and adds the actual knowledge-transfer recording.
 - [ ] Create or update the tags `p1-v1.0`, `p2-v1.0` and `p3-v1.0` on the final commits.
 - [ ] Both members confirm [CONTRIBUTIONS.md](CONTRIBUTIONS.md) and complete [AI_USAGE.md](AI_USAGE.md).

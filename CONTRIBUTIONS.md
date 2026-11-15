@@ -31,7 +31,7 @@ Both members are responsible for the whole submission. The tables below show who
 
 ## Part 2: Diffusion fine-tuning
 
-**Lead:** Pratiksha Kaushik. **Main notebook:** [`notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_v4.ipynb). See the [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md).
+**Lead:** Pratiksha Kaushik. **Main notebook:** [`notebooks/Pratiksha_Kaushik/p2/p2_submission.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_submission.ipynb). See the [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md).
 
 | Task | Work | Member |
 | --- | --- | --- |

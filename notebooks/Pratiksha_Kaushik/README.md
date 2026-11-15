@@ -5,7 +5,7 @@ DATA 266 Lab 2, Team 41. This folder holds Pratiksha Kaushik's notebooks for all
 | Part | Folder | Role | Main notebook |
 | --- | --- | --- | --- |
 | 1. Multimodal RAG | [p1/](p1/README.md) | Development notebooks (the team submission is Yuyao Ding's [`p1_rag.ipynb`](../Yuyao_Ding/p1_rag.ipynb)) | [p1_rag_v15.ipynb](p1/p1_rag_v15.ipynb) |
-| 2. Diffusion fine-tuning | [p2/](p2/README.md) | **Lead; team submission** | [p2_v4.ipynb](p2/p2_v4.ipynb) |
+| 2. Diffusion fine-tuning | [p2/](p2/README.md) | **Lead; team submission** | [p2_submission.ipynb](p2/p2_submission.ipynb) |
 | 3. Multi-agent system | [p3/](p3/README.md) | Independent second build (the team submission is Yuyao Ding's [`p3_agents.ipynb`](../Yuyao_Ding/p3_agents.ipynb)) | [p3_agents_v2.ipynb](p3/p3_agents_v2.ipynb) |
 
 ## Folder layout
@@ -14,7 +14,7 @@ DATA 266 Lab 2, Team 41. This folder holds Pratiksha Kaushik's notebooks for all
 notebooks/Pratiksha_Kaushik/
 ├── README.md                 # this file
 ├── p1/                       # Part 1 notebook versions v1–v6, v15 + README
-├── p2/                       # Part 2 submission (p2_v4.ipynb) + README
+├── p2/                       # Part 2 submission (p2_submission.ipynb) + README
 │   └── development/          # earlier Part 2 notebooks
 └── p3/                       # Part 3 build (p3_agents_v1, v2) + README
 

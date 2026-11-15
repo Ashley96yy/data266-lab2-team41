@@ -1,6 +1,7 @@
 # Fresh Colab/Kaggle baseline runtime only. Keep the existing CUDA/PyTorch build.
 # These ML API versions match the recorded Part 3 Colab T4 environment.
-# The new Part 2 pipeline itself still requires its own real GPU validation.
+# The pipeline was subsequently executed on a real single Colab T4; see
+# eval/part2/results/yuyao_t4_20261115T034917Z/ for measured evidence.
 diffusers==0.42.1
 transformers==5.22.1
 peft==0.21.2

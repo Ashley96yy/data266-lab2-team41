@@ -1,12 +1,10 @@
 # Part 2 partner working baseline: Yuyao Ding
 
-Status: implementation prepared; no new GPU execution or baseline measurements
-have been claimed. CPU checks are not T4/P100 validation.
+Status: completed on a real single Colab Tesla T4. The [recorded run and measurements](part2/results/yuyao_t4_20261115T034917Z/) have been checked against the user-supplied executed notebook and private artifact bundle. Importing these files did not rerun training or inference.
 
 Team Rules, page 1, require the partner who does not lead Parts 2/3 to implement
 and run the complete pipeline at least as a working baseline. This notebook
-provides the Part 2 execution path for Yuyao; completing it still requires Yuyao
-to run it, inspect results, explain the code and record actual participation.
+provides the Part 2 execution path for Yuyao; the actual execution is now recorded. Yuyao still needs to add their own visual interpretation, explain the code and retain the real knowledge-transfer recording.
 The assignment does not define a separate minimum step budget for this partner
 baseline. The shorter budget below is a disclosed implementation choice, not a
 claim that the course explicitly specifies 600 steps.
@@ -70,8 +68,7 @@ allows only that known zero-allocation failure to adopt the new worker source,
 archives its original manifest/statistics, and records the new training commit.
 It does not change training data, prompts, model revisions, settings or the
 original data-preparation source commit. Existing checkpoints or unrelated source
-changes are rejected. This fix has CPU regression coverage; a successful GPU
-training run is still pending.
+changes are rejected. This fix has CPU regression coverage, and the subsequent user-provided T4 record completed 600 steps. The original failure and successful recovery are retained in the linked evidence.
 
 The new implementation adds isolated outputs, revision/source/data hashes,
 single-GPU checks, measured worker statistics, checkpoint restart, per-image

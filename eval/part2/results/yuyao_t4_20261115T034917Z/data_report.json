@@ -1,0 +1,21 @@
+{
+  "dataset": "lambdalabs/naruto-blip-captions",
+  "dataset_revision": "1ed13e8ef280bd45e3bbac4cfa8bbd9d64ec9f89",
+  "original": 1221,
+  "kept_before_split": 1221,
+  "removed_ids": {
+    "corrupted": [],
+    "exact_duplicates": [],
+    "near_duplicates": []
+  },
+  "split_seed": 266,
+  "train_before_safety": 1098,
+  "train_nsfw_flagged": 240,
+  "train_after_safety": 858,
+  "test": 123,
+  "resolution": 512,
+  "license": "Not stated in dataset card; copyrighted Naruto images, non-commercial research only.",
+  "train_metadata_sha256": "e831a7eccc663067a6ac0c3c1ed8e864bb29838893b59f473ca2318a6570a5dc",
+  "train_ids_sha256": "dc3f16c1dc230677a9361d23469873cc52d917c9ca98b31c922d6c05c02602fb",
+  "test_ids_sha256": "50e734882bf5d24cd64c6c020b7fc706b29d8820b912eabc41dee93142ff542b"
+}

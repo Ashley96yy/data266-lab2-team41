@@ -1,0 +1,22 @@
+{
+  "original_archive_sha256": "f569ff4d8d32db8b61c63b3c339a33244f8f1d827408f44cd908cc4868a653e8",
+  "original_notebook_sha256": "fb3afe0422fac4f386fe3d9f19fef8b1b09ffc5883be36c1f0e4bd806a94f955",
+  "source_artifact_hashes": {
+    "memorization_neighbors.json": "5ef94a7e4cc9a59e62ecde37f7c7af8dfb298f3b6af0622570c0430b7b3ee9c5",
+    "lpips_pairs.json": "4fb8a2b01be2f8792f017a6f25066b1e78db3bef29ecb789f423525b010961ce",
+    "results.json": "b85c3362305307e57053d7b39410fbbe5df3307ceaa847d6bac34cfe097eeb5c",
+    "test.json": "c6122567fc4ba61ef1bf0bed200b3e636983093cf3b833932f337e4385aa6b99",
+    "training_stats.json": "d514a20c1efae282b2e08f46635d6cccde0dd7c32109f8824e5ad9414670949d",
+    "prompts.json": "4298b0378332c6dc9b2e56eb9c5712b436416daba6ecc0f938c30ae4254db046",
+    "data_report.json": "427cac7c2efc4c2bc3ecccda2e06ad8f4cc9e4d94e3ae5e78ce927ce585da89f",
+    "train.json": "2b46e400136811fbd6736f9396a09828feb98f674bf888734f05bad01e18d02e",
+    "manifest.json": "278ea9928f50d21b75f5fb3bf44073e038d04c65d8ea1b21a27957cc0ea166c2",
+    "generations.json": "28f84d6c3a100fe20b9dbfb5bc70af3848482132e50adbf813769582d198fd16"
+  },
+  "training_log_sha256": "889926c6106972a577d6c09dc919033bc04aed8b1a1824fef798649ee8eff5de",
+  "adapter_sha256": "b40c06bf43e61565c293ce5d1c6c760f17a43e996b6af69339ee33cb50f22f03",
+  "initial_source_commit": "ef31e7bdd3088c10e59b44f259c928e299da4a4f",
+  "training_source_commit": "9e6039015f14fe0d119ccfeb80d9758d3271f59b",
+  "publication": "Only metadata, measured numbers, hashes and executed notebook numeric outputs. No raw training/test records, model weights, generated image files or embedded image previews are included.",
+  "originals_preserved": true
+}

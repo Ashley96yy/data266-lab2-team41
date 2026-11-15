@@ -1,0 +1,45 @@
+{
+  "method": "CLIP ViT-B/16 nearest-training-image diagnostic; images and training-image identities remain in the private archive.",
+  "records": [
+    {
+      "prompt_id": 0,
+      "cosine": 0.6208944320678711
+    },
+    {
+      "prompt_id": 1,
+      "cosine": 0.7082586288452148
+    },
+    {
+      "prompt_id": 2,
+      "cosine": 0.7162032127380371
+    },
+    {
+      "prompt_id": 3,
+      "cosine": 0.7350957989692688
+    },
+    {
+      "prompt_id": 4,
+      "cosine": 0.5259116291999817
+    },
+    {
+      "prompt_id": 5,
+      "cosine": 0.6864029169082642
+    },
+    {
+      "prompt_id": 6,
+      "cosine": 0.751332700252533
+    },
+    {
+      "prompt_id": 7,
+      "cosine": 0.7143975496292114
+    },
+    {
+      "prompt_id": 8,
+      "cosine": 0.5741770267486572
+    },
+    {
+      "prompt_id": 9,
+      "cosine": 0.6088966131210327
+    }
+  ]
+}

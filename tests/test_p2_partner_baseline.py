@@ -88,8 +88,9 @@ class PartnerBaselineTest(unittest.TestCase):
         with patch.dict('sys.modules',{'torch':SimpleNamespace(cuda=cuda)}):
             self.assertEqual(gpu_check()['name'],'Tesla T4')
 
-    def test_notebook_is_unexecuted_and_all_cells_parse(self):
+    def test_recorded_notebook_has_provenance_outputs_and_all_cells_parse(self):
         nb=read(ROOT/'notebooks/Yuyao_Ding/p2_baseline.ipynb')
+        validation=read(ROOT/'eval/part2/results/yuyao_t4_20261115T034917Z/integration_validation.json')
         self.assertEqual(nb['cells'][0]['cell_type'],'code')
         first=''.join(nb['cells'][0]['source'])
         for text in ('Git commit:','Python:','PyTorch:','GPU:','SEED:'):
@@ -97,8 +98,30 @@ class PartnerBaselineTest(unittest.TestCase):
         for cell in nb['cells']:
             if cell['cell_type']=='code':
                 ast.parse(''.join(cell['source']))
-                self.assertIsNone(cell['execution_count'])
-                self.assertEqual(cell['outputs'],[])
+                self.assertIsNotNone(cell['execution_count'])
+                self.assertTrue(cell['outputs'])
+                self.assertFalse(any(o.get('output_type')=='error' for o in cell['outputs']))
+                self.assertFalse(any(mime.startswith('image/') for o in cell['outputs'] for mime in o.get('data',{})))
+        for proof in validation['canonical_code_source_and_execution_counts']:
+            cell=nb['cells'][proof['canonical_cell']]
+            self.assertEqual(cell['execution_count'],proof['execution_count'])
+            self.assertEqual(hashlib.sha256(''.join(cell['source']).encode()).hexdigest(),proof['source_sha256'])
+
+    def test_recorded_metrics_match_saved_image_ledger_and_lpips_pairs(self):
+        from statistics import mean,median
+        folder=ROOT/'eval/part2/results/yuyao_t4_20261115T034917Z'
+        ledger=read(folder/'generation_ledger.json')
+        scores=read(folder/'lpips_pairs.json')
+        self.assertEqual(len(ledger),80)
+        self.assertEqual(len({(r['model'],r['prompt_id'],r['seed']) for r in ledger}),80)
+        for model in read(folder/'results.json'):
+            rows=[r for r in ledger if r['model']==model['model']]
+            self.assertEqual(len(rows),40)
+            self.assertAlmostEqual(mean(r['clip_score'] for r in rows),model['clip_score'])
+            self.assertAlmostEqual(median(r['seconds'] for r in rows),model['median_seconds_per_image'])
+            self.assertAlmostEqual(mean(scores[model['model']]),model['lpips'])
+            self.assertEqual(sum(r['nsfw'] for r in rows),model['nsfw_flagged'])
+            self.assertIsNone(model['human_preference'])
 
     def test_actual_cli_parse_is_normalized_before_accelerator_construction(self):
         with TemporaryDirectory() as temp:

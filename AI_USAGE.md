@@ -44,3 +44,18 @@ normalization to Python `None` in the worker, preserving the pinned trainer, and
 a narrowly checked recovery that archives the failed attempt and records the
 source transition without discarding prepared data. CPU regression tests cover
 this boundary. No successful GPU training or new model result is claimed yet.
+
+
+Part 2 executed evidence import (2026-11-14 PT; run ID `20261115T034917Z` UTC):
+the user supplied the executed baseline notebook and a private 80-image/adapter
+bundle after actual Colab T4 execution. Codex checked archive integrity, all image
+hashes and dimensions, adapter hash/tensor-header parameter count, source/prompt
+hashes, checkpoint-600 log evidence, split isolation and saved aggregate metrics.
+Original files remain private and unchanged. The canonical notebook retains the
+original code and numeric outputs, omitting the clone/recovery setup cells,
+interactive widgets and three embedded visual previews. Metadata discloses the
+interactive recovery and both source commits; no uninterrupted run is claimed.
+No new training, generation, human rating or metric-model evaluation was performed.
+The measured result record and contributions now reflect actual execution; Yuyao's
+own interpretation, real meeting record and the team's human-preference evaluation
+were not created by the import.

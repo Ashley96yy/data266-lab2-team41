@@ -10,5 +10,4 @@ CUDA or PyTorch installation.
 
 `requirements-part2-baseline.txt` is a separate setup specification for Yuyao's
 new partner baseline in a fresh Colab/Kaggle GPU runtime. Its notebook preserves
-the existing CUDA/PyTorch build with explicit constraints. The new pipeline's
-actual GPU validation is pending; see [the baseline runbook](../eval/PART2_YUYAO_BASELINE.md).
+the existing CUDA/PyTorch build with explicit constraints. The subsequent real single-T4 execution is recorded in [the baseline runbook](../eval/PART2_YUYAO_BASELINE.md). Its logging initialization needed the documented worker compatibility fix; the original failure remains recorded.

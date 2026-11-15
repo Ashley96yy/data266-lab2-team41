@@ -1,0 +1,46 @@
+[
+  {
+    "model": "base",
+    "images": 40,
+    "kid_in_domain": 0.1336551010608673,
+    "kid_std": 0.012165539897978306,
+    "kid_generated_images": 20,
+    "kid_test_images": 123,
+    "clip_score": 31.10844111442566,
+    "clip_by_category": {
+      "in_domain": 31.190407848358156,
+      "ood": 32.30993099212647,
+      "compositional": 29.743017768859865
+    },
+    "lpips": 0.8116339445114136,
+    "nsfw_flagged": 1,
+    "median_seconds_per_image": 4.856717990999869,
+    "generation_gpu_hours": 0.05427028387527786,
+    "training_gpu_hours": 0,
+    "training_peak_allocated_gib": null,
+    "generation_peak_allocated_gib": 3.1806139945983887,
+    "human_preference": null
+  },
+  {
+    "model": "yuyao_lora_r4",
+    "images": 40,
+    "kid_in_domain": 0.09096148610115051,
+    "kid_std": 0.010268660262227058,
+    "kid_generated_images": 20,
+    "kid_test_images": 123,
+    "clip_score": 30.702619791030884,
+    "clip_by_category": {
+      "in_domain": 30.32430534362793,
+      "ood": 31.132004928588866,
+      "compositional": 31.029863548278808
+    },
+    "lpips": 0.792774549126625,
+    "nsfw_flagged": 0,
+    "median_seconds_per_image": 5.107185192000088,
+    "generation_gpu_hours": 0.05675947710583311,
+    "training_gpu_hours": 0.3329846822841667,
+    "training_peak_allocated_gib": 3.681016445159912,
+    "generation_peak_allocated_gib": 3.182098865509033,
+    "human_preference": null
+  }
+]

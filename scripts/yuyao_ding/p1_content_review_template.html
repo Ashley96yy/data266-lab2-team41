@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>Part 1 correctness and citation support</title>
+<style>body{font:16px/1.5 system-ui;max-width:1050px;margin:30px auto;padding:0 20px;color:#14213d;background:#f5f7fb}section{background:white;padding:24px;border:1px solid #ccd5df;border-radius:10px;margin:24px 0}label{display:block;margin:16px 0}select,input,button,textarea{font:inherit;padding:8px}textarea{display:block;width:95%}img{max-width:100%;height:auto}blockquote{padding:15px;background:#edf3fa;border-left:4px solid #5f80aa;margin:12px 0}summary{cursor:pointer;margin:12px 0}header{background:white;padding:24px;border-radius:10px}.toolbar{position:sticky;top:0;padding:10px;background:#e5edf8;z-index:1}button{cursor:pointer}#status{font-weight:600}</style>
+<header><h1>Part 1: correctness and citation-support review</h1>
+<p><b>Your two-member groundedness review is already complete. Do not repeat it.</b> This page collects different measurements for the saved second-round baseline and final answers: 50 answers and each emitted citation. No model is run.</p>
+<p><b>Answer correctness:</b> check all required facts and units against the frozen reference and original pages. Numbers must match within ±1%, status must match, and contradictory central claims make an answer incorrect. For multi-turn questions, use the displayed earlier conversation turns. Do not change the frozen questions or reference rubric while scoring.</p>
+<p><b>Citation support:</b> judge each emitted page individually. Yes means it genuinely supports a factual claim stated in this answer; a relevant-looking page alone is not enough. A partly correct answer can contain a valid citation, and a correct answer can contain an irrelevant citation. Never accept DOC3 Appendix C as evidence. An uncited answer still needs its correctness label.</p>
+<p>The original PDFs include constructed teaching values: evaluate these sources, not outside economic statistics. These 50 answers were already generated; neither reviewer names nor judgments are prefilled.</p>
+<p>One documented source-content reviewer may complete these two measurements; the assignment's two-independent-member requirement applies to the separate groundedness ratings. Browser drafts are saved locally on this browser when possible; export a draft periodically as a backup. Original rating files are never changed.</p></header>
+<div class="toolbar"><button type="button" id="draft">Download draft backup</button> <span id="progress"></span> <span id="status" role="status"></span></div>
+<form id="review"><label>Your full name <input id="name" required autocomplete="off"></label>__SECTIONS__
+<label><input id="declare" type="checkbox" required> I personally checked these answers and their sources. These are my judgments.</label>
+<button type="submit">Download completed content review</button></form>
+<script>
+const contract=__PAYLOAD__;
+const key='p1-content-'+contract.predictions_sha256;
+const sections=[...document.querySelectorAll('section')];
+function snapshot(){return {name:document.querySelector('#name').value,declare:document.querySelector('#declare').checked,rows:sections.map(s=>({correct:s.querySelector('.correct').value,citations:[...s.querySelectorAll('.citation')].map(x=>x.value),note:s.querySelector('textarea').value}))};}
+function progress(){const fields=[...document.querySelectorAll('select')];document.querySelector('#progress').textContent=fields.filter(x=>x.value!=='').length+' / '+fields.length+' judgments entered';}
+function save(){try{localStorage.setItem(key,JSON.stringify(snapshot()));}catch(e){document.querySelector('#status').textContent='Browser storage unavailable; download a draft backup.';}progress();}
+function download(value,name){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+try{const old=JSON.parse(localStorage.getItem(key));if(old&&old.rows.length===sections.length){document.querySelector('#name').value=old.name||'';document.querySelector('#declare').checked=Boolean(old.declare);sections.forEach((s,i)=>{s.querySelector('.correct').value=old.rows[i].correct;s.querySelector('textarea').value=old.rows[i].note;[...s.querySelectorAll('.citation')].forEach((x,j)=>x.value=old.rows[i].citations[j]||'');});}}catch(e){}
+progress();document.querySelector('#review').addEventListener('input',save);document.querySelector('#review').addEventListener('change',save);
+document.querySelector('#draft').onclick=()=>download({draft_only:true,evidence_sha256:contract.predictions_sha256,...snapshot()},'part1-content-review-draft.json');
+document.querySelector('#review').addEventListener('submit',e=>{e.preventDefault();if(!document.querySelector('#name').value.trim()||!document.querySelector('#declare').checked){return;}if([...document.querySelectorAll('select')].some(x=>x.value==='')){alert('Complete every answer and citation judgment.');return;}
+const value=JSON.parse(JSON.stringify(contract));value.content_reviewer=document.querySelector('#name').value.trim();value.content_review_method='independent_human_source_review';value.exported_at=new Date().toISOString();
+sections.forEach(s=>{const row=value.modes[s.dataset.mode].records[Number(s.dataset.index)];row.answer_correct=s.querySelector('.correct').value==='true';row.citation_support={};s.querySelectorAll('.citation').forEach(x=>row.citation_support[x.dataset.citation]=x.value==='true');row.content_review_note=s.querySelector('textarea').value.trim();});
+download(value,'part1-content-review.json');document.querySelector('#status').textContent='Completed review exported. Keep this file for metric aggregation.';});
+</script></html>

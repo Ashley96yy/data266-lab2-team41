@@ -1,0 +1,15 @@
+# Fresh Colab/Kaggle baseline runtime only. Keep the existing CUDA/PyTorch build.
+# These ML API versions match the recorded Part 3 Colab T4 environment.
+# The pipeline was subsequently executed on a real single Colab T4; see
+# eval/yuyao_ding/part2/results/yuyao_t4_20261115T034917Z/ for measured evidence.
+diffusers==0.42.1
+transformers==5.22.1
+peft==0.21.2
+accelerate==1.15.0
+huggingface-hub==1.33.0
+datasets==3.1.0
+torchmetrics==1.6.0
+torch-fidelity==0.3.0
+lpips==0.1.4
+ImageHash==4.3.1
+Pillow==11.3.0

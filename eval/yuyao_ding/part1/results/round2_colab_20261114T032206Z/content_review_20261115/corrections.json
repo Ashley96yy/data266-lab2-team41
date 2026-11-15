@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "source_review_sha256": "2d3394a882ba5249e22b49e582be7b244bd606cbca1f92725fb6f0b514e05e26",
+  "corrections": [
+    {
+      "mode": "dense_only",
+      "question_id": "P1V2-11",
+      "field": "answer_correct",
+      "old_value": true,
+      "new_value": false,
+      "reason": "The baseline answer omits the required core CPI 1.8% and incorrectly states the shared headline CPI value as 2.5% instead of 1.5%.",
+      "user_confirmation": "确认，这题应判为不正确",
+      "authority": "Explicit user reply in this conversation on 2026-11-15 PT; original supplied file remains unchanged."
+    }
+  ]
+}

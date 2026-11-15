@@ -1,0 +1,40 @@
+# Part 1 second Colab development evaluation
+
+Round 1: original complete Colab evaluation before schema compatibility changes.
+Round 2: improved real Tesla T4 run 20261114T032206Z. Questions, rubrics, seed and
+model revisions stayed fixed. Changes were informed by prior failures; this is a
+development rerun, not a new holdout or preregistered experiment.
+
+Fixes: explicit array/schema instructions, format-only figure mapping conversion,
+deduplication before unchanged strict evidence validation, timed/raw response
+diagnostics, rebinding the captured generator callback, and measured GPU metadata.
+Colab CLIP image/text outputs are compatible with Tensor and ModelOutput returns.
+No CUDA/PyTorch environment was installed or replaced for this integration.
+
+Two required distinctions: baseline vs final is the dense-only vs hybrid/structured
+pipeline comparison within a round. First vs second evaluation shows development
+format stability. Format fallbacks and latency are not answer correctness. No
+human or citation-support scores have been invented. See the executed comparison
+notebook and its notebook-generated ROUND2_IMPROVEMENT.md report for actual numbers.
+
+The preserved round directories are under [`part1/results/`](part1/results/).
+The [comparison notebook](../../notebooks/Yuyao_Ding/p1_round2_comparison.ipynb)
+reads that location. This directory reorganization preserves the result-file
+contents and the notebook's saved outputs; it does not require another GPU run.
+
+The genuine executed p1_rag notebook is preserved; the canonical copy adds only
+Markdown labels to distinguish rounds. The helper source is now
+`scripts/yuyao_ding/p1_colab_schema_fix_and_rerun.py`; its bytes are unchanged. Its final
+cell still expects that file to be uploaded as
+`/content/p1_colab_schema_fix_and_rerun.py` in the recorded Colab layout.
+Original archives/full retrieved contexts/images are local-only under
+.runtime/part1_colab. Published outputs omit those original inputs and contexts.
+
+The saved Colab run had no Git checkout: retain null/unavailable rather than
+retroactively assigning the later integration commit. Commit the actual source
+before final reproducibility submission. The [round-2 final-system groundedness
+review](part1/results/round2_colab_20261114T032206Z/human_review_20261114/)
+is now complete: mean 4.44/5 and 25/25 pairs within one point. This applies only
+to that final-system run. The [completed content/citation review](part1/results/round2_colab_20261114T032206Z/content_review_20261115/RESULTS.md)
+now supplements these records. The team's own report, final tag and Kaggle
+selection remain pending.

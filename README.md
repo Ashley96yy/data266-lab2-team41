@@ -113,8 +113,10 @@ images and evaluation on a real single Colab Tesla T4. Its [measured record](eva
 has KID 0.1337 → 0.0910, CLIP 31.1084 → 30.7026 and LPIPS 0.8116 → 0.7928.
 Peak training allocation was 3.6810 GiB. The initial pre-training logging failure,
 source transition and private original artifacts are preserved. This shorter
-baseline is separate from Pratiksha's two formal runs and final model; its own
-written interpretation and actual knowledge-transfer recording are still pending.
+baseline is separate from Pratiksha's two formal runs and final model. The
+[AI-assisted result analysis](eval/part2/results/yuyao_t4_20261115T034917Z/ANALYSIS.md)
+explains metric tradeoffs and concrete output limitations; Yuyao's verification/
+rewording and actual knowledge-transfer recording remain pending.
 See the [runbook and attribution](eval/PART2_YUYAO_BASELINE.md).
 
 **Setup:**
@@ -200,7 +202,7 @@ Model weights, checkpoints and full raw run archives stay outside GitHub. Local 
 - [ ] Part 1: final Kaggle submission.
 - [ ] Part 2: blinded human evaluation (25 pairs, 3 or more raters).
 - [x] Part 2: Yuyao's partner baseline GPU execution and measured outputs saved.
-- [ ] Part 2: Yuyao adds their own baseline interpretation and the actual knowledge-transfer recording.
+- [ ] Part 2: Yuyao verifies/rewords the AI-assisted baseline interpretation and adds the actual knowledge-transfer recording.
 - [ ] Create or update the tags `p1-v1.0`, `p2-v1.0` and `p3-v1.0` on the final commits.
 - [ ] Both members confirm [CONTRIBUTIONS.md](CONTRIBUTIONS.md) and complete [AI_USAGE.md](AI_USAGE.md).
 - [ ] Final report.

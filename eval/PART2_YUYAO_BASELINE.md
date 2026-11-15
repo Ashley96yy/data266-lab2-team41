@@ -4,7 +4,7 @@ Status: completed on a real single Colab Tesla T4. The [recorded run and measure
 
 Team Rules, page 1, require the partner who does not lead Parts 2/3 to implement
 and run the complete pipeline at least as a working baseline. This notebook
-provides the Part 2 execution path for Yuyao; the actual execution is now recorded. Yuyao still needs to add their own visual interpretation, explain the code and retain the real knowledge-transfer recording.
+provides the Part 2 execution path for Yuyao; the actual execution is now recorded. An [AI-assisted result interpretation](part2/results/yuyao_t4_20261115T034917Z/ANALYSIS.md) now accompanies the saved metrics. Yuyao still needs to verify/reword it, explain the code and retain the real knowledge-transfer recording.
 The assignment does not define a separate minimum step budget for this partner
 baseline. The shorter budget below is a disclosed implementation choice, not a
 claim that the course explicitly specifies 600 steps.

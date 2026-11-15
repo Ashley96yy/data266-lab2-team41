@@ -59,3 +59,13 @@ No new training, generation, human rating or metric-model evaluation was perform
 The measured result record and contributions now reflect actual execution; Yuyao's
 own interpretation, real meeting record and the team's human-preference evaluation
 were not created by the import.
+
+
+Part 2 result interpretation supplement (2026-11-14 PT): Codex inspected selected
+private generated images and drafted the metric tradeoffs, count/hat-subtype
+limitations and safety/memorization caveats in the baseline notebook and results
+`ANALYSIS.md`. One separate CPU notebook cell computed differences from saved
+numeric artifacts; the ten original T4 code cells and their outputs were retained.
+No training, generation, metric-model inference or human scoring was repeated.
+The draft is explicitly AI-assisted; Yuyao's verification and rewording, the real
+meeting record and any independent human-preference evaluation remain separate.

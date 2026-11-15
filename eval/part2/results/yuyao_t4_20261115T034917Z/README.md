@@ -62,7 +62,8 @@ log hash. The complete original log is in the private ZIP.
 ## Notebook and artifact provenance
 
 The public [executed notebook](../../../../notebooks/Yuyao_Ding/p2_baseline.ipynb)
-retains ten original code cells, execution counts and numerical outputs. The
+retains ten original code cells, execution counts and numerical outputs, followed
+by one separately executed file-backed CPU analysis cell (eleven code cells total). The
 uploaded original has twelve executed code cells with zero stored error outputs.
 The clone bootstrap and one-off recovery cell are removed from the canonical
 copy but retained in the private original. The ordinary training cell explicitly
@@ -86,10 +87,18 @@ contains image hashes and per-image numbers without image bytes or raw captions.
 `memorization_scores.json` has ten nearest-training-image similarity values;
 similarity alone is not proof of memorization or its absence.
 
+## Result interpretation
+
+[Result analysis and concrete output observations](ANALYSIS.md) explain the metric
+tradeoffs, cost, safety limits and selected image failures. Derived differences
+are saved in `analysis_computed.json` and the separate CPU notebook cell. This is
+an AI-assisted draft for Yuyao to verify and revise; it adds no human ratings and
+requires no new GPU run.
+
 ## Still requires the team
 
-Yuyao's own written visual interpretation and the real knowledge-transfer/design
-meeting recording were not supplied. Do not invent either. Actual GPU execution
+Yuyao's verification/rewording of the AI-assisted interpretation and the real
+knowledge-transfer/design meeting recording are still pending. Do not invent either. Actual GPU execution
 of this baseline is now recorded; these remaining interpretation/documentation
 items do not require repeating training. Publish any supplemental weights/images
 to an authorized Hugging Face location if they are needed for final sharing.

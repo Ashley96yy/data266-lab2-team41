@@ -18,7 +18,7 @@
   "test_images": 123,
   "supplied_notebook_code_cells": 12,
   "supplied_notebook_error_outputs": 0,
-  "canonical_code_cells": 10,
+  "canonical_code_cells": 11,
   "canonical_code_source_and_execution_counts": [
     {
       "canonical_cell": 0,
@@ -81,7 +81,7 @@
       "source_sha256": "15c17ba34bdb3211113a1a35dfba5ebaaad58436393d1a9a40199d34a96af043"
     }
   ],
-  "canonical_notebook_sha256": "86015f0eb341c947fb00057b8bbef4475b8f7743bc65824381ef66c6c47b76a0",
+  "canonical_notebook_sha256": "5ab8fb01b3c105efe38f26b9ee30e10d7c4e4bd0c8b5026fad91ca3ed00150c9",
   "canonical_visual_payloads_omitted": [
     {
       "original_cell": 17,
@@ -106,5 +106,13 @@
   "no_new_inference": true,
   "metrics_check": "Reaggregated CLIP scores, LPIPS pairs, safety flags and timings from saved records. KID checked against saved notebook output/results only, not recomputed by new inference.",
   "human_preference": null,
-  "own_interpretation_and_meeting_recording": "pending"
+  "own_interpretation_and_meeting_recording": "AI-assisted draft added; Yuyao verification/rewording and actual meeting record pending",
+  "postrun_cpu_analysis": {
+    "cell_index": 21,
+    "execution_count": 1,
+    "execution_scope": "Separate file-backed CPU analysis; no new GPU inference",
+    "source_sha256": "046ffc713899c543cf74de1493ada4be0e8604dad0a63f776b85a4f99a8217e5",
+    "executed_analysis_notebook_sha256": "459100a69f7a98a0e516f1c188f8fd553bd81ccdc1be1de4b1abd963259f6729",
+    "input_data_commit": "39bb9487753606305dfc8e18a56e7bf7b8f9e693"
+  }
 }

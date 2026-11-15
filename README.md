@@ -33,15 +33,15 @@ All course GPU runs were done on a single Tesla T4 (Colab).
 │   └── Pratiksha_Kaushik/
 │       ├── p1/                  # Part 1 development notebooks (v1–v6, v15)
 │       ├── p2/                  # Part 2 notebooks + README (p2_v4.ipynb is the submission)
-│       └── p3/                  # independent Part 3 build (v1, v2) + README, inputs, outputs, log
+│       └── p3/                  # independent Part 3 build (v1, v2) + README
 ├── eval/                        # golden sets, scenarios, protocols, measured reports
 │   ├── part1/results/           # saved Part 1 run results and human review
 │   ├── part3/results/           # saved Part 3 run results and human reviews
-│   └── Pratiksha kaushik/p3/    # results of the independent Part 3 build
-├── traces/                      # redacted Part 3 JSON traces (+ independent build traces)
+│   └── pratiksha_p3/            # results of the independent Part 3 build
+├── traces/                      # redacted Part 3 JSON traces (+ pratiksha_p3/ for the independent build)
 ├── src/                         # shared helpers for Parts 1 and 3
 ├── scripts/                     # runners and review tools
-└── tests/                       # unit tests (+ judging images for the independent Part 3 build)
+└── tests/                       # unit tests
 ```
 
 Model weights and the full raw run archives are not in this repository. See [Artifacts](#artifacts).

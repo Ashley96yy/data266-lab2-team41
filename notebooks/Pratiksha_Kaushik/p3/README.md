@@ -113,7 +113,7 @@ The task success rate, member agreement and Cohen's kappa are reported only once
 
 ## Per-question comparison
 
-Every scenario and red-team case, one row each. Taken from the saved results files (`p3_results_*.csv`, `p3_redteam_results*.csv`) and your judgment file (`p3_human_judgments.csv`).
+Every scenario and red-team case, one row each. Taken from the saved results files (`p3_results_*.csv`, `p3_redteam_results*.csv`) and your judgment file (`p3_human_judgments.csv`), all in [`eval/pratiksha_p3/`](../../../eval/pratiksha_p3/).
 
 - **s:** seconds for the request.
 - **CLIP:** prompt–image similarity × 100. The critic accepts at 22.0 or above.
@@ -202,6 +202,13 @@ What the per-question tables show:
 
 The notebook ends with a Gradio app that shows each agent's output for a request. In Colab it also prints a temporary public `gradio.live` link. That link expires after one week, so the one in the saved output no longer works.
 
-## Files not in this repository
+## Where the files are
 
-The run data is kept in Google Drive under `MyDrive/data266-lab2/p3/`: about 36 MB of input images, generated images, judge sheets, JSON traces and results CSVs. It isn't committed, for two reasons. The repository rule is that images go on Hugging Face or Drive, and the inputs include a photo of a real person (`person.jpg`).
+| What | Where |
+| --- | --- |
+| Notebooks | this folder: `p3_agents_v2.ipynb` (latest), `p3_agents_v1.ipynb` |
+| Scenarios, red-team cases, results CSVs, human judgments, system card, run log, architecture diagram | [`eval/pratiksha_p3/`](../../../eval/pratiksha_p3/) |
+| JSON trace of every request (88) | [`traces/pratiksha_p3/`](../../../traces/pratiksha_p3/) |
+| Input images, generated images, judging images | Not in GitHub. Kept in Google Drive under `MyDrive/data266-lab2/p3/` |
+
+The images aren't committed, for two reasons. The course rules say generated images go to Hugging Face, not GitHub. The inputs also include a photo of a real person (`person.jpg`), and the red-team outputs include an edited image of that person.

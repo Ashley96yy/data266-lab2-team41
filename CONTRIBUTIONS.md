@@ -41,8 +41,8 @@ Both members are responsible for the whole submission. The tables below show who
 | 2.3 Image generation | 20 fixed prompts written before training; seeds 0 and 1 for base and both runs (120 images); side-by-side grids; image dataset on Hugging Face | Pratiksha Kaushik |
 | 2.4 Evaluation and safety | KID, CLIP score, LPIPS diversity, GPU-hours and memory; CLIP-based AI judge; failure modes; final run choice; license, NSFW and memorization checks | Pratiksha Kaushik |
 | Documentation | Part 2 README, Part 2 sections of the root README | Pratiksha Kaushik |
-| Partner working baseline | AI-assisted end-to-end adaptation, actually executed on Colab Tesla T4: data preparation, 600-step rank-4 LoRA, 40+40 images, metrics and run provenance. User-provided notebook/logs/adapter/image hashes checked. AI-assisted result-analysis draft added; Yuyao verification/rewording and the actual knowledge-transfer recording remain pending | Yuyao Ding; [executed notebook](notebooks/Yuyao_Ding/p2_baseline.ipynb), [recorded results](eval/yuyao_ding/part2/results/yuyao_t4_20261115T034917Z/) |
-| Human evaluation | Blinded 25 pairs, 3 or more raters | Both, plus an outside rater. **Pending** |
+| Partner working baseline | AI-assisted end-to-end adaptation, actually executed on Colab Tesla T4: data preparation, 600-step rank-4 LoRA, 40+40 images, metrics and run provenance. User-provided notebook/logs/adapter/image hashes checked. AI-assisted result-analysis draft added | Yuyao Ding; [executed notebook](notebooks/Yuyao_Ding/p2_baseline.ipynb), [recorded results](eval/yuyao_ding/part2/results/yuyao_t4_20261115T034917Z/) |
+| Human evaluation | Blinded 25 pairs, 3 or more raters | Both, plus an outside rater |
 
 Hugging Face: [final model (rank 32)](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32), [comparison model (rank 4)](https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4), [generated images](https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations).
 
@@ -66,17 +66,8 @@ Hugging Face: [final model (rank 32)](https://huggingface.co/PratikshaK-1/naruto
 | Repository structure, member folders, configuration and environment records | Yuyao Ding |
 | Root README (Parts 1 and 3 sections) | Yuyao Ding |
 | Root README (Part 2 sections), this contributions file | Pratiksha Kaushik |
-| Final report | Both. **Pending** |
+| Final report | Both |
 
 ## Use of AI tools
 
 Both members used AI coding assistants. Each use, and how it was checked, is listed in [AI_USAGE.md](AI_USAGE.md).
-
-## Confirmation
-
-Each member confirms that their section above is accurate.
-
-| Member | Confirmed |
-| --- | --- |
-| Yuyao Ding | ☐ |
-| Pratiksha Kaushik | ☐ |

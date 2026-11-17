@@ -1,5 +1,32 @@
 # AI Usage Disclosure
 
+## Final disclosure summary — 2026-11-16 PT
+
+Yuyao used ChatGPT/Codex for coding, debugging, test preparation, documentation
+and report formatting. Exact assistant model versions were not consistently
+recorded. The detailed log below preserves the work and checks at each stage.
+
+- **Part 1 human reviews:** Codex prepared review forms, checked the supplied
+  ratings and calculated groundedness, correctness and citation-support results.
+  The members supplied the ratings. Pratiksha's misfilled reviewer name was
+  corrected after Yuyao confirmed her identity; one correctness label was changed
+  only after Yuyao explicitly approved it. Original files were retained.
+- **Part 3 human reviews:** Codex prepared review forms and combined the supplied
+  independent member reviews and joint adjudication to calculate the results.
+  AI did not fill in either member's ratings or decide disagreements for them.
+- **Report and documentation:** Codex checked the teammate-written report against
+  the assignment, suggested wording and table corrections, and converted the
+  user-selected final document to IEEE-style PDF layouts, including a single-column
+  version. It also helped with READMEs, the system card and `links.txt`. This
+  assistance did not produce new experiments or human scores.
+- **Current status:** Part 1 groundedness/content reviews and Part 3 member reviews
+  and adjudication are recorded in `eval/yuyao_ding/part1/results/` and
+  `eval/yuyao_ding/part3/results/`. Yuyao's Part 2 baseline ran on Colab T4, and
+  Yuyao confirmed the final Part 1 Kaggle submission. Earlier “pending” statements
+  below describe the status when those entries were written.
+- **Teammate disclosure:** Pratiksha still needs to confirm the tools, tasks and
+  checks for her own AI use. Yuyao's entries do not stand in for her disclosure.
+
 ## Part 1 Kaggle runtime and evidence import — 2026-11-16 PT
 
 Codex prepared the Kaggle-only entry, dependency constraints, single-model load
@@ -28,16 +55,10 @@ Affected files: `notebooks/Yuyao_Ding/p1_kaggle_submission.ipynb`,
 `eval/yuyao_ding/part1/results/kaggle_20261117T003803178245Z/`, the Part 1 import
 record, CPU verifier/regression tests and related README/release links.
 
-Document all uses of generative AI tools in this project according to the course requirements.
+## Historical usage log
 
-For each use, record:
-
-- the tool and model, when known;
-- the task for which it was used;
-- how the output was reviewed, tested, or revised by the team; and
-- the affected files or project sections.
-
-## Usage log
+These entries retain the status and file paths recorded at the time. See the
+summary above and later entries for completed follow-up work.
 
 | Date | Tool/model | Purpose | Human review and changes | Affected files |
 | --- | --- | --- | --- | --- |

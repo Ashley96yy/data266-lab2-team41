@@ -1,0 +1,52 @@
+{
+  "base_commit": "df1867f9f85078e738a6211e06c85b19e0c904db",
+  "runtime_entry": "p1_kaggle_final_v2.ipynb",
+  "runtime_changes": [
+    "Kaggle setup",
+    "pinned inference libraries",
+    "CPU retrieval",
+    "efficient SDPA with explicit KV expansion",
+    "explicit dynamic cache",
+    "decode-shape diagnostics",
+    "single-load guard and dtype-explicit CPU transfer"
+  ],
+  "schema_helper_sha256": "f8f7635eb5c7b0e0133be95693ff625eda379024072f923a0bf6ff76e230f472",
+  "model_revisions": {
+    "qwen": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+    "clip": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "bge": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+  },
+  "seed": 266,
+  "gpu": "Tesla T4",
+  "used_gpu": "cuda:0",
+  "libraries": {
+    "torch": "2.11.0+cu130",
+    "torchvision": "0.26.0+cu130",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "Pillow": "11.3.0",
+    "PyMuPDF": "1.26.5",
+    "pdfplumber": "0.11.9",
+    "chromadb": "1.5.9",
+    "sentence-transformers": "5.1.2",
+    "rank-bm25": "0.2.2",
+    "peft": "0.17.1"
+  },
+  "questions_path": "/kaggle/input/datasets/yuyaoding/data266-lab2-part1-inputs/Questions.csv",
+  "question_rows": 40,
+  "question_file_sha256": "2343f9bd1df41ae5ab778869a57b4a1f0c7f9c55af4cb83167c973de5ccd291d",
+  "vlm_pixel_bounds": [
+    200704,
+    401408
+  ],
+  "max_new_tokens": 256,
+  "golden_evaluation_executed": false,
+  "status": "completed",
+  "official_validator_returncode": 0,
+  "elapsed_seconds_since_setup": 1058.914,
+  "peak_allocated_gib": 7.8588690757751465,
+  "peak_reserved_gib": 7.931640625
+}

@@ -13,6 +13,11 @@ and roles, and the [shared evaluation index](../README.md) for other contributor
 
 ## Layout
 
+The [completed Part 1 Kaggle competition run](part1/results/kaggle_20261117T003803178245Z/)
+is separate from the Colab Golden Set and human-review records. It preserves
+the 40-row CSV, official validation, prior failed preflight and final runtime
+diagnostics; no Golden Set or human evaluation was repeated during import.
+
 ```text
 eval/yuyao_ding/
 ├── README.md

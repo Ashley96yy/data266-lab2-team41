@@ -1,0 +1,14 @@
+{
+  "original_archive_sha256": "a562c535af03e0a957901e3d6990bf11f89f3f87039fc9e0de5d54b8e62adb9b",
+  "original_notebook_sha256": "c795d60febdd95299c74d5a8a25978a41c2b170916fe2ac5404567250698d32e",
+  "files": {
+    "generation_diagnostics.jsonl": "dabbec127b2cbe064a6544dfe4067a1bf571aaf00d794cffb14b8153b9ac8d85",
+    "kaggle_run_provenance.json": "62f60d08f522eeef275ec371fa534471c2f7f71bd3322719772fe9df668e9182",
+    "official_validator.txt": "246d91686e97a732084a5163b7ba1f8e8d0480ccbd39f68b0b8228196e9cc38c",
+    "p1_run_audit.json": "93a1e2f84e9fe9435b35d2f896232bbbecbaa516c3b51bf4a566b1a5e9611046",
+    "p1_run_diagnostics.csv": "8c55ef2e160e7d336cbd4e54f19ec1fdb9d54087a21f127b21b849389a045299",
+    "preserve_kaggle_core.txt": "783dd2dd3fcd970a6a0e5dfc90a569dff06d92bcefbc02c9d0e54bb93e540e2f",
+    "run_qwen_generation_no_tensor_recording.py": "804e53d8ecbaa21ef5f66ec8723c2df3201880c3f89baceb072bc7b9e83d3bd0",
+    "submission.csv": "188bfc808bceb91e6221022987f98331dffd66fe715089fb0a1de1118ba992bb"
+  }
+}

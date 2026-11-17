@@ -1,5 +1,33 @@
 # AI Usage Disclosure
 
+## Part 1 Kaggle runtime and evidence import — 2026-11-16 PT
+
+Codex prepared the Kaggle-only entry, dependency constraints, single-model load
+guard, explicit generation settings and efficient-attention compatibility code.
+An AI-generated `patch.object(..., return_value=False)` override retained GPU
+tensor call arguments and caused repeated OOM failures. Codex diagnosed this
+Python reference-lifetime defect and replaced the Mock with an ordinary function;
+CPU weak-reference tests reproduce the old retention and verify the correction.
+These CPU tests are distinct from the subsequent GPU execution.
+
+Yuyao executed the corrected notebook on a real single Kaggle Tesla T4, supplied
+the executed notebook and results ZIP, and confirmed the CSV was submitted and
+selected as final. Codex checked original question-file/order hashes, all 40
+submission and diagnostic rows, audit consistency, recorded official validation,
+generation token totals and the exact uploaded live generation function. The
+archive retains one earlier failed preflight before the successful probe and
+competition calls. No score improvement or new human judgment is inferred.
+
+The public notebook retains recorded numerical outputs while omitting course-text
+previews and interactive widgets. The already executed live generation function
+is inlined without changing its AST. Source-tag bootstrap and entry-name edits
+made after execution are identified separately; they were not rerun on GPU.
+Original notebooks/ZIPs remain private with recorded hashes. Existing Colab
+experiments, human labels, teammate files, models and images were not replaced.
+Affected files: `notebooks/Yuyao_Ding/p1_kaggle_submission.ipynb`,
+`eval/yuyao_ding/part1/results/kaggle_20261117T003803178245Z/`, the Part 1 import
+record, CPU verifier/regression tests and related README/release links.
+
 Document all uses of generative AI tools in this project according to the course requirements.
 
 For each use, record:

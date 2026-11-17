@@ -1,0 +1,23 @@
+{
+  "row_count": 40,
+  "conversation_count": 35,
+  "status_distribution": {
+    "answered": 30,
+    "not_found": 3,
+    "conflict": 2,
+    "false_premise": 1,
+    "session_override": 4
+  },
+  "median_seconds_per_question": 5.768,
+  "peak_allocated_gib": 7.8588690757751465,
+  "peak_reserved_gib": 7.931640625,
+  "elapsed_seconds_since_setup": 1058.914,
+  "within_90_minutes": true,
+  "competition_model_calls": 22,
+  "earlier_completed_probes": 1,
+  "earlier_failed_probes": 1,
+  "original_question_file_checked": true,
+  "recorded_official_validator_returncode": 0,
+  "gpu_inference_rerun_by_verifier": false,
+  "human_correctness_or_citation_support_scored": false
+}

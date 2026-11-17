@@ -10,11 +10,12 @@ Graders use the tagged commit for each part.
 
 | Part | Git tag | Main notebook | Headline result | Details |
 | --- | --- | --- | --- | --- |
-| 1. Multimodal RAG | `p1-v1.0` | [`notebooks/Yuyao_Ding/p1_rag.ipynb`](notebooks/Yuyao_Ding/p1_rag.ipynb) | Recall@5 0.764 (final) vs 0.472 (dense only); human groundedness 4.44/5 | [Part 1 results](#part-1--multimodal-rag) |
+| 1. Multimodal RAG | `p1-v1.0` | [`notebooks/Yuyao_Ding/p1_kaggle_submission.ipynb`](notebooks/Yuyao_Ding/p1_kaggle_submission.ipynb) | Kaggle: 40 rows validated; Colab golden-set Recall@5 0.764 vs 0.472 and groundedness 4.44/5 | [Part 1 results](#part-1--multimodal-rag) |
 | 2. Diffusion fine-tuning | `p2-v1.0` | [`notebooks/Pratiksha_Kaushik/p2/p2_submission.ipynb`](notebooks/Pratiksha_Kaushik/p2/p2_submission.ipynb) | KID 0.0217 (LoRA r=32) vs 0.1337 (base SD 1.5) | [Part 2 README](notebooks/Pratiksha_Kaushik/p2/README.md) |
 | 3. Multi-agent system | `p3-v1.0` | [`notebooks/Yuyao_Ding/p3_agents.ipynb`](notebooks/Yuyao_Ding/p3_agents.ipynb) | Task success 10/15 with loop, 11/15 without; 0/10 red-team attacks succeeded | [Part 3 report](eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md) |
 
-All course GPU runs were done on a single Tesla T4 (Colab).
+Course GPU runs used one Tesla T4: Colab for the reviewed experiments, and
+Kaggle for the final Part 1 competition execution.
 
 ## Repository structure
 
@@ -27,7 +28,8 @@ All course GPU runs were done on a single Tesla T4 (Colab).
 ├── config/                      # optional environment records
 ├── notebooks/
 │   ├── Yuyao_Ding/
-│   │   ├── p1_rag.ipynb                  # Part 1 submission
+│   │   ├── p1_kaggle_submission.ipynb    # executed Part 1 Kaggle submission
+│   │   ├── p1_rag.ipynb                  # preserved Part 1 Colab benchmark
 │   │   ├── p1_round2_comparison.ipynb    # Part 1 round 1 vs round 2
 │   │   ├── p2_baseline.ipynb             # Yuyao executed partner baseline
 │   │   └── p3_agents.ipynb               # Part 3 submission
@@ -88,7 +90,11 @@ Each notebook begins with a reproducibility cell that prints the Git commit, Pyt
 
 ## Part 1 — Multimodal RAG
 
-**Run:** open [`notebooks/Yuyao_Ding/p1_rag.ipynb`](notebooks/Yuyao_Ding/p1_rag.ipynb) with the Part 1 inputs attached. Set `DATA266_RUN_FULL_PART1=1` to answer all questions, write `submission.csv` and run the provided validator.
+**Competition run:** open [`notebooks/Yuyao_Ding/p1_kaggle_submission.ipynb`](notebooks/Yuyao_Ding/p1_kaggle_submission.ipynb) in Kaggle with the seven official Part 1 inputs attached, Internet enabled and a T4/P100 accelerator. For a private repository, enable the `GITHUB_TOKEN` Kaggle secret. The entry selects `DATA266_SOURCE_REF` (default `p1-v1.0`), preserves the installed PyTorch/CUDA stack, and uses CPU retrieval plus `cuda:0`. It runs the competition questions and official validator, then writes `/kaggle/working/submission.csv`; it does not repeat the Golden Set or human evaluation.
+
+**Completed Kaggle record:** [40-row run and provenance](eval/yuyao_ding/part1/results/kaggle_20261117T003803178245Z/), [Kaggle notebook](https://www.kaggle.com/code/yuyaoding/part1-rag). On November 16 PT the actual single-T4 run completed all 40 rows, passed every audit and the official validator, and recorded 7.86 GiB peak allocation and zero answer repairs/fallbacks. Yuyao confirmed this CSV was submitted and selected as final. The earlier failed preflight is preserved separately from the successful competition calls. Runtime integration follows the execution; the notebook and import record identify bootstrap edits made afterward.
+
+**Reviewed Colab benchmark:** [`p1_rag.ipynb`](notebooks/Yuyao_Ding/p1_rag.ipynb) and [`p1_round2_comparison.ipynb`](notebooks/Yuyao_Ding/p1_round2_comparison.ipynb) retain the original experiments and completed human evaluation summarized below. Kaggle execution/format success is not a new correctness score or a leaderboard improvement.
 
 **System:**
 - **Ingestion:** text chunks keep their document ID and page. Every Figure and Table is cropped with its label and caption, and figures are made searchable with CLIP image embeddings. Everything is stored in ChromaDB with the metadata from `kb_manifest.json`.
@@ -229,11 +235,11 @@ Model weights, checkpoints and full raw run archives stay outside GitHub. Local 
 ## Remaining before final submission
 
 - [x] Part 1: human answer-correctness and citation-accuracy review, plus completed two-member groundedness.
-- [x] Part 1: Kaggle submission completed, as confirmed by Yuyao.
+- [x] Part 1: final Kaggle execution and official validation saved; Yuyao confirmed the new CSV was submitted and selected as final.
 - [x] Part 2: blinded human evaluation (25 pairs, 3 raters).
 - [x] Part 2: Yuyao's partner baseline GPU execution and measured outputs saved.
 - [x] Part 3: completed human metrics calculated and saved as CPU notebook output.
 - [ ] Part 2: Yuyao verifies/rewords the AI-assisted baseline interpretation and adds the actual knowledge-transfer recording.
-- [ ] Create or update the tags `p1-v1.0`, `p2-v1.0` and `p3-v1.0` on the final commits.
+- [x] Part 2 and Part 3 submission tags published. Part 1 release references are finalized separately from the recorded GPU run; preserve prior tag targets when updating.
 - [ ] Both members confirm [CONTRIBUTIONS.md](CONTRIBUTIONS.md) and complete [AI_USAGE.md](AI_USAGE.md).
 - [ ] Final report.

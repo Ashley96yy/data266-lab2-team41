@@ -1,0 +1,102 @@
+{
+  "run_id": "kaggle_20261117T003803178245Z",
+  "local_date_pt": "2026-11-16",
+  "algorithm_base_commit": "df1867f9f85078e738a6211e06c85b19e0c904db",
+  "original_archive_sha256": "a562c535af03e0a957901e3d6990bf11f89f3f87039fc9e0de5d54b8e62adb9b",
+  "original_notebook_sha256": "c795d60febdd95299c74d5a8a25978a41c2b170916fe2ac5404567250698d32e",
+  "private_originals_relative_directory": ".runtime/part1_kaggle/kaggle_20261117T003803178245Z",
+  "imported_files": {
+    "generation_diagnostics.jsonl": "dabbec127b2cbe064a6544dfe4067a1bf571aaf00d794cffb14b8153b9ac8d85",
+    "kaggle_run_provenance.json": "62f60d08f522eeef275ec371fa534471c2f7f71bd3322719772fe9df668e9182",
+    "official_validator.txt": "246d91686e97a732084a5163b7ba1f8e8d0480ccbd39f68b0b8228196e9cc38c",
+    "p1_run_audit.json": "93a1e2f84e9fe9435b35d2f896232bbbecbaa516c3b51bf4a566b1a5e9611046",
+    "p1_run_diagnostics.csv": "8c55ef2e160e7d336cbd4e54f19ec1fdb9d54087a21f127b21b849389a045299",
+    "preserve_kaggle_core.txt": "783dd2dd3fcd970a6a0e5dfc90a569dff06d92bcefbc02c9d0e54bb93e540e2f",
+    "run_qwen_generation_no_tensor_recording.py": "804e53d8ecbaa21ef5f66ec8723c2df3201880c3f89baceb072bc7b9e83d3bd0",
+    "submission.csv": "188bfc808bceb91e6221022987f98331dffd66fe715089fb0a1de1118ba992bb"
+  },
+  "published_notebook": "notebooks/Yuyao_Ding/p1_kaggle_submission.ipynb",
+  "published_notebook_sha256": "8d87b4a7b21d121a54a2782c34e1abb9a59a2ea822085db12b01e711020e6cfc",
+  "live_generation_source_sha256": "804e53d8ecbaa21ef5f66ec8723c2df3201880c3f89baceb072bc7b9e83d3bd0",
+  "live_generation_ast_matches_notebook_runtime_patch": true,
+  "source_edits_after_execution": [
+    {
+      "cell": 61,
+      "change": "Inline byte-identical uploaded live generation function; no runtime behavior change."
+    },
+    {
+      "cell": 1,
+      "change": "Post-run bootstrap maintenance: resolve DATA266_SOURCE_REF (default p1-v1.0) at runtime, retaining the actual recorded algorithm-base SHA separately. Not rerun on GPU after import."
+    },
+    {
+      "cell": 85,
+      "change": "Post-run provenance entry-name maintenance; saved outputs retain the original run."
+    }
+  ],
+  "output_redactions": [
+    {
+      "cell": 12,
+      "output": 0,
+      "reason": "course-source excerpt preview",
+      "original_sha256": "3adc4fc3aaaa3cc881069e599035fb171e0f26b19f65a34e3529a96b489d0e7f",
+      "published_sha256": "cc87316399e07567bed87cdf0fe05d75c3f2ad08492a57ab5284a823d8fbd801"
+    },
+    {
+      "cell": 16,
+      "output": 0,
+      "reason": "course-source excerpt preview",
+      "original_sha256": "100dcbb728a3a603c37b283a094466dc1d6af81ebf05abc78f9738a90d7fc0c3",
+      "published_sha256": "552529d7c526ac0ad8c8e21542cb691f9f0d07fcdaf8839a79d400f0b7f648c2"
+    }
+  ],
+  "widget_redactions": [
+    {
+      "cell": 27,
+      "removed_widget_outputs": 8,
+      "original_sha256": "f7045e28a280ef3b586d50d1c849d640766be48374083201c90d6c9f2cf70505"
+    },
+    {
+      "cell": 29,
+      "removed_widget_outputs": 1,
+      "original_sha256": "895ae9ed74be9c4cac9fe0d533754095c50f8e5dbc1cb184d49ae3c6a2f53053"
+    },
+    {
+      "cell": 32,
+      "removed_widget_outputs": 11,
+      "original_sha256": "5ec3e7249f440c87a46a9ae53dcec52071492996d49a586f7459b832ce05ab6d"
+    }
+  ],
+  "widget_metadata_removed": false,
+  "unchanged_code_cell_output_sets": 43,
+  "local_checks": {
+    "row_count": 40,
+    "conversation_count": 35,
+    "status_distribution": {
+      "answered": 30,
+      "not_found": 3,
+      "conflict": 2,
+      "false_premise": 1,
+      "session_override": 4
+    },
+    "median_seconds_per_question": 5.768,
+    "peak_allocated_gib": 7.8588690757751465,
+    "peak_reserved_gib": 7.931640625,
+    "elapsed_seconds_since_setup": 1058.914,
+    "within_90_minutes": true,
+    "competition_model_calls": 22,
+    "earlier_completed_probes": 1,
+    "earlier_failed_probes": 1,
+    "original_question_file_checked": true,
+    "recorded_official_validator_returncode": 0,
+    "gpu_inference_rerun_by_verifier": false,
+    "human_correctness_or_citation_support_scored": false
+  },
+  "kaggle_url": "https://www.kaggle.com/code/yuyaoding/part1-rag",
+  "submission_status": {
+    "submitted_and_selected_final": "confirmed by Yuyao in this conversation",
+    "independently_checked_on_kaggle": false
+  },
+  "new_gpu_inference_performed_during_import": false,
+  "golden_or_human_evaluation_repeated": false,
+  "publication_boundary": "The source integration follows the GPU execution. Prior source commits and original results remain unchanged."
+}

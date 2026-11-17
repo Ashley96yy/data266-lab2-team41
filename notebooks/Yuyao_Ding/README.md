@@ -9,12 +9,12 @@ AI-assisted implementation, analysis and verification are disclosed in
 
 | Part | Role | Main notebook | Supporting material |
 | --- | --- | --- | --- |
-| 1. Multimodal RAG | **Lead; team submission** | [p1_rag.ipynb](p1_rag.ipynb) | [Round comparison and completed review aggregation](p1_round2_comparison.ipynb) |
+| 1. Multimodal RAG | **Lead; team submission** | [p1_kaggle_submission.ipynb](p1_kaggle_submission.ipynb) | [Preserved Colab benchmark](p1_rag.ipynb), [round comparison and completed review aggregation](p1_round2_comparison.ipynb) |
 | 2. Diffusion fine-tuning | Partner working baseline, implemented and executed separately | [p2_baseline.ipynb](p2_baseline.ipynb) | [Measured baseline results](../../eval/yuyao_ding/part2/results/yuyao_t4_20261115T034917Z/) |
 | 3. Multi-agent system | **Lead; team submission** | [p3_agents.ipynb](p3_agents.ipynb) | [T4 measured report](../../eval/yuyao_ding/PART3_T4_MEASURED_RESULTS.md), [human reviews](../../eval/yuyao_ding/part3/results/t4_20261114T060249Z/) |
 
 Pratiksha Kaushik leads the team's formal Part 2 comparison and final model in
-[p2_v4.ipynb](../Pratiksha_Kaushik/p2/p2_v4.ipynb). Her independent Part 1 and
+[p2_submission.ipynb](../Pratiksha_Kaushik/p2/p2_submission.ipynb). Her independent Part 1 and
 Part 3 implementations are documented in [her workspace](../Pratiksha_Kaushik/README.md).
 The partner baseline here does not replace her two formal training runs.
 
@@ -23,7 +23,8 @@ The partner baseline here does not replace her two formal training runs.
 ```text
 notebooks/Yuyao_Ding/
 ├── README.md                        # this file
-├── p1_rag.ipynb                      # main Part 1 notebook, recorded Colab outputs
+├── p1_kaggle_submission.ipynb        # executed Part 1 Kaggle competition notebook
+├── p1_rag.ipynb                      # preserved Part 1 Colab benchmark outputs
 ├── p1_round2_comparison.ipynb         # saved-round comparison + completed human metrics
 ├── p1_metrics.ipynb                  # earlier development-run metrics and review analysis
 ├── p2_baseline.ipynb                 # Yuyao's executed rank-4 partner baseline
@@ -44,6 +45,16 @@ notebook folder. Reusable implementations live in [`src/yuyao_ding/`](../../src/
 runners, evidence-export tools and review forms live in [`scripts/yuyao_ding/`](../../scripts/yuyao_ding/).
 
 ## Part 1: main multimodal RAG system
+
+The final competition entry is [p1_kaggle_submission.ipynb](p1_kaggle_submission.ipynb).
+The [saved single-T4 Kaggle run](../../eval/yuyao_ding/part1/results/kaggle_20261117T003803178245Z/)
+completed 40 rows and the official validator, with zero answer repairs/fallbacks
+and 7.86 GiB peak allocation. Yuyao supplied the original notebook and results,
+and confirmed the CSV was submitted and selected as final at
+[this Kaggle page](https://www.kaggle.com/code/yuyaoding/part1-rag).
+Public course-text previews are redacted; post-run bootstrap maintenance is
+identified in the import record. No new Golden Set or human review was run.
+The Colab benchmark notebook and results below remain unchanged.
 
 The implementation covers the full read-only document-QA workflow:
 

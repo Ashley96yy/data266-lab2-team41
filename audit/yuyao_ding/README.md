@@ -1,6 +1,7 @@
 # Yuyao Ding — provenance and preserved history
 
 - [Part 1 history](part1/README.md): original Git bundles and Colab-round history.
+- [Part 1 Kaggle import](part1/kaggle_import_20261116.json): original archive/notebook hashes, unchanged result-file hashes, the tested live generation function, public-output redactions and post-run bootstrap edits.
 - [Part 3 import](part3/IMPORT_PROVENANCE.md) and [T4 archive record](part3/T4_RUN_PROVENANCE.md).
 - [Member-directory migration](workspace_relocation.json): old/new file paths,
   original hashes, reversible notebook reference edits and preserved output hashes.

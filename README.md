@@ -8,6 +8,9 @@ Shared implementation, results and documentation for DATA 266 Lab 2.
 
 Graders use the tagged commit for each part.
 
+See [links.txt](links.txt) for the full release commits, final Kaggle notebook
+and Hugging Face artifacts.
+
 | Part | Git tag | Main notebook | Headline result | Details |
 | --- | --- | --- | --- | --- |
 | 1. Multimodal RAG | `p1-v1.0` | [`notebooks/Yuyao_Ding/p1_kaggle_submission.ipynb`](notebooks/Yuyao_Ding/p1_kaggle_submission.ipynb) | Kaggle: 40 rows validated; Colab golden-set Recall@5 0.764 vs 0.472 and groundedness 4.44/5 | [Part 1 results](#part-1--multimodal-rag) |

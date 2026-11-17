@@ -1,0 +1,50 @@
+DATA 266 Lab 2 - Team 41
+Yuyao Ding and Pratiksha Kaushik
+
+GITHUB REPOSITORY
+https://github.com/Ashley96yy/data266-lab2-team41
+
+PART 1 RELEASE
+Tag: p1-v1.0
+Commit: ae030b9c6526cfb3d4fd824951bbc0e45b594a6e
+https://github.com/Ashley96yy/data266-lab2-team41/tree/p1-v1.0
+https://github.com/Ashley96yy/data266-lab2-team41/blob/ae030b9c6526cfb3d4fd824951bbc0e45b594a6e/notebooks/Yuyao_Ding/p1_kaggle_submission.ipynb
+
+PART 2 RELEASE
+Tag: p2-v1.0
+Commit: df1867f9f85078e738a6211e06c85b19e0c904db
+https://github.com/Ashley96yy/data266-lab2-team41/tree/p2-v1.0
+https://github.com/Ashley96yy/data266-lab2-team41/blob/df1867f9f85078e738a6211e06c85b19e0c904db/notebooks/Pratiksha_Kaushik/p2/p2_submission.ipynb
+
+PART 3 RELEASE
+Tag: p3-v1.0
+Commit: df1867f9f85078e738a6211e06c85b19e0c904db
+https://github.com/Ashley96yy/data266-lab2-team41/tree/p3-v1.0
+https://github.com/Ashley96yy/data266-lab2-team41/blob/df1867f9f85078e738a6211e06c85b19e0c904db/notebooks/Yuyao_Ding/p3_agents.ipynb
+
+FINAL PART 1 KAGGLE NOTEBOOK
+https://www.kaggle.com/code/yuyaoding/part1-rag
+Yuyao confirmed that this run's CSV was submitted and selected as the final result.
+The saved run contains 40 rows and the official validator output: valid: 40 rows.
+The recorded algorithm base is df1867f; the release above also includes the
+verified runtime fix and post-run repository integration. Saved outputs are not
+presented as a GPU rerun of the later integration commit.
+
+PART 2 HUGGING FACE MODELS AND GENERATED IMAGES
+Final adapter (rank 32):
+https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r32
+Comparison adapter (rank 4):
+https://huggingface.co/PratikshaK-1/naruto-sd15-lora-r4
+Generated images (120):
+https://huggingface.co/datasets/PratikshaK-1/naruto-sd15-p2-generations
+
+ADDITIONAL YUYAO PART 2 BASELINE ARTIFACTS
+Rank-4, 600-step adapter:
+https://huggingface.co/ashley999999/data266-team41-yuyao-lora-r4-600steps
+Paired generated images (80):
+https://huggingface.co/datasets/ashley999999/data266-team41-yuyao-part2-generations
+
+PART 3 GENERATED OUTPUTS
+https://huggingface.co/datasets/ashley999999/data266-team41-part3-t4-generations
+Generated outputs only; original private fixtures and the consented portrait
+are excluded. Part 3 uses the existing Part 2 rank-32 adapter listed above.
